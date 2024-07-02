@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.love {
+  
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  gap: 3.5rem;
+  
+}
+
+.img-text {
+  margin: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 3rem;
+  border: 1px solid yellow;
+  
+  
+}
+
+.img-text img, .text1 {
+  width: 20em; 
+  height: auto; 
+
+}
+
+.text1 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  height: 20em; 
+}
+
+.love {
+text-align: center;
+font-size: 2em;
+text-shadow: -1px 1px 2px  rgb(104, 158, 22);
+}
+
+.love:hover{
+  color:  
+  #266241;
+}
+
+
+section {
+  background-color: 
+  rgb(44, 116, 76, 0.8);
+  padding: 10px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
