@@ -1,9 +1,16 @@
-import './App.css'
+
+import { useContext, useState } from "react";
+import "./App.css";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
     <>
+    <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <form>
         <input type="text" />
         <button>search</button>
@@ -37,3 +44,4 @@ function App() {
 }
 
 export default App
+
