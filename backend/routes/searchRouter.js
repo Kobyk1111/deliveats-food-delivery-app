@@ -3,5 +3,5 @@ import { getAllRestaurants } from "../controllers/restaurantsController.js";
 
 const router = Router();
 
-router.get("/restaurants", getAllRestaurants);
+router.post("/restaurants", getAllRestaurants);
 export default router;
