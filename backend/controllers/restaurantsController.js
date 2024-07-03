@@ -2,16 +2,27 @@ import createHttpError from "http-errors";
 import menus from "../menu.js";
 import { v4 as uuidv4 } from "uuid";
 
-function getRandomMenu() {
-  const randomIndex = Math.floor(Math.random() * menus.length);
-  return menus[randomIndex];
-}
-
 export async function getAllRestaurants(req, res, next) {
   const { search } = req.body;
 
-  // search = "Soup in berlin"
-  // const search = "restaurants in Berlin";
+  const splitSearch = search.toLowerCase().split(" ");
+  console.log(splitSearch);
+
+  const filteredArray = menus.filter((menu) =>
+    menu.items.some((item) =>
+      splitSearch.some(
+        (word) => item.name.toLowerCase().includes(word) || item.description.toLowerCase().includes(word)
+      )
+    )
+  );
+
+  console.log(filteredArray);
+
+  function getRandomMenu() {
+    const randomIndex = Math.floor(Math.random() * filteredArray.length);
+    return filteredArray[randomIndex];
+  }
+
   const API_KEY = process.env.GOOGLE_API_KEY;
 
   try {
