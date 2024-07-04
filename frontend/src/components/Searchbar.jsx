@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 
-function Searchbar() {
+function Searchbar({ className }) {
   const { setRestaurants } = useContext(DataContext);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
@@ -20,7 +20,10 @@ function Searchbar() {
         credentials: "include",
       };
 
-      const response = await fetch("http://localhost:5002/search/restaurants", settings);
+      const response = await fetch(
+        "http://localhost:5002/search/restaurants",
+        settings
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -39,17 +42,19 @@ function Searchbar() {
 
   return (
     <>
-      <div className="search-container">
+    <div className={`${className}`}>
+      <div className={`${className} search-container`}>
         <form className="search-form" onSubmit={handleSubmit}>
           <input
             type="text"
             className="search-input"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="type the kind of food and city eg. Italian food, Berlin"
+            placeholder="eg. Italian food, Berlin"
           />
           <button className="search-button">Search</button>
         </form>
+      </div>
       </div>
     </>
   );

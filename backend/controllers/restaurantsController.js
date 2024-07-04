@@ -22,6 +22,8 @@ export async function getAllRestaurants(req, res, next) {
     if (response.ok) {
       const data = await response.json();
 
+      console.log(data);
+
       const restaurantsData = data.results.map((restaurant) => {
         return {
           id: uuidv4(),
@@ -30,6 +32,7 @@ export async function getAllRestaurants(req, res, next) {
           rating: restaurant.rating,
           userRatings: restaurant.user_ratings_total,
           isOpen: restaurant.opening_hours.open_now,
+          price_level: restaurant.price_level,
           menu: getRandomMenu(),
         };
       });
@@ -40,6 +43,11 @@ export async function getAllRestaurants(req, res, next) {
       return next(createHttpError(400, error));
     }
   } catch (error) {
-    next(createHttpError(500, "Please search for cuisines or restaurants in a city"));
+    next(
+      createHttpError(
+        500,
+        "Please search for cuisines or restaurants in a city"
+      )
+    );
   }
 }
