@@ -5,18 +5,12 @@ import { v4 as uuidv4 } from "uuid";
 export async function getAllRestaurants(req, res, next) {
   const { search } = req.body;
 
+  // const search = "soup in leipzig"
+
   const splitSearch = search.toLowerCase().split(" ");
   console.log(splitSearch);
 
-  const filteredArray = menus.filter((menu) =>
-    menu.items.some((item) =>
-      splitSearch.some(
-        (word) => item.name.toLowerCase().includes(word) || item.description.toLowerCase().includes(word)
-      )
-    )
-  );
-
-  console.log(filteredArray);
+  const filteredArray = menus.filter((menu) => splitSearch.includes(menu.cuisine.toLowerCase()));
 
   function getRandomMenu() {
     const randomIndex = Math.floor(Math.random() * filteredArray.length);
