@@ -13,7 +13,16 @@ function DataContextProvider({ children }) {
   // console.log(data);
 
   return (
-    <DataContext.Provider value={{ data, setData, loggedInUser, setLoggedInUser, restaurants, setRestaurants }}>
+    <DataContext.Provider
+      value={{
+        data,
+        setData,
+        loggedInUser,
+        setLoggedInUser,
+        restaurants,
+        setRestaurants,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );

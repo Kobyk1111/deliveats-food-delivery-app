@@ -1,11 +1,13 @@
 import { DataContext } from "../contexts/DataContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
 
 function SearchResults() {
   const { restaurants } = useContext(DataContext);
+  const navigate = useNavigate();
 
   function getPriceLevel(priceLevel) {
     return priceLevel ? `$`.repeat(priceLevel) : null;
@@ -19,7 +21,10 @@ function SearchResults() {
     return rating ? `⭐️`.repeat(rating) : null;
   }
 
-  console.log(restaurants);
+  function handleCardClick(id) {
+    navigate(`/restaurant/${id}`);
+  }
+
   return (
     <>
       <Navbar />
@@ -30,13 +35,16 @@ function SearchResults() {
         {restaurants.map((restaurant) => {
           const openStatus = isRestaurantOpen(restaurant.isOpen);
           return (
-            <div key={restaurant.id} className="card-results">
+            <div
+              key={restaurant.id}
+              className="card-results"
+              onClick={() => handleCardClick(restaurant.id)}
+            >
               <p className="card-title-results">{restaurant.name}</p>
               <p>{restaurant.address}</p>
               <div className="details-container">
                 <div className="rating-container">
                   <p className="rating">
-                    {" "}
                     {showRating(restaurant.rating)} {restaurant.rating} (
                     {restaurant.userRatings})
                   </p>
