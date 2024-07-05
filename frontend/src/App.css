@@ -375,7 +375,51 @@ footer {
   margin-top: 150px;
 }
 
-/* ****** */
+/* ****** BASKET ****** */
+
+.basket {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List styles */
+.basket ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.basket li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Button styles */
+.basket button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes logo-spin {
   from {

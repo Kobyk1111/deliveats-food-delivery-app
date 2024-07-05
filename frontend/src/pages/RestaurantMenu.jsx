@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
+import { BasketContext } from "../contexts/BasketContext";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Basket from "../components/Basket";
 
 function RestaurantMenu() {
   const { id } = useParams();
   const { restaurants } = useContext(DataContext);
+  const { basket, addItemToBasket } = useContext(BasketContext);
 
   const restaurant = restaurants.find((r) => r.id === id);
 
@@ -19,6 +22,11 @@ function RestaurantMenu() {
       </>
     );
   }
+
+  const getItemQuantity = (itemId) => {
+    const basketItem = basket.find((item) => item.id === itemId);
+    return basketItem ? basketItem.quantity : 0;
+  };
 
   return (
     <>
@@ -41,12 +49,14 @@ function RestaurantMenu() {
                 >
                   Add
                 </button>
+                <span>Quantity: {getItemQuantity(item.id)}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
+      <Basket />
       <Footer />
     </>
   );
