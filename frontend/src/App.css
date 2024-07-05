@@ -276,6 +276,151 @@ footer {
   color: #f44336;
 }
 
+/* ********* RESTAURANT MENU PAGE ********* */
+
+.menu-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.restaurant-name {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.restaurant-address {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.item-info {
+  max-width: 70%;
+}
+
+.item-name {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.item-description {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.item-price {
+  font-size: 1.2em;
+  color: rgb(38, 98, 65);
+  margin-bottom: 10px;
+}
+
+.add-button {
+  background: rgb(38, 98, 65);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-button:hover {
+  background: #163825;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-top: 150px;
+}
+
+/* ****** BASKET ****** */
+
+.basket {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List styles */
+.basket ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.basket li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Button styles */
+.basket button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

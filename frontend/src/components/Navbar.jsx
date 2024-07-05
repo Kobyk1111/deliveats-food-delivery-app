@@ -1,10 +1,12 @@
 import RegisterAndLogin from "./RegisterAndLogin";
+// import Basket from "./Basket";
 
 function Navbar() {
   return (
     <>
       <nav>
         <RegisterAndLogin />
+        {/* <Basket /> */}
       </nav>
     </>
   );
