@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Basket from "../components/Basket";
 
+
 function RestaurantMenu() {
   const { id } = useParams();
   const { restaurants } = useContext(DataContext);
@@ -31,6 +32,8 @@ function RestaurantMenu() {
   return (
     <>
       <Navbar />
+      <div className="page-container">
+      <div className="main-content">
       <div className="menu-card">
         <h1 className="restaurant-name">{restaurant.name}</h1>
         <p className="restaurant-address">{restaurant.address}</p>
@@ -49,14 +52,17 @@ function RestaurantMenu() {
                 >
                   Add
                 </button>
-                <span>Quantity: {getItemQuantity(item.id)}</span>
+                {/* <span>Quantity: {getItemQuantity(item.id)}</span> */}
               </div>
             </div>
           ))}
         </div>
       </div>
 
+      </div>
       <Basket />
+    </div>
+
       <Footer />
     </>
   );
