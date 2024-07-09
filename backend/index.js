@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import globalErrorHandler from "./middlewares/globalErrorHandler.js";
 import userRouter from "./routes/userRouter.js";
 import searchRouter from "./routes/searchRouter.js";
+import checkoutRouter from "./routes/checkoutRouter.js";
 
 try {
   await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
@@ -27,6 +28,7 @@ app.use(
 
 app.use("/users", userRouter);
 app.use("/search", searchRouter);
+app.use("/create-checkout-session", checkoutRouter);
 
 const port = process.env.PORT || 5002;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
