@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* ********* NAVBAR ********* */
+/* ****************** NAVBAR ****************** */
 
 nav {
   display: flex;
@@ -100,7 +100,7 @@ nav {
   background-color: #163825;
 }
 
-/* ********* SEARCH BAR HOME ********* */
+/* ****************** SEARCH BAR HOME ****************** */
 
 .search-container {
   display: flex;
@@ -160,7 +160,7 @@ nav {
   background-color: #163825;
 }
 
-/* *********  SECTION AND FOOTER  ********* */
+/* ******************  SECTION AND FOOTER  ****************** */
 
 .images {
   display: flex;
@@ -213,7 +213,7 @@ footer {
   padding: 2rem;
 }
 
-/* ********* SEARCH RESULTS PAGE ********* */
+/* ****************** SEARCH RESULTS PAGE ****************** */
 
 .results-searchbar .search-container {
   /* background-color: rgb(38, 98, 65, 0.1); */
@@ -276,7 +276,7 @@ footer {
   color: #f44336;
 }
 
-/* ********* RESTAURANT MENU PAGE ********* */
+/* ****************** RESTAURANT MENU PAGE ****************** */
 .page-container {
   display: flex;
   justify-content: space-between;
@@ -384,7 +384,7 @@ footer {
   margin-top: 150px;
 }
 
-/* ****** BASKET ****** */
+/* ****************** BASKET ****************** */
 
 .basket-container {
   margin-top: 40px;
@@ -409,6 +409,35 @@ footer {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
+}
+
+.delivery-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #eee;
+  border-radius: 30px;
+}
+
+.delivery-toggle button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
+.delivery-toggle button.active {
+  background-color:rgb(38, 98, 65);
+  color: white;
 }
 
 .basket ul {
@@ -501,6 +530,69 @@ h3 {
   background-color: #163825;
 }
 
+/* ****************** TRACKING COMPONENT ******************  */
+
+.tracking-container {
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(38, 98, 65);
+  padding-bottom: 10px;
+}
+
+.current-stage {
+  background-color: rgb(38, 98, 65);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.timeline {
+  border-left: 2px solid #ddd;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-icon {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(38, 98, 65);
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+}
+
+.timeline-content {
+  margin-left: 20px;
+}
+
+.timeline-status {
+  font-weight: bold;
+}
+
+.timeline-timestamp {
+  color: #888;
+}
+
+.completion {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
 
 /* @keyframes logo-spin {
   from {
