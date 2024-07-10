@@ -47,6 +47,30 @@ nav {
   background-color: #163825;
 }
 
+.logout-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #266241;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button.active {
+  background-color: #57635c;
+}
+
+.logout-button:hover {
+  background-color: #163825;
+}
+.welcome-message{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
 .register-login-container {
   width: 100%;
   /* max-width: 500px; */
