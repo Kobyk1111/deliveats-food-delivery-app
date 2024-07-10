@@ -8,6 +8,10 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
 
+  function logout(){
+    setLoggedInUser(null);
+  }
+
   console.log(loggedInUser);
 
   // console.log(data);
@@ -19,6 +23,7 @@ function DataContextProvider({ children }) {
         setData,
         loggedInUser,
         setLoggedInUser,
+        logout,
         restaurants,
         setRestaurants,
       }}
