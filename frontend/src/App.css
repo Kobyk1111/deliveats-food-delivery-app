@@ -435,6 +435,10 @@ footer {
   font-size: 24px;
 }
 
+
+.basket p {
+  text-align: center;
+
 .delivery-toggle {
   display: flex;
   justify-content: center;
@@ -553,6 +557,7 @@ h3 {
 .checkout-button:hover {
   background-color: #163825;
 }
+
 
 /* ****************** TRACKING COMPONENT ******************  */
 

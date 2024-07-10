@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
@@ -8,10 +8,26 @@ import Basket from "../components/Basket";
 
 function RestaurantMenu() {
   const { id } = useParams();
-  const { restaurants } = useContext(DataContext);
-  const { /* basket,  */ addItemToBasket } = useContext(BasketContext);
+  const { restaurants, getSearchedRestaurants } = useContext(DataContext);
+  const { addItemToBasket } = useContext(BasketContext);
+  const [restaurant, setRestaurant] = useState(null);
 
-  const restaurant = restaurants.find((r) => r.id === id);
+  // const restaurant = restaurants.find((r) => r._id === id);
+
+  const fetchRestaurants = useCallback(async () => {
+    await getSearchedRestaurants();
+  }, []);
+
+  useEffect(() => {
+    fetchRestaurants();
+  }, [fetchRestaurants]);
+
+  useEffect(() => {
+    const foundRestaurant = restaurants.find((r) => r._id === id);
+    setRestaurant(foundRestaurant);
+  }, [id, restaurants]);
+
+  console.log(restaurant);
 
   if (!restaurant) {
     return (
@@ -23,12 +39,6 @@ function RestaurantMenu() {
     );
   }
 
-  // SOLVE This function is not being used
-  // const getItemQuantity = (itemId) => {
-  //   const basketItem = basket.find((item) => item.id === itemId);
-  //   return basketItem ? basketItem.quantity : 0;
-  // };
-
   return (
     <>
       <Navbar />
@@ -39,7 +49,7 @@ function RestaurantMenu() {
             <p className="restaurant-address">{restaurant.address}</p>
             <div className="menu-items">
               {restaurant?.menu?.items?.map((item) => (
-                <div key={item.id} className="menu-item-card">
+                <div key={item._id} className="menu-item-card">
                   <div className="item-info">
                     <p className="item-name">{item.name}</p>
                     <p className="item-description">{item.description}</p>
