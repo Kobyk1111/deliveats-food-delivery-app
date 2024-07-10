@@ -8,9 +8,27 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
 
-  console.log(loggedInUser);
+  // console.log(loggedInUser);
 
   // console.log(data);
+  async function getSearchedRestaurants() {
+    try {
+      const response = await fetch("http://localhost:5002/search/getRestaurants");
+      if (response.ok) {
+        const data = await response.json();
+        setRestaurants(data);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  // useEffect(() => {
+  //   getSearchedRestaurants(); // Fetch restaurants initially
+  // }, []);
 
   return (
     <DataContext.Provider
@@ -21,6 +39,7 @@ function DataContextProvider({ children }) {
         setLoggedInUser,
         restaurants,
         setRestaurants,
+        getSearchedRestaurants,
       }}
     >
       {children}

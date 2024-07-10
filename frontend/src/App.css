@@ -411,6 +411,10 @@ footer {
   font-size: 24px;
 }
 
+.basket p {
+  text-align: center;
+}
+
 .basket ul {
   list-style-type: none;
   padding: 0;
@@ -500,7 +504,6 @@ h3 {
 .checkout-button:hover {
   background-color: #163825;
 }
-
 
 /* @keyframes logo-spin {
   from {

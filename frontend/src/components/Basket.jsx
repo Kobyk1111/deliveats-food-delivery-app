@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
-// SOLVE
 import { loadStripe } from "@stripe/stripe-js";
 
 function Basket({ id }) {
   const { basket, removeItemFromBasket, increaseItemQuantity, decreaseItemQuantity, totalSum } =
     useContext(BasketContext);
 
-  // SOLVE
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
@@ -46,18 +44,18 @@ function Basket({ id }) {
         ) : (
           <ul>
             {basket.map((item) => (
-              <li key={item.id} className="basket-item">
+              <li key={item._id} className="basket-item">
                 <div className="item-details">
                   <span className="item-name">{item.name}</span>
                 </div>
                 <div className="item-controls">
                   <div className="item-quantity">
-                    <button onClick={() => decreaseItemQuantity(item.id)}>-</button>
+                    <button onClick={() => decreaseItemQuantity(item._id)}>-</button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseItemQuantity(item.id)}>+</button>
+                    <button onClick={() => increaseItemQuantity(item._id)}>+</button>
                   </div>
                   <span className="item-total">${(item.price * item.quantity).toFixed(2)}</span>
-                  <button className="remove-button" onClick={() => removeItemFromBasket(item.id)}>
+                  <button className="remove-button" onClick={() => removeItemFromBasket(item._id)}>
                     x
                   </button>
                 </div>
