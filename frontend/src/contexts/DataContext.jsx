@@ -8,7 +8,13 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
 
+
   // console.log(loggedInUser);
+
+  function logout(){
+    setLoggedInUser(null);
+  }
+
 
   // console.log(data);
   async function getSearchedRestaurants() {
@@ -37,6 +43,7 @@ function DataContextProvider({ children }) {
         setData,
         loggedInUser,
         setLoggedInUser,
+        logout,
         restaurants,
         setRestaurants,
         getSearchedRestaurants,
