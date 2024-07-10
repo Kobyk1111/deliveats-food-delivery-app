@@ -1,12 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 // SOLVE
 import { loadStripe } from "@stripe/stripe-js";
 
 function Basket({ id }) {
-  const { basket, removeItemFromBasket, increaseItemQuantity, decreaseItemQuantity, totalSum } =
-    useContext(BasketContext);
+  const {
+    basket,
+    removeItemFromBasket,
+    increaseItemQuantity,
+    decreaseItemQuantity,
+    totalSum,
+  } = useContext(BasketContext);
+
+  const [deliveryOption, setDeliveryOption] = useState("delivery");
 
   // SOLVE
   async function handleCheckout() {
@@ -21,7 +28,10 @@ function Basket({ id }) {
     };
 
     try {
-      const response = await fetch("http://localhost:5002/create-checkout-session", settings);
+      const response = await fetch(
+        "http://localhost:5002/create-checkout-session",
+        settings
+      );
 
       if (response.ok) {
         const session = await response.json();
@@ -41,6 +51,22 @@ function Basket({ id }) {
     <div className="basket-container">
       <div className="basket">
         <h2>Basket</h2>
+
+        <div className="delivery-toggle">
+          <button
+            className={deliveryOption === "delivery" ? "active" : ""}
+            onClick={() => setDeliveryOption("delivery")}
+          >
+            delivery
+          </button>
+          <button
+            className={deliveryOption === "pickup" ? "active" : ""}
+            onClick={() => setDeliveryOption("pickup")}
+          >
+            pickup
+          </button>
+        </div>
+
         {basket.length === 0 ? (
           <p>No items in the basket</p>
         ) : (
@@ -52,12 +78,21 @@ function Basket({ id }) {
                 </div>
                 <div className="item-controls">
                   <div className="item-quantity">
-                    <button onClick={() => decreaseItemQuantity(item.id)}>-</button>
+                    <button onClick={() => decreaseItemQuantity(item.id)}>
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseItemQuantity(item.id)}>+</button>
+                    <button onClick={() => increaseItemQuantity(item.id)}>
+                      +
+                    </button>
                   </div>
-                  <span className="item-total">${(item.price * item.quantity).toFixed(2)}</span>
-                  <button className="remove-button" onClick={() => removeItemFromBasket(item.id)}>
+                  <span className="item-total">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </span>
+                  <button
+                    className="remove-button"
+                    onClick={() => removeItemFromBasket(item.id)}
+                  >
                     x
                   </button>
                 </div>
