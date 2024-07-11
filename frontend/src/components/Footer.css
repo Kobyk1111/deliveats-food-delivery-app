@@ -1,0 +1,82 @@
+.footer {
+    background-color: #212121;
+    color: #f1f1f1;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 1200px;
+  }
+  
+  .footer .footer-content .footer-section {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .footer .footer-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .footer .footer-content p,
+  .footer .footer-content ul,
+  .footer .footer-bottom p {
+    font-size: 0.9em;
+  }
+  
+  .footer .footer-content .links ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer .footer-content .links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .footer-content .links ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+  
+  .footer .footer-content .links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer .footer-content .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .footer .footer-content .social-icon {
+    font-family: 'Font Awesome 5 Free'; /* This assumes you have imported FontAwesome */
+    font-weight: 900;
+    font-size: 1.6em;
+    margin-right: 10px;
+  }
+  
+  .footer .footer-content .social-icon:hover {
+    color: #55acee; /* A hover effect color for social icons */
+  }
+  
+  @media (max-width: 768px) {
+    .footer .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer .footer-content .footer-section {
+      margin-bottom: 20px;
+    }
+  }
+  

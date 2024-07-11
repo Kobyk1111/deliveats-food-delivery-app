@@ -5,19 +5,19 @@ function Section() {
         <h3 className="love">why we love</h3>
         <div className="images">
           <img
-            src="https://as1.ftcdn.net/v2/jpg/00/92/28/08/1000_F_92280824_MCDYLmFXd3XUDohvnLhkQNw2KVeTNgTa.jpg"
+            src="https://pics.craiyon.com/2023-10-12/0d90d854ecae4e66838f1a2ebcce5f20.webp"
             alt=""
-            width={200}
+            width={350}
+          />
+          <img
+            src="https://pics.craiyon.com/2023-10-28/a8ea30daa44748ff9ab2391675b5eb9d.webp"
+            alt=""
+            width={350}
           />
           <img
             src="https://as1.ftcdn.net/v2/jpg/00/92/28/08/1000_F_92280824_MCDYLmFXd3XUDohvnLhkQNw2KVeTNgTa.jpg"
             alt=""
-            width={200}
-          />
-          <img
-            src="https://as1.ftcdn.net/v2/jpg/00/92/28/08/1000_F_92280824_MCDYLmFXd3XUDohvnLhkQNw2KVeTNgTa.jpg"
-            alt=""
-            width={200}
+            width={350}
           />
         </div>
 
