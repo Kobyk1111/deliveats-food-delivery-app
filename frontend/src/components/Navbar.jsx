@@ -2,11 +2,15 @@ import RegisterAndLogin from "./RegisterAndLogin";
 // import Basket from "./Basket";
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
-
+import { BasketContext } from "../contexts/BasketContext"; 
+import { Link } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 
 function Navbar() {
 
   const { loggedInUser, logout } = useContext(DataContext);
+
+  const { basket } = useContext(BasketContext);
 
   return (
     <>
@@ -17,6 +21,10 @@ function Navbar() {
             <button className="logout-button" onClick={logout}>
               Logout
             </button> 
+            <Link to="/manage-orders" className="cart-logo">
+            <i className="fas fa-shopping-cart"></i>
+            <span className="item-count">{basket.length}</span>
+          </Link>
           </div>
         ) : (
           <RegisterAndLogin />
