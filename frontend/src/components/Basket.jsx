@@ -1,18 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import { loadStripe } from "@stripe/stripe-js";
 
 function Basket({ id }) {
   const {
     basket,
+    deliveryOption, 
+    setDeliveryOption,
     removeItemFromBasket,
     increaseItemQuantity,
     decreaseItemQuantity,
     totalSum,
   } = useContext(BasketContext);
 
-  const [deliveryOption, setDeliveryOption] = useState("delivery");
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
@@ -101,3 +102,5 @@ function Basket({ id }) {
 }
 
 export default Basket;
+
+
