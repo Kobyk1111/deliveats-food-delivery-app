@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 /* ****************** NAVBAR ****************** */
@@ -66,7 +67,7 @@ nav {
 .logout-button:hover {
   background-color: #163825;
 }
-.welcome-message{
+.welcome-message {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
@@ -435,11 +436,9 @@ footer {
   font-size: 24px;
 }
 
-
 .basket p {
   text-align: center;
 }
-
 
 .delivery-toggle {
   display: flex;
@@ -464,9 +463,8 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-
 .delivery-toggle button.active {
-  background-color:rgb(38, 98, 65);
+  background-color: rgb(38, 98, 65);
   color: white;
 }
 
@@ -560,33 +558,66 @@ h3 {
   background-color: #163825;
 }
 
+/* ****************** SUCCESS PAGE ******************  */
+
+.successPage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 80vh;
+  margin-top: 4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-right: 50px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.message {
+  font-size: 18px;
+  color: #666;
+}
+
+.trackerContainer {
+  flex-grow: 1; /* Ensures the tracker container takes available space */
+  max-width: 600px;
+}
 
 /* ****************** TRACKING COMPONENT ******************  */
 
 .tracking-container {
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
 }
 
 h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgb(38, 98, 65);
   padding-bottom: 10px;
 }
 
-.current-stage {
-  background-color: rgb(38, 98, 65);
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .timeline {
-  border-left: 2px solid #ddd;
+  border-left: 2px solid #ccc; /* Grey by default */
   padding-left: 10px;
   margin-left: 10px;
 }
@@ -596,19 +627,40 @@ h2 {
   align-items: center;
   margin-bottom: 20px;
   position: relative;
+  color: rgb(217, 207, 207);
+  /* background-color: #f0f0f0; /*Grey out by default */
 }
+
+.timeline-item.completed {
+  color: black;
+  /* background-color: #e0ffe0; Light green for completed stages */
+}
+
+/* .timeline-item.current {
+  background-color: rgb(38, 98, 65, 0.2); Light yellow for the current stage
+} */
 
 .timeline-icon {
   width: 10px;
   height: 10px;
-  background-color: rgb(38, 98, 65);
+  background-color: #ccc;
   border-radius: 50%;
   position: absolute;
-  left: -15px;
+  left: -16px;
+}
+
+.timeline-item.completed .timeline-icon,
+.timeline-item.current .timeline-icon {
+  background-color: rgb(
+    38,
+    98,
+    65
+  ); /* Green for completed and current stages */
 }
 
 .timeline-content {
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 15px;
 }
 
 .timeline-status {
@@ -623,6 +675,10 @@ h2 {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
+  background-color: rgb(38, 98, 65);
+  border-radius: 10px;
+  color: #eaeaea;
+  padding: 10px;
 }
 
 /* @keyframes logo-spin {
