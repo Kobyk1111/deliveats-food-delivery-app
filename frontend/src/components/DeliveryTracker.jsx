@@ -24,11 +24,12 @@ const pickupStages = [
 
 function DeliveryTracker() {
   const { deliveryOption } = useContext(BasketContext);
-  const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
 
   const [currentStage, setCurrentStage] = useState(0);
   const [completedStages, setCompletedStages] = useState([]);
   const [timeElapsed, setTimeElapsed] = useState(0);
+
+  const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
 
   useEffect(() => {
     if (currentStage < stages.length) {
@@ -59,11 +60,9 @@ function DeliveryTracker() {
       <h2>Track Your Order</h2>
 
       <div className="timeline">
-  
         {stages.map((stage, index) => (
           <div
             key={index}
-            // className="timeline-item">
 
             className={`timeline-item ${
               completedStages.length > index ? "completed" : ""
@@ -72,7 +71,6 @@ function DeliveryTracker() {
             <div className="timeline-icon"></div>
             <div className="timeline-content">
               <p className="timeline-status">{stage.status}</p>
-              {/* <p className="timeline-timestamp">{stage.timestamp}</p> */}
 
               {completedStages.length > index && (
                 <p className="timeline-timestamp">
