@@ -51,6 +51,7 @@ function Searchbar({ className }) {
               placeholder="eg. Italian food, Berlin"
             />
             <button className="search-button">Search</button>
+            
           </form>
         </div>
       </div>
