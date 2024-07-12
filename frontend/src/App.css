@@ -585,7 +585,7 @@ h3 {
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
-  width: 400px;
+  width: 100%;
 }
 
 .title {
@@ -599,8 +599,40 @@ h3 {
 }
 
 .trackerContainer {
-  flex-grow: 1; /* Ensures the tracker container takes available space */
+  flex-grow: 1;
   max-width: 600px;
+}
+
+.card-order-details {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-order-details h2 {
+  margin: 8px;
+}
+
+.card-order-details p {
+  font-size: 16px;
+  margin: 8px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-order-details p:last-child {
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.card-order-details .total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 /* ****************** TRACKING COMPONENT ******************  */
@@ -612,12 +644,11 @@ h3 {
 
 h2 {
   font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .timeline {
-  border-left: 2px solid #ccc; /* Grey by default */
+  border-left: 2px solid #ccc;
   padding-left: 10px;
   margin-left: 10px;
 }
@@ -625,20 +656,33 @@ h2 {
 .timeline-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
   color: rgb(217, 207, 207);
-  /* background-color: #f0f0f0; /*Grey out by default */
+  /* background-color: #f0f0f0; */
 }
 
 .timeline-item.completed {
   color: black;
-  /* background-color: #e0ffe0; Light green for completed stages */
+  /* background-color: #e0ffe0; */
 }
 
-/* .timeline-item.current {
-  background-color: rgb(38, 98, 65, 0.2); Light yellow for the current stage
-} */
+.timeline-item.current {
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(38, 98, 65, 0.2);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.timeline-item .current .timeline-status {
+  text-align: center;
+}
 
 .timeline-icon {
   width: 10px;
@@ -677,8 +721,8 @@ h2 {
   font-weight: bold;
   background-color: rgb(38, 98, 65);
   border-radius: 10px;
-  color: #eaeaea;
-  padding: 10px;
+  color: white;
+  padding: 15px;
 }
 
 /* @keyframes logo-spin {

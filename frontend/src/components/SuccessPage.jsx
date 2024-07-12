@@ -5,7 +5,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function SuccessPage() {
-  const { deliveryOption } = useContext(BasketContext);
+  const { deliveryOption, basket, totalSum } = useContext(BasketContext);
+  // console.log(deliveryOption);
+
   return (
     <>
       <Navbar />
@@ -20,14 +22,14 @@ function SuccessPage() {
               soon.
             </p>
           </div>
-          <div className="card">
-            <p>*** order details *** </p>
-            <p>Restaurant Name*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>total*</p>
+          <div className="card-order-details">
+            <h2>Order Details</h2>
+            {basket.map((item) => (
+              <p key={item._id}>
+                {item.quantity} x {item.name}
+              </p>
+            ))}
+            <p className="total">Total: €{totalSum.toFixed(2)}</p>
           </div>
         </div>
         <div className="trackerContainer">
