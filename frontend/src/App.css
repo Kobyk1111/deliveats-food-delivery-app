@@ -199,6 +199,14 @@ background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907c
   gap: 3.5rem;
 }
 
+.images img:hover {
+  box-shadow: #ddd 0 0 10px;
+  transform: perspective(1000px) rotateY(10deg);
+  transition: all 0.5s;
+  
+}
+  
+
 .img-text {
   margin: 7rem;
   display: flex;
@@ -206,12 +214,20 @@ background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907c
   align-items: center;
   gap: 3rem;
   border: 1px solid yellow;
+  font-size: 1.5em ;
 }
 
 .img-text img,
 .text1 {
   width: 20em;
   height: auto;
+}
+
+.img-text:hover {
+  box-shadow: #ddd 0 0 10px;
+  transform: perspective(1000px) rotateY(10deg);
+  transition: all 0.5s;
+
 }
 
 .text1 {
