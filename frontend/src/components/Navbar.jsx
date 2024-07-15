@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
 import RegisterAndLogin from "./RegisterAndLogin";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Navbar() {
   const { loggedInUser, logout } = useContext(DataContext);

@@ -6,6 +6,16 @@ import RestaurantMenu from "./pages/RestaurantMenu";
 import SuccessPage from "./components/SuccessPage";
 import BasketPage from "./components/BasketPage";
 
+
+import Profile from "./pages/Profile";
+import Preferences from "./components/Preferences";
+import Addresses from "./components/Addresses";
+import OrderHistory from "./components/OrderHistory";
+import Settings from "./components/Settings";
+
+
+
+
 function App() {
   return (
     <>
@@ -16,6 +26,13 @@ function App() {
         <Route path="/BasketPage" element={<BasketPage />} />
         {/* //SOLVE */}
         <Route path="/success" element={<SuccessPage />} />
+
+        <Route path="/profile/*" element={<Profile />}>
+          <Route path="preferences" element={<Preferences />} />
+          <Route path="addresses" element={<Addresses />} />
+          <Route path="order-history" element={<OrderHistory />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
     </>
   );
