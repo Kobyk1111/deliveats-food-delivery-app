@@ -65,13 +65,14 @@ function DeliveryTracker() {
 
 
 
-  const handleBackToMainPage = () => {
-    navigate("/");
-  };
+  
 
   }, [currentStage, stages]);
 
-
+  const handleBackToMainPage = () => {
+    navigate("/");
+  };
+  
   return (
     <div className="tracking-container">
       <h2>Track Your Order</h2>
