@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import Modal from "react-modal";
 
 Modal.setAppElement("#root"); // This helps with accessibility

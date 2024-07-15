@@ -27,8 +27,6 @@ function RestaurantMenu() {
     setRestaurant(foundRestaurant);
   }, [id, restaurants]);
 
-  console.log(restaurant);
-
   if (!restaurant) {
     return (
       <>

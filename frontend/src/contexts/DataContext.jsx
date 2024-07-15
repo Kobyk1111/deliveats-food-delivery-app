@@ -7,14 +7,13 @@ function DataContextProvider({ children }) {
   const [data, setData] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
-
+  const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
 
   // console.log(loggedInUser);
 
-  function logout(){
+  function logout() {
     setLoggedInUser(null);
   }
-
 
   // console.log(data);
   async function getSearchedRestaurants() {
@@ -47,6 +46,8 @@ function DataContextProvider({ children }) {
         restaurants,
         setRestaurants,
         getSearchedRestaurants,
+        sessionId,
+        setSessionId,
       }}
     >
       {children}

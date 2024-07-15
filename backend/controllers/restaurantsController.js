@@ -8,7 +8,6 @@ export async function getAllRestaurants(req, res, next) {
   // const search = "Brazilian food in leipzig";
 
   const splitSearch = search.toLowerCase().split(" ");
-  console.log(splitSearch);
 
   const filteredArray = menus.filter((menu) => splitSearch.includes(menu.cuisine.toLowerCase()));
 
@@ -38,9 +37,6 @@ export async function getAllRestaurants(req, res, next) {
           menu: getRandomMenu(),
         };
       });
-
-      console.log(restaurantsData.length);
-      console.log(restaurantsData);
 
       try {
         await Restaurant.deleteMany({});

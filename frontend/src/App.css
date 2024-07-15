@@ -760,11 +760,7 @@ h2 {
 
 .timeline-item.completed .timeline-icon,
 .timeline-item.current .timeline-icon {
-  background-color: rgb(
-    38,
-    98,
-    65
-  ); /* Green for completed and current stages */
+  background-color: rgb(38, 98, 65); /* Green for completed and current stages */
 }
 
 .timeline-content {

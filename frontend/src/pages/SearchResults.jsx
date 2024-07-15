@@ -6,24 +6,10 @@ import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
 
 function SearchResults() {
-  const { restaurants, /* setRestaurants */ getSearchedRestaurants } = useContext(DataContext);
+  const { restaurants, getSearchedRestaurants } = useContext(DataContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // async function getSearchedRestaurants() {
-    //   try {
-    //     const response = await fetch("http://localhost:5002/search/getRestaurants");
-    //     if (response.ok) {
-    //       const data = await response.json();
-    //       setRestaurants(data);
-    //     } else {
-    //       const { error } = await response.json();
-    //       throw new Error(error.message);
-    //     }
-    //   } catch (error) {
-    //     alert(error.message);
-    //   }
-    // }
     getSearchedRestaurants();
   }, []);
 
