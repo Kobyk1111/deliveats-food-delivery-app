@@ -3,22 +3,22 @@ import React, { useState, useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 
-function Profile(){
+function UserProfile(){
   const { loggedInUser, setLoggedInUser } = useContext(DataContext);
   const [user, setUser] = useState({ firstName: ``, lastName: ``, email: ``, password: ``});
   
   //const [userId, setUserId] = useState(``);
 
-  /* useEffect(() => {
-    if (loggedInUser){
-      setUser({
-        firstName: loggedInUser.firstName,
-        lastName: loggedInUser.lastName,
-        email: loggedInUser.email,
-        password: loggedInUser.password
-      })
-    }
-  }, [loggedInUser]); */
+  // useEffect(() => {
+   // if (loggedInUser){
+     // setUser({
+       // firstName: loggedInUser.firstName,
+        //lastName: loggedInUser.lastName,
+        //email: loggedInUser.email,
+       // password: loggedInUser.password
+     // })
+    //}
+  //}, [loggedInUser]); 
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value })
@@ -55,10 +55,10 @@ function Profile(){
       try {
         const settings = {
           method: "DELETE",
-          /* headers: {
-            "Content-Type": "application/JSON"
-          },
-          body: JSON.stringify({ userId: loggedInUser._id}) */
+          // headers: {
+           // "Content-Type": "application/JSON"
+          //},
+          //body: JSON.stringify({ userId: loggedInUser._id}) 
         }
         const response = await fetch(`http://localhost:5002/users/delete/${loggedInUser.id}`, settings);
 
@@ -93,4 +93,4 @@ function Profile(){
   );
 }
 
-export default Profile;
+export default UserProfile;

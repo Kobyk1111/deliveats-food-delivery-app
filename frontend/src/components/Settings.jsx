@@ -8,7 +8,7 @@ function Settings() {
 
  const { loggedInUser, setLoggedInUser, logout: contextLogout } = useContext(DataContext);
  
- const [showProfile, setShowProfile ] = useState(false)
+ const [showProfile, setShowProfile ] = useState(true)
  //const [showToggle, setShowToggle] = useState(false);
 
  const toggleProfile = () => {
@@ -22,28 +22,29 @@ function Settings() {
  const logout = () => {
  setShowProfile(false);
  contextLogout();
+ 
  }
 
  return (
  <>
- <nav> {loggedInUser ? (
- <div className= "user-info">
- 
- <span className="welcome-message">Welcome, {loggedInUser.firstName}!</span>
- <button className="logout-button" onClick={logout}>
- Logout
- </button> 
-<button className="profile-button" onClick={toggleProfile}>
-{showProfile ? `Hide Profile` : `Show Profile`}
- </button>
- </div>
- ) : (
- <RegisterAndLogin />
- )
- }
- {/* <Basket /> */}
- </nav>
- {loggedInUser && showProfile && <UserProfile />}
+  <nav> {loggedInUser ? (
+   <div className= "user-info">
+  
+    <span className="welcome-message">Welcome, {loggedInUser.firstName}!</span>
+    <button className="logout-button" onClick={logout}>
+      Logout
+    </button> 
+    <button className="profile-button" onClick={toggleProfile}>
+     { showProfile ? `Hide Profile` : `Show Profile`}
+    </button>
+   </div>
+     ) : (
+     <RegisterAndLogin />
+     )
+    }
+    {/* <Basket /> */}
+  </nav>
+    {loggedInUser && showProfile && <UserProfile />}
  </>
  );
 }
