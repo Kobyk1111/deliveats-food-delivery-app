@@ -1,3 +1,9 @@
+
+
+import { useNavigate } from "react-router-dom";
+
+
+
 import { useState, useEffect, useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 
@@ -24,11 +30,13 @@ const pickupStages = [
 
 function DeliveryTracker() {
   const { deliveryOption } = useContext(BasketContext);
-  const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
+
 
   const [currentStage, setCurrentStage] = useState(0);
   const [completedStages, setCompletedStages] = useState([]);
-  const [timeElapsed, setTimeElapsed] = useState(0);
+  const navigate = useNavigate();
+
+  const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
 
   useEffect(() => {
     if (currentStage < stages.length) {
@@ -47,23 +55,32 @@ function DeliveryTracker() {
           ...prev,
           { ...stages[currentStage], timestamp: currentTime },
         ]);
-        setTimeElapsed((prev) => prev + stages[currentStage].duration);
         setCurrentStage((prev) => prev + 1);
       }, stages[currentStage].duration);
       return () => clearTimeout(timer);
+    } else {
+      // After delivery is completed, navigate to success page
+      navigate("/success");
     }
+
+
+
+  
+
   }, [currentStage, stages]);
 
+  const handleBackToMainPage = () => {
+    navigate("/");
+  };
+  
   return (
     <div className="tracking-container">
       <h2>Track Your Order</h2>
 
       <div className="timeline">
-  
         {stages.map((stage, index) => (
           <div
             key={index}
-            // className="timeline-item">
 
             className={`timeline-item ${
               completedStages.length > index ? "completed" : ""
@@ -72,7 +89,6 @@ function DeliveryTracker() {
             <div className="timeline-icon"></div>
             <div className="timeline-content">
               <p className="timeline-status">{stage.status}</p>
-              {/* <p className="timeline-timestamp">{stage.timestamp}</p> */}
 
               {completedStages.length > index && (
                 <p className="timeline-timestamp">
@@ -84,13 +100,27 @@ function DeliveryTracker() {
         ))}
       </div>
 
-      {currentStage >= stages.length && (
-        <div className="completion">
-          <p>Delivery Completed!</p>
-        </div>
-      )}
+      <div className="current-stage">
+        {currentStage < stages.length ? (
+          <div className="current-stage-content">
+            <p>Checking next step: {stages[currentStage].status}</p>
+          </div>
+        ) : (
+          <div className="current-stage-content">
+            <p>Delivery Completed!</p>
+            <button onClick={handleBackToMainPage} className="back-to-main-button">
+              Back to main page
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
-}
+};
+
+
+      
+
+
 
 export default DeliveryTracker;

@@ -7,6 +7,7 @@ import { DataContext } from "../contexts/DataContext";
 
 function SuccessPage() {
   const { deliveryOption, basket, totalSum } = useContext(BasketContext);
+
   const { sessionId, loggedInUser } = useContext(DataContext);
 
   console.log(sessionId);
@@ -51,14 +52,14 @@ function SuccessPage() {
               Your order will be {deliveryOption === "delivery" ? "delivered" : "ready for pickup"} soon.
             </p>
           </div>
-          <div className="card">
-            <p>*** order details *** </p>
-            <p>Restaurant Name*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>item* price*</p>
-            <p>total*</p>
+          <div className="card-order-details">
+            <h2>Order Details</h2>
+            {basket.map((item) => (
+              <p key={item._id}>
+                {item.quantity} x {item.name}
+              </p>
+            ))}
+            <p className="total">Total: €{totalSum.toFixed(2)}</p>
           </div>
         </div>
         <div className="trackerContainer">

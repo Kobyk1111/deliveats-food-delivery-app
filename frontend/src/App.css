@@ -100,7 +100,7 @@ nav {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #eee2e2;
   border-radius: 5px;
 }
 
@@ -138,9 +138,15 @@ nav {
 }
 
 .home-searchbar .search-container {
-  background-color: rgb(38, 98, 65);
-  margin-top: 50px;
+  background-image: url("https://imageproxy.wolt.com/venue/60c438f43b9448233d9907cf/2c0a32ee-d34c-11eb-9198-5e1d1b316988_food_brothers_close_up_3.jpg");
   padding: 200px;
+  cover: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(31, 39, 35, 0.6);
+  height: 20vh;
 }
 
 /* .results-searchbar .search-container {
@@ -194,6 +200,12 @@ nav {
   gap: 3.5rem;
 }
 
+.images img:hover {
+  box-shadow: #ddd 0 0 10px;
+  transform: perspective(1000px) rotateY(10deg);
+  transition: all 0.5s;
+}
+
 .img-text {
   margin: 7rem;
   display: flex;
@@ -201,12 +213,19 @@ nav {
   align-items: center;
   gap: 3rem;
   border: 1px solid yellow;
+  font-size: 1.5em;
 }
 
 .img-text img,
 .text1 {
   width: 20em;
   height: auto;
+}
+
+.img-text:hover {
+  box-shadow: #ddd 0 0 10px;
+  transform: perspective(1000px) rotateY(10deg);
+  transition: all 0.5s;
 }
 
 .text1 {
@@ -239,6 +258,52 @@ footer {
 }
 
 /* ****************** SEARCH RESULTS PAGE ****************** */
+
+.basket-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the page fills the viewport height */
+  padding: 20px;
+}
+
+.basket {
+  margin-bottom: 20px;
+  /* Add additional styling for basket section */
+}
+
+.search-bar-container {
+  margin-top: 20px;
+  /* Add additional styling for search bar container */
+}
+
+.restaurant-list {
+  /* Add styling for restaurant list section */
+}
+
+/* Example additional styles */
+.delivery-toggle {
+  margin-bottom: 10px;
+}
+
+.checkout-button {
+  margin-top: 10px;
+}
+.back-to-main-button {
+  padding: 10px 20px;
+  background-color: #e6ebf0;
+  color: #281111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-main-button:hover {
+  background-color: #0056b3;
+}
 
 .results-searchbar .search-container {
   /* background-color: rgb(38, 98, 65, 0.1); */
@@ -585,7 +650,7 @@ h3 {
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
-  width: 400px;
+  width: 100%;
 }
 
 .title {
@@ -599,8 +664,40 @@ h3 {
 }
 
 .trackerContainer {
-  flex-grow: 1; /* Ensures the tracker container takes available space */
+  flex-grow: 1;
   max-width: 600px;
+}
+
+.card-order-details {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-order-details h2 {
+  margin: 8px;
+}
+
+.card-order-details p {
+  font-size: 16px;
+  margin: 8px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-order-details p:last-child {
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.card-order-details .total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 /* ****************** TRACKING COMPONENT ******************  */
@@ -612,12 +709,11 @@ h3 {
 
 h2 {
   font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .timeline {
-  border-left: 2px solid #ccc; /* Grey by default */
+  border-left: 2px solid #ccc;
   padding-left: 10px;
   margin-left: 10px;
 }
@@ -625,20 +721,33 @@ h2 {
 .timeline-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
   color: rgb(217, 207, 207);
-  /* background-color: #f0f0f0; /*Grey out by default */
+  /* background-color: #f0f0f0; */
 }
 
 .timeline-item.completed {
   color: black;
-  /* background-color: #e0ffe0; Light green for completed stages */
+  /* background-color: #e0ffe0; */
 }
 
-/* .timeline-item.current {
-  background-color: rgb(38, 98, 65, 0.2); Light yellow for the current stage
-} */
+.timeline-item.current {
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(38, 98, 65, 0.2);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.timeline-item .current .timeline-status {
+  text-align: center;
+}
 
 .timeline-icon {
   width: 10px;
@@ -673,8 +782,73 @@ h2 {
   font-weight: bold;
   background-color: rgb(38, 98, 65);
   border-radius: 10px;
-  color: #eaeaea;
+  color: white;
+  padding: 15px;
+}
+
+/* ****************** PROFILE PAGE ****************** */
+
+.container-profile {
+  margin: 100px 50px;
+  width: 80%;
+  height: 80vh;
+}
+.header-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.title-profile {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.navbar-profile {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.navbar-profile ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-profile ul li {
   padding: 10px;
+}
+
+.navbar-profile ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navbar-profile ul li a:hover {
+  border-bottom: 1px solid black;
+  transform: scale(1.05);
+}
+
+.navbar-profile ul li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-profile ul li button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-profile ul li button:hover {
+  border-bottom: 2px solid #000;
 }
 
 /* @keyframes logo-spin {

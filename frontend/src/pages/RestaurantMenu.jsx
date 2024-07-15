@@ -53,7 +53,7 @@ function RestaurantMenu() {
                     <p className="item-description">{item.description}</p>
                   </div>
                   <div className="item-actions">
-                    <p className="item-price">${item.price}</p>
+                    <p className="item-price">€{item.price}</p>
                     <button className="add-button" onClick={() => addItemToBasket(item)}>
                       Add
                     </button>
