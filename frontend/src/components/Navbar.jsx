@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext"; 
 import { Link } from "react-router-dom";
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+//import '@fortawesome/fontawesome-free/css/all.min.css'; 
 
 function Navbar() {
 
