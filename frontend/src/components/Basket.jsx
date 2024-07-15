@@ -1,18 +1,28 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import { loadStripe } from "@stripe/stripe-js";
 
 function Basket({ id }) {
   const {
     basket,
+    deliveryOption,
+    setDeliveryOption,
     removeItemFromBasket,
     increaseItemQuantity,
     decreaseItemQuantity,
     totalSum,
   } = useContext(BasketContext);
 
-  const [deliveryOption, setDeliveryOption] = useState("delivery");
+
+
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+    localStorage.setItem("deliveryOption", deliveryOption);
+  }, [basket, deliveryOption]);
+
+
+
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
@@ -76,14 +86,21 @@ function Basket({ id }) {
                 </div>
                 <div className="item-controls">
                   <div className="item-quantity">
-
-                    <button onClick={() => decreaseItemQuantity(item._id)}>-</button>
+                    <button onClick={() => decreaseItemQuantity(item._id)}>
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseItemQuantity(item._id)}>+</button>
+                    <button onClick={() => increaseItemQuantity(item._id)}>
+                      +
+                    </button>
                   </div>
-                  <span className="item-total">${(item.price * item.quantity).toFixed(2)}</span>
-                  <button className="remove-button" onClick={() => removeItemFromBasket(item._id)}>
-
+                  <span className="item-total">
+                  €{(item.price * item.quantity).toFixed(2)}
+                  </span>
+                  <button
+                    className="remove-button"
+                    onClick={() => removeItemFromBasket(item._id)}
+                  >
                     x
                   </button>
                 </div>
@@ -91,9 +108,9 @@ function Basket({ id }) {
             ))}
           </ul>
         )}
-        <h3>Total: ${totalSum.toFixed(2)}</h3>
+        <h3>Total: €{totalSum.toFixed(2)}</h3>
         <button onClick={handleCheckout} className="checkout-button">
-          Checkout (${totalSum.toFixed(2)})
+          Checkout (€{totalSum.toFixed(2)})
         </button>
       </div>
     </div>

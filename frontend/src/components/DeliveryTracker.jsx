@@ -1,19 +1,42 @@
-import React, { useState, useEffect } from "react";
+
+
 import { useNavigate } from "react-router-dom";
 
-const stages = [
-  { status: "Payment confirmed! 🎉", duration: 1000 }, // 1 second
-  { status: "Order received by the restaurant ✅", duration: 5000 }, // 5 seconds
-  { status: "A human being is preparing your food 🧑‍🍳", duration: 10000 }, // 10 seconds
-  { status: "Food is ready to go! 🍽", duration: 3000 }, // 3 seconds
-  { status: "Your order is on its way 🚗", duration: 7000 }, // 7 seconds
-  { status: "Knock, knock! Your order is at the door 🛎", duration: 2000 }, // 2 seconds
+
+
+import { useState, useEffect, useContext } from "react";
+import { BasketContext } from "../contexts/BasketContext";
+
+const deliveryStages = [
+  { status: "Payment confirmed! 🎉", duration: 1000 },
+  { status: "Order received by the restaurant. ✅", duration: 5000 },
+  { status: "Food is being prepared.🧑‍🍳", duration: 10000 },
+  { status: "Food is ready to go! 🍽", duration: 3000 },
+  { status: "Your order is on its way. 🚗", duration: 7000 },
+  { status: "Knock, knock! Your order is at the door. 🛎", duration: 2000 },
 ];
 
-const DeliveryTracker = () => {
+const pickupStages = [
+  { status: "Payment confirmed! 🎉", duration: 1000 },
+  { status: "Order received by the restaurant. ✅", duration: 5000 },
+  { status: "Food is being prepared. 🧑‍🍳", duration: 10000 },
+  { status: "Food is ready to go! 🍽", duration: 3000 },
+  { status: "Your order is ready for pickup! 🛍️", duration: 3000 },
+  {
+    status: "You can now pick up your order at the counter 🏃",
+    duration: 5000,
+  },
+];
+
+function DeliveryTracker() {
+  const { deliveryOption } = useContext(BasketContext);
+
+
   const [currentStage, setCurrentStage] = useState(0);
   const [completedStages, setCompletedStages] = useState([]);
   const navigate = useNavigate();
+
+  const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
 
   useEffect(() => {
     if (currentStage < stages.length) {
@@ -39,27 +62,43 @@ const DeliveryTracker = () => {
       // After delivery is completed, navigate to success page
       navigate("/success");
     }
-  }, [currentStage, navigate]);
+
+
 
   const handleBackToMainPage = () => {
     navigate("/");
   };
+
+  }, [currentStage, stages]);
+
 
   return (
     <div className="tracking-container">
       <h2>Track Your Order</h2>
 
       <div className="timeline">
-        {completedStages.map((stage, index) => (
-          <div key={index} className="timeline-item">
+        {stages.map((stage, index) => (
+          <div
+            key={index}
+
+            className={`timeline-item ${
+              completedStages.length > index ? "completed" : ""
+            } ${currentStage === index ? "current" : ""}`}
+          >
             <div className="timeline-icon"></div>
             <div className="timeline-content">
               <p className="timeline-status">{stage.status}</p>
-              <p className="timeline-timestamp">{stage.timestamp}</p>
+
+              {completedStages.length > index && (
+                <p className="timeline-timestamp">
+                  {completedStages[index].timestamp}
+                </p>
+              )}
             </div>
           </div>
         ))}
       </div>
+
       <div className="current-stage">
         {currentStage < stages.length ? (
           <div className="current-stage-content">
@@ -77,5 +116,10 @@ const DeliveryTracker = () => {
     </div>
   );
 };
+
+
+      
+
+
 
 export default DeliveryTracker;
