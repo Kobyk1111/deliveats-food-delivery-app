@@ -138,7 +138,7 @@ nav {
 }
 
 .home-searchbar .search-container {
-background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907cf/2c0a32ee-d34c-11eb-9198-5e1d1b316988_food_brothers_close_up_3.jpg');
+  background-image: url("https://imageproxy.wolt.com/venue/60c438f43b9448233d9907cf/2c0a32ee-d34c-11eb-9198-5e1d1b316988_food_brothers_close_up_3.jpg");
   padding: 200px;
   cover: 100%;
   background-size: 100% 100%;
@@ -204,9 +204,7 @@ background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907c
   box-shadow: #ddd 0 0 10px;
   transform: perspective(1000px) rotateY(10deg);
   transition: all 0.5s;
-  
 }
-  
 
 .img-text {
   margin: 7rem;
@@ -215,7 +213,7 @@ background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907c
   align-items: center;
   gap: 3rem;
   border: 1px solid yellow;
-  font-size: 1.5em ;
+  font-size: 1.5em;
 }
 
 .img-text img,
@@ -228,7 +226,6 @@ background-image: url('https://imageproxy.wolt.com/venue/60c438f43b9448233d9907c
   box-shadow: #ddd 0 0 10px;
   transform: perspective(1000px) rotateY(10deg);
   transition: all 0.5s;
-
 }
 
 .text1 {
@@ -261,7 +258,6 @@ footer {
 }
 
 /* ****************** SEARCH RESULTS PAGE ****************** */
-
 
 .basket-page-container {
   display: flex;
@@ -308,10 +304,6 @@ footer {
 .back-to-main-button:hover {
   background-color: #0056b3;
 }
-
-
-
-
 
 .results-searchbar .search-container {
   /* background-color: rgb(38, 98, 65, 0.1); */
@@ -798,10 +790,70 @@ h2 {
   padding: 15px;
 }
 
-/* ****************** footer ****************** */
+/* ****************** PROFILE PAGE ****************** */
 
+.container-profile {
+  margin: 100px 50px;
+  width: 80%;
+  height: 80vh;
+}
+.header-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
 
+.title-profile {
+  margin: 0;
+  font-size: 2.5em;
+}
 
+.navbar-profile {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.navbar-profile ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-profile ul li {
+  padding: 10px;
+}
+
+.navbar-profile ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navbar-profile ul li a:hover {
+  border-bottom: 1px solid black;
+  transform: scale(1.05);
+}
+
+.navbar-profile ul li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-profile ul li button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-profile ul li button:hover {
+  border-bottom: 2px solid #000;
+}
 
 /* @keyframes logo-spin {
   from {

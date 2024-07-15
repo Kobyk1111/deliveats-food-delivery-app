@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
 import RegisterAndLogin from "./RegisterAndLogin";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Navbar() {
   const { loggedInUser, logout } = useContext(DataContext);
@@ -14,7 +14,13 @@ function Navbar() {
       <nav>
         {loggedInUser ? (
           <div className="user-info">
-            <span className="welcome-message">Welcome, {loggedInUser.firstName}!</span>
+            <span className="welcome-message">
+              Welcome, {loggedInUser.firstName}!
+            </span>
+            <Link to="/profile" className="profile-link">
+          chanche the icon to dropdown
+            </Link>{" "}
+            {/* Add Profile Link */}
             <button className="logout-button" onClick={logout}>
               Logout
             </button>
