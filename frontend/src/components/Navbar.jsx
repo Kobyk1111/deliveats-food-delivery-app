@@ -14,7 +14,13 @@ function Navbar() {
       <nav>
         {loggedInUser ? (
           <div className="user-info">
-            <span className="welcome-message">Welcome, {loggedInUser.firstName}!</span>
+            <span className="welcome-message">
+              Welcome, {loggedInUser.firstName}!
+            </span>
+            <Link to="/profile" className="profile-link">
+          chanche the icon to dropdown
+            </Link>{" "}
+            {/* Add Profile Link */}
             <button className="logout-button" onClick={logout}>
               Logout
             </button>
