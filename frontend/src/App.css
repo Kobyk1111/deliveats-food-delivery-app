@@ -850,7 +850,7 @@ h2 {
 .navbar-profile ul li button:hover {
   border-bottom: 2px solid #000;
 }
-
+/* ******************************************* USER PROFILE STYLING ********************************************************** */
 .profile-button{
   padding: 10px 20px;
   margin: 0 10px;
@@ -930,6 +930,8 @@ h2 {
 .userProfileDelete:hover {
   background-color: #ff1a1a;
 }
+
+/* ************************************************** USER PROFILE STYLING - END ************************************************** */
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
