@@ -77,18 +77,18 @@ function UserProfile(){
     }
   }
   return (
-    <>
-    <form onSubmit={handleUpdate}>
+    <div className="userProfileContainer">
+    <form className="userProfileForm" onSubmit={handleUpdate}>
       <h2>Profile</h2>
       <input type="text" name="firstName" placeholder="First Name" value={user.firstName} onChange={handleChange} />
       <input type="text" name="lastName" placeholder="Last Name" value={user.lastName} onChange={handleChange} />
       <input type="email" name="email" placeholder="Email" value={user.email} onChange={handleChange} />
       <input type="password" name="password" placeholder="Password" value={user.password} onChange={handleChange} />
-      <button>Update</button>
+      <button className="userProfileUpdate">Update</button>
       
     </form>
-    <button onClick={handleDelete}>Delete Account</button>
-    </>
+    <button className="userProfileDelete" onClick={handleDelete}>Delete Account</button>
+    </div>
     
   );
 }

@@ -851,6 +851,85 @@ h2 {
   border-bottom: 2px solid #000;
 }
 
+.profile-button{
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #266241;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.profile-button:hover {
+  background-color: #163825;
+}
+.userProfileContainer{
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items:end
+}
+.userProfileForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 25%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.userProfileForm input{
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.userProfileUpdate{
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  background-color: #266241;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center
+}
+.userProfileUpdate:hover {
+  background-color: #163825;
+}
+.userProfileDelete{
+  margin-bottom: 20px;
+  text-align: left;
+  width: 25%;
+  background-color: #d34949;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  
+  text-align: center
+  
+}
+.userProfileDelete:hover {
+  background-color: #ff1a1a;
+}
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
