@@ -6,124 +6,8 @@
 }
 
 /* ****************** NAVBAR ****************** */
+/* it is in Navbar.css */
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-width: 400px;
-  padding: 0.6rem 3rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  background-color: rgb(229, 224, 224);
-  z-index: 10;
-}
-
-.register-login-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-}
-
-.toggle-button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: #266241;
-  color: white;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-button.active {
-  background-color: #57635c;
-}
-
-.toggle-button:hover {
-  background-color: #163825;
-}
-
-.logout-button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: #266241;
-  color: white;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.logout-button.active {
-  background-color: #57635c;
-}
-
-.logout-button:hover {
-  background-color: #163825;
-}
-.welcome-message {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-}
-
-.register-login-container {
-  width: 100%;
-  /* max-width: 500px; */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.name-fields {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-label {
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #eee2e2;
-  border-radius: 5px;
-}
-
-.form-input:focus {
-  border-color: #266241;
-  outline: none;
-}
-
-.submit-button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #266241;
-  color: white;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #163825;
-}
 
 /* ****************** SEARCH BAR HOME ****************** */
 
@@ -264,25 +148,22 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ensures the page fills the viewport height */
+  min-height: 100vh;
   padding: 20px;
 }
 
 .basket {
   margin-bottom: 20px;
-  /* Add additional styling for basket section */
 }
 
 .search-bar-container {
   margin-top: 20px;
-  /* Add additional styling for search bar container */
 }
 
-.restaurant-list {
-  /* Add styling for restaurant list section */
-}
+/* .restaurant-list {
 
-/* Example additional styles */
+} */
+
 .delivery-toggle {
   margin-bottom: 10px;
 }
@@ -306,7 +187,6 @@ footer {
 }
 
 .results-searchbar .search-container {
-  /* background-color: rgb(38, 98, 65, 0.1); */
   margin-top: 60px;
   padding: 30px;
 }
@@ -760,7 +640,11 @@ h2 {
 
 .timeline-item.completed .timeline-icon,
 .timeline-item.current .timeline-icon {
-  background-color: rgb(38, 98, 65); /* Green for completed and current stages */
+  background-color: rgb(
+    38,
+    98,
+    65
+  ); /* Green for completed and current stages */
 }
 
 .timeline-content {
@@ -790,8 +674,8 @@ h2 {
 
 .container-profile {
   margin: 100px 50px;
-  width: 80%;
-  height: 80vh;
+  height: 100vh;
+  /* width: 80%; */
 }
 .header-profile {
   display: flex;
@@ -973,3 +857,6 @@ button:hover {
 .read-the-docs {
   color: #888;
 } */
+
+
+

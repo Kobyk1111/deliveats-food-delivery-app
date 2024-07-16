@@ -1,0 +1,112 @@
+/* src/AddressBook.css */
+
+.address-book {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+.address-book h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.address-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address-info {
+  color: #424242;
+}
+
+.address-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.address-actions button {
+  background: none;
+  border: none;
+  color: rgb(38, 98, 65);
+  cursor: pointer;
+}
+
+.address-actions button:hover {
+  text-decoration: underline;
+}
+
+.address-edit {
+  display: flex;
+  gap: 10px;
+}
+
+.address-edit input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.address-edit button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #266241;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.address-edit button:hover {
+  background-color: #266241;
+}
+
+.add-address-button {
+  display: block;
+  /* width: 50%; */
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: #266241;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-address-button:hover {
+  background-color: #266241;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-link {
+  color: black;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  background-color: #f0f0f0;
+}
