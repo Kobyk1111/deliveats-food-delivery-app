@@ -19,7 +19,7 @@ const additionalInfoSchema = new Schema({
 
 const historySchema = new Schema(
   {
-    restaurantName: { type: String, required: true },
+    restaurantName: { type: String, /* required: true */ default: "No information" },
     items: {
       type: [orderItemsSchema],
       required: true,

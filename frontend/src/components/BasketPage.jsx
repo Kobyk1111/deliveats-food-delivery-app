@@ -1,17 +1,12 @@
 /* eslint-disable react/prop-types */
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import { loadStripe } from "@stripe/stripe-js";
 import Searchbar from "./Searchbar"; // Import Searchbar component
 
 function BasketPage({ id, restaurants }) {
-  const {
-    basket,
-    removeItemFromBasket,
-    increaseItemQuantity,
-    decreaseItemQuantity,
-    totalSum,
-  } = useContext(BasketContext);
+  const { basket, removeItemFromBasket, increaseItemQuantity, decreaseItemQuantity, totalSum } =
+    useContext(BasketContext);
 
   const [deliveryOption, setDeliveryOption] = useState("delivery");
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,10 +23,7 @@ function BasketPage({ id, restaurants }) {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:5002/create-checkout-session",
-        settings
-      );
+      const response = await fetch("http://localhost:5002/create-checkout-session", settings);
 
       if (response.ok) {
         const session = await response.json();
@@ -65,10 +57,7 @@ function BasketPage({ id, restaurants }) {
           >
             Delivery
           </button>
-          <button
-            className={deliveryOption === "pickup" ? "active" : ""}
-            onClick={() => setDeliveryOption("pickup")}
-          >
+          <button className={deliveryOption === "pickup" ? "active" : ""} onClick={() => setDeliveryOption("pickup")}>
             Pickup
           </button>
         </div>
@@ -88,13 +77,8 @@ function BasketPage({ id, restaurants }) {
                     <span>{item.quantity}</span>
                     <button onClick={() => increaseItemQuantity(item._id)}>+</button>
                   </div>
-                  <span className="item-total">
-                    ${(item.price * item.quantity).toFixed(2)}
-                  </span>
-                  <button
-                    className="remove-button"
-                    onClick={() => removeItemFromBasket(item._id)}
-                  >
+                  <span className="item-total">${(item.price * item.quantity).toFixed(2)}</span>
+                  <button className="remove-button" onClick={() => removeItemFromBasket(item._id)}>
                     Remove
                   </button>
                 </div>
@@ -109,12 +93,11 @@ function BasketPage({ id, restaurants }) {
       </div>
 
       <div className="search-bar-container">
-      <h2>Order Your Favorite Food Here</h2>
+        <h2>Order Your Favorite Food Here</h2>
         <Searchbar className="restaurant-search" setSearchQuery={setSearchQuery} />
       </div>
 
       <div className="restaurant-list">
-       
         <ul>
           {filteredRestaurants.map((restaurant) => (
             <li key={restaurant.id}>{restaurant.name}</li>

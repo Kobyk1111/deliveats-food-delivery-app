@@ -35,9 +35,11 @@ export async function checkout(req, res, next) {
   res.json({ id: session.id });
 }
 
-export async function getOrderDetails(req, res, next) {
-  const { sessionId, basket, totalSum } = req.body;
+export async function setOrderDetails(req, res, next) {
+  const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
   const { id } = req.params;
+
+  console.log(restaurantName);
 
   try {
     // Promise.all will make the two functions run at the same time since none of them depends on the other.
@@ -57,9 +59,6 @@ export async function getOrderDetails(req, res, next) {
       return next(createHttpError(400, "Order History could not be retrieved"));
     }
 
-    // const session = orderHistory[0]
-    // const lineItems = orderHistory[1]
-
     const basketItems = basket.map((item) => {
       return {
         itemName: item.name,
@@ -70,7 +69,7 @@ export async function getOrderDetails(req, res, next) {
     });
 
     const orderHistorySaved = {
-      restaurantName: "Den Home Restaurant",
+      restaurantName: restaurantName,
       items: basketItems,
       totalSum: totalSum,
       paymentDetails: {
@@ -78,7 +77,7 @@ export async function getOrderDetails(req, res, next) {
         chargedAmount: totalSum,
       },
       additionalInfo: {
-        orderType: "Delivery",
+        orderType: deliveryOption,
         orderStatus: "Delivered",
       },
     };

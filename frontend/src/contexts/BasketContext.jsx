@@ -5,9 +5,8 @@ export const BasketContext = createContext();
 
 const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useState([]);
-
+  const [purchasedItems, setPurchasedItems] = useState([]);
   const [deliveryOption, setDeliveryOption] = useState("delivery");
-  // const [totalSumSave, setTotalSumSave] = useState(0);
 
   useEffect(() => {
     const savedBasket = localStorage.getItem("basket");
@@ -16,6 +15,7 @@ const BasketProvider = ({ children }) => {
     if (savedBasket) {
       const parsedBasket = JSON.parse(savedBasket);
       setBasket(parsedBasket);
+      localStorage.removeItem("basket");
       // const newTotalSum = parsedBasket.reduce(
       //   (sum, item) => sum + item.price * item.quantity,
       //   0
@@ -25,8 +25,14 @@ const BasketProvider = ({ children }) => {
 
     if (savedDeliveryOption) {
       setDeliveryOption(savedDeliveryOption);
+      localStorage.removeItem("deliveryOption");
     }
   }, []);
+
+  function completePurchase() {
+    setPurchasedItems([...basket]);
+    setBasket([]);
+  }
 
   // const totalSum = basket.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -34,13 +40,15 @@ const BasketProvider = ({ children }) => {
     return basket.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }, [basket]);
 
+  const totalSumPurchasedItems = useMemo(() => {
+    return purchasedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  }, [purchasedItems]);
+
   const addItemToBasket = (item) => {
     setBasket((prev) => {
       const existingItem = prev.find((i) => i._id === item._id);
       if (existingItem) {
-        return prev.map((i) =>
-          i._id === item._id ? { ...i, quantity: i.quantity + 1 } : i
-        );
+        return prev.map((i) => (i._id === item._id ? { ...i, quantity: i.quantity + 1 } : i));
       } else {
         return [...prev, { ...item, quantity: 1 }];
       }
@@ -52,20 +60,12 @@ const BasketProvider = ({ children }) => {
   };
 
   const increaseItemQuantity = (id) => {
-    setBasket((prev) =>
-      prev.map((item) =>
-        item._id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
-    );
+    setBasket((prev) => prev.map((item) => (item._id === id ? { ...item, quantity: item.quantity + 1 } : item)));
   };
 
   const decreaseItemQuantity = (id) => {
     setBasket((prev) =>
-      prev.map((item) =>
-        item._id === id && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
+      prev.map((item) => (item._id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item))
     );
   };
 
@@ -80,6 +80,9 @@ const BasketProvider = ({ children }) => {
         increaseItemQuantity,
         decreaseItemQuantity,
         totalSum,
+        completePurchase,
+        purchasedItems,
+        totalSumPurchasedItems,
       }}
     >
       {children}

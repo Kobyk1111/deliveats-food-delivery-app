@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
@@ -8,9 +8,9 @@ import Basket from "../components/Basket";
 
 function RestaurantMenu() {
   const { id } = useParams();
-  const { restaurants, getSearchedRestaurants } = useContext(DataContext);
+  const { restaurants, getSearchedRestaurants, restaurant, setRestaurant } = useContext(DataContext);
   const { addItemToBasket } = useContext(BasketContext);
-  const [restaurant, setRestaurant] = useState(null);
+  // const [restaurant, setRestaurant] = useState(null);
 
   // const restaurant = restaurants.find((r) => r._id === id);
 

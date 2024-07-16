@@ -18,6 +18,28 @@ export async function registerUser(req, res, next) {
 
       const newUser = await User.create({ firstName, lastName, email, password: hashedPassword });
 
+      const accessToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
+      const refreshToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
+
+      const cookieOptions = {
+        httpOnly: true,
+        secure: true,
+        sameSite: "Strict",
+      };
+
+      const accessOptions = {
+        ...cookieOptions,
+        maxAge: 1000 * 60 * 15,
+      };
+
+      const refreshOptions = {
+        ...cookieOptions,
+        maxAge: 1000 * 60 * 60 * 24,
+      };
+
+      res.cookie("accessCookie", accessToken, accessOptions);
+      res.cookie("refreshCookie", refreshToken, refreshOptions);
+
       res.status(201).json({
         id: newUser._id,
         firstName: newUser.firstName,
@@ -45,6 +67,28 @@ export async function loginUser(req, res, next) {
         return next(createHttpError(400, "Wrong Password, please try again!"));
       }
 
+      const accessToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
+      const refreshToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
+
+      const cookieOptions = {
+        httpOnly: true,
+        secure: true,
+        sameSite: "Strict",
+      };
+
+      const accessOptions = {
+        ...cookieOptions,
+        maxAge: 1000 * 60 * 15,
+      };
+
+      const refreshOptions = {
+        ...cookieOptions,
+        maxAge: 1000 * 60 * 60 * 24,
+      };
+
+      res.cookie("accessCookie", accessToken, accessOptions);
+      res.cookie("refreshCookie", refreshToken, refreshOptions);
+
       res.json({
         id: foundUser._id,
         firstName: foundUser.firstName,
@@ -56,5 +100,24 @@ export async function loginUser(req, res, next) {
     }
   } catch (error) {
     next(createHttpError(500, "login unsuccessful"));
+  }
+}
+
+export async function checkAuthentication(req, res, next) {
+  try {
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      return next(400, createHttpError("User not found, Authentication failed! Please login."));
+    }
+
+    res.json({
+      id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+    });
+  } catch (error) {
+    return next(createHttpError(500, "Authentication failed! Please login again."));
   }
 }

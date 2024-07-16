@@ -7,15 +7,27 @@ function DataContextProvider({ children }) {
   const [data, setData] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
+  const [restaurant, setRestaurant] = useState(null);
   const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
 
-  // console.log(loggedInUser);
+  async function logout() {
+    try {
+      const response = await fetch("http://localhost:5002/logout", { method: "POST", credentials: "include" });
 
-  function logout() {
-    setLoggedInUser(null);
+      if (response.ok) {
+        const { message } = await response.json();
+        alert(message);
+        setLoggedInUser(null);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      alert(error.message);
+      console.log(error.message);
+    }
   }
 
-  // console.log(data);
   async function getSearchedRestaurants() {
     try {
       const response = await fetch("http://localhost:5002/search/getRestaurants");
@@ -31,9 +43,38 @@ function DataContextProvider({ children }) {
     }
   }
 
-  // useEffect(() => {
-  //   getSearchedRestaurants(); // Fetch restaurants initially
-  // }, []);
+  async function handleHTTPRequestWithToken(url, settings) {
+    const firstAccessResponse = await fetch(url, settings);
+
+    if (firstAccessResponse.ok) {
+      return firstAccessResponse;
+    } else {
+      let error;
+      try {
+        const responseClone = firstAccessResponse.clone();
+        error = await responseClone.json();
+      } catch (err) {
+        console.log("Failed to parse JSON response", err);
+      }
+
+      if (error.status !== 401) {
+        return firstAccessResponse;
+      }
+
+      console.log("Access Token has expired");
+
+      const refreshResponse = await fetch("http://localhost:5002/refresh-token", { credentials: "include" });
+
+      if (refreshResponse.ok) {
+        console.log("New tokens received");
+
+        const secondAccessResponse = await fetch(url, settings);
+        return secondAccessResponse;
+      } else {
+        return refreshResponse;
+      }
+    }
+  }
 
   return (
     <DataContext.Provider
@@ -48,6 +89,9 @@ function DataContextProvider({ children }) {
         getSearchedRestaurants,
         sessionId,
         setSessionId,
+        handleHTTPRequestWithToken,
+        restaurant,
+        setRestaurant,
       }}
     >
       {children}

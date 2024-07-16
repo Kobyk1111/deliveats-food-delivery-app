@@ -1,9 +1,4 @@
-
-
 import { useNavigate } from "react-router-dom";
-
-
-
 import { useState, useEffect, useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 
@@ -31,7 +26,6 @@ const pickupStages = [
 function DeliveryTracker() {
   const { deliveryOption } = useContext(BasketContext);
 
-
   const [currentStage, setCurrentStage] = useState(0);
   const [completedStages, setCompletedStages] = useState([]);
   const navigate = useNavigate();
@@ -51,10 +45,7 @@ function DeliveryTracker() {
           year: "numeric",
         });
 
-        setCompletedStages((prev) => [
-          ...prev,
-          { ...stages[currentStage], timestamp: currentTime },
-        ]);
+        setCompletedStages((prev) => [...prev, { ...stages[currentStage], timestamp: currentTime }]);
         setCurrentStage((prev) => prev + 1);
       }, stages[currentStage].duration);
       return () => clearTimeout(timer);
@@ -62,17 +53,12 @@ function DeliveryTracker() {
       // After delivery is completed, navigate to success page
       navigate("/success");
     }
-
-
-
-  
-
   }, [currentStage, stages]);
 
   const handleBackToMainPage = () => {
     navigate("/");
   };
-  
+
   return (
     <div className="tracking-container">
       <h2>Track Your Order</h2>
@@ -81,19 +67,16 @@ function DeliveryTracker() {
         {stages.map((stage, index) => (
           <div
             key={index}
-
-            className={`timeline-item ${
-              completedStages.length > index ? "completed" : ""
-            } ${currentStage === index ? "current" : ""}`}
+            className={`timeline-item ${completedStages.length > index ? "completed" : ""} ${
+              currentStage === index ? "current" : ""
+            }`}
           >
             <div className="timeline-icon"></div>
             <div className="timeline-content">
               <p className="timeline-status">{stage.status}</p>
 
               {completedStages.length > index && (
-                <p className="timeline-timestamp">
-                  {completedStages[index].timestamp}
-                </p>
+                <p className="timeline-timestamp">{completedStages[index].timestamp}</p>
               )}
             </div>
           </div>
@@ -116,11 +99,6 @@ function DeliveryTracker() {
       </div>
     </div>
   );
-};
-
-
-      
-
-
+}
 
 export default DeliveryTracker;
