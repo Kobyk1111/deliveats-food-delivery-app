@@ -22,9 +22,9 @@ function Footer() {
         <div className="footer-section social">
           <h2>Follow Us</h2>
           <div className="social-icons">
-            <a href="#" className="social-icon icon-facebook">&#xf09a;</a>
-            <a href="#" className="social-icon icon-twitter">&#xf099;</a>
-            <a href="#" className="social-icon icon-instagram">&#xf16d;</a>
+            <a href="#" className="social-icon"><i className="fab fa-facebook-f"></i></a>
+            <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
+            <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>

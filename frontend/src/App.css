@@ -851,6 +851,106 @@ h2 {
   border-bottom: 2px solid #000;
 }
 
+
+/* ****************** ADDRESSES CSS ****************** */
+
+
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+ 
+  
+}
+
+.address-book {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.address-book h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.address-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.address-view,
+.address-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-input,
+.address-input,
+.address-edit input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button,
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-button,
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-address-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #2196f3;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
