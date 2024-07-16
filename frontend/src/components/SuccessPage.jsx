@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import DeliveryTracker from "./DeliveryTracker";
 import Navbar from "./Navbar";
@@ -6,16 +6,23 @@ import Footer from "./Footer";
 import { DataContext } from "../contexts/DataContext";
 
 function SuccessPage() {
-  const { deliveryOption, basket, totalSum } = useContext(BasketContext);
-
+  const { deliveryOption, totalSum, totalSumPurchasedItems, basket, purchasedItems, completePurchase } =
+    useContext(BasketContext);
   const { sessionId, loggedInUser } = useContext(DataContext);
-
-  console.log(sessionId);
+  const [restaurantName, setRestaurantName] = useState(JSON.parse(localStorage.getItem("restaurantName") || ""));
 
   useEffect(() => {
-    async function getOrderDetails() {
+    const getRestaurantName = JSON.parse(localStorage.getItem("restaurantName"));
+
+    if (getRestaurantName) {
+      setRestaurantName(getRestaurantName);
+    }
+  }, []);
+
+  useEffect(() => {
+    async function setOrderDetails() {
       const settings = {
-        body: JSON.stringify({ sessionId, basket, totalSum }),
+        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
         headers: {
           "Content-Type": "application/JSON",
         },
@@ -24,11 +31,12 @@ function SuccessPage() {
 
       try {
         const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderDetails/${loggedInUser.id}`,
+          `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
           settings
         );
         if (response.ok) {
           await response.json();
+          completePurchase(); // Clear the basket and set purchasedItems
         } else {
           const { error } = await response.json();
           throw new Error(error.message);
@@ -37,8 +45,12 @@ function SuccessPage() {
         console.log(error.message);
       }
     }
-    getOrderDetails();
+    setOrderDetails();
   }, [sessionId]);
+
+  useEffect(() => {
+    completePurchase();
+  }, []);
 
   return (
     <>
@@ -54,12 +66,12 @@ function SuccessPage() {
           </div>
           <div className="card-order-details">
             <h2>Order Details</h2>
-            {basket.map((item) => (
+            {purchasedItems.map((item) => (
               <p key={item._id}>
                 {item.quantity} x {item.name}
               </p>
             ))}
-            <p className="total">Total: €{totalSum.toFixed(2)}</p>
+            <p className="total">Total: €{totalSumPurchasedItems.toFixed(2)}</p>
           </div>
         </div>
         <div className="trackerContainer">

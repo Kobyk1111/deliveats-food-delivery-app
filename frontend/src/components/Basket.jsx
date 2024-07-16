@@ -2,6 +2,7 @@
 import { useContext, useEffect } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import { loadStripe } from "@stripe/stripe-js";
+import { DataContext } from "../contexts/DataContext";
 // import { DataContext } from "../contexts/DataContext";
 
 function Basket({ id }) {
@@ -14,16 +15,14 @@ function Basket({ id }) {
     decreaseItemQuantity,
     totalSum,
   } = useContext(BasketContext);
+  const { restaurant } = useContext(DataContext);
   // const { setSessionId } = useContext(DataContext);
-
 
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("deliveryOption", deliveryOption);
-  }, [basket, deliveryOption]);
-
-
-
+    localStorage.setItem("restaurantName", JSON.stringify(restaurant.name));
+  }, [basket, deliveryOption, restaurant.name]);
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
@@ -84,20 +83,14 @@ function Basket({ id }) {
                 </div>
                 <div className="item-controls">
                   <div className="item-quantity">
-
                     <button onClick={() => decreaseItemQuantity(item._id)}>-</button>
 
-                   
-
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseItemQuantity(item._id)}>
-                      +
-                    </button>
+                    <button onClick={() => increaseItemQuantity(item._id)}>+</button>
                   </div>
 
                   <span className="item-total">${(item.price * item.quantity).toFixed(2)}</span>
                   <button className="remove-button" onClick={() => removeItemFromBasket(item._id)}>
-
                     x
                   </button>
                 </div>

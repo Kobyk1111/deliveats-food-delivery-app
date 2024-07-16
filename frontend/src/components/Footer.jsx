@@ -1,5 +1,4 @@
-import React from 'react';
-import './Footer.css';
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -7,24 +6,39 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section about">
           <h2>DelivEats</h2>
-          <p>DelivEats is your go-to app for fast, reliable food delivery from your favorite restaurants. Savor the flavors of the city from the comfort of your home!</p>
+          <p>
+            DelivEats is your go-to app for fast, reliable food delivery from your favorite restaurants. Savor the
+            flavors of the city from the comfort of your home!
+          </p>
         </div>
         <div className="footer-section links">
           <h2>Quick Links</h2>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">Orders</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Sign Up</a>
+            </li>
           </ul>
         </div>
         <div className="footer-section social">
           <h2>Follow Us</h2>
           <div className="social-icons">
+
             <a href="#" className="social-icon"><i className="fab fa-facebook-f"></i></a>
             <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
             <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
+
           </div>
         </div>
       </div>

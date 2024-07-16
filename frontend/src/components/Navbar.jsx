@@ -1,13 +1,17 @@
+
 import { useContext, useState, useEffect, useRef } from "react";
+
 import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
 import RegisterAndLogin from "./RegisterAndLogin";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faCartShopping, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import "../style/Navbar.css";
+
 
 function Navbar() {
   const { loggedInUser, logout } = useContext(DataContext);
@@ -37,6 +41,7 @@ function Navbar() {
     <>
       <nav>
         {loggedInUser ? (
+
           <div className="user-info" ref={dropdownRef}>
             <span className="welcome-message" onClick={toggleDropdown}>
               Welcome, {loggedInUser.firstName}! {""}
@@ -57,6 +62,7 @@ function Navbar() {
                 </button>
               </div>
             )}
+
 
             <Link to="/BasketPage" className="cart-logo">
               <FontAwesomeIcon

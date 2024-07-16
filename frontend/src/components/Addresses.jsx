@@ -1,5 +1,6 @@
 
 
+
 import "../style/Adressess.css";
 
 
@@ -14,7 +15,6 @@ function Addresses() {
   const [label, setLabel] = useState('');
   const [address, setAddress] = useState('');
 
-
   const handleEdit = (id) => {
     setEditingId(id);
     const addressToEdit = addresses.find((address) => address.id === id);
@@ -24,8 +24,10 @@ function Addresses() {
 
   const handleSave = (id) => {
 
+
     const updatedAddresses = addresses.map(address =>
       address.id === id ? { ...address, address: editedAddress, label: editedLabel } : address
+
 
     );
     setAddresses(updatedAddresses);
@@ -41,10 +43,12 @@ function Addresses() {
   };
 
 
+
   const handleAddNewAddress = (e) => {
     e.preventDefault();
 
     const newAddress = { id: addresses.length + 1, label: label, address: address };
+
 
     setAddresses([...addresses, newAddress]);
     setLabel('');
@@ -90,11 +94,13 @@ function Addresses() {
         ))}
       </ul>
 
+
       <form>
         <input type="text" value={label} onChange={(e) => setLabel(e.target.value)} placeholder="Label" required />
         <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address" required />
         <button className="add-address-button" onClick={handleAddNewAddress}>Add New Address</button>
       </form>
+
 
     </div>
   );
