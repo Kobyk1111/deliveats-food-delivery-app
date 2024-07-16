@@ -59,7 +59,9 @@ function RegisterAndLogin() {
     // If isToRegister is true, we send the request to the register route, if isToRegister is false, then we send the request to the login route
     try {
       const response = await fetch(
-        isToRegister ? "http://localhost:5002/users/register" : "http://localhost:5002/users/login",
+        isToRegister
+          ? "http://localhost:5002/users/register"
+          : "http://localhost:5002/users/login",
         settings
       );
 
@@ -161,7 +163,9 @@ function RegisterAndLogin() {
                   className="form-input"
                 />
               </label>
-              <button className="submit-button">{isToRegister ? "Register" : "Login"}</button>
+              <button className="submit-button">
+                {isToRegister ? "Register" : "Login"}
+              </button>
             </form>
           </div>
         )}
