@@ -1,19 +1,14 @@
-
-
-
 import "../style/Adressess.css";
-
-
-import React, { useState } from 'react';
+import { useState } from "react";
 
 function Addresses() {
   const [addresses, setAddresses] = useState([]);
 
   const [editingId, setEditingId] = useState(null);
-  const [editedAddress, setEditedAddress] = useState('');
-  const [editedLabel, setEditedLabel] = useState('');
-  const [label, setLabel] = useState('');
-  const [address, setAddress] = useState('');
+  const [editedAddress, setEditedAddress] = useState("");
+  const [editedLabel, setEditedLabel] = useState("");
+  const [label, setLabel] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleEdit = (id) => {
     setEditingId(id);
@@ -23,12 +18,8 @@ function Addresses() {
   };
 
   const handleSave = (id) => {
-
-
-    const updatedAddresses = addresses.map(address =>
+    const updatedAddresses = addresses.map((address) =>
       address.id === id ? { ...address, address: editedAddress, label: editedLabel } : address
-
-
     );
     setAddresses(updatedAddresses);
     setEditingId(null);
@@ -42,18 +33,14 @@ function Addresses() {
     setAddresses(addresses.filter((address) => address.id !== id));
   };
 
-
-
   const handleAddNewAddress = (e) => {
     e.preventDefault();
 
     const newAddress = { id: addresses.length + 1, label: label, address: address };
 
-
     setAddresses([...addresses, newAddress]);
-    setLabel('');
-    setAddress('');
-    
+    setLabel("");
+    setAddress("");
   };
 
   const handleAddressChange = (e) => {
@@ -72,21 +59,32 @@ function Addresses() {
           <li key={address.id} className="address-item">
             {editingId === address.id ? (
               <div className="address-edit">
-
                 <input type="text" value={editedLabel} onChange={handleLabelChange} placeholder="Label" required />
-                <input type="text" value={editedAddress} onChange={handleAddressChange} placeholder="Address" required />
-                <button onClick={() => handleSave(address.id)} className="save-button">Save</button>
-                <button onClick={handleCancel} className="cancel-button">Cancel</button>
+                <input
+                  type="text"
+                  value={editedAddress}
+                  onChange={handleAddressChange}
+                  placeholder="Address"
+                  required
+                />
+                <button onClick={() => handleSave(address.id)} className="save-button">
+                  Save
+                </button>
+                <button onClick={handleCancel} className="cancel-button">
+                  Cancel
+                </button>
               </div>
             ) : (
               <div className="address-view">
                 <div className="address-label">{address.label}</div>
                 <div className="address-details">{address.address}</div>
                 <div className="address-actions">
-
-                  <button onClick={() => handleEdit(address.id)} className="edit-button">Edit</button>
-                  <button onClick={() => handleDelete(address.id)} className="delete-button">Delete</button>
-
+                  <button onClick={() => handleEdit(address.id)} className="edit-button">
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete(address.id)} className="delete-button">
+                    Delete
+                  </button>
                 </div>
               </div>
             )}
@@ -94,14 +92,17 @@ function Addresses() {
         ))}
       </ul>
 
-
-      <form>
+      <form onSubmit={handleAddNewAddress}>
         <input type="text" value={label} onChange={(e) => setLabel(e.target.value)} placeholder="Label" required />
-        <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address" required />
-        <button className="add-address-button" onClick={handleAddNewAddress}>Add New Address</button>
+        <input
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          placeholder="Address"
+          required
+        />
+        <button className="add-address-button">Add New Address</button>
       </form>
-
-
     </div>
   );
 }

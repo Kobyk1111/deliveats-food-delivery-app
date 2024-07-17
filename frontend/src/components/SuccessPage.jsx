@@ -52,6 +52,53 @@ function SuccessPage() {
     completePurchase();
   }, []);
 
+  useEffect(() => {
+    async function setOrder() {
+      const settings = {
+        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+        method: "POST",
+      };
+
+      try {
+        const response = await fetch(`http://localhost:5002/create-checkout-session/setOrder`, settings);
+
+        if (response.ok) {
+          const { id } = await response.json();
+
+          if (loggedInUser) {
+            const settings = {
+              body: JSON.stringify({ orderId: id }),
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/JSON",
+              },
+            };
+            const response = await fetch(
+              `http://localhost:5002/create-checkout-session/setOrder/${loggedInUser.id}`,
+              settings
+            );
+            if (response.ok) {
+              await response.json();
+            } else {
+              const { error } = await response.json();
+              throw new Error(error.message);
+            }
+          }
+        } else {
+          const { error } = await response.json();
+          throw new Error(error.message);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+
+    setOrder();
+  }, [sessionId]);
+
   return (
     <>
       <Navbar />

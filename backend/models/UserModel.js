@@ -59,6 +59,12 @@ const userSchema = new Schema(
       type: [historySchema],
       default: [],
     },
+    orders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "OrderHistory",
+      },
+    ],
   },
   { timestamps: true }
 );
