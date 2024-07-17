@@ -53,7 +53,12 @@ import { DataContext } from "../contexts/DataContext";
 
 function Settings() {
   const { loggedInUser, setLoggedInUser } = useContext(DataContext);
-  const [user, setUser] = useState({ firstName: ``, lastName: ``, email: ``, password: `` });
+  const [user, setUser] = useState({
+    firstName: ``,
+    lastName: ``,
+    email: ``,
+    password: ``,
+  });
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -75,7 +80,10 @@ function Settings() {
       },
     };
     try {
-      const response = await fetch(`http://localhost:5002/users/update/${loggedInUser.id}`, settings);
+      const response = await fetch(
+        `http://localhost:5002/users/update/${loggedInUser.id}`,
+        settings
+      );
       if (response.ok) {
         const { message } = await response.json();
         alert(message);
@@ -95,7 +103,10 @@ function Settings() {
           //},
           //body: JSON.stringify({ userId: loggedInUser._id})
         };
-        const response = await fetch(`http://localhost:5002/users/delete/${loggedInUser.id}`, settings);
+        const response = await fetch(
+          `http://localhost:5002/users/delete/${loggedInUser.id}`,
+          settings
+        );
 
         if (response.ok) {
           const { message } = await response.json();
@@ -114,11 +125,35 @@ function Settings() {
   return (
     <div className="userProfileContainer">
       <form className="userProfileForm" onSubmit={handleUpdate}>
-        <h2>Profile</h2>
-        <input type="text" name="firstName" placeholder="First Name" value={user.firstName} onChange={handleChange} />
-        <input type="text" name="lastName" placeholder="Last Name" value={user.lastName} onChange={handleChange} />
-        <input type="email" name="email" placeholder="Email" value={user.email} onChange={handleChange} />
-        <input type="password" name="password" placeholder="Password" value={user.password} onChange={handleChange} />
+        <h2>Settings</h2>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          value={user.firstName}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          value={user.lastName}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={user.email}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={user.password}
+          onChange={handleChange}
+        />
         <button className="userProfileUpdate">Update</button>
       </form>
       <button className="userProfileDelete" onClick={handleDelete}>
