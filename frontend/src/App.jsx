@@ -44,7 +44,7 @@ function App() {
       } finally {
         setTimeout(() => {
           setIsInitialLoad(false); // Mark initial load as complete after delay
-        }, 5000); //
+        }, 500); //
       }
     }
 

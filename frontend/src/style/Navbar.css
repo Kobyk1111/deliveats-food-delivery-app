@@ -85,7 +85,7 @@
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   min-width: 400px;
   height: 4rem;
@@ -96,6 +96,19 @@ nav {
   width: 100%;
   background-color: rgb(229, 224, 224);
   z-index: 10;
+}
+
+nav h1 {
+  font-family: "Merienda", cursive;
+  font-weight: bolder;
+  font-size: 2.2rem;
+  color: #163825;
+  cursor: pointer;
+}
+
+.basket-and-register-container {
+  display: flex;
+  align-items: center;
 }
 
 .user-info {

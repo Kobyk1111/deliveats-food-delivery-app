@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Pacifico&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,15 @@
   font-family: Arial, sans-serif;
 }
 
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* ****************** NAVBAR ****************** */
 /* it is in Navbar.css */
-
 
 /* ****************** SEARCH BAR HOME ****************** */
 
@@ -24,7 +32,7 @@
 .home-searchbar .search-container {
   background-image: url("https://imageproxy.wolt.com/venue/60c438f43b9448233d9907cf/2c0a32ee-d34c-11eb-9198-5e1d1b316988_food_brothers_close_up_3.jpg");
   padding: 200px;
-  cover: 100%;
+  /* cover: 100%; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -640,11 +648,7 @@ h2 {
 
 .timeline-item.completed .timeline-icon,
 .timeline-item.current .timeline-icon {
-  background-color: rgb(
-    38,
-    98,
-    65
-  ); /* Green for completed and current stages */
+  background-color: rgb(38, 98, 65); /* Green for completed and current stages */
 }
 
 .timeline-content {
@@ -735,7 +739,7 @@ h2 {
   border-bottom: 2px solid #000;
 }
 /* ******************************************* USER PROFILE STYLING ********************************************************** */
-.profile-button{
+.profile-button {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
@@ -749,14 +753,14 @@ h2 {
 .profile-button:hover {
   background-color: #163825;
 }
-.userProfileContainer{
+.userProfileContainer {
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items:end
+  align-items: end;
 }
-.userProfileForm{
+.userProfileForm {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -770,7 +774,7 @@ h2 {
   padding: 20px;
 }
 
-.userProfileForm input{
+.userProfileForm input {
   margin-bottom: 20px;
   text-align: left;
   width: 100%;
@@ -780,47 +784,45 @@ h2 {
   padding: 10px;
 }
 
-.userProfileUpdate{
+.userProfileUpdate {
   margin-bottom: 20px;
   text-align: left;
   width: 100%;
   background-color: #266241;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;color: white;
+  padding: 10px;
+  color: white;
   font-size: 16px;
   transition: background-color 0.3s ease;
   cursor: pointer;
-  text-align: center
+  text-align: center;
 }
 .userProfileUpdate:hover {
   background-color: #163825;
 }
-.userProfileDelete{
+.userProfileDelete {
   margin-bottom: 20px;
   text-align: left;
   width: 25%;
   background-color: #d34949;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;color: white;
+  padding: 10px;
+  color: white;
   font-size: 16px;
   transition: background-color 0.3s ease;
   cursor: pointer;
-  
-  text-align: center
-  
+
+  text-align: center;
 }
 .userProfileDelete:hover {
   background-color: #ff1a1a;
 }
 
-
 /* ************************************************** USER PROFILE STYLING - END ************************************************** */
 
-
 /* ****************** ADDRESSES CSS ****************** */
-
 
 .address-book {
   max-width: 600px;
@@ -907,7 +909,6 @@ button:hover {
   opacity: 0.85;
 }
 
-
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -930,6 +931,3 @@ button:hover {
 .read-the-docs {
   color: #888;
 } */
-
-
-
