@@ -14,6 +14,7 @@ function RegisterAndLogin() {
   // state to check if user wants to register
   const [isToRegister, setIsToRegister] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTermsChecked, setIsTermsChecked] = useState(false); // state variable to control the checkbox
 
   const { setLoggedInUser } = useContext(DataContext);
 
@@ -24,10 +25,19 @@ function RegisterAndLogin() {
   function handleChange(e) {
     setLoginInputs({ ...loginInputs, [e.target.name]: e.target.value });
   }
+  // function to handle checkbox
+  function handleCheckboxChange(e){
+    setIsTermsChecked(e.target.checked);
+  }
 
   // function to run when the form is submitted
   async function handleSubmit(e) {
     e.preventDefault();
+
+    if(isToRegister && !isTermsChecked){
+      alert("You must agree to the Terms of Use before proceeding.");
+      return;
+    }
 
     // Since we are doing conditional request, we first declare a variable to contain the object we are sending
     let user;
@@ -87,6 +97,7 @@ function RegisterAndLogin() {
       email: "",
       password: "",
     });
+    setIsTermsChecked(false); // Reset the checkbox state
   }
 
   return (
@@ -164,6 +175,19 @@ function RegisterAndLogin() {
                   className="form-input"
                 />
               </label>
+              {isToRegister && (
+                <label className="form-label">
+                <input 
+                  type="checkbox"
+                  checked={isTermsChecked}
+                  onChange={handleCheckboxChange}
+                  required
+                  className="form-checkbox"
+                />
+                 <span>    I agree to the Terms of Use.</span>
+               </label>
+              )}
+              
               <button className="submit-button">
                 {isToRegister ? "Register" : "Login"}
               </button>
