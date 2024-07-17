@@ -96,7 +96,7 @@ function Navbar() {
       </nav>
 
       <CustomModal isOpen={isBasketModalOpen} onClose={closeBasketModal}>
-        <Basket />
+        <Basket isModal={true} />
       </CustomModal>
     </>
   );

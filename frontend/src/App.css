@@ -369,7 +369,7 @@ footer {
   position: sticky;
   top: 0;
   right: 0;
-  height: 100vh;
+  /* height: 100vh; */
   overflow-y: auto;
   padding: 20px;
   background-color: #fff;
@@ -511,6 +511,8 @@ h3 {
   background-color: #163825;
 }
 
+
+
 /* ****************** SUCCESS PAGE ******************  */
 
 .successPage {
@@ -648,7 +650,11 @@ h2 {
 
 .timeline-item.completed .timeline-icon,
 .timeline-item.current .timeline-icon {
-  background-color: rgb(38, 98, 65); /* Green for completed and current stages */
+  background-color: rgb(
+    38,
+    98,
+    65
+  ); /* Green for completed and current stages */
 }
 
 .timeline-content {
