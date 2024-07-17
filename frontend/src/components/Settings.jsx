@@ -50,8 +50,10 @@
 
 import { useState, useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
+import { useNavigate } from "react-router-dom";
 
 function Settings() {
+  const navigate = useNavigate();
   const { loggedInUser, setLoggedInUser } = useContext(DataContext);
   const [user, setUser] = useState({
     firstName: ``,
@@ -85,8 +87,8 @@ function Settings() {
         settings
       );
       if (response.ok) {
-        const { message } = await response.json();
-        alert(message);
+        const user = await response.json();
+        setLoggedInUser(user);
       }
     } catch (error) {
       console.log(error);
@@ -107,18 +109,21 @@ function Settings() {
           `http://localhost:5002/users/delete/${loggedInUser.id}`,
           settings
         );
+        console.log(response);
 
         if (response.ok) {
           const { message } = await response.json();
           alert(message);
           setUser({ firstName: ``, lastName: ``, email: ``, password: `` });
           setLoggedInUser(null);
+          navigate("/");
         } else {
           const { error } = await response.json();
           throw new Error(error.message);
         }
       } catch (err) {
         alert(err.message);
+        console.log(err.message);
       }
     }
   };

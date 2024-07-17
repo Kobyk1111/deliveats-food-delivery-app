@@ -131,6 +131,9 @@ export async function updateUser(req, res, next) {
   try {
     const user = await User.findById(userId);
     if (user) {
+      
+      const hashedPassword = await bcrypt.hash(password, 10);
+
       const options = {
         new: true,
         runValidators: true,
@@ -141,11 +144,16 @@ export async function updateUser(req, res, next) {
           firstName,
           lastName,
           email,
-          password,
+          password: hashedPassword,
         },
         options
       );
-      res.status(200).json({ message: `${updatedUser.firstName} updated successfully` });
+      res.status(201).json({
+        id: updatedUser._id,
+        firstName: updatedUser.firstName,
+        lastName: updatedUser.lastName,
+        email: updatedUser.email,
+      })
     } else {
       return next(createHttpError(404, "User not found"));
     }
@@ -158,9 +166,11 @@ export async function deleteUser(req, res, next) {
   const { userId } = req.params;
   try {
     await User.findByIdAndDelete(userId);
-    res.status(200).send(`User deleted successfully`);
+    res.status(200).json({
+      message: `User deleted successfully`
+    });
   } catch (error) {
-    res.status(400).send(`Error deleting user`);
+    return next(createHttpError(500, "Server error"));
   }
 }
 

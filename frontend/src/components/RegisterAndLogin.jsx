@@ -15,6 +15,7 @@ function RegisterAndLogin() {
   const [isToRegister, setIsToRegister] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTermsChecked, setIsTermsChecked] = useState(false); // state variable to control the checkbox
+  const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
 
   const { setLoggedInUser } = useContext(DataContext);
 
@@ -28,6 +29,11 @@ function RegisterAndLogin() {
   // function to handle checkbox
   function handleCheckboxChange(e){
     setIsTermsChecked(e.target.checked);
+  }
+
+  // function to handle password visibility toggle
+  function togglePasswordVisibility(){
+    setShowPassword(!showPassword);
   }
 
   // function to run when the form is submitted
@@ -164,19 +170,27 @@ function RegisterAndLogin() {
                   className="form-input"
                 />
               </label>
-              <label className="form-label">
+              <label className="form-label password-field">
                 Password
-                <input
-                  type="password"
-                  name="password"
-                  value={loginInputs.password}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
+                <div className="password-input-container">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    value={loginInputs.password}
+                    onChange={handleChange}
+                    required
+                    className="form-input password-input"
+                  />
+                  <span
+                    className="password-toggle-icon"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {showPassword ? "🙈" : "👁️"}
+                  </span>
+                </div>
               </label>
               {isToRegister && (
-                <label className="form-label">
+                <label className="checkbox-form-label">
                 <input 
                   type="checkbox"
                   checked={isTermsChecked}
@@ -184,7 +198,7 @@ function RegisterAndLogin() {
                   required
                   className="form-checkbox"
                 />
-                 <span>    I agree to the Terms of Use.</span>
+                 <span>          I agree to the Terms of Use.</span>
                </label>
               )}
               

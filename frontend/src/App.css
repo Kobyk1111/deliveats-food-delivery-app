@@ -908,6 +908,64 @@ button {
 button:hover {
   opacity: 0.85;
 }
+/* ***************************** TOGGLE PASSWORD VISIBILITY AT LOGIN AND REGISTER ***********************************/
+
+/* Basic styling for the form and input fields */
+.form-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  flex: 1;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  font-weight: bold;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* *************************************** END OF TOGGLE PASSWORD VISIBILITY AT LOGIN AND REGISTER **************** */
 
 /* @keyframes logo-spin {
   from {
