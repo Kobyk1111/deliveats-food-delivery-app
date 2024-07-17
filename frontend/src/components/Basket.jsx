@@ -20,8 +20,8 @@ function Basket({ id }) {
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("deliveryOption", deliveryOption);
-    localStorage.setItem("restaurantName", JSON.stringify(restaurant.name));
-  }, [basket, deliveryOption, restaurant.name]);
+    localStorage.setItem("restaurantName", JSON.stringify(restaurant?.name));
+  }, [basket, deliveryOption, restaurant?.name]);
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);

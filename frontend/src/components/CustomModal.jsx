@@ -19,8 +19,8 @@ const CustomModal = ({ isOpen, onClose, children }) => {
           bottom: "auto",
           marginRight: "-50%",
           transform: "translate(-50%, -50%)",
-          borderRadius: "10px",
-          padding: "20px",
+          borderRadius: "5px",
+          padding: "10px",
         },
       }}
     >
