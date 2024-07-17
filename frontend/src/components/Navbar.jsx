@@ -4,23 +4,34 @@ import { Link, useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
 import RegisterAndLogin from "./RegisterAndLogin";
+import CustomModal from "./CustomModal";
+import Basket from "./Basket";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faCartShopping, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import "../style/Navbar.css";
 
 function Navbar() {
   const { loggedInUser, logout } = useContext(DataContext);
-  const { basket } = useContext(BasketContext);
+  const { basket, totalItemCount } = useContext(BasketContext);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
+  const [isBasketModalOpen, setIsBasketModalOpen] = useState(false);
+  
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const openBasketModal = () => {
+    setIsBasketModalOpen(true);
+  };
+
+  const closeBasketModal = () => {
+    setIsBasketModalOpen(false);
   };
 
   useEffect(() => {
@@ -45,7 +56,10 @@ function Navbar() {
             <div className="user-info" ref={dropdownRef}>
               <span className="welcome-message" onClick={toggleDropdown}>
                 Welcome, {loggedInUser.firstName}! {""}
-                <FontAwesomeIcon icon={faCaretDown} style={{ color: "#266241" }} />
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  style={{ color: "#266241" }}
+                />
               </span>
 
               {isDropdownOpen && (
@@ -63,12 +77,27 @@ function Navbar() {
           ) : (
             <RegisterAndLogin />
           )}
-          <Link to="/BasketPage" className="cart-logo">
-            <FontAwesomeIcon icon={faCartShopping} style={{ color: "#266241" }} />
+          {/* <Link to="/BasketPage" className="cart-logo">
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{ color: "#266241" }}
+            />
             <span className="item-count">{basket.length}</span>
-          </Link>
+          </Link> */}
+
+          <div className="cart-logo" onClick={openBasketModal}>
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{ color: "#266241" }}
+            />
+            <span className="item-count">{totalItemCount}</span>
+          </div>
         </div>
       </nav>
+
+      <CustomModal isOpen={isBasketModalOpen} onClose={closeBasketModal}>
+        <Basket />
+      </CustomModal>
     </>
   );
 }

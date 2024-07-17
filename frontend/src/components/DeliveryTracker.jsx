@@ -57,9 +57,9 @@ function DeliveryTracker() {
     }
   }, [currentStage, stages]);
 
-  // const handleBackToMainPage = () => {
-  //   navigate("/");
-  // };
+  const handleBackToMainPage = () => {
+    navigate("/");
+  };
 
   return (
     <div className="tracking-container">
@@ -91,9 +91,12 @@ function DeliveryTracker() {
         {currentStage >= stages.length && (
           <div className="completion">
             <p>Delivery Completed!</p>
-            {/* <button onClick={handleBackToMainPage} className="back-to-main-button">
+            <button
+              onClick={handleBackToMainPage}
+              className="back-to-main-button"
+            >
               Back to main page
-            </button> */}
+            </button>
           </div>
         )}
       </div>
