@@ -7,6 +7,11 @@
   margin: 5px;
 }
 
+.register-login-page .button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .toggle-button {
   padding: 10px 20px;
   margin: 0 10px;
@@ -129,7 +134,7 @@ nav h1 {
   top: 100%;
   right: 0;
   min-width: 170px;
-  background-color:#E5E0E0;
+  background-color: #e5e0e0;
   border: 1px solid #e0e0e0;
   border-radius: 0 0 15px 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -145,7 +150,6 @@ nav h1 {
   text-decoration: none;
   display: block;
   border-bottom: 1px solid rgb(195, 190, 190);
- 
 }
 
 .dropdown-item:hover {

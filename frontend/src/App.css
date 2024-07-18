@@ -527,8 +527,6 @@ h3 {
   background-color: #163825;
 }
 
-
-
 /* ****************** SUCCESS PAGE ******************  */
 
 .successPage {
@@ -666,11 +664,7 @@ h2 {
 
 .timeline-item.completed .timeline-icon,
 .timeline-item.current .timeline-icon {
-  background-color: rgb(
-    38,
-    98,
-    65
-  ); /* Green for completed and current stages */
+  background-color: rgb(38, 98, 65); /* Green for completed and current stages */
 }
 
 .timeline-content {
@@ -941,7 +935,7 @@ h2 {
   cursor: pointer;
   font-size: 16px;
 }
-.settings-password-toggle-icon{
+.settings-password-toggle-icon {
   position: absolute;
   right: 75px;
   bottom: 180px;
@@ -949,11 +943,11 @@ h2 {
   font-size: 16px;
 }
 
-.button-container {
+/* .button-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-}
+} */
 
 .toggle-button {
   margin: 0 10px;
