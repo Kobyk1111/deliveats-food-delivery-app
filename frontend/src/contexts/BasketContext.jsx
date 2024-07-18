@@ -41,14 +41,22 @@ const BasketProvider = ({ children }) => {
   }, [basket]);
 
   const totalSumPurchasedItems = useMemo(() => {
-    return purchasedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    return purchasedItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
   }, [purchasedItems]);
+
+  // to atualize the number of items in the basketICON
+  const totalItemCount = basket.reduce((sum, item) => sum + item.quantity, 0);
 
   const addItemToBasket = (item) => {
     setBasket((prev) => {
       const existingItem = prev.find((i) => i._id === item._id);
       if (existingItem) {
-        return prev.map((i) => (i._id === item._id ? { ...i, quantity: i.quantity + 1 } : i));
+        return prev.map((i) =>
+          i._id === item._id ? { ...i, quantity: i.quantity + 1 } : i
+        );
       } else {
         return [...prev, { ...item, quantity: 1 }];
       }
@@ -60,12 +68,20 @@ const BasketProvider = ({ children }) => {
   };
 
   const increaseItemQuantity = (id) => {
-    setBasket((prev) => prev.map((item) => (item._id === id ? { ...item, quantity: item.quantity + 1 } : item)));
+    setBasket((prev) =>
+      prev.map((item) =>
+        item._id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
   };
 
   const decreaseItemQuantity = (id) => {
     setBasket((prev) =>
-      prev.map((item) => (item._id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item))
+      prev.map((item) =>
+        item._id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
     );
   };
 
@@ -83,6 +99,7 @@ const BasketProvider = ({ children }) => {
         completePurchase,
         purchasedItems,
         totalSumPurchasedItems,
+        totalItemCount,
       }}
     >
       {children}

@@ -45,12 +45,14 @@ function DeliveryTracker() {
           year: "numeric",
         });
 
-        setCompletedStages((prev) => [...prev, { ...stages[currentStage], timestamp: currentTime }]);
+        setCompletedStages((prev) => [
+          ...prev,
+          { ...stages[currentStage], timestamp: currentTime },
+        ]);
         setCurrentStage((prev) => prev + 1);
       }, stages[currentStage].duration);
       return () => clearTimeout(timer);
     } else {
-      // After delivery is completed, navigate to success page
       navigate("/success");
     }
   }, [currentStage, stages]);
@@ -67,16 +69,18 @@ function DeliveryTracker() {
         {stages.map((stage, index) => (
           <div
             key={index}
-            className={`timeline-item ${completedStages.length > index ? "completed" : ""} ${
-              currentStage === index ? "current" : ""
-            }`}
+            className={`timeline-item ${
+              completedStages.length > index ? "completed" : ""
+            } ${currentStage === index ? "current" : ""}`}
           >
             <div className="timeline-icon"></div>
             <div className="timeline-content">
               <p className="timeline-status">{stage.status}</p>
 
               {completedStages.length > index && (
-                <p className="timeline-timestamp">{completedStages[index].timestamp}</p>
+                <p className="timeline-timestamp">
+                  {completedStages[index].timestamp}
+                </p>
               )}
             </div>
           </div>
@@ -84,14 +88,13 @@ function DeliveryTracker() {
       </div>
 
       <div className="current-stage">
-        {currentStage < stages.length ? (
-          <div className="current-stage-content">
-            <p>Checking next step: {stages[currentStage].status}</p>
-          </div>
-        ) : (
-          <div className="current-stage-content">
+        {currentStage >= stages.length && (
+          <div className="completion">
             <p>Delivery Completed!</p>
-            <button onClick={handleBackToMainPage} className="back-to-main-button">
+            <button
+              onClick={handleBackToMainPage}
+              className="back-to-main-button"
+            >
               Back to main page
             </button>
           </div>
