@@ -15,9 +15,9 @@ function RegisterAndLogin() {
   const [isToRegister, setIsToRegister] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTermsChecked, setIsTermsChecked] = useState(false); // state variable to control the checkbox
-  const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
+  
 
-  const { setLoggedInUser } = useContext(DataContext);
+  const { setLoggedInUser, showPassword, togglePasswordVisibility } = useContext(DataContext);
 
   // initialize useNavigate hook
   // const navigate = useNavigate();
@@ -31,10 +31,7 @@ function RegisterAndLogin() {
     setIsTermsChecked(e.target.checked);
   }
 
-  // function to handle password visibility toggle
-  function togglePasswordVisibility(){
-    setShowPassword(!showPassword);
-  }
+  
 
   // function to run when the form is submitted
   async function handleSubmit(e) {
@@ -198,7 +195,7 @@ function RegisterAndLogin() {
                   required
                   className="form-checkbox"
                 />
-                 <span>          I agree to the Terms of Use.</span>
+                 <span className="terms-of-use-span" style={{whiteSpace: "pre-wrap"}}>  I agree to the Terms of Use.</span>
                </label>
               )}
               
