@@ -90,11 +90,13 @@ function Settings() {
       if (response.ok) {
         const user = await response.json();
         setLoggedInUser(user);
+        alert(user.message);
       }
     } catch (error) {
       console.log(error);
       alert(error.message);
     }
+    setShowPassword(false);
   };
   const handleDelete = async () => {
     if (confirm("Are you sure you want to delete your account?")) {
