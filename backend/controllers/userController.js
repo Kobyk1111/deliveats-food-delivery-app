@@ -193,3 +193,96 @@ export async function getUserData(req, res, next) {
     return next(createHttpError(500, "Server error"));
   }
 }
+
+export async function addAddress(req, res, next) {
+  const { label, address } = req.body;
+  const { id } = req.params;
+
+  if (!label || !address) {
+    return next(createHttpError(400, "Label and address are required"));
+  }
+
+  try {
+    const foundUser = await User.findById(id);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No user found"));
+    }
+
+    const options = {
+      new: true,
+      runValidators: true,
+    };
+
+    const updatedUser = await User.findByIdAndUpdate(id, { $push: { addresses: { label, address } } }, options);
+
+    res.json({ addresses: updatedUser.addresses });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error"));
+  }
+}
+
+export async function deleteAddress(req, res, next) {
+  const { userId, id } = req.params;
+
+  try {
+    const foundUser = await User.findById(userId);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No user found"));
+    }
+
+    foundUser.addresses = foundUser.addresses.filter((address) => address._id.toString() !== id);
+    await foundUser.save();
+
+    res.json({ addresses: foundUser.addresses });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error"));
+  }
+}
+
+export async function editAddress(req, res, next) {
+  const { editedAddress, editedLabel } = req.body;
+  const { id, userId } = req.params;
+
+  if (!editedAddress || !editedLabel) {
+    return next(createHttpError(400, "Address and label are required"));
+  }
+
+  try {
+    const foundUser = await User.findById(userId);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No user found"));
+    }
+
+    foundUser.addresses = foundUser.addresses.map((address) =>
+      address._id.toString() === id ? { ...address, address: editedAddress, label: editedLabel } : address
+    );
+    await foundUser.save();
+
+    res.json({ addresses: foundUser.addresses });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error"));
+  }
+}
+
+export async function getAllAddresses(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const foundUser = await User.findById(id);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No user found"));
+    }
+
+    res.json({ addresses: foundUser.addresses });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error"));
+  }
+}

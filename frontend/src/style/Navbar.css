@@ -88,7 +88,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-width: 400px;
-  height: 4rem;
+  height: 7rem;
   padding: 0.6rem 3rem;
   position: absolute;
   top: 0;
@@ -101,7 +101,7 @@ nav {
 nav h1 {
   font-family: "Merienda", cursive;
   font-weight: bolder;
-  font-size: 2.2rem;
+  font-size: 3.6rem;
   color: #163825;
   cursor: pointer;
 }

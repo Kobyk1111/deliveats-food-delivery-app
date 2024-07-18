@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const DataContext = createContext();
@@ -80,6 +80,7 @@ function DataContextProvider({ children }) {
       }
     }
   }
+
   // function to handle password visibility toggle
   function togglePasswordVisibility(){
     setShowPassword(!showPassword);
@@ -107,6 +108,7 @@ function DataContextProvider({ children }) {
       getOrderHistory();
     }
   }, [loggedInUser]);
+
 
   return (
     <DataContext.Provider

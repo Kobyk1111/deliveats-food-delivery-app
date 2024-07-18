@@ -20,39 +20,6 @@ function SuccessPage() {
   }, []);
 
   useEffect(() => {
-    async function setOrderDetails() {
-      const settings = {
-        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
-        headers: {
-          "Content-Type": "application/JSON",
-        },
-        method: "POST",
-      };
-
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
-          settings
-        );
-        if (response.ok) {
-          await response.json();
-          completePurchase(); // Clear the basket and set purchasedItems
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
-    setOrderDetails();
-  }, [sessionId]);
-
-  useEffect(() => {
-    completePurchase();
-  }, []);
-
-  useEffect(() => {
     async function setOrder() {
       const settings = {
         body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
@@ -98,6 +65,63 @@ function SuccessPage() {
 
     setOrder();
   }, [sessionId]);
+
+  useEffect(() => {
+    async function setOrderDetails() {
+      const settings = {
+        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+        method: "POST",
+      };
+
+      try {
+        const response = await fetch(
+          `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
+          settings
+        );
+        if (response.ok) {
+          await response.json();
+          completePurchase(); // Clear the basket and set purchasedItems
+        } else {
+          const { error } = await response.json();
+          throw new Error(error.message);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    setOrderDetails();
+  }, [sessionId]);
+
+  // useEffect(() => {
+  //   async function getOrderHistory() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+  //       );
+
+  //       if (response.ok) {
+  //         const { orderHistory } = await response.json();
+  //         setUserOrderHistory(orderHistory);
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
+
+  //   if (loggedInUser) {
+  //     getOrderHistory();
+  //   }
+  // }, [loggedInUser, setUserOrderHistory]);
+
+  useEffect(() => {
+    completePurchase();
+  }, []);
 
   return (
     <>

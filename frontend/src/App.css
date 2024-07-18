@@ -7,6 +7,15 @@
   font-family: Arial, sans-serif;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* min-height: 40vh; */
+}
+
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -215,6 +224,13 @@ footer {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.card-results:hover {
+  background-color: #f1f1f1;
 }
 
 .card-title-results {
@@ -523,7 +539,7 @@ h3 {
   padding: 20px;
   background-color: #f9f9f9;
   min-height: 80vh;
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 
 .card-container {
@@ -684,7 +700,7 @@ h2 {
 
 .container-profile {
   margin: 100px 50px;
-  height: 100vh;
+  min-height: 100vh;
   /* width: 80%; */
 }
 .header-profile {
@@ -723,14 +739,21 @@ h2 {
   transition: background-color 0.3s;
 }
 
+.navbar-profile ul li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar-profile ul li a:hover {
   border-bottom: 1px solid black;
   transform: scale(1.05);
 }
 
-.navbar-profile ul li a:visited {
-  text-decoration: none;
-  color: black;
+.navbar-profile ul li a.active {
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid #163825;
+  color: #163825;
 }
 
 .navbar-profile ul li button {
@@ -828,91 +851,62 @@ h2 {
 
 /* ************************************************** USER PROFILE STYLING - END ************************************************** */
 
-/* ****************** ADDRESSES CSS ****************** */
-
-.address-book {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  margin-left: 10px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+/* ****************** ORDER HISTORY CSS ****************** */
+.order-history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 4rem;
+  padding-top: 2rem;
+  position: relative;
+  /* min-height: 30vh; */
 }
 
-.address-book h2 {
+.order-history-container .no-history-info {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.address-item {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  background-color: #fafafa;
-}
-
-.address-view,
-.address-edit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.label-input,
-.address-input,
-.address-edit input {
-  flex: 1;
-  padding: 8px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-}
-
-button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.edit-button,
-.save-button {
-  background-color: #4caf50;
-  color: white;
-}
-
-.cancel-button,
-.delete-button {
-  background-color: #f44336;
-  color: white;
-}
-
-.add-address-button {
-  display: block;
   width: 100%;
-  margin-top: 20px;
-  background-color: #2196f3;
-  color: white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  margin-top: 4rem;
 }
 
-button:hover {
-  opacity: 0.85;
+.order-history-container .order {
+  padding: 2rem;
+  box-shadow: 1px 1px 10px rgb(219, 219, 219);
+  text-align: left;
+}
+
+.order-history-container h3 {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.order-history-container p {
+  font-size: 1.4rem;
+  color: rgb(59, 59, 59);
+}
+
+.order-history-container .restaurant-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-history-container .items-container,
+.order-history-container .payment-details,
+.order-history-container .additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.order-history-container .item {
+  display: flex;
+  justify-content: space-between;
 }
 /* ***************************** TOGGLE PASSWORD VISIBILITY AT LOGIN, REGISTER AND UPDATE SETTINGS ***********************************/
 
@@ -980,25 +974,23 @@ button:hover {
 
 /* *************************************** END OF TOGGLE PASSWORD VISIBILITY AT LOGIN, REGISTER AND UPDATE SETTINGS **************** */
 
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.order-history-container .calculations {
+  display: flex;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.order-history-container .total-sum {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.card {
-  padding: 2em;
+.order-history-container .payment-method,
+.order-history-container .charged-amount,
+.order-history-container .order-type,
+.order-history-container .order-status,
+.order-history-container .order-date,
+.order-history-container .order-time {
+  display: flex;
+  justify-content: space-between;
 }
-
-.read-the-docs {
-  color: #888;
-} */
