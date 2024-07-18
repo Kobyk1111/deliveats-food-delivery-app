@@ -370,6 +370,60 @@ const menus = [
       },
     ],
   },
+  {
+    cuisine: "Croatian",
+    items: [
+      {
+        name: "Black risotto",
+        description: "Rice and squid parts cooked in squid ink",
+        price: 15.99,
+      },
+      {
+        name: "Pašticada",
+        description: "Beef slowly cooked in wine, carrots and cloves sweet and sour sauce, with gnocchi",
+        price: 14.99,
+      },
+      {
+        name: "Brudet",
+        description: "Rich fish stew with squid, shrimps, with polenta",
+        price: 15.99,
+      },
+      
+      {
+        name: "Buzara",
+        description: "Mussels and shrimp stew in a wine broth with garlc and breadcrumbs",
+        price: 12.99,
+      },
+      
+      
+    ]
+  },
+  {
+    cuisine: "Croatian",
+    items: [
+      {
+        name: "Zagrebački odrezak",
+        description: "Veal steak stuffed with ham and cheese, deep-fried in egg, flour and breadcrumbs coat",
+        price: 10.99,
+      },
+      {
+        name: "Istrian Yota",
+        description: "Beans, potatoes, bacon, spare ribs and sauerkraut stew",
+        price: 11.99,
+      },
+      {
+        name: "Sarma",
+        description: "Slowly cooked minced meat wrapped in cabbage leaves, with mashed potato",
+        price: 12.99,
+      },
+      {
+        name: "Lamb on a spit",
+        description: "Lamb roasted on a spit, with roasted potatoes",
+        price: 13.99,
+      },
+    ]
+  }
+
 ];
 
 export default menus;
