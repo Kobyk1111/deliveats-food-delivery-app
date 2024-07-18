@@ -61,6 +61,7 @@ function Settings() {
     email: ``,
     password: ``,
   });
+ const { showPassword, setShowPassword, togglePasswordVisibility } = useContext(DataContext);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -89,11 +90,13 @@ function Settings() {
       if (response.ok) {
         const user = await response.json();
         setLoggedInUser(user);
+        alert(user.message);
       }
     } catch (error) {
       console.log(error);
       alert(error.message);
     }
+    setShowPassword(false);
   };
   const handleDelete = async () => {
     if (confirm("Are you sure you want to delete your account?")) {
@@ -152,13 +155,29 @@ function Settings() {
           value={user.email}
           onChange={handleChange}
         />
-        <input
+        {/* <input
           type="password"
           name="password"
           placeholder="Password"
           value={user.password}
           onChange={handleChange}
-        />
+        /> */}
+        <div className="password-input-container">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Password"
+                    value={user.password}
+                    onChange={handleChange}
+                    className="form-input password-input"
+                  />
+                  <span
+                    className="settings-password-toggle-icon"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {showPassword ? "🙈" : "👁️"}
+                  </span>
+                </div>
         <button className="userProfileUpdate">Update</button>
       </form>
       <button className="userProfileDelete" onClick={handleDelete}>

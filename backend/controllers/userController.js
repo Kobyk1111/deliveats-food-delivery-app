@@ -153,6 +153,7 @@ export async function updateUser(req, res, next) {
         firstName: updatedUser.firstName,
         lastName: updatedUser.lastName,
         email: updatedUser.email,
+        message: `User updated successfully`
       })
     } else {
       return next(createHttpError(404, "User not found"));

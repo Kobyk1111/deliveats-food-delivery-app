@@ -11,6 +11,7 @@ function DataContextProvider({ children }) {
   const [restaurant, setRestaurant] = useState(null);
   const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
   const [userOrderHistory, setUserOrderHistory] = useState([]);
+  const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const navigate = useNavigate();
 
   async function logout() {
@@ -79,7 +80,10 @@ function DataContextProvider({ children }) {
       }
     }
   }
-
+  // function to handle password visibility toggle
+  function togglePasswordVisibility(){
+    setShowPassword(!showPassword);
+  }
   useEffect(() => {
     async function getOrderHistory() {
       try {
@@ -112,6 +116,9 @@ function DataContextProvider({ children }) {
         loggedInUser,
         setLoggedInUser,
         logout,
+        showPassword, 
+        setShowPassword,
+        togglePasswordVisibility,
         restaurants,
         setRestaurants,
         getSearchedRestaurants,
