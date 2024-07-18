@@ -14,14 +14,14 @@ import "../style/Navbar.css";
 
 function Navbar() {
   const { loggedInUser, logout } = useContext(DataContext);
-  const { basket, totalItemCount } = useContext(BasketContext);
+  const { totalItemCount } = useContext(BasketContext);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
   const [isBasketModalOpen, setIsBasketModalOpen] = useState(false);
-  
+
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -56,10 +56,7 @@ function Navbar() {
             <div className="user-info" ref={dropdownRef}>
               <span className="welcome-message" onClick={toggleDropdown}>
                 Welcome, {loggedInUser.firstName}! {""}
-                <FontAwesomeIcon
-                  icon={faCaretDown}
-                  style={{ color: "#266241" }}
-                />
+                <FontAwesomeIcon icon={faCaretDown} style={{ color: "#266241" }} />
               </span>
 
               {isDropdownOpen && (
@@ -86,10 +83,7 @@ function Navbar() {
           </Link> */}
 
           <div className="cart-logo" onClick={openBasketModal}>
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "#266241" }}
-            />
+            <FontAwesomeIcon icon={faCartShopping} style={{ color: "#266241" }} />
             <span className="item-count">{totalItemCount}</span>
           </div>
         </div>

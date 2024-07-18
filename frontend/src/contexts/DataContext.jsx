@@ -82,33 +82,32 @@ function DataContextProvider({ children }) {
   }
 
   // function to handle password visibility toggle
-  function togglePasswordVisibility(){
+  function togglePasswordVisibility() {
     setShowPassword(!showPassword);
   }
-  useEffect(() => {
-    async function getOrderHistory() {
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-        );
+  // useEffect(() => {
+  //   async function getOrderHistory() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+  //       );
 
-        if (response.ok) {
-          const { orderHistory } = await response.json();
-          setUserOrderHistory(orderHistory);
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
+  //       if (response.ok) {
+  //         const { orderHistory } = await response.json();
+  //         setUserOrderHistory(orderHistory);
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
 
-    if (loggedInUser) {
-      getOrderHistory();
-    }
-  }, [loggedInUser]);
-
+  //   if (loggedInUser) {
+  //     getOrderHistory();
+  //   }
+  // }, [loggedInUser]);
 
   return (
     <DataContext.Provider
@@ -118,7 +117,7 @@ function DataContextProvider({ children }) {
         loggedInUser,
         setLoggedInUser,
         logout,
-        showPassword, 
+        showPassword,
         setShowPassword,
         togglePasswordVisibility,
         restaurants,
