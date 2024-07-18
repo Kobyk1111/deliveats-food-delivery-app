@@ -40,8 +40,6 @@ export async function setOrderDetails(req, res, next) {
   const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
   const { id } = req.params;
 
-  console.log(restaurantName);
-
   try {
     // Promise.all will make the two functions run at the same time since none of them depends on the other.
     const result = Promise.all([
@@ -128,7 +126,7 @@ export async function setOrder(req, res, next) {
       },
       additionalInfo: {
         orderType: deliveryOption,
-        orderStatus: "Delivered",
+        orderStatus: "delivered",
       },
     };
 

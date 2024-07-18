@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -13,16 +13,16 @@ function Profile() {
         <div className="navbar-profile">
           <ul>
             <li>
-              <Link to="preferences">Preferences</Link>
+              <NavLink to="preferences">Preferences</NavLink>
             </li>
             <li>
-              <Link to="addresses">Addresses</Link>
+              <NavLink to="addresses">Addresses</NavLink>
             </li>
             <li>
-              <Link to="order-history">Order history</Link>
+              <NavLink to="order-history">Order history</NavLink>
             </li>
             <li>
-              <Link to="settings">Settings</Link>
+              <NavLink to="settings">Settings</NavLink>
             </li>
           </ul>
         </div>

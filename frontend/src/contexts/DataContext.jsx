@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const DataContext = createContext();
@@ -80,29 +80,29 @@ function DataContextProvider({ children }) {
     }
   }
 
-  useEffect(() => {
-    async function getOrderHistory() {
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-        );
+  // useEffect(() => {
+  //   async function getOrderHistory() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+  //       );
 
-        if (response.ok) {
-          const { orderHistory } = await response.json();
-          setUserOrderHistory(orderHistory);
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
+  //       if (response.ok) {
+  //         const { orderHistory } = await response.json();
+  //         setUserOrderHistory(orderHistory);
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
 
-    if (loggedInUser) {
-      getOrderHistory();
-    }
-  }, [loggedInUser]);
+  //   if (loggedInUser) {
+  //     getOrderHistory();
+  //   }
+  // }, [loggedInUser]);
 
   return (
     <DataContext.Provider

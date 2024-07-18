@@ -37,6 +37,11 @@ const historySchema = new Schema(
   { timestamps: true }
 );
 
+const addressesSchema = new Schema({
+  label: { type: String, required: true },
+  address: { type: String, required: true },
+});
+
 const userSchema = new Schema(
   {
     firstName: {
@@ -65,6 +70,10 @@ const userSchema = new Schema(
         ref: "OrderHistory",
       },
     ],
+    addresses: {
+      type: [addressesSchema],
+      default: [],
+    },
   },
   { timestamps: true }
 );
@@ -72,30 +81,3 @@ const userSchema = new Schema(
 const User = model("User", userSchema);
 
 export default User;
-
-// const test = [
-//   {
-//     restaurantName: "Den Home Restaurant",
-//     items: [
-//       {
-//         itemName: "Pizza",
-//         price: 24.0,
-//         quantity: 2,
-//       },
-//       {
-//         itemName: "Bread",
-//         price: 24.0,
-//         quantity: 2,
-//       },
-//     ],
-//     totalSum: 48.0,
-//     paymentDetails: {
-//       paymentMethod: "Paypal",
-//       chargedAmount: 48.0,
-//     },
-//     additionalInfo: {
-//       orderType: "Delivery",
-//       orderStatus: "Delivered",
-//     },
-//   },
-// ];
