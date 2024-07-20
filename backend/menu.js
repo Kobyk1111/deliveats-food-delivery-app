@@ -391,7 +391,7 @@ const menus = [
       
       {
         name: "Buzara",
-        description: "Mussels and shrimp stew in a wine broth with garlc and breadcrumbs",
+        description: "Mussels and shrimp stew in a wine broth with garlic and breadcrumbs",
         price: 12.99,
       },
       
@@ -413,7 +413,7 @@ const menus = [
       },
       {
         name: "Sarma",
-        description: "Slowly cooked minced meat wrapped in cabbage leaves, with mashed potato",
+        description: "Slowly cooked minced meat wrapped in cabbage leaves, with mashed potatoes",
         price: 12.99,
       },
       {
@@ -421,6 +421,57 @@ const menus = [
         description: "Lamb roasted on a spit, with roasted potatoes",
         price: 13.99,
       },
+    ]
+  },
+  {
+    cuisine: "German",
+    items: [
+      {
+        name: "Käsespätzle",
+        description: "Small Spätzle pasta layered with grated cheese and topping with fried onion",
+        price: 8.99,
+      },
+      {
+        name: "Currywurst",
+        description: "Chopped up sausages, fried potatoes and a spicy ketchup sauce",
+        price: 5.99,
+      },
+      {
+        name: "Rouladen",
+        description: "Pickles and bacon wrapped in thin slices of beef, or veal, with gravy, dumplings, mashed potatoes, and cabbage",
+        price: 9.99,
+      },
+      {
+        name: "Eintopf",
+        description: "Broth stew with vegetables, potatoes, lentils and meat, with bread",
+        price: 10.99,
+      }
+    ]
+  },
+  { 
+    cuisine: "German",
+    items: [
+      {
+        name: "Sauerbraten",
+        description: "Marinated veal/beef/pork meat, pickled in a sweet and sour gravy-like sauce, and slowly roasted in a dish, with potatoes",
+        price: 11.99,
+      },
+      {
+        name: "Pork Schnitzel",
+        description: "Tenderized pork meat, coated in egg, flour and breadcrumbs, and fried in oil",
+        price: 8.99,
+      },
+      {
+        name: "Bratkartoffeln",
+        description: "Small chunks of potatoes parboiled and fried with onion and bacon",
+        price: 7.99,
+      },
+      {
+        name: "Kartoffelpuffer",
+        description: "Shallow fried pancake made from grated potatoes, egg, and flour, served with eggs and bacon",
+        price: 6.99,
+      }
+
     ]
   }
 
