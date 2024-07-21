@@ -549,6 +549,82 @@ const menus = [
       }
     ]
   }
+  {
+    cuisine: "Colombian",
+    items: [
+      {
+        name: "Sopa de lentejas",
+        description: "Lentil soup with chopped onion, garlic and grated carrots, served with avocado, rice, tomato and sweet plantain",
+        price: 7.99,
+      },
+      {
+        name: "Bandeja Paisa",
+        description: "Rice, avocado, plantain, beans, chorizo and morilla sausages, chicharron fried pork rind, and minced beef",
+        price: 9.99,
+      },
+      {
+        name: "Empanadas",
+        description: "Deep fried flaky pockets of pastry filled with minced beef meat chunks, potatoes, rice, tomatoes, green peppers, peanut sauce, with a squeeze of lime and a spoonful of aji",
+        price: 8.99,
+      },
+      {
+        name: "Sancocho",
+        description: "Chicken, corn on the cob, plantain and beans soup, served with cooked rice, avocado, and aji dipping sauce on the side",
+        price: 7.99,
+      }
+    ]
+  },
+  {
+    cuisine: "Venezuelan",
+    items: [
+      {
+        name: "Chupe Andino",
+        description: "Chicken, potatoes, corn, cheese and cream soup",
+        price: 7.99,
+      },
+      {
+        name: "Chicharron Salad",
+        description: "Chicharron crispy pork rings mixed with lettuce, tomatoes, onions, avocado, olive oil and vinegar dressing",
+        price: 8.99,
+      },
+      {
+        name: "Pabellon Criollo",
+        description: "Shredded beef, cooked rice and black beans, and fried plantains",
+        price: 9.99,
+      },
+      {
+        name: "Asado Negro",
+        description: "Juicy roasted beef steak, marinated in caramelized sugar and slow cooked, served with cooked rice and fried plantains",
+        price: 10.99,
+      }
+    ]
+  },
+  {
+    cuisine: "Irish",
+    items: [
+      {
+        name: "Colcannon Potatoes",
+        description: "Mashed potatoes, crumbled bacon, shredded cabbage, grean onions, butter and whole milk",
+        price: 8.99,
+      },
+      {
+        name: "Irish Stew",
+        description: "Thick, hearty mutton, potatoes, onions and carrots stew",
+        price: 7.99,
+      },
+      {
+        name: "Shepherd's Pie",
+        description: "Casserole with a layer of cooked ground lamb meat, onions and carrots, topped with mashed potatoes, and baked in the oven until the mashed potatoes are well browned",
+        price: 9.99,
+      },
+      {
+        name: "Coddle",
+        description: "Potatoes, sausages, bacon and onions simmered in a broth",
+        price: 10.99,
+      }
+      
+    ]
+  }
 
 ];
 
