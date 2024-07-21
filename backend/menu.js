@@ -473,6 +473,81 @@ const menus = [
       }
 
     ]
+  },
+  {
+    cuisine: "Bosnian",
+    items: [
+      {
+        name: "Ćevapi",
+        description: "Two types of minced beef meat hand-mixed and formed using a funnel, with lepinja flatbread, chopped onions, ajvar (bell pepper relish), sour cream, kajmak (similar to clotted cream), and cottage cheese",
+        price: 9.99,
+      },
+      {
+        name: "Pljeskavica",
+        description: "Two types of minced beef meat hand-mixed and patty formed, served in lepinja flatbread with onions, ajvar, kajmak, and urnebes (spicy cheese salad)",
+        price: 8.99,
+      },
+      {
+        name: "Musaka",
+        description: "Seasoned round beef and potato rounds casserole, layered, baked, and finished off with an egg and sour cream topping",
+        price: 10.59,
+      },
+      {
+        name: "Boranija",
+        description: "Romano green beans simmered with chunks of veal, carrots, potatoes, onions and garlic, and seasoned with paprika, bay leaves, salt and pepper",
+        price: 8.99,
+      }
+    ]
+  },
+  {
+    cuisine: "Ukrainian",
+    items: [
+      {
+        name: "Borsch",
+        description: "Lent and meat soup with dried mushrooms, beets, carrots, beet kvass, dairy butter, and flour, with small mushrooms stuffed dough (vushka)",
+        price: 9.99,
+      },
+      {
+        name: "Varenyky",
+        description: "Savory water, flour and yeast made perogie dumplings, stuffed with  the mixture of stewed cabbage and onions",
+        price: 7.99,
+      },
+      {
+        name: "Holubtsi",
+        description: "Cabbage rolls filled with potatoes, mushrooms, onions, and carrots mixture, fried in a pan with a little vegetable oil, and stewed in tomato paste",
+        price: 8.99,
+      },
+      {
+        name: "Haricots",
+        description: "White harricots cooked with dried mushrooms, bulb onions, and garlic",
+        price: 8.99,
+      }
+    ]
+  },
+  {
+    cuisine: "Turkish",
+    items: [
+      {
+        name: "Kuru fasulye",
+        description: "Stewed white beans, olive oil, pastirma highly seasoned, air-dried cured beef and onion and tomato sauce, with cacik salted strained yogurt or diluted yogurt mixed with cucumbers, garlic, salt, olive oil, red wine vinegar, and rice",
+        price: 9.99,
+      },
+      {
+        name: "Saksuka",
+        description: "Silky purple skinned cubes of green eggplant flesh are cooked with zucchinis, garlic, tomatoes and chili",
+        price: 7.99,
+      },
+      {
+        name: "Iskender Kebab",
+        description: "Thin slices of doner meat reverently laid over pieces of plump pide bread, smothered in freshly made tomato sauce, with a dash of sizzling melted butter, served with a portion of tanghy yoghurt, grilled tomato and green peppers",
+        price: 11.99,
+      },
+      {
+        name: "Hamsili pilav",
+        description: "Filleted anchovies arranged over the rice and cooked in stock made from fried onions, butter, peanuts, Turkish allspice and raisins, mixed with fresh parsley and dill",
+        price: 10.99,
+      }
+    ]
   }
 
 ];
