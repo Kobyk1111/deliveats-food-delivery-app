@@ -51,6 +51,7 @@ const menus = [
   },
   {
     cuisine: "American",
+    
     items: [
       {
         name: "Cheeseburger",
