@@ -624,6 +624,56 @@ const menus = [
       }
       
     ]
+  },
+  {
+    cuisine: "Portuguese",
+    items: [
+      {
+        name: "Bacalhau a Gomes de Sa",
+        description: "Salted cod fish baked in the oven with onion, garlic, olive oil and potatoes",
+        price: 12.99,
+      },
+      {
+        name: "Polvo a Lagareiro",
+        description: "Octopus tentacles and body chhuncks roasted, doused in olive oil and garlic, served with slow-baked potatoes",
+        price: 11.99,
+      },
+      {
+        name: "Arroz de pato",
+        description: "The boiled and shredded duck meat is added to a bed of rice cooked in duck stock, onions and garlic, baked, garnished with spicy chourico sausage and served alongside orange slices",
+        price: 13.99
+      },
+      {
+        name: "Sardinas assadas",
+        description: "Sardines seasoned with coarse salt, slapped on grills over hot coals, server with bell peper salad and boiled potatoes",
+        price: 9.99,
+      }
+    ]
+  },
+  {
+    cuisine: "South Korean",
+    items: [
+      {
+        name: "Hangover Stew",
+        description: "Beef broth with cabbage, bean sprouts, radish and chunks of congealed ox blood",
+        price: 7.99,
+      },
+      {
+        name: "Samgyeopsal",
+        description: "Pork belly meat smudged in ssamjang soybean paste and chilli paste, served with lettuce, perilla leaves, sliced onions and raw garlic",
+        price: 8.99,
+      }
+      {
+        name: "Kimchi Jjigae",
+        description: "Kimchi stew with red cabbage chopped, sauteed in oil, cooked with tofu, pork, scallions and onions",
+        price: 9.99,
+      },
+      {
+        name: "Tteokbokki",
+        description: "Steamed and sliced rice cakes, cooked with fish cakes and scallions in a sweet and spicy sauce made of chili paste, and pepper",
+        price: 6.99,
+      }
+    ]
   }
 
 ];
