@@ -674,7 +674,38 @@ const menus = [
         price: 6.99,
       }
     ]
+  },
+  {
+    cuisine: "Albanian",
+    items: [
+      {
+        name: "Fërgesë",
+        description: "Baked dish with peppers, tomatoes, and cheese",
+        price: 8.99,
+      },
+      {
+        name: "Byrek",
+        description: "Savory pastry filled with spinach and cheese",
+        price: 3.99,
+      },
+      {
+        name: "Tavë Kosi",
+        description: "Baked lamb and rice with yogurt",
+        price: 12.99,
+      },
+      {
+        name: "Baklava",
+        description: "Sweet pastry with layers of nuts and honey",
+        price: 4.99,
+      },
+      {
+        name: "Raki",
+        description: "Traditional Albanian grape brandy",
+        price: 5.99,
+      },
+    ],
   }
+  
 
 ];
 
