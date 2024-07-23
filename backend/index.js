@@ -8,6 +8,7 @@ import searchRouter from "./routes/searchRouter.js";
 import checkoutRouter from "./routes/checkoutRouter.js";
 import refreshTokenRouter from "./routes/refreshTokenRouter.js";
 import logoutRouter from "./routes/logoutRouter.js";
+import restaurantsRouter from "./routes/restaurantsRouter.js";
 
 try {
   await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
@@ -33,6 +34,7 @@ app.use("/search", searchRouter);
 app.use("/create-checkout-session", checkoutRouter);
 // app.use("/saveBasketAndDelivery");
 app.use("/refresh-token", refreshTokenRouter);
+app.use("/restaurants", restaurantsRouter);
 app.use("/logout", logoutRouter);
 
 const port = process.env.PORT || 5002;

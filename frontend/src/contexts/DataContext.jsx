@@ -12,17 +12,40 @@ function DataContextProvider({ children }) {
   const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
   const [userOrderHistory, setUserOrderHistory] = useState([]);
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
+  const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
   const navigate = useNavigate();
 
   async function logout() {
     try {
-      const response = await fetch("http://localhost:5002/logout", { method: "POST", credentials: "include" });
+      const response = await fetch("http://localhost:5002/logout/user", { method: "POST", credentials: "include" });
 
       if (response.ok) {
         const { message } = await response.json();
         alert(message);
         setLoggedInUser(null);
         navigate("/");
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      alert(error.message);
+      console.log(error.message);
+    }
+  }
+
+  async function logoutRestaurant() {
+    try {
+      const response = await fetch("http://localhost:5002/logout/restaurant", {
+        method: "POST",
+        credentials: "include",
+      });
+
+      if (response.ok) {
+        const { message } = await response.json();
+        alert(message);
+        setLoggedInRestaurant(null);
+        navigate("/restaurantHome");
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -130,6 +153,9 @@ function DataContextProvider({ children }) {
         setRestaurant,
         userOrderHistory,
         setUserOrderHistory,
+        loggedInRestaurant,
+        setLoggedInRestaurant,
+        logoutRestaurant,
       }}
     >
       {children}
