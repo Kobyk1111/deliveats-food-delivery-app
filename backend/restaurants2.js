@@ -103,10 +103,10 @@ const restaurants = [
         phoneNumber: "+49 170 2345678",
       },
       address: {
-        street: "Kaiserstraße 12",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Alexanderplatz 1",
+        city: "Berlin",
+        state: "Berlin",
+        zipCode: "10178",
       },
     },
     openAndCloseHours: {
@@ -196,11 +196,12 @@ const restaurants = [
         phoneNumber: "+49 170 3456789",
       },
       address: {
-        street: "Lindenstraße 23",
-        city: "Munich",
-        state: "Bavaria",
-        zipCode: "80331",
+        street: "Graf-Adolf-Platz 15",
+        city: "Düsseldorf",
+        state: "North Rhine-Westphalia",
+        zipCode: "40213",
       },
+      
     },
     openAndCloseHours: {
       monday: "11:00 AM - 10:00 PM",
@@ -289,10 +290,10 @@ const restaurants = [
         phoneNumber: "+49 170 4567890",
       },
       address: {
-        street: "Schillerstraße 18",
-        city: "Hamburg",
-        state: "Hamburg",
-        zipCode: "20095",
+        street: "Marktplatz 2",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "230159",
       },
     },
     openAndCloseHours: {
@@ -661,10 +662,10 @@ const restaurants = [
         phoneNumber: "+49 170 7890124",
       },
       address: {
-        street: "Gänsemarkt 3",
-        city: "Hamburg",
-        state: "Hamburg",
-        zipCode: "20354",
+        street: "Markt 10",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04109",
       },
     },
     openAndCloseHours: {
@@ -754,10 +755,10 @@ const restaurants = [
         phoneNumber: "+49 170 8901234",
       },
       address: {
-        street: "Schleswiger Straße 10",
-        city: "Munich",
-        state: "Bavaria",
-        zipCode: "80335",
+        street: "Karl-Liebknecht-Straße 10",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04107",
       },
     },
     openAndCloseHours: {
@@ -847,10 +848,10 @@ const restaurants = [
         phoneNumber: "+49 170 8901235",
       },
       address: {
-        street: "Marktplatz 12",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Raschplatz 7",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30161",
       },
     },
     openAndCloseHours: {
@@ -1033,10 +1034,11 @@ const restaurants = [
         phoneNumber: "+49 170 2345678",
       },
       address: {
-        street: "Hauptstraße 5",
-        city: "Munich",
-        state: "Bavaria",
-        zipCode: "80331",
+        street: "Königsallee 20",
+        city: "Düsseldorf",
+        state: "North Rhine-Westphalia",
+        zipCode: "40212"
+
       },
     },
     openAndCloseHours: {
@@ -1126,10 +1128,10 @@ const restaurants = [
         phoneNumber: "+49 170 3456789",
       },
       address: {
-        street: "Goethestraße 15",
-        city: "Hamburg",
-        state: "Hamburg",
-        zipCode: "20095",
+        street: "Georgstraße 10",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30159",
       },
     },
     openAndCloseHours: {
@@ -1312,10 +1314,10 @@ const restaurants = [
         phoneNumber: "+49 170 5678901",
       },
       address: {
-        street: "Steinweg 25",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Petersstraße 50",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04109",
       },
     },
     openAndCloseHours: {
@@ -1405,10 +1407,10 @@ const restaurants = [
         phoneNumber: "+49 170 6789012",
       },
       address: {
-        street: "Friedrichstraße 45",
-        city: "Cologne",
-        state: "North Rhine-Westphalia",
-        zipCode: "50667",
+        street: "Friedrichstraße 76",
+        city: "Berlin",
+        state: "Berlin",
+        zipCode: "10117",
       },
     },
     openAndCloseHours: {
@@ -1498,10 +1500,10 @@ const restaurants = [
         phoneNumber: "+49 170 7890123",
       },
       address: {
-        street: "Kaiserstraße 60",
-        city: "Munich",
-        state: "Bavaria",
-        zipCode: "80331",
+        street: "Schadowstraße 75",
+        city: "Düsseldorf",
+        state: "North Rhine-Westphalia",
+        zipCode: "4021",
       },
     },
     openAndCloseHours: {
@@ -1591,10 +1593,10 @@ const restaurants = [
         phoneNumber: "+49 170 7890124",
       },
       address: {
-        street: "Marktplatz 70",
-        city: "Stuttgart",
-        state: "Baden-Württemberg",
-        zipCode: "70173",
+        street: "Lister Meile 37",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30161",
       },
     },
     openAndCloseHours: {
@@ -1684,10 +1686,10 @@ const restaurants = [
         phoneNumber: "+49 170 1234567",
       },
       address: {
-        street: "Kaiserstraße 35",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Grimmaische Straße 25",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04109",
       },
     },
     openAndCloseHours: {
@@ -1777,10 +1779,10 @@ const restaurants = [
         phoneNumber: "+49 170 1234567",
       },
       address: {
-        street: "Kaiserstraße 35",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Bernauer Straße 111",
+        city: "Berlin",
+        state: "Berlin",
+        zipCode: "13355",
       },
     },
     openAndCloseHours: {
@@ -1870,10 +1872,10 @@ const restaurants = [
         phoneNumber: "+49 160 2345678",
       },
       address: {
-        street: "Münsterplatz 12",
-        city: "Cologne",
+        street: "Heinrich-Heine-Allee 51",
+        city: "Düsseldorf",
         state: "North Rhine-Westphalia",
-        zipCode: "50667",
+        zipCode: "40213",
       },
     },
     openAndCloseHours: {
@@ -2056,10 +2058,10 @@ const restaurants = [
         phoneNumber: "+49 160 4567890",
       },
       address: {
-        street: "Lindenstraße 98",
-        city: "Hamburg",
-        state: "Hamburg",
-        zipCode: "20095",
+        street: "Königstraße 34",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30175",
       },
     },
     openAndCloseHours: {
@@ -2149,10 +2151,10 @@ const restaurants = [
         phoneNumber: "+49 170 5678901",
       },
       address: {
-        street: "Holstenstraße 23",
-        city: "Bremen",
-        state: "Bremen",
-        zipCode: "28195",
+        street: "Prager Straße 50",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04317",
       },
     },
     openAndCloseHours: {
@@ -2242,10 +2244,10 @@ const restaurants = [
         phoneNumber: "+49 160 6789012",
       },
       address: {
-        street: "Berliner Straße 12",
-        city: "Stuttgart",
-        state: "Baden-Württemberg",
-        zipCode: "70173",
+        street: "Karl-Marx-Allee 34",
+        city: "Berlin",
+        state: "Berlin",
+        zipCode: "10178",
       },
     },
     openAndCloseHours: {
@@ -2614,10 +2616,10 @@ const restaurants = [
         phoneNumber: "+49 160 0123456",
       },
       address: {
-        street: "Darmstädter Straße 56",
-        city: "Mannheim",
-        state: "Baden-Württemberg",
-        zipCode: "68165",
+        street: "Podbielskistraße 200",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30177",
       },
     },
     openAndCloseHours: {
@@ -2707,10 +2709,10 @@ const restaurants = [
         phoneNumber: "+49 170 2345678",
       },
       address: {
-        street: "Kaiserstraße 12",
-        city: "Frankfurt",
-        state: "Hesse",
-        zipCode: "60311",
+        street: "Königstraße 34",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30175",
       },
     },
     openAndCloseHours: {
@@ -2986,10 +2988,10 @@ const restaurants = [
         phoneNumber: "+49 170 5678901",
       },
       address: {
-        street: "Hauptstraße 45",
-        city: "Munich",
-        state: "Bavaria",
-        zipCode: "80331",
+        street: "Kaiserswerther Straße 100",
+        city: "Düsseldorf",
+        state: "North Rhine-Westphalia",
+        zipCode: "40474",
       },
     },
     openAndCloseHours: {
@@ -3172,10 +3174,10 @@ const restaurants = [
         phoneNumber: "+49 170 7890123",
       },
       address: {
-        street: "Königsstraße 67",
-        city: "Stuttgart",
-        state: "Baden-Württemberg",
-        zipCode: "70173",
+        street: "Ritterstraße 22",
+        city: "Leipzig",
+        state: "Saxony",
+        zipCode: "04109",
       },
     },
     openAndCloseHours: {
@@ -3265,10 +3267,10 @@ const restaurants = [
         phoneNumber: "+49 170 8901234",
       },
       address: {
-        street: "Gartenstraße 54",
-        city: "Cologne",
-        state: "North Rhine-Westphalia",
-        zipCode: "50667",
+        street: "Hildesheimer Straße 236",
+        city: "Hannover",
+        state: "Lower Saxony",
+        zipCode: "30519",
       },
     },
     openAndCloseHours: {
