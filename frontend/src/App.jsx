@@ -14,7 +14,7 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "./contexts/DataContext";
 import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
-import RestaurantHome from "./pages/RestaurantHome";
+// import RestaurantHome from "./pages/RestaurantHome";
 
 // RESTAURANT SIDE
 import RSRegisterPage from "./pages/RSRegisterPage";
@@ -77,7 +77,7 @@ function App() {
         <Route path="/restaurant/:id" element={<RestaurantMenu />} />
         <Route path="/BasketPage" element={<BasketPage />} />
         <Route path="/success" element={<SuccessPage />} />
-        <Route path="/restaurantHome" element={<RestaurantHome />} />
+        {/* <Route path="/restaurantHome" element={<RestaurantHome />} /> */}
 
         <Route
           path="/profile/*"

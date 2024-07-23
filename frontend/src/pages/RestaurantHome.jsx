@@ -1,11 +1,11 @@
-import RestaurantNavbar from "../components/RestaurantNavbar";
+// import RestaurantNavbar from "../components/RestaurantNavbar";
 
-function RestaurantHome() {
-  return (
-    <div>
-      <RestaurantNavbar />
-    </div>
-  );
-}
+// function RestaurantHome() {
+//   return (
+//     <div>
+//       <RestaurantNavbar />
+//     </div>
+//   );
+// }
 
-export default RestaurantHome;
+// export default RestaurantHome;
