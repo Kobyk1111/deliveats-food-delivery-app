@@ -549,7 +549,7 @@ const menus = [
         price: 10.99,
       }
     ]
-  }
+  },
   {
     cuisine: "Colombian",
     items: [
@@ -663,7 +663,7 @@ const menus = [
         name: "Samgyeopsal",
         description: "Pork belly meat smudged in ssamjang soybean paste and chilli paste, served with lettuce, perilla leaves, sliced onions and raw garlic",
         price: 8.99,
-      }
+      },
       {
         name: "Kimchi Jjigae",
         description: "Kimchi stew with red cabbage chopped, sauteed in oil, cooked with tofu, pork, scallions and onions",
