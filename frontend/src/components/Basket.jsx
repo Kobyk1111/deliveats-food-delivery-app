@@ -4,6 +4,8 @@ import { BasketContext } from "../contexts/BasketContext";
 import { loadStripe } from "@stripe/stripe-js";
 import { DataContext } from "../contexts/DataContext";
 
+import "../style/Basket.css";
+
 function Basket({ id }) {
   const {
     basket,
@@ -99,7 +101,7 @@ function Basket({ id }) {
                   </div>
 
                   <span className="item-total">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    €{(item.price * item.quantity).toFixed(2)}
                   </span>
                   <button
                     className="remove-button"

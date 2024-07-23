@@ -8,6 +8,8 @@ import Basket from "../components/Basket";
 // import { FaRegHeart } from "react-icons/fa";
 // import { FaHeart } from "react-icons/fa";
 
+import "../style/RestaurantMenu.css"
+
 function RestaurantMenu() {
   const { id } = useParams();
   const { restaurants, getSearchedRestaurants, restaurant, setRestaurant, loggedInUser } = useContext(DataContext);

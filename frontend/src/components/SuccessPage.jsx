@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { DataContext } from "../contexts/DataContext";
 
+import "../style/SuccessPage.css"
+
 function SuccessPage() {
   const { deliveryOption, totalSum, totalSumPurchasedItems, basket, purchasedItems, completePurchase } =
     useContext(BasketContext);
@@ -127,25 +129,25 @@ function SuccessPage() {
     <>
       <Navbar />
       <div className="successPage">
-        <div className="card-container">
-          <div className="card">
-            <h1 className="title">Thank you! 🎉</h1>
-            <h1 className="title">Order Successful.</h1>
-            <p className="message">
+        <div className="success-card-container">
+          <div className="success-card">
+            <h1 className="success-title">Thank you! 🎉</h1>
+            <h1 className="success-title">Order Successful.</h1>
+            <p className="success-message">
               Your order will be {deliveryOption === "delivery" ? "delivered" : "ready for pickup"} soon.
             </p>
           </div>
-          <div className="card-order-details">
+          <div className="success-card-order-details">
             <h2>Order Details</h2>
             {purchasedItems.map((item) => (
               <p key={item._id}>
                 {item.quantity} x {item.name}
               </p>
             ))}
-            <p className="total">Total: €{totalSumPurchasedItems.toFixed(2)}</p>
+            <p className="success-total">Total: €{totalSumPurchasedItems.toFixed(2)}</p>
           </div>
         </div>
-        <div className="trackerContainer">
+        <div className="success-trackerContainer">
           <DeliveryTracker />
         </div>
       </div>

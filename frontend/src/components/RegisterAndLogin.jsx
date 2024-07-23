@@ -3,6 +3,8 @@ import { useState, useContext } from "react";
 import { DataContext } from "../contexts/DataContext.jsx";
 import CustomModal from "./CustomModal.jsx";
 
+import "../style/RegisterAndLogin.css"
+
 function RegisterAndLogin() {
   // State to check all inputs here
   const [loginInputs, setLoginInputs] = useState({

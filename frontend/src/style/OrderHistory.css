@@ -1,0 +1,79 @@
+/* OrderHistory.css */
+
+.order-history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 4rem;
+  padding-top: 2rem;
+  position: relative;
+  /* min-height: 30vh; */
+}
+
+.order-history-container .no-history-info {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  margin-top: 4rem;
+}
+
+.order-history-container .order {
+  padding: 2rem;
+  box-shadow: 1px 1px 10px rgb(219, 219, 219);
+  text-align: left;
+}
+
+.order-history-container h3 {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.order-history-container p {
+  font-size: 1.4rem;
+  color: rgb(59, 59, 59);
+}
+
+.order-history-container .restaurant-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-history-container .items-container,
+.order-history-container .payment-details,
+.order-history-container .additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.order-history-container .item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-history-container .calculations {
+  display: flex;
+  gap: 1rem;
+}
+
+.order-history-container .total-sum {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.order-history-container .payment-method,
+.order-history-container .charged-amount,
+.order-history-container .order-type,
+.order-history-container .order-status,
+.order-history-container .order-date,
+.order-history-container .order-time {
+  display: flex;
+  justify-content: space-between;
+}

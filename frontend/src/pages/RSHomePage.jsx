@@ -1,33 +1,32 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+
+import RSNavbar from "../components/RSNavbar";
 import Footer from "../components/Footer";
 
-import "../style/Profile.css";
+// import "../style/RSHomePage.css";
 
-function Profile() {
+function RSHomePage() {
   return (
     <>
-      <Navbar />
+      <RSNavbar />
       <div className="container-profile">
-        <header className="header-profile">
-          <h1 className="title-profile">Profile</h1>
-        </header>
         <div className="navbar-profile">
           <ul>
             <li>
-              <NavLink to="preferences">Preferences</NavLink>
+              <NavLink to="orders-active">Active Orders</NavLink>
             </li>
             <li>
-              <NavLink to="addresses">Addresses</NavLink>
+              <NavLink to="orders-history">Orders History</NavLink>
             </li>
             <li>
-              <NavLink to="order-history">Order history</NavLink>
+              <NavLink to="menu">Menu</NavLink>
             </li>
             <li>
-              <NavLink to="settings">Settings</NavLink>
+              <NavLink to="profile">Profile</NavLink>
             </li>
           </ul>
         </div>
+        <div className="content-profile"></div>
         <div className="content-profile">
           <Outlet />
         </div>
@@ -37,4 +36,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default RSHomePage;

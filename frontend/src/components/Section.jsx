@@ -1,3 +1,5 @@
+import "../style/Section.css"
+
 function Section() {
   return (
     <>

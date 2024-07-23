@@ -1,8 +1,11 @@
 import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataContext";
 
+import "../style/OrderHistory.css";
+
 function OrderHistory() {
-  const { userOrderHistory, setUserOrderHistory, loggedInUser } = useContext(DataContext);
+  const { userOrderHistory, setUserOrderHistory, loggedInUser } =
+    useContext(DataContext);
 
   useEffect(() => {
     async function getOrderHistory() {
@@ -31,7 +34,10 @@ function OrderHistory() {
     <>
       <div className="order-history-container">
         {userOrderHistory.length === 0 ? (
-          <h2 className="no-history-info"> You have no order history at the moment</h2>
+          <h2 className="no-history-info">
+            {" "}
+            You have no order history at the moment
+          </h2>
         ) : (
           <>
             {userOrderHistory.map((order) => {
