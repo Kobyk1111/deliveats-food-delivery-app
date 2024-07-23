@@ -14,21 +14,18 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "./contexts/DataContext";
 import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
+import RestaurantHome from "./pages/RestaurantHome";
 
 function App() {
-  const { setLoggedInUser, handleHTTPRequestWithToken } =
-    useContext(DataContext);
+  const { setLoggedInUser, handleHTTPRequestWithToken } = useContext(DataContext);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {
     async function checkAuthentication() {
       try {
-        const response = await handleHTTPRequestWithToken(
-          "http://localhost:5002/users/check-auth",
-          {
-            credentials: "include",
-          }
-        );
+        const response = await handleHTTPRequestWithToken("http://localhost:5002/users/check-auth", {
+          credentials: "include",
+        });
 
         if (response.ok) {
           const user = await response.json();
@@ -72,6 +69,7 @@ function App() {
         <Route path="/restaurant/:id" element={<RestaurantMenu />} />
         <Route path="/BasketPage" element={<BasketPage />} />
         <Route path="/success" element={<SuccessPage />} />
+        <Route path="/restaurantHome" element={<RestaurantHome />} />
 
         <Route
           path="/profile/*"

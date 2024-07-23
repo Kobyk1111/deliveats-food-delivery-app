@@ -33,6 +33,10 @@ const historySchema = new Schema(
       type: additionalInfoSchema,
       required: true,
     },
+    // favorited: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   { timestamps: true }
 );
@@ -74,6 +78,12 @@ const userSchema = new Schema(
       type: [addressesSchema],
       default: [],
     },
+    // favoriteRestaurants: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Restaurant",
+    //   },
+    // ],
   },
   { timestamps: true }
 );

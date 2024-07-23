@@ -279,7 +279,7 @@ export async function getAllAddresses(req, res, next) {
       return next(createHttpError(404, "No user found"));
     }
 
-    console.log(foundUser);
+    // console.log(foundUser);
 
     res.json({ addresses: foundUser.addresses });
   } catch (error) {
@@ -287,3 +287,73 @@ export async function getAllAddresses(req, res, next) {
     return next(createHttpError(500, "Server error"));
   }
 }
+
+// export async function setFavorite(req, res, next) {
+//   const { isFavorited } = req.body;
+//   const { userId, id } = req.params;
+
+//   try {
+//     const foundUser = await User.findById(userId);
+
+//     if (!foundUser) {
+//       return next(createHttpError(404, "No user found"));
+//     }
+
+//     const restaurants = await Restaurant.find();
+
+//     if (!restaurants) {
+//       return next(createHttpError(404, "No restaurants found"));
+//     }
+
+//     const restaurant = restaurants.find((restaurant) => restaurant._id.toString() === id);
+
+//     if (!restaurant) {
+//       return next(createHttpError(404, "No restaurant found"));
+//     }
+
+//     restaurant.favorited = isFavorited;
+
+//     console.log(restaurant);
+//     res.json({ favoritedRestaurant: restaurant });
+//   } catch (error) {
+//     console.error(error);
+//     return next(createHttpError(500, "Server error"));
+//   }
+// }
+
+// export async function setFavorite(req, res, next) {
+//   const { userId, restaurantId } = req.params;
+
+//   try {
+//     const foundUser = await User.findById(userId);
+
+//     if (!foundUser) {
+//       return next(createHttpError(404, "No user found"));
+//     }
+
+//     const restaurant = await Restaurant.findById(restaurantId);
+
+//     if (!restaurant) {
+//       return next(createHttpError(404, "No restaurant found"));
+//     }
+
+//     const isFavorited = foundUser.favoriteRestaurants.includes(restaurantId);
+
+//     if (isFavorited) {
+//       foundUser.favoriteRestaurants.pull(restaurantId);
+//     } else {
+//       foundUser.favoriteRestaurants.push(restaurantId);
+//     }
+
+//     await foundUser.save();
+
+//     await foundUser.populate("favoriteRestaurants");
+
+//     console.log(foundUser.favoriteRestaurants);
+
+//     res.json({ favoriteRestaurants: foundUser.favoriteRestaurants });
+//   } catch (error) {
+//     console.error(error);
+//     return next(createHttpError(500, "Server error"));
+//   }
+// }
