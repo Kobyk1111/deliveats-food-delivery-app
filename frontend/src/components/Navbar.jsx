@@ -74,13 +74,6 @@ function Navbar() {
           ) : (
             <RegisterAndLogin />
           )}
-          {/* <Link to="/BasketPage" className="cart-logo">
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "#266241" }}
-            />
-            <span className="item-count">{basket.length}</span>
-          </Link> */}
 
           <div className="cart-logo" onClick={openBasketModal}>
             <FontAwesomeIcon icon={faCartShopping} style={{ color: "#266241" }} />

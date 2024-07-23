@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 
+import "../style/DeliveryTracker.css"
+
 const deliveryStages = [
   { status: "Payment confirmed! 🎉", duration: 1000 },
   { status: "Order received by the restaurant. ✅", duration: 5000 },

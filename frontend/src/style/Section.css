@@ -1,0 +1,62 @@
+/* Section.css */
+
+
+section {
+    background-color: rgb(44, 116, 76, 0.8);
+    padding: 10px;
+  }
+  
+
+.love {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: -1px 1px 2px rgb(104, 158, 22);
+  }
+
+  .love:hover {
+    color: #266241;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    gap: 3.5rem;
+  }
+
+  .images img:hover {
+    box-shadow: #ddd 0 0 10px;
+    transform: perspective(1000px) rotateY(10deg);
+    transition: all 0.5s;
+  }
+
+  .img-text {
+    margin: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid yellow;
+    font-size: 1.5em;
+  }
+
+
+.img-text img,
+.text1 {
+  width: 20em;
+  height: auto;
+}
+
+.img-text:hover {
+    box-shadow: #ddd 0 0 10px;
+    transform: perspective(1000px) rotateY(10deg);
+    transition: all 0.5s;
+  }
+
+  .text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20em;
+  }

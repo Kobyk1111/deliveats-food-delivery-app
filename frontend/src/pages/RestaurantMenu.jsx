@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Basket from "../components/Basket";
 
+import "../style/RestaurantMenu.css"
+
 function RestaurantMenu() {
   const { id } = useParams();
   const { restaurants, getSearchedRestaurants, restaurant, setRestaurant } = useContext(DataContext);

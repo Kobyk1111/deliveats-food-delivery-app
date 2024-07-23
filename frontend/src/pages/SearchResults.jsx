@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
 
+import "../style/SearchResults.css";
+
 function SearchResults() {
   const { restaurants, getSearchedRestaurants } = useContext(DataContext);
   const navigate = useNavigate();
@@ -39,17 +41,32 @@ function SearchResults() {
         {restaurants.map((restaurant) => {
           const openStatus = isRestaurantOpen(restaurant.isOpen);
           return (
-            <div key={restaurant._id} className="card-results" onClick={() => handleCardClick(restaurant._id)}>
+            <div
+              key={restaurant._id}
+              className="card-results"
+              onClick={() => handleCardClick(restaurant._id)}
+            >
               <p className="card-title-results">{restaurant.name}</p>
               <p>{restaurant.address}</p>
               <div className="details-container">
                 <div className="rating-container">
                   <p className="rating">
-                    {showRating(restaurant.rating)} {restaurant.rating} ({restaurant.userRatings})
+                    {showRating(restaurant.rating)} {restaurant.rating} (
+                    {restaurant.userRatings})
                   </p>
                 </div>
-                {restaurant.price_level && <p className="price-level">{getPriceLevel(restaurant.price_level)}</p>}
-                <p className={`open-status ${restaurant.isOpen ? "open" : "closed"}`}>{openStatus}</p>
+                {restaurant.price_level && (
+                  <p className="price-level">
+                    {getPriceLevel(restaurant.price_level)}
+                  </p>
+                )}
+                <p
+                  className={`open-status ${
+                    restaurant.isOpen ? "open" : "closed"
+                  }`}
+                >
+                  {openStatus}
+                </p>
               </div>
             </div>
           );

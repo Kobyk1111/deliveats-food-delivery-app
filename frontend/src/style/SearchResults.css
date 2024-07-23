@@ -1,0 +1,61 @@
+/* SearchResults.css */
+
+.card-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card-results {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  .card-results:hover {
+    background-color: #f1f1f1;
+  }
+
+  .card-title-results {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .details-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rating-container {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #ffa500;
+  }
+
+  .price-level {
+    font-size: 1em;
+    color: #666;
+  }
+
+  .open-status {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .open-status.open {
+    color: #4caf50;
+  }
+
+  .open-status.closed {
+    color: #f44336;
+  }
+  

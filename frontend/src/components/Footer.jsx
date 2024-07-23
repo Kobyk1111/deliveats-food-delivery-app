@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-section about">
+        <div className="footer-section">
           <h2>DelivEats</h2>
           <p>
             DelivEats is your go-to app for fast, reliable food delivery from
@@ -12,11 +12,11 @@ function Footer() {
             comfort of your home!
           </p>
         </div>
-        <div className="footer-section links">
+        <div className="footer-section">
           <h2>Quick Links</h2>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="#">Menu</a>
@@ -28,7 +28,8 @@ function Footer() {
               <a href="#">Contact</a>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              {/* check this link */}
+              <a href="rs-register">Register Restaurant</a>
             </li>
           </ul>
         </div>

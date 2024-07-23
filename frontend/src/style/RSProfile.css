@@ -1,0 +1,55 @@
+/* ******** RSProfile.css ********* */
+
+/* RSProfile.css */
+
+.rs-profile-container {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.basic-info,
+.contact-information,
+.address,
+.digital-presence,
+.opening-hours {
+  border: 1px solid #ddd;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+h3 {
+  padding-bottom: 5px;
+}
+
+.rs-profile-section {
+  margin: 10px 0;
+  padding: 10px;
+
+  border-radius: 5px;
+}
+
+.rs-profile-section div {
+  margin: 5px 0;
+}
+
+strong {
+  color: #555;
+}
+
+.edit-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #274691;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #274691;
+}

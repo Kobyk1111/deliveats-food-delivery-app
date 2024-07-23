@@ -15,6 +15,14 @@ import { DataContext } from "./contexts/DataContext";
 import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
 
+// RESTAURANT SIDE
+import RSRegisterPage from "./pages/RSRegisterPage";
+import RSHomePage from "./pages/RSHomePage";
+import RSOrdersActive from "./components/RSOrdersActive";
+import RSOrdersHistory from "./components/RSOrdersHistory";
+import RSMenu from "./components/RSMenu";
+import RSProfile from "./components/RSProfile";
+
 function App() {
   const { setLoggedInUser, handleHTTPRequestWithToken } =
     useContext(DataContext);
@@ -86,6 +94,23 @@ function App() {
           <Route path="addresses" element={<Addresses />} />
           <Route path="order-history" element={<OrderHistory />} />
           <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* ******** restaurantes Routes ******** */}
+        <Route path="rs-register" element={<RSRegisterPage />} />
+        <Route
+          path="/rs-home/*"
+          element={
+            // <ProtectedRouteLoggedInUser>
+            <RSHomePage />
+            // </ProtectedRouteLoggedInUser>
+          }
+        >
+          <Route index element={<RSOrdersActive />} />
+          <Route path="orders-active" element={<RSOrdersActive />} />
+          <Route path="orders-history" element={<RSOrdersHistory />} />
+          <Route path="menu" element={<RSMenu />} />
+          <Route path="profile" element={<RSProfile />} />
         </Route>
       </Routes>
     </>
