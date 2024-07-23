@@ -293,6 +293,15 @@ footer {
   margin-bottom: 50px;
 }
 
+.menu-card .favorite-icon-container {
+  text-align: right;
+  /* width: 100%; */
+}
+
+.menu-card .favorite-icon {
+  cursor: pointer;
+}
+
 .restaurant-name {
   font-size: 2.5em;
   color: #333;
