@@ -21,7 +21,7 @@ const CustomModal = ({ isOpen, onClose, children }) => {
           transform: "translate(-50%, -50%)",
           borderRadius: "5px",
           padding: "10px",
-          width: "40%",
+          width: "60%",
           maxHeight: "70vh",
         },
       }}

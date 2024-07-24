@@ -1,8 +1,11 @@
 import "../style/RSMenu.css";
 
+import { useContext } from "react";
+import { DataContext } from "../contexts/DataContext";
+
 function RSMenu() {
   const menuData = {
-    cuisine: ["Croatian","Brazilian"],
+    cuisine: ["Croatian", "Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -119,9 +122,12 @@ function RSMenu() {
     ],
   };
 
+  const { loggedInRestaurant } = useContext(DataContext);
+
   return (
     <div className="rs-menu-container">
       <div className="cuisine">
+        <p>{loggedInRestaurant.basicInfo.businessName}</p>
         <h2>Cuisine: {menuData.cuisine.join(", ")}</h2>
       </div>
       {menuData.menu.map((category) => (

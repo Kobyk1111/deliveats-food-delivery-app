@@ -7,24 +7,24 @@ body {
   background-color: #f8f9fa;
 }
 
-.rs-section-signup {
+.rs-section-register {
   margin-top: 70px;
   padding: 10rem;
   text-align: center;
   /* background-color: ; */
 }
 
-.rs-section-signup h1 {
+.rs-section-register h1 {
   color: white;
 }
 
-.rs-section-signup p {
+.rs-section-register p {
   color: white;
   max-width: 600px;
   margin: 1rem auto;
 }
 
-.rs-section-signup button {
+.rs-section-register button {
   padding: 10px 20px;
   margin-top: 20px;
   border: none;
@@ -36,7 +36,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.rs-section-signup button:hover {
+.rs-section-register button:hover {
   background-color: rgb(52, 58, 64);
 }
 

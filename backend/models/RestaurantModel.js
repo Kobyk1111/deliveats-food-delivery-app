@@ -86,19 +86,34 @@ const addressSchema = new Schema({
   postalCode: { type: String, required: true },
 });
 
+// const hoursSchema = new Schema({
+//   open: { type: String, required: true },
+//   close: { type: String, required: true },
+// });
+
 const hoursSchema = new Schema({
-  open: { type: String, required: true },
-  close: { type: String, required: true },
+  open: { type: String },
+  close: { type: String },
 });
 
+// const daysSchema = new Schema({
+//   monday: { type: hoursSchema, required: true },
+//   tuesday: { type: hoursSchema, required: true },
+//   wednesday: { type: hoursSchema, required: true },
+//   thursday: { type: hoursSchema, required: true },
+//   friday: { type: hoursSchema, required: true },
+//   saturday: { type: hoursSchema, required: true },
+//   sunday: { type: hoursSchema, required: true },
+// });
+
 const daysSchema = new Schema({
-  monday: { type: hoursSchema, required: true },
-  tuesday: { type: hoursSchema, required: true },
-  wednesday: { type: hoursSchema, required: true },
-  thursday: { type: hoursSchema, required: true },
-  friday: { type: hoursSchema, required: true },
-  saturday: { type: hoursSchema, required: true },
-  sunday: { type: hoursSchema, required: true },
+  monday: { type: hoursSchema },
+  tuesday: { type: hoursSchema },
+  wednesday: { type: hoursSchema },
+  thursday: { type: hoursSchema },
+  friday: { type: hoursSchema },
+  saturday: { type: hoursSchema },
+  sunday: { type: hoursSchema },
 });
 
 const basicInfoSchema = new Schema({
@@ -109,7 +124,8 @@ const basicInfoSchema = new Schema({
   venueName: { type: String, required: true },
   contact: { type: contactSchema, required: true },
   address: { type: addressSchema, required: true },
-  openAndCloseHours: { type: daysSchema, required: true },
+  // openAndCloseHours: { type: daysSchema, required: true },
+  openAndCloseHours: { type: daysSchema },
 });
 
 const menuItemSchema = new Schema({

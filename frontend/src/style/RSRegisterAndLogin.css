@@ -1,0 +1,136 @@
+/* RSRegisterAndLogin.css */
+
+.restaurant-register-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+/* .button-container {} */
+
+.toggle-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #266241;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #57635c;
+}
+
+.toggle-button:hover {
+  background-color: #163825;
+}
+
+/* MODAL */
+.restaurant-register-login-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+ .restaurant-register-login-container .form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+} 
+
+.restaurant-register-login-container .name-fields {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-height: 40vh;
+}
+
+.restaurant-register-login-container label {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-register-login-container .monday-container,
+.restaurant-register-login-container .tuesday-container,
+.restaurant-register-login-container .wednesday-container,
+.restaurant-register-login-container .thursday-container,
+.restaurant-register-login-container .friday-container,
+.restaurant-register-login-container .saturday-container,
+.restaurant-register-login-container .sunday-container {
+  display: flex;
+  gap: 2rem;
+}
+
+/* .register-login-page .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* *********** REGISTER LOGIN - NAVBAR - MODAL  *********** */
+/* 
+.register-login-container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .restaurant-register-login-container .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-register-login-container .name-fields {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form-label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-input {
+  /* width: 100%; */
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #eee2e2;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  border-color: #266241;
+  outline: none;
+}
+
+.restaurant-register-login-container .checkbox-form-label {
+  display: flex;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #266241;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #163825;
+}
