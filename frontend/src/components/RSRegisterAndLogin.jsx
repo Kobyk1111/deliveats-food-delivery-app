@@ -23,36 +23,6 @@ function RSRegisterAndLogin() {
         state: "",
         postalCode: "",
       },
-      openAndCloseHours: {
-        monday: {
-          open: "",
-          close: "",
-        },
-        tuesday: {
-          open: "",
-          close: "",
-        },
-        wednesday: {
-          open: "",
-          close: "",
-        },
-        thursday: {
-          open: "",
-          close: "",
-        },
-        friday: {
-          open: "",
-          close: "",
-        },
-        saturday: {
-          open: "",
-          close: "",
-        },
-        sunday: {
-          open: "",
-          close: "",
-        },
-      },
     },
   });
   // state to check if user wants to register
@@ -60,8 +30,7 @@ function RSRegisterAndLogin() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTermsChecked, setIsTermsChecked] = useState(false); // state variable to control the checkbox
 
-  const { setLoggedInRestaurant, showPassword, togglePasswordVisibility } =
-    useContext(DataContext);
+  const { setLoggedInRestaurant, showPassword, togglePasswordVisibility } = useContext(DataContext);
 
   // initialize useNavigate hook
   // const navigate = useNavigate();
@@ -122,36 +91,6 @@ function RSRegisterAndLogin() {
             state: loginInputs.basicInfo.address.state,
             postalCode: loginInputs.basicInfo.address.postalCode,
           },
-          openAndCloseHours: {
-            monday: {
-              open: loginInputs.basicInfo.openAndCloseHours.monday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.monday.close,
-            },
-            tuesday: {
-              open: loginInputs.basicInfo.openAndCloseHours.tuesday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.tuesday.close,
-            },
-            wednesday: {
-              open: loginInputs.basicInfo.openAndCloseHours.wednesday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.wednesday.close,
-            },
-            thursday: {
-              open: loginInputs.basicInfo.openAndCloseHours.thursday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.thursday.close,
-            },
-            friday: {
-              open: loginInputs.basicInfo.openAndCloseHours.friday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.friday.close,
-            },
-            saturday: {
-              open: loginInputs.basicInfo.openAndCloseHours.saturday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.saturday.close,
-            },
-            sunday: {
-              open: loginInputs.basicInfo.openAndCloseHours.sunday.open,
-              close: loginInputs.basicInfo.openAndCloseHours.sunday.close,
-            },
-          },
         },
       };
     } else {
@@ -173,9 +112,7 @@ function RSRegisterAndLogin() {
     // If isToRegister is true, we send the request to the register route, if isToRegister is false, then we send the request to the login route
     try {
       const response = await fetch(
-        isToRegister
-          ? "http://localhost:5002/restaurants/register"
-          : "http://localhost:5002/restaurants/login",
+        isToRegister ? "http://localhost:5002/restaurants/register" : "http://localhost:5002/restaurants/login",
         settings
       );
 
@@ -209,36 +146,6 @@ function RSRegisterAndLogin() {
           city: "",
           state: "",
           postalCode: "",
-        },
-        openAndCloseHours: {
-          monday: {
-            open: "",
-            close: "",
-          },
-          tuesday: {
-            open: "",
-            close: "",
-          },
-          wednesday: {
-            open: "",
-            close: "",
-          },
-          thursday: {
-            open: "",
-            close: "",
-          },
-          friday: {
-            open: "",
-            close: "",
-          },
-          saturday: {
-            open: "",
-            close: "",
-          },
-          sunday: {
-            open: "",
-            close: "",
-          },
         },
       },
     });
@@ -400,223 +307,11 @@ function RSRegisterAndLogin() {
                   required
                   className="form-input password-input"
                 />
-                <span
-                  className="password-toggle-icon"
-                  onClick={togglePasswordVisibility}
-                >
+                <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
                   {showPassword ? "🙈" : "👁️"}
                 </span>
               </div>
             </label>
-            {isToRegister && (
-              <>
-                <h3>Open and Close Hours</h3>
-                <h4>Monday</h4>
-                <div className="monday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.monday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.monday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.monday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.monday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Tuesday</h4>
-                <div className="tuesday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.tuesday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.tuesday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.tuesday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.tuesday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Wednesday</h4>
-                <div className="wednesday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.wednesday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.wednesday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.wednesday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.wednesday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Thursday</h4>
-                <div className="thursday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.thursday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.thursday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.thursday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.thursday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Friday</h4>
-                <div className="friday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.friday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.friday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.friday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.friday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Saturday</h4>
-                <div className="saturday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.saturday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.saturday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.saturday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.saturday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-                <h4>Sunday</h4>
-                <div className="sunday-container">
-                  <label className="form-label">
-                    Open
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.sunday.open"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.sunday.open
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                  <label className="form-label">
-                    Close
-                    <input
-                      type="time"
-                      name="basicInfo.openAndCloseHours.sunday.close"
-                      value={
-                        loginInputs.basicInfo.openAndCloseHours.sunday.close
-                      }
-                      onChange={handleChange}
-                      // required
-                      className="form-input"
-                    />
-                  </label>
-                </div>
-              </>
-            )}
-
             {isToRegister && (
               <label className="checkbox-form-label">
                 <input
@@ -626,19 +321,14 @@ function RSRegisterAndLogin() {
                   required
                   className="form-checkbox"
                 />
-                <span
-                  className="terms-of-use-span"
-                  style={{ whiteSpace: "pre-wrap" }}
-                >
+                <span className="terms-of-use-span" style={{ whiteSpace: "pre-wrap" }}>
                   {" "}
                   I agree to the Terms of Use.
                 </span>
               </label>
             )}
 
-            <button className="submit-button">
-              {isToRegister ? "Register" : "Login"}
-            </button>
+            <button className="submit-button">{isToRegister ? "Register" : "Login"}</button>
           </form>
         )}
       </CustomModal>
