@@ -9,11 +9,18 @@
 
 :root {
   font-size: 62.5%;
+  --color-1: #064635;
+  --color-2: #519259;
+  --color-3: #eaba4a;
+  --color-4: #feeabc;
+  --color-5: #fbf9f5;
 }
 
 body {
   font-size: 1.6rem;
+  color: var(--color-5);
   /* min-height: 40vh; */
+  /* background-color: var(--color-1); */
 }
 
 .loading-spinner {
@@ -302,7 +309,6 @@ body {
   margin-bottom: 50px;
 } */
 
-
 .menu-card .favorite-icon-container {
   text-align: right;
   /* width: 100%; */
@@ -313,12 +319,11 @@ body {
 }
 
 .restaurant-name {
-
   font-size: 2.5em;
   color: #333;
   text-align: center;
   margin-bottom: 10px;
-} 
+}
 
 /* .restaurant-address {
   font-size: 1.2em;
