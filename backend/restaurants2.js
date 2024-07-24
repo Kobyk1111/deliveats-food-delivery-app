@@ -70,10 +70,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -163,10 +163,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -257,10 +257,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -350,10 +350,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -443,10 +443,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -536,10 +536,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -629,10 +629,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -722,10 +722,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -815,10 +815,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -908,10 +908,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Coxinha", description: "Chicken croquettes", price: 5.00 },
-          { category: "Main Courses", name: "Feijoada", description: "Brazilian black bean stew with pork", price: 12.00 },
-          { category: "Desserts", name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
-          { category: "Drinks", name: "Guaraná", description: "Brazilian guaraná soda", price: 3.50 },
+          { name: "Coxinha", description: "Chicken croquettes", price: 3.00 },
+          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.00 },
+          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.00 },
+          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.00 },
         ],
       },
     ],
@@ -1001,10 +1001,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Pršut", description: "Cured ham served with cheese", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1095,10 +1095,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1188,10 +1188,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1281,10 +1281,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Pršut", description: "Cured ham served with cheese", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1374,10 +1374,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Pršut", description: "Cured ham served with cheese", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1467,10 +1467,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1560,10 +1560,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1653,10 +1653,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Ćevapi", description: "Grilled minced meat sausages", price: 6.50 },
-          { category: "Main Courses", name: "Pašticada", description: "Beef stew in a rich sauce", price: 14.00 },
-          { category: "Desserts", name: "Krempita", description: "Custard cream pie", price: 3.50 },
-          { category: "Drinks", name: "Croatian Wine", description: "Selection of local wines", price: 5.00 },
+          { name: "Pršut", description: "Cured ham served with cheese", price: 3.00 },
+          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.00 },
+          { name: "Krempita", description: "Custard cream pie", price: 3.00 },
+          { name: "Croatian Wine", description: "Selection of local wines", price: 3.00 },
         ],
       },
     ],
@@ -1746,10 +1746,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { category: "Appetizers", name: "Kelewele", description: "Spicy fried plantains", price: 5.50 },
-          { category: "Main Courses", name: "Jollof Rice", description: "Spiced rice cooked with tomatoes and vegetables", price: 12.00 },
-          { category: "Desserts", name: "Puff Puff", description: "Sweet fried dough balls", price: 3.00 },
-          { category: "Drinks", name: "Sobolo", description: "Hibiscus tea drink", price: 4.50 },
+          { name: "Kelewele", description: "Spicy fried plantains", price: 3.00 },
+          { name: "Jollof Rice", description: "Spiced rice cooked with tomatoes and vegetables", price: 11.00 },
+          { name: "Puff Puff", description: "Sweet fried dough balls", price: 3.00 },
+          { name: "Sobolo", description: "Hibiscus tea drink", price: 3.00 },
         ],
       },
     ],
@@ -1839,10 +1839,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Kelewele", description: "Spicy fried plantains", price: 5.00 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.50 },
+              { name: "Kelewele", description: "Spicy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.00 },
             ],
           },
     ],
@@ -1932,10 +1932,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Kenkey and Fish", description: "Fermented corn dough served with fried fish", price: 13.00 },
-              { category: "Desserts", name: "Mango Pudding", description: "Creamy mango pudding", price: 4.50 },
-              { category: "Drinks", name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 4.00 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Kenkey and Fish", description: "Fermented corn dough served with fried fish", price: 11.00 },
+              { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.00 },
+              { name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 3.00 },
             ],
           },
     ],
@@ -2025,10 +2025,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Chinchinga", description: "Spicy kebabs", price: 6.00 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.50 },
+              { name: "Chinchinga", description: "Spicy kebabs", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.00 },
             ],
           },
     ],
@@ -2118,10 +2118,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Kelewele", description: "Spicy fried plantains", price: 5.00 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Pudding", description: "Creamy mango pudding", price: 4.50 },
-              { category: "Drinks", name: "Fruit Punch", description: "Mixed fruit punch", price: 3.50 },
+              { name: "Kelewele", description: "Spicy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.00 },
+              { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.00 },
             ],
           },
     ],
@@ -2211,10 +2211,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.50 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.00 },
             ],
           },
     ],
@@ -2304,10 +2304,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fruit Punch", description: "Mixed fruit punch", price: 3.50 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.00 },
             ],
           },
     ],
@@ -2397,10 +2397,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fruit Punch", description: "Mixed fruit punch", price: 3.50 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.00 },
             ],
           },
     ],
@@ -2490,10 +2490,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Kelewele", description: "Spicy fried plantains", price: 5.00 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.50 },
+              { name: "Kelewele", description: "Spicy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.00 },
             ],
           },
     ],
@@ -2583,10 +2583,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Pudding", description: "Creamy mango pudding", price: 4.50 },
-              { category: "Drinks", name: "Fruit Punch", description: "Mixed fruit punch", price: 3.50 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.00 },
+              { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.00 },
             ],
           },
     ],
@@ -2676,10 +2676,10 @@ const restaurants = [
           {
             category: "20 menu",
             items: [
-              { category: "Appetizers", name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 4.50 },
-              { category: "Main Courses", name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 12.00 },
-              { category: "Desserts", name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 4.00 },
-              { category: "Drinks", name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.50 },
+              { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.00 },
+              { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.00 },
+              { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.00 },
+              { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.00 },
             ],
           },
     ],
@@ -2769,10 +2769,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -2862,10 +2862,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -2955,10 +2955,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -3048,10 +3048,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -3141,10 +3141,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -3234,10 +3234,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
@@ -3327,10 +3327,10 @@ const restaurants = [
       {
         category: "20 menu",
         items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 4.00 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 10.00 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.50 },
-          { name: "Coke", description: "Classic soft drink", price: 2.50 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.00 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.00 },
+          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.00 },
+          { name: "Coke", description: "Classic soft drink", price: 3.00 },
         ],
       }
     ],
