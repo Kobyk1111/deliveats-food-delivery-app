@@ -1,79 +1,5 @@
 import { Schema, model } from "mongoose";
 
-// const menuItemSchema = new Schema({
-//   name: { type: String, required: true },
-//   description: { type: String, required: true },
-//   price: { type: Number, required: true },
-// });
-
-// const menuSchema = new Schema({
-//   cuisine: { type: String, required: true },
-//   items: { type: [menuItemSchema], required: true },
-// });
-
-// const restaurantSchema = new Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//   },
-//   address: {
-//     type: String,
-//     required: true,
-//   },
-//   rating: {
-//     type: Number,
-//     required: true,
-//   },
-//   userRatings: {
-//     type: Number,
-//     required: true,
-//   },
-//   isOpen: {
-//     type: Boolean,
-//     required: true,
-//   },
-//   price_level: {
-//     type: Number,
-//     required: true,
-//   },
-//   favorited: {
-//     type: Boolean,
-//     default: false,
-//   },
-//   menu: {
-//     type: menuSchema,
-//     required: true,
-//     default: {
-//       cuisine: "Italian",
-//       items: [
-//         {
-//           name: "Margherita Pizza",
-//           description: "Classic cheese and tomato pizza",
-//           price: 8.99,
-//         },
-//         {
-//           name: "Pepperoni Pizza",
-//           description: "Pepperoni, cheese, and tomato pizza",
-//           price: 9.99,
-//         },
-//         {
-//           name: "Caesar Salad",
-//           description: "Romaine lettuce, croutons, and Caesar dressing",
-//           price: 7.99,
-//         },
-//         {
-//           name: "Pasta Carbonara",
-//           description: "Pasta with creamy bacon sauce",
-//           price: 11.99,
-//         },
-//       ],
-//     },
-//   },
-// });
-
-// const Restaurant = model("Restaurant", restaurantSchema);
-// export default Restaurant;
-
 const contactSchema = new Schema({
   email: { type: String, required: true },
   phoneNumber: { type: String, required: true },
@@ -86,35 +12,25 @@ const addressSchema = new Schema({
   postalCode: { type: String, required: true },
 });
 
-// const hoursSchema = new Schema({
-//   open: { type: String, required: true },
-//   close: { type: String, required: true },
-// });
-
-const hoursSchema = new Schema({
-  open: { type: String },
-  close: { type: String },
-});
-
-// const daysSchema = new Schema({
-//   monday: { type: hoursSchema, required: true },
-//   tuesday: { type: hoursSchema, required: true },
-//   wednesday: { type: hoursSchema, required: true },
-//   thursday: { type: hoursSchema, required: true },
-//   friday: { type: hoursSchema, required: true },
-//   saturday: { type: hoursSchema, required: true },
-//   sunday: { type: hoursSchema, required: true },
-// });
-
 const daysSchema = new Schema({
-  monday: { type: hoursSchema },
-  tuesday: { type: hoursSchema },
-  wednesday: { type: hoursSchema },
-  thursday: { type: hoursSchema },
-  friday: { type: hoursSchema },
-  saturday: { type: hoursSchema },
-  sunday: { type: hoursSchema },
+  monday: { type: String, required: true, default: "" },
+  tuesday: { type: String, required: true, default: "" },
+  wednesday: { type: String, required: true, default: "" },
+  thursday: { type: String, required: true, default: "" },
+  friday: { type: String, required: true, default: "" },
+  saturday: { type: String, required: true, default: "" },
+  sunday: { type: String, required: true, default: "" },
 });
+
+const defaultDays = {
+  monday: "",
+  tuesday: "",
+  wednesday: "",
+  thursday: "",
+  friday: "",
+  saturday: "",
+  sunday: "",
+};
 
 const basicInfoSchema = new Schema({
   businessName: { type: String, required: true },
@@ -124,8 +40,6 @@ const basicInfoSchema = new Schema({
   venueName: { type: String, required: true },
   contact: { type: contactSchema, required: true },
   address: { type: addressSchema, required: true },
-  // openAndCloseHours: { type: daysSchema, required: true },
-  openAndCloseHours: { type: daysSchema },
 });
 
 const menuItemSchema = new Schema({
@@ -159,6 +73,7 @@ const promotionalInfoSchema = new Schema({
 
 const restaurantSchema = new Schema({
   basicInfo: { type: basicInfoSchema, required: true },
+  openAndCloseHours: { type: daysSchema, required: true, default: defaultDays },
   cuisine: { type: [String], required: true, default: [] },
   menu: { type: [menuCategorySchema], required: true, default: [] },
   digitalPresence: {
