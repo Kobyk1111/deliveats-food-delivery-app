@@ -128,9 +128,9 @@ function RSMenu() {
     <div className="rs-menu-container">
       <div className="cuisine">
         <p>{loggedInRestaurant.basicInfo.businessName}</p>
-        <h2>Cuisine: {menuData.cuisine.join(", ")}</h2>
+        <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
       </div>
-      {menuData.menu.map((category) => (
+      {loggedInRestaurant.menu.map((category) => (
         <div key={category.category} className="menu-category">
           <h2>{category.category}</h2>
           {category.items.map((item) => (
@@ -145,6 +145,12 @@ function RSMenu() {
         </div>
       ))}
       <button className="update-button">Update</button>
+
+      <div>
+        <h3>Promotionals Info</h3>
+        <div> Current Offers</div>
+        <div> Loyalty Programs</div>
+      </div>
     </div>
   );
 }
