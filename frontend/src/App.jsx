@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import SearchResults from "./pages/SearchResults";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import SuccessPage from "./components/SuccessPage";
@@ -25,15 +25,19 @@ import RSMenu from "./components/RSMenu";
 import RSProfile from "./components/RSProfile";
 
 function App() {
-  const { setLoggedInUser, handleHTTPRequestWithToken } = useContext(DataContext);
+  const { setLoggedInUser, handleHTTPRequestWithToken, loggedInRestaurant } =
+    useContext(DataContext);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {
     async function checkAuthentication() {
       try {
-        const response = await handleHTTPRequestWithToken("http://localhost:5002/users/check-auth", {
-          credentials: "include",
-        });
+        const response = await handleHTTPRequestWithToken(
+          "http://localhost:5002/users/check-auth",
+          {
+            credentials: "include",
+          }
+        );
 
         if (response.ok) {
           const user = await response.json();
@@ -95,13 +99,21 @@ function App() {
         </Route>
 
         {/* ******** restaurantes Routes ******** */}
-        <Route path="rs-register" element={<RSRegisterPage />} />
+
+        <Route
+          path="/rs-register"
+          element={
+            loggedInRestaurant ? (
+              <Navigate to="/rs-home/*" />
+            ) : (
+              <RSRegisterPage />
+            )
+          }
+        />
         <Route
           path="/rs-home/*"
           element={
-            // <ProtectedRouteLoggedInUser>
-            <RSHomePage />
-            // </ProtectedRouteLoggedInUser>
+            loggedInRestaurant ? <RSHomePage /> : <Navigate to="/rs-register" />
           }
         >
           <Route index element={<RSOrdersActive />} />

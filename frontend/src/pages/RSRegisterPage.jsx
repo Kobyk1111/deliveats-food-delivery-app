@@ -1,17 +1,17 @@
 import "../style/RSRegisterPage.css";
 
-import Footer from "../components/Footer";
 import RSNavbar from "../components/RSNavbar";
+import Footer from "../components/Footer";
 
 function RSRegisterPage() {
   return (
     <>
       <RSNavbar />
 
-      <section className="rs-section-signup">
+      <section className="rs-section-register">
         <h1>Reach more customers and grow your business with DelivEats</h1>
         <p>Partner with DelivEats to create more sales</p>
-        <button>Sign up</button>
+        <button>Register</button>
       </section>
 
       <section className="rs-section-partner">

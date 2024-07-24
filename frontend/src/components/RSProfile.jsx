@@ -1,41 +1,10 @@
 import "../style/RSProfile.css";
 
+import { useContext } from "react";
+import { DataContext } from "../contexts/DataContext";
+
 function RSProfile() {
-  const profile = {
-    businessName: "Gourmet Haven",
-    businessId: "12/345/67890",
-    owner: "Jane Doe",
-    venueName: "Gourmet",
-    contact: {
-      email: "janedoe@gourmethaven.com",
-      phoneNumber: "+1234567890",
-    },
-    address: {
-      street: "123 Foodie Lane",
-      city: "Culinary City",
-      state: "Gastronomy",
-      zipCode: "12345",
-    },
-    openAndCloseHours: {
-      monday: "10:00 AM - 10:00 PM",
-      tuesday: "10:00 AM - 10:00 PM",
-      wednesday: "10:00 AM - 10:00 PM",
-      thursday: "10:00 AM - 10:00 PM",
-      friday: "10:00 AM - 11:00 PM",
-      saturday: "10:00 AM - 11:00 PM",
-      sunday: "closed",
-    },
-    digitalPresence: {
-      photos: [
-        "https://www.hvarstaste.com/photos/restaurant1.jpg",
-        "https://www.hvarstaste.com/photos/dish1.jpg",
-      ],
-      socialMedia: {
-        facebook: "http://www.facebook.com/hvarstaste",
-        instagram: "http://www.instagram.com/hvarstaste",
-      },
-    },
-  };
+  const { loggedInRestaurant } = useContext(DataContext);
 
   return (
     <>
@@ -44,16 +13,23 @@ function RSProfile() {
           <h3>Basic Info</h3>
           <div className="rs-profile-section">
             <div>
-              <strong>Business Name:</strong> {profile.businessName}
+              <strong>Business Name:</strong>{" "}
+              {loggedInRestaurant.basicInfo.businessName}
             </div>
             <div>
-              <strong>Business ID:</strong> {profile.businessId}
+              <strong>Business ID:</strong>{" "}
+              {loggedInRestaurant.basicInfo.businessId}
             </div>
             <div>
-              <strong>Owner:</strong> {profile.owner}
+              <strong>Owner:</strong> {loggedInRestaurant.basicInfo.owner}
             </div>
             <div>
-              <strong>Venue Name:</strong> {profile.venueName}
+              <strong>Venue Name:</strong>{" "}
+              {loggedInRestaurant.basicInfo.venueName}
+            </div>
+            <div>
+              <strong>Password:</strong>{" "}
+              {/* {loggedInRestaurant.basicInfo.password} */}
             </div>
           </div>
         </div>
@@ -62,10 +38,12 @@ function RSProfile() {
 
           <div className="rs-profile-section">
             <div>
-              <strong>Email:</strong> {profile.contact.email}
+              <strong>Email:</strong>{" "}
+              {loggedInRestaurant.basicInfo.contact.email}
             </div>
             <div>
-              <strong>Phone Number:</strong> {profile.contact.phoneNumber}
+              <strong>Phone Number:</strong>{" "}
+              {loggedInRestaurant.basicInfo.contact.phoneNumber}
             </div>
           </div>
         </div>
@@ -73,16 +51,19 @@ function RSProfile() {
           <h3>Address</h3>
           <div className="rs-profile-section">
             <div>
-              <strong>Street:</strong> {profile.address.street}
+              <strong>Street:</strong>{" "}
+              {loggedInRestaurant.basicInfo.address.street}
             </div>
             <div>
-              <strong>City:</strong> {profile.address.city}
+              <strong>City:</strong> {loggedInRestaurant.basicInfo.address.city}
             </div>
             <div>
-              <strong>State:</strong> {profile.address.state}
+              <strong>State:</strong>{" "}
+              {loggedInRestaurant.basicInfo.address.state}
             </div>
             <div>
-              <strong>Zip Code:</strong> {profile.address.zipCode}
+              <strong>Postal Code:</strong>{" "}
+              {loggedInRestaurant.basicInfo.address.postalCode}
             </div>
           </div>
         </div>
@@ -91,11 +72,17 @@ function RSProfile() {
           <div className="rs-profile-section">
             <div>
               <strong>Facebook:</strong>{" "}
-              {profile.digitalPresence.socialMedia.facebook}
+              {/* {
+                loggedInRestaurant.basicInfo.digitalPresence.socialMedia
+                  .facebook
+              } */}
             </div>
             <div>
               <strong>Instagram:</strong>{" "}
-              {profile.digitalPresence.socialMedia.instagram}
+              {/* {
+                loggedInRestaurant.basicInfo.digitalPresence.socialMedia
+                  .instagram
+              } */}
             </div>
           </div>
         </div>
@@ -103,25 +90,40 @@ function RSProfile() {
           <h3>Opening Hours</h3>
           <div className="rs-profile-section">
             <div>
-              <strong>Monday:</strong> {profile.openAndCloseHours.monday}
+              <strong>Monday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.monday.open} -{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.monday.close}
             </div>
             <div>
-              <strong>Tuesday:</strong> {profile.openAndCloseHours.tuesday}
+              <strong>Tuesday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.tuesday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.tuesday.close}
             </div>
             <div>
-              <strong>Wednesday:</strong> {profile.openAndCloseHours.wednesday}
+              <strong>Wednesday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.wednesday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.wednesday.close}
             </div>
             <div>
-              <strong>Thursday:</strong> {profile.openAndCloseHours.thursday}
+              <strong>Thursday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.thursday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.thursday.close}
             </div>
             <div>
-              <strong>Friday:</strong> {profile.openAndCloseHours.friday}
+              <strong>Friday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.friday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.friday.close}
             </div>
             <div>
-              <strong>Saturday:</strong> {profile.openAndCloseHours.saturday}
+              <strong>Saturday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.saturday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.saturday.close}
             </div>
             <div>
-              <strong>Sunday:</strong> {profile.openAndCloseHours.sunday}
+              <strong>Sunday:</strong>{" "}
+              {loggedInRestaurant.basicInfo.openAndCloseHours.sunday.open} -
+              {loggedInRestaurant.basicInfo.openAndCloseHours.sunday.close} 
+
             </div>
           </div>
         </div>

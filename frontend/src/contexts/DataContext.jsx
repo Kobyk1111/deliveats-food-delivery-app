@@ -45,7 +45,7 @@ function DataContextProvider({ children }) {
         const { message } = await response.json();
         alert(message);
         setLoggedInRestaurant(null);
-        navigate("/restaurantHome");
+        navigate("/rs-register");
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
