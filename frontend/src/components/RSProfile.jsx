@@ -72,17 +72,11 @@ function RSProfile() {
           <div className="rs-profile-section">
             <div>
               <strong>Facebook:</strong>{" "}
-              {/* {
-                loggedInRestaurant.basicInfo.digitalPresence.socialMedia
-                  .facebook
-              } */}
+              {loggedInRestaurant.digitalPresence.socialMedia.facebook}
             </div>
             <div>
               <strong>Instagram:</strong>{" "}
-              {/* {
-                loggedInRestaurant.basicInfo.digitalPresence.socialMedia
-                  .instagram
-              } */}
+              {loggedInRestaurant.digitalPresence.socialMedia.instagram}
             </div>
           </div>
         </div>
@@ -91,39 +85,31 @@ function RSProfile() {
           <div className="rs-profile-section">
             <div>
               <strong>Monday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.monday.open} -{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.monday.close}
+              {loggedInRestaurant.openAndCloseHours.monday}
             </div>
             <div>
               <strong>Tuesday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.tuesday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.tuesday.close}
+              {loggedInRestaurant.openAndCloseHours.tuesday}
             </div>
             <div>
               <strong>Wednesday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.wednesday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.wednesday.close}
+              {loggedInRestaurant.openAndCloseHours.wednesday}
             </div>
             <div>
               <strong>Thursday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.thursday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.thursday.close}
+              {loggedInRestaurant.openAndCloseHours.thursday}
             </div>
             <div>
               <strong>Friday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.friday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.friday.close}
+              {loggedInRestaurant.openAndCloseHours.friday}
             </div>
             <div>
               <strong>Saturday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.saturday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.saturday.close}
+              {loggedInRestaurant.openAndCloseHours.saturday}
             </div>
             <div>
               <strong>Sunday:</strong>{" "}
-              {loggedInRestaurant.basicInfo.openAndCloseHours.sunday.open} -
-              {loggedInRestaurant.basicInfo.openAndCloseHours.sunday.close} 
-
+              {loggedInRestaurant.openAndCloseHours.sunday}
             </div>
           </div>
         </div>
