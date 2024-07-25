@@ -45,19 +45,19 @@ function Searchbar({ className }) {
 
   return (
     <>
-
-      <div className="search-container">
-        <form className="search-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className="search-input"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          placeholder="eg. Brazilian restaurants in Berlin"
-          />
-          <button className="search-button">Search</button>
-        </form>
-
+      <div className={`${className}`}>
+        <div className={`${className} search-container`}>
+          <form className="search-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="search-input"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="eg. Brazilian restaurants in Berlin"
+            />
+            <button className="search-button">Search</button>
+          </form>
+        </div>
       </div>
     </>
   );

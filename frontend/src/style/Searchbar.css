@@ -11,12 +11,11 @@
 }
 
 /* .home-searchbar */
- .search-container {
+.search-container {
   /* background-image: url("https://imageproxy.wolt.com/venue/60c438f43b9448233d9907cf/2c0a32ee-d34c-11eb-9198-5e1d1b316988_food_brothers_close_up_3.jpg"); */
 
   background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 
- 
   padding: 200px;
   /* cover: 100%; */
   background-size: 100% 100%;
@@ -58,16 +57,38 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-  
 }
 
 .search-button:hover {
   background-color: #163825;
 }
 
-/* that is the className pass in the function */
+/* SEARCH BAR IN THE SEARCH-RESULTS PAGE */
+/* results-searchbar = that is the className pass in the function */
+
+.results-searchbar {
+  background-color: transparent;
+  /* margin-top: 60px; */
+  border-radius: none;
+  border: none;
+}
+
 .results-searchbar .search-container {
-  margin-top: 60px;
   padding: 30px;
+  background-image: none;
+}
+
+.results-searchbar .search-form {
+  background-color: transparent;
+  border-radius: 1px;
+  border: none;
+  padding: 0px;
+  background-color: none;
+  box-shadow: none;
+  width: 50%;
+}
+
+.results-searchbar .search-form .search-input,
+.results-searchbar .search-form .search-button {
+  border: 0.5px solid gray;
 }
