@@ -32,7 +32,9 @@
   }
 
   .navbar-profile ul li {
-    padding: 10px;
+    padding: 5px;
+    border-radius: 15px;
+
   }
 
   .navbar-profile ul li a {
@@ -53,7 +55,7 @@
   }
   
   .navbar-profile ul li a.active {
-    font-weight: bold;
+    font-weight: bolder;
     padding: 10px;
     border-bottom: 1px solid #163825;
     color: #163825;

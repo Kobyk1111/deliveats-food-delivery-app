@@ -23,7 +23,10 @@ function Searchbar({ className }) {
         credentials: "include",
       };
 
-      const response = await fetch("http://localhost:5002/search/restaurants", settings);
+      const response = await fetch(
+        "http://localhost:5002/search/restaurants",
+        settings
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -42,19 +45,19 @@ function Searchbar({ className }) {
 
   return (
     <>
-      <div className={`${className}`}>
-        <div className={`${className} search-container`}>
-          <form className="search-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="search-input"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="eg. Brazilian restaurants in Berlin"
-            />
-            <button className="search-button">Search</button>
-          </form>
-        </div>
+
+      <div className="search-container">
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="search-input"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          placeholder="eg. Brazilian restaurants in Berlin"
+          />
+          <button className="search-button">Search</button>
+        </form>
+
       </div>
     </>
   );
