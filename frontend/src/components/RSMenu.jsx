@@ -1,149 +1,102 @@
 import "../style/RSMenu.css";
-
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 function RSMenu() {
-  const menuData = {
-    cuisine: ["Croatian", "Brazilian"],
-    menu: [
-      {
-        category: "Appetizers",
-        items: [
-          {
-            name: "Istrian Ham",
-            description: "Cured ham from Istria",
-            price: 5.0,
-          },
-          {
-            name: "Stuffed Peppers",
-            description: "Peppers stuffed with cheese",
-            price: 6.5,
-          },
-          {
-            name: "Seafood Salad",
-            description: "Mixed seafood with olive oil",
-            price: 7.0,
-          },
-          {
-            name: "Bread with Olive Oil",
-            description: "Fresh bread with extra virgin olive oil",
-            price: 4.5,
-          },
-          {
-            name: "Marinated Olives",
-            description: "Olives marinated with herbs",
-            price: 4.0,
-          },
-        ],
-      },
-      {
-        category: "Main Courses",
-        items: [
-          {
-            name: "Lamb Peka",
-            description: "Lamb slow-cooked under a bell",
-            price: 14.0,
-          },
-          {
-            name: "Mussels Buzara",
-            description: "Mussels cooked in tomato and wine sauce",
-            price: 12.5,
-          },
-          {
-            name: "Grilled Tuna",
-            description: "Fresh tuna steak grilled",
-            price: 13.5,
-          },
-          {
-            name: "Vegetable Risotto",
-            description: "Creamy risotto with seasonal vegetables",
-            price: 11.0,
-          },
-          {
-            name: "Pork Ribs",
-            description: "Barbecued pork ribs",
-            price: 15.0,
-          },
-        ],
-      },
-      {
-        category: "Desserts",
-        items: [
-          {
-            name: "Povitica",
-            description: "Nut roll from Croatia",
-            price: 5.0,
-          },
-          {
-            name: "Apple Strudel",
-            description: "Traditional apple strudel",
-            price: 4.5,
-          },
-          {
-            name: "Sweet Ricotta Balls",
-            description: "Ricotta balls coated in sugar",
-            price: 5.5,
-          },
-          {
-            name: "Croatian Cheesecake",
-            description: "Rich and creamy cheesecake",
-            price: 6.0,
-          },
-          { name: "Tiramisu", description: "Classic tiramisu", price: 5.0 },
-        ],
-      },
-      {
-        category: "Drinks",
-        items: [
-          {
-            name: "Croatian Lager",
-            description: "Local Croatian beer",
-            price: 4.0,
-          },
-          { name: "Red Wine", description: "House red wine", price: 5.5 },
-          {
-            name: "Sparkling Water",
-            description: "Carbonated water",
-            price: 3.0,
-          },
-          {
-            name: "Fruit Juice",
-            description: "Seasonal fruit juice",
-            price: 3.5,
-          },
-          {
-            name: "Herbal Tea",
-            description: "Selection of herbal teas",
-            price: 2.0,
-          },
-        ],
-      },
-    ],
+  const { loggedInRestaurant, setLoggedInRestaurant } = useContext(DataContext);
+  const [editingCategory, setEditingCategory] = useState(null);
+  const [newMenuData, setNewMenuData] = useState({});
+
+  const handleEditClick = (category) => {
+    setEditingCategory(category);
+    const categoryData = loggedInRestaurant.menu.find(cat => cat.category === category);
+    setNewMenuData({ ...categoryData });
   };
 
-  const { loggedInRestaurant } = useContext(DataContext);
+  const handleInputChange = (index, field, value) => {
+    if (field === 'price') {
+      value = parseFloat(value) || 0; // Ensure price is a number
+    }
+    const updatedItems = [...newMenuData.items];
+    updatedItems[index] = { ...updatedItems[index], [field]: value };
+    setNewMenuData({ ...newMenuData, items: updatedItems });
+  };
+
+  const handleSaveClick = () => {
+    const updatedMenu = loggedInRestaurant.menu.map(cat =>
+      cat.category === editingCategory ? newMenuData : cat
+    );
+    setLoggedInRestaurant({ ...loggedInRestaurant, menu: updatedMenu });
+    setEditingCategory(null);
+  };
+
+  const handleCancelClick = () => {
+    setEditingCategory(null);
+  };
 
   return (
     <div className="rs-menu-container">
       <div className="cuisine">
         <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
       </div>
+
       {loggedInRestaurant.menu.map((category) => (
         <div key={category.category} className="menu-category">
-          <h2>{category.category}</h2>
-          {category.items.map((item) => (
-            <div key={item.name} className="menu-item">
-              <div className="item-info">
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-              </div>
-              <div className="item-price">€{item.price.toFixed(2)}</div>
+          <div className="category-header">
+            <h2>{category.category}</h2>
+            <button
+              className="edit-button"
+              onClick={() => handleEditClick(category.category)}
+            >
+              {editingCategory === category.category ? "Cancel" : "Edit"}
+            </button>
+          </div>
+
+          {editingCategory === category.category ? (
+            <div className="edit-form">
+              <h2>Edit {category.category}</h2>
+              {newMenuData.items.map((item, index) => (
+                <div key={index} className="edit-item">
+                  <label>Name:
+                    <input
+                      type="text"
+                      value={item.name}
+                      onChange={(e) => handleInputChange(index, "name", e.target.value)}
+                    />
+                  </label>
+                  <label>Description:
+                    <input
+                      type="text"
+                      value={item.description}
+                      onChange={(e) => handleInputChange(index, "description", e.target.value)}
+                    />
+                  </label>
+                  <label>Price:
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={item.price}
+                      onChange={(e) => handleInputChange(index, "price", e.target.value)}
+                    />
+                  </label>
+                </div>
+              ))}
+              <button className="save-button" onClick={handleSaveClick}>Save</button>
+              <button className="cancel-button" onClick={handleCancelClick}>Cancel</button>
             </div>
-          ))}
+          ) : (
+            category.items.map((item) => (
+              <div key={item.name} className="menu-item">
+                <div className="item-info">
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                </div>
+                <div className="item-price">€{Number(item.price).toFixed(2)}</div>
+              </div>
+            ))
+          )}
         </div>
       ))}
-      <button className="update-button">Update</button>
 
       <div>
         <h3>Promotionals Info</h3>
