@@ -22,8 +22,8 @@ function Basket({ id }) {
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("deliveryOption", deliveryOption);
-    localStorage.setItem("restaurantName", JSON.stringify(restaurant?.name));
-  }, [basket, deliveryOption, restaurant?.name]);
+    localStorage.setItem("restaurantName", JSON.stringify(restaurant.basicInfo.businessName));
+  }, [basket, deliveryOption, restaurant.basicInfo.businessName]);
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
@@ -37,10 +37,7 @@ function Basket({ id }) {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:5002/create-checkout-session",
-        settings
-      );
+      const response = await fetch("http://localhost:5002/create-checkout-session", settings);
 
       if (response.ok) {
         const session = await response.json();
@@ -71,10 +68,7 @@ function Basket({ id }) {
           >
             delivery
           </button>
-          <button
-            className={deliveryOption === "pickup" ? "active" : ""}
-            onClick={() => setDeliveryOption("pickup")}
-          >
+          <button className={deliveryOption === "pickup" ? "active" : ""} onClick={() => setDeliveryOption("pickup")}>
             pickup
           </button>
         </div>
@@ -90,23 +84,14 @@ function Basket({ id }) {
                 </div>
                 <div className="item-controls">
                   <div className="item-quantity">
-                    <button onClick={() => decreaseItemQuantity(item._id)}>
-                      -
-                    </button>
+                    <button onClick={() => decreaseItemQuantity(item._id)}>-</button>
 
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseItemQuantity(item._id)}>
-                      +
-                    </button>
+                    <button onClick={() => increaseItemQuantity(item._id)}>+</button>
                   </div>
 
-                  <span className="item-total">
-                    €{(item.price * item.quantity).toFixed(2)}
-                  </span>
-                  <button
-                    className="remove-button"
-                    onClick={() => removeItemFromBasket(item._id)}
-                  >
+                  <span className="item-total">€{(item.price * item.quantity).toFixed(2)}</span>
+                  <button className="remove-button" onClick={() => removeItemFromBasket(item._id)}>
                     x
                   </button>
                 </div>

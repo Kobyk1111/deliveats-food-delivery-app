@@ -8,6 +8,8 @@
 .main-content {
   flex: 1;
   padding: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .menu-card {
@@ -20,6 +22,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 100px;
   margin-bottom: 50px;
+  /* max-height: 100vh;
+  overflow-y: auto; */
 }
 
 .restaurant-name {
@@ -44,12 +48,14 @@
 
 .menu-item-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
+  gap: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -58,8 +64,18 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.item-info {
+/* .item-info {
   max-width: 70%;
+} */
+
+.menu-item-card .item-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .item-name {
@@ -85,22 +101,23 @@
 }
 
 .add-button {
-    background: rgb(38, 98, 65);
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+  background: rgb(38, 98, 65);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: center;
+}
 
-  .add-button:hover {
-    background: #163825;
-  }
+.add-button:hover {
+  background: #163825;
+}
 
-  .not-found {
-    text-align: center;
-    font-size: 1.5em;
-    color: #ff0000;
-    margin-top: 150px;
-  }
+.not-found {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-top: 150px;
+}

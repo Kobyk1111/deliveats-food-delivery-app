@@ -1,0 +1,127 @@
+/* Adressess.css */
+
+.address-book {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+  color: var(--color-1);
+}
+
+.address-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address-view,
+.address-edit {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  /* background-color: red; */
+}
+
+form.address-edit {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.address-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address-details {
+  font-size: 14px;
+  color: #888;
+}
+
+.address-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.edit-address-button,
+.delete-address-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-2);
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-address-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 40%;
+  min-width: 100px;
+  padding: 10px 0;
+  background-color: var(--color-2);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-address-button:hover {
+  background-color: var(--color-1);
+}
+
+.address-edit input,
+.address-edit .autocomplete {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.save-button,
+.cancel-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: var(--color-2);
+  color: white;
+  width: 30%;
+  margin: 0.5rem auto;
+}
+
+.cancel-button {
+  background-color: white;
+  border: 1px solid var(--color-3);
+  color: var(--color-3);
+  width: 30%;
+  margin: 0 auto;
+}
