@@ -167,8 +167,8 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("basicInfo", "venueName", e.target.value)}
                 />
               </div>
-              <button onClick={() => handleSave("basicInfo")}>Save</button>
-              <button onClick={() => handleCancel("basicInfo")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("basicInfo")}>Save</button>
+              <button className="edit-button" onClick={() => handleCancel("basicInfo")}>Cancel</button>
             </>
           ) : (
             <>
@@ -184,7 +184,7 @@ function RSProfile() {
               <div>
                 <strong>Venue Name:</strong> {basicInfo.venueName}
               </div>
-              <button onClick={() => handleEdit("basicInfo")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("basicInfo")}>Edit</button>
             </>
           )}
         </div>
@@ -211,8 +211,8 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("contact", "phoneNumber", e.target.value)}
                 />
               </div>
-              <button onClick={() => handleSave("contact")}>Save</button>
-              <button onClick={() => handleCancel("contact")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("contact")}>Save</button>
+              <button className="edit-button" onClick={() => handleCancel("contact")}>Cancel</button>
             </>
           ) : (
             <>
@@ -222,7 +222,7 @@ function RSProfile() {
               <div>
                 <strong>Phone Number:</strong> {contact.phoneNumber}
               </div>
-              <button onClick={() => handleEdit("contact")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("contact")}>Edit</button>
             </>
           )}
         </div>
@@ -265,8 +265,8 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("address", "postalCode", e.target.value)}
                 />
               </div>
-              <button onClick={() => handleSave("address")}>Save</button>
-              <button onClick={() => handleCancel("address")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("address")}>Save</button>
+              <button className="edit-button" onClick={() => handleCancel("address")}>Cancel</button>
             </>
           ) : (
             <>
@@ -282,7 +282,7 @@ function RSProfile() {
               <div>
                 <strong>Postal Code:</strong> {address.postalCode}
               </div>
-              <button onClick={() => handleEdit("address")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("address")}>Edit</button>
             </>
           )}
         </div>
@@ -309,8 +309,8 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("digitalPresence", "instagram", e.target.value)}
                 />
               </div>
-              <button onClick={() => handleSave("digitalPresence")}>Save</button>
-              <button onClick={() => handleCancel("digitalPresence")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("digitalPresence")}>Save</button>
+              <button className="edit-button" onClick={() => handleCancel("digitalPresence")}>Cancel</button>
             </>
           ) : (
             <>
@@ -320,7 +320,7 @@ function RSProfile() {
               <div>
                 <strong>Instagram:</strong> {digitalPresence.socialMedia.instagram}
               </div>
-              <button onClick={() => handleEdit("digitalPresence")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("digitalPresence")}>Edit</button>
             </>
           )}
         </div>
@@ -387,8 +387,8 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "sunday", e.target.value)}
                 />
               </div>
-              <button onClick={() => handleSave("openingHours")}>Save</button>
-              <button onClick={() => handleCancel("openingHours")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("openingHours")}>Save</button>
+              <button className="edit-button" onClick={() => handleCancel("openingHours")}>Cancel</button>
             </>
           ) : (
             <>
@@ -413,7 +413,7 @@ function RSProfile() {
               <div>
                 <strong>Sunday:</strong> {openingHours.sunday}
               </div>
-              <button onClick={() => handleEdit("openingHours")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("openingHours")}>Edit</button>
             </>
           )}
         </div>
