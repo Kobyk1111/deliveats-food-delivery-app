@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 
-import "../style/Searchbar.css"
+import "../style/Searchbar.css";
 
 function Searchbar({ className }) {
   const { setRestaurants } = useContext(DataContext);
@@ -50,10 +50,9 @@ function Searchbar({ className }) {
               className="search-input"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="eg. Italian food, Berlin"
+              placeholder="eg. Brazilian restaurants in Berlin"
             />
             <button className="search-button">Search</button>
-            
           </form>
         </div>
       </div>

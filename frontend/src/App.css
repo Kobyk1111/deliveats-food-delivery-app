@@ -16,9 +16,14 @@
   --color-5: #fbf9f5;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 body {
   font-size: 1.6rem;
-  color: var(--color-5);
+  color: var(--color-1);
+  min-height: 100vh;
   /* min-height: 40vh; */
   /* background-color: var(--color-1); */
 }

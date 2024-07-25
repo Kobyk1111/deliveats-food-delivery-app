@@ -26,6 +26,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -122,6 +123,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -215,6 +217,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -311,6 +314,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -404,6 +408,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -500,6 +505,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -593,6 +599,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -689,6 +696,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -785,6 +793,7 @@ export const restaurants = [
       sunday: "9:00 AM - 7:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -878,6 +887,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Brazilian"],
+    restaurantType: ["Brazilian"],
     menu: [
       {
         category: "Appetizers",
@@ -971,6 +981,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1064,6 +1075,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1160,6 +1172,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1256,6 +1269,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1352,6 +1366,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1445,6 +1460,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1538,6 +1554,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1634,6 +1651,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Croatian"],
+    restaurantType: ["Croatian"],
     menu: [
       {
         category: "Appetizers",
@@ -1727,6 +1745,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -1820,6 +1839,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -1913,6 +1933,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2006,6 +2027,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2099,6 +2121,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2192,6 +2215,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2285,6 +2309,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2381,6 +2406,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2474,6 +2500,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2567,6 +2594,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2660,6 +2688,7 @@ export const restaurants = [
       sunday: "11:00 AM - 9:00 PM",
     },
     cuisine: ["Ghanaian"],
+    restaurantType: ["Ghanaian"],
     menu: [
       {
         category: "Appetizers",
@@ -2753,6 +2782,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -2849,6 +2879,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -2945,6 +2976,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -3041,6 +3073,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -3137,6 +3170,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -3233,6 +3267,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
@@ -3329,6 +3364,7 @@ export const restaurants = [
       sunday: "12:00 PM - 9:00 PM",
     },
     cuisine: ["Albanian"],
+    restaurantType: ["Albanian"],
     menu: [
       {
         category: "Appetizers",
