@@ -11,16 +11,18 @@ nav {
   top: 0;
   right: 0;
   width: 100%;
-  background-color: rgb(229, 224, 224);
+  background-color: var(--background-color);
   z-index: 10;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+  -8px -8px 16px var(--shadow-light);
 }
 
 nav h1 {
-  font-family: "Merienda", cursive;
+  /* font-family: "Merienda", cursive; */
   font-weight: bolder;
   font-size: 3.6rem;
-  color: #163825;
   cursor: pointer;
+  color: var(--color-1)
 }
 
 .basket-and-register-container {
@@ -46,18 +48,18 @@ nav h1 {
   top: 100%;
   right: 0;
   min-width: 170px;
-  background-color: #e5e0e0;
+  /* background-color: var(--color-4); */
+  background-color: var(--background-color);
   border: 1px solid #e0e0e0;
   border-radius: 0 0 15px 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   right: 0;
   top: 100%;
-  margin-right: 85px;
+  margin-right: 70px;
 }
 
 .dropdown-item {
-  color: black;
   padding: 10px;
   text-decoration: none;
   display: block;
@@ -65,8 +67,8 @@ nav h1 {
 }
 
 .dropdown-item:hover {
-  background-color: #f1f1f1;
-  border-radius: 20px;
+  background-color: var(--color-5);
+  /* border-radius: 20px; */
 }
 
 .logout-button {
@@ -82,11 +84,11 @@ nav h1 {
 }
 
 .logout-button.active {
-  background-color: #57635c;
+  background-color: var(--color-1);
 }
 
 .logout-button:hover {
-  background-color: #163825;
+  background-color: var(--color-1);
 }
 
 /* *********** basket ICON in the nav bar *********** */
@@ -100,12 +102,13 @@ nav h1 {
 }
 
 .cart-logo .item-count {
-  background-color: red;
+  background-color: var(--color-3);
   color: white;
+  font-weight: bold;
   border-radius: 50%;
   padding: 2px 6px;
   font-size: 12px;
   position: absolute;
-  top: -5px;
-  right: -10px;
+  top: -12px;
+  right: -11px;
 }

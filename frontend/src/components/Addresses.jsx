@@ -1,7 +1,10 @@
-import "../style/Adressess.css";
+import "../style/Addressess.css";
 import { useContext, useEffect, useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 import { DataContext } from "../contexts/DataContext";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 function Addresses() {
   const { loggedInUser, handleHTTPRequestWithToken } = useContext(DataContext);
@@ -11,6 +14,7 @@ function Addresses() {
   const [editedLabel, setEditedLabel] = useState("");
   const [label, setLabel] = useState("");
   const [address, setAddress] = useState("");
+  const [addingNew, setAddingNew] = useState(false);
 
   function handleEdit(id) {
     setEditingId(id);
@@ -29,12 +33,15 @@ function Addresses() {
 
   function handleCancel() {
     setEditingId(null);
+    setAddingNew(false);
   }
 
   useEffect(() => {
     async function getAllAddresses() {
       try {
-        const response = await fetch(`http://localhost:5002/users/getAllAddresses/${loggedInUser.id}`);
+        const response = await fetch(
+          `http://localhost:5002/users/getAllAddresses/${loggedInUser.id}`
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -135,13 +142,76 @@ function Addresses() {
 
     setLabel("");
     setAddress("");
+    setAddingNew(false); // Hide the form after adding the address
   }
 
   return (
     <div className="address-book">
-      <h2>Addresses</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="inputs-container">
+      {/* <h2>Addresses</h2> */}
+      <ul>
+        {addresses.length === 0 ? (
+          <h3>Hey, let's save your address here!</h3>
+        ) : (
+          addresses.map((address) => (
+            <li key={address._id} className="address-item">
+              {editingId === address._id ? (
+                <div className="address-edit">
+                  <input
+                    type="text"
+                    value={editedLabel}
+                    onChange={handleLabelChange}
+                    placeholder="Label"
+                    required
+                  />
+                  <Autocomplete
+                    apiKey={import.meta.env.VITE_GOOGLE_API}
+                    value={editedAddress}
+                    onPlaceSelected={(place) =>
+                      setEditedAddress(place.formatted_address)
+                    }
+                    options={{
+                      types: ["address"],
+                    }}
+                    placeholder="Address"
+                    required
+                    onChange={(e) => setEditedAddress(e.target.value)}
+                  />
+                  <button
+                    onClick={() => handleSave(address._id)}
+                    className="save-button"
+                  >
+                    Save
+                  </button>
+                  <button onClick={handleCancel} className="cancel-button">
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <div className="address-view">
+                  <div className="address-actions">
+                    <button
+                      onClick={() => handleEdit(address._id)}
+                      className="edit-address-button"
+                    >
+                      <FontAwesomeIcon icon={faPenToSquare} />
+                    </button>
+                    <button
+                      onClick={() => handleDelete(address._id)}
+                      className="delete-address-button"
+                    >
+                      <FontAwesomeIcon icon={faTrashCan} />
+                    </button>
+                  </div>
+                  <div className="address-label">{address.label}</div>
+                  <div className="address-details">{address.address}</div>
+                </div>
+              )}
+            </li>
+          ))
+        )}
+      </ul>
+      {addingNew ? (
+        <form onSubmit={handleSubmit} className="address-edit">
           <input
             type="text"
             value={label}
@@ -160,54 +230,25 @@ function Addresses() {
             required
             onChange={(e) => setAddress(e.target.value)}
           />
-        </div>
-        <button className="add-address-button">Add New Address</button>
-      </form>
-      <ul>
-        {addresses.length === 0 ? (
-          <h3>You have no saved addresses</h3>
-        ) : (
-          addresses.map((address) => (
-            <li key={address._id} className="address-item">
-              {editingId === address._id ? (
-                <div className="address-edit">
-                  <input type="text" value={editedLabel} onChange={handleLabelChange} placeholder="Label" required />
-                  <Autocomplete
-                    apiKey={import.meta.env.VITE_GOOGLE_API}
-                    value={editedAddress}
-                    onPlaceSelected={(place) => setEditedAddress(place.formatted_address)}
-                    options={{
-                      types: ["address"],
-                    }}
-                    placeholder="Address"
-                    required
-                    onChange={(e) => setEditedAddress(e.target.value)}
-                  />
-                  <button onClick={() => handleSave(address._id)} className="save-button">
-                    Save
-                  </button>
-                  <button onClick={handleCancel} className="cancel-button">
-                    Cancel
-                  </button>
-                </div>
-              ) : (
-                <div className="address-view">
-                  <div className="address-label">{address.label}</div>
-                  <div className="address-details">{address.address}</div>
-                  <div className="address-actions">
-                    <button onClick={() => handleEdit(address._id)} className="edit-button">
-                      Edit
-                    </button>
-                    <button onClick={() => handleDelete(address._id)} className="delete-button">
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              )}
-            </li>
-          ))
-        )}
-      </ul>
+          <button type="submit" className="save-button">
+            Save
+          </button>
+          <button
+            type="button"
+            onClick={handleCancel}
+            className="cancel-button"
+          >
+            Cancel
+          </button>
+        </form>
+      ) : (
+        <button
+          onClick={() => setAddingNew(true)}
+          className="add-address-button"
+        >
+          Add New Address
+        </button>
+      )}
     </div>
   );
 }

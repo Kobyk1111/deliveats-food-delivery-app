@@ -9,9 +9,9 @@ function Profile() {
     <>
       <Navbar />
       <div className="container-profile">
-        <header className="header-profile">
+        {/* <header className="header-profile">
           <h1 className="title-profile">Profile</h1>
-        </header>
+        </header> */}
         <div className="navbar-profile">
           <ul>
             <li>

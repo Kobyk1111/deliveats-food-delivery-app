@@ -1,13 +1,6 @@
-/* Foorter.css */
-
-footer {
-  text-align: center;
-  background-color: rgb(229, 224, 224);
-  padding: 2rem;
-}
 
 .footer {
-  background-color: #231f1f;
+  background-color: var(--color-1);
   color: #fff;
   padding: 20px 0;
   text-align: center;

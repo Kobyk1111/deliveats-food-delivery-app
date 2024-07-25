@@ -98,7 +98,7 @@ function App() {
           <Route path="settings" element={<Settings />} />
         </Route>
 
-        {/* ******** restaurantes Routes ******** */}
+        {/* ******** restaurant Routes ******** */}
 
         <Route
           path="/rs-register"
