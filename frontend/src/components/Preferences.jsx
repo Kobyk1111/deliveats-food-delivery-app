@@ -2,32 +2,32 @@ import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 function Preferences() {
-  const { userOrderHistory, setUserOrderHistory, loggedInUser } =
-    useContext(DataContext);
+  const { userOrderHistory } = useContext(DataContext);
 
-  useEffect(() => {
-    async function getOrderHistory() {
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-        );
+  // useEffect(() => {
+  //   async function getOrderHistory() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+  //       );
 
-        if (response.ok) {
-          const { orderHistory } = await response.json();
-          setUserOrderHistory(orderHistory);
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
+  //       if (response.ok) {
+  //         const { orderHistory } = await response.json();
+  //         setUserOrderHistory(orderHistory);
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
 
-    if (loggedInUser) {
-      getOrderHistory();
-    }
-  }, [loggedInUser, setUserOrderHistory]);
+  //   if (loggedInUser) {
+  //     getOrderHistory();
+  //   }
+  // }, [loggedInUser, setUserOrderHistory]);
+
   return (
     <>
       <p>Preferences</p>

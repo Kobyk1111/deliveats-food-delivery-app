@@ -27,7 +27,9 @@ function Navbar() {
   };
 
   const openBasketModal = () => {
-    setIsBasketModalOpen(true);
+    // if (items.length > 0) {
+      setIsBasketModalOpen(true);
+    // }
   };
 
   const closeBasketModal = () => {
@@ -56,7 +58,10 @@ function Navbar() {
             <div className="user-info" ref={dropdownRef}>
               <span className="welcome-message" onClick={toggleDropdown}>
                 Welcome, {loggedInUser.firstName}! {""}
-                <FontAwesomeIcon icon={faCaretDown} style={{ color: "#266241" }} />
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  style={{ color: "#266241" }}
+                />
               </span>
 
               {isDropdownOpen && (
@@ -76,7 +81,10 @@ function Navbar() {
           )}
 
           <div className="cart-logo" onClick={openBasketModal}>
-            <FontAwesomeIcon icon={faCartShopping} style={{ color: "#266241" }} />
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{ color: "#266241" }}
+            />
             <span className="item-count">{totalItemCount}</span>
           </div>
         </div>

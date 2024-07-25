@@ -120,6 +120,7 @@ function RestaurantMenu() {
               </div>
             ) : null}
             <h1 className="restaurant-name">{restaurant.basicInfo.businessName}</h1>
+            <p> restaurant_ID: {restaurant._id}</p>
             <p className="restaurant-address">
               {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
               {restaurant.basicInfo.address.city}
