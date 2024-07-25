@@ -4,32 +4,33 @@ import { DataContext } from "../contexts/DataContext";
 import "../style/OrderHistory.css";
 
 function OrderHistory() {
-  const { userOrderHistory, setUserOrderHistory, loggedInUser } =
-    useContext(DataContext);
+  const { userOrderHistory } = useContext(DataContext);
 
-  useEffect(() => {
-    async function getOrderHistory() {
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-        );
 
-        if (response.ok) {
-          const { orderHistory } = await response.json();
-          setUserOrderHistory(orderHistory);
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
+  // useEffect(() => {
+  //   async function getOrderHistory() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+  //       );
 
-    if (loggedInUser) {
-      getOrderHistory();
-    }
-  }, [loggedInUser, setUserOrderHistory]);
+  //       if (response.ok) {
+  //         const { orderHistory } = await response.json();
+  //         setUserOrderHistory(orderHistory);
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
+
+  //   if (loggedInUser) {
+  //     getOrderHistory();
+  //   }
+  // }, [loggedInUser, setUserOrderHistory]);
+
   return (
     <>
       <div className="order-history-container">
@@ -44,8 +45,8 @@ function OrderHistory() {
               return (
                 <div key={order._id} className="order">
                   <div className="restaurant-name-container">
-                    {/* <h4>Restaurant Name</h4> */}
                     <h2>{order.restaurantName}</h2>
+                    <div>{order.restaurantId}</div>
                   </div>
                   <h3>Items</h3>
                   <div className="items-container">

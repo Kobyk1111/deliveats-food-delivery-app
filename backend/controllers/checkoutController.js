@@ -37,13 +37,16 @@ export async function checkout(req, res, next) {
 }
 
 export async function setOrderDetails(req, res, next) {
-  const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
+  const { sessionId, basket, totalSum, deliveryOption, restaurantName } =
+    req.body;
   const { id } = req.params;
 
   try {
     // Promise.all will make the two functions run at the same time since none of them depends on the other.
     const result = Promise.all([
-      stripe.checkout.sessions.retrieve(sessionId, { expand: ["payment_intent.payment_method"] }),
+      stripe.checkout.sessions.retrieve(sessionId, {
+        expand: ["payment_intent.payment_method"],
+      }),
       stripe.checkout.sessions.listLineItems(sessionId),
     ]);
 
@@ -92,7 +95,11 @@ export async function setOrderDetails(req, res, next) {
       runValidators: true,
     };
 
-    const updatedUser = await User.findByIdAndUpdate(id, { $push: { orderHistory: orderHistorySaved } }, options);
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      { $push: { orderHistory: orderHistorySaved } },
+      options
+    );
 
     console.log("Order history saved");
 
@@ -104,7 +111,8 @@ export async function setOrderDetails(req, res, next) {
 }
 
 export async function setOrder(req, res, next) {
-  const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
+  const { sessionId, basket, totalSum, deliveryOption, restaurantName } =
+    req.body;
 
   try {
     const basketItems = basket.map((item) => {
@@ -118,6 +126,7 @@ export async function setOrder(req, res, next) {
 
     const orderHistorySaved = {
       restaurantName: restaurantName,
+
       items: basketItems,
       totalSum: totalSum,
       paymentDetails: {
@@ -157,7 +166,10 @@ export async function setOrderOfUser(req, res, next) {
       runValidators: true,
     };
 
-    const updatedUser = await User.findByIdAndUpdate(id, { $push: { orders: orderId }, options });
+    const updatedUser = await User.findByIdAndUpdate(id, {
+      $push: { orders: orderId },
+      options,
+    });
 
     await updatedUser.populate("orders");
 
