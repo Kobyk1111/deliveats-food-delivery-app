@@ -117,7 +117,7 @@ function Searchbar({ className }) {
               className="search-input"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="eg. Brazilian restaurants in Berlin"
+              placeholder="eg. Brazilian Berlin"
             />
             <button className="search-button">Search</button>
           </form>

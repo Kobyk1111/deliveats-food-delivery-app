@@ -24,11 +24,11 @@ export async function getAllRestaurants(req, res, next) {
       return next(createHttpError(400, "Search city should be Leipzig, Berlin, Hannover or Düsseldorf"));
     }
 
-    const includesRestaurantOrCuisine = splitSearch.includes("restaurants") || splitSearch.includes("cuisines");
+    // const includesRestaurantOrCuisine = splitSearch.includes("restaurants") || splitSearch.includes("cuisines");
 
-    if (!includesRestaurantOrCuisine) {
-      return next(createHttpError(400, 'Search must include either "restaurants" or "cuisines"'));
-    }
+    // if (!includesRestaurantOrCuisine) {
+    //   return next(createHttpError(400, 'Search must include either "restaurants" or "cuisines"'));
+    // }
 
     const restaurants = await Restaurant.find({});
 
@@ -186,5 +186,66 @@ export async function loginRestaurant(req, res, next) {
   } catch (error) {
     console.error(error);
     next(createHttpError(500, "Server error logging in."));
+  }
+}
+
+export async function updateRestaurant(req, res, next) {
+  const { id, section } = req.params;
+  const updateData = req.body[section];
+
+  if (!updateData) {
+    return next(createHttpError(400, "No update data provided"));
+  }
+
+  // Function to remove all _id fields from an object
+  const removeIds = (obj) => {
+    if (Array.isArray(obj)) {
+      obj.forEach(removeIds);
+    } else if (obj && typeof obj === "object") {
+      delete obj._id;
+      Object.keys(obj).forEach((key) => removeIds(obj[key]));
+    }
+  };
+
+  removeIds(updateData);
+
+  let update = {};
+  switch (section) {
+    case "basicInfo":
+      update = { basicInfo: updateData };
+      break;
+    case "contact":
+      update = { "basicInfo.contact": updateData };
+      break;
+    case "address":
+      update = { "basicInfo.address": updateData };
+      break;
+    case "digitalPresence":
+      update = { digitalPresence: updateData };
+      break;
+    case "openingHours":
+      update = { openAndCloseHours: updateData };
+      break;
+    default:
+      return next(createHttpError(400, "Invalid Section"));
+  }
+
+  console.log(update);
+
+  try {
+    const options = {
+      new: true,
+      runValidators: true,
+    };
+    const updatedRestaurant = await Restaurant.findByIdAndUpdate(id, { $set: update }, options);
+
+    if (!updatedRestaurant) {
+      return next(createHttpError(404, "Restaurant not found"));
+    }
+
+    res.status(200).json(updatedRestaurant);
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error updating restaurant"));
   }
 }
