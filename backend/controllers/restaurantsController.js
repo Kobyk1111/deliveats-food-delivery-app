@@ -5,69 +5,6 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import SearchedRestaurant from "../models/SearchedRestaurantsModel.js";
 
-// export async function getAllRestaurants(req, res, next) {
-//   const { search } = req.body;
-
-//   // const search = "Brazilian food in leipzig";
-
-//   const splitSearch = search.toLowerCase().split(" ");
-
-//   const filteredArray = menus.filter((menu) => splitSearch.includes(menu.cuisine.toLowerCase()));
-
-//   function getRandomMenu() {
-//     const randomIndex = Math.floor(Math.random() * filteredArray.length);
-//     return filteredArray[randomIndex];
-//   }
-
-//   const API_KEY = process.env.GOOGLE_API_KEY;
-
-//   try {
-//     const response = await fetch(
-//       `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${search}&type=restaurant&key=${API_KEY}`
-//     );
-
-//     if (response.ok) {
-//       const data = await response.json();
-
-//       const restaurantsData = data.results.map((restaurant) => {
-//         return {
-//           name: restaurant.name,
-//           address: restaurant.formatted_address,
-//           rating: restaurant.rating,
-//           userRatings: restaurant.user_ratings_total,
-//           isOpen: restaurant.opening_hours ? restaurant.opening_hours.open_now : false,
-//           price_level: restaurant.price_level || 0,
-//           favorited: false,
-//           menu: getRandomMenu(),
-//         };
-//       });
-
-//       try {
-//         await Restaurant.deleteMany({});
-//         const allRestaurants = await Restaurant.create(restaurantsData);
-//         res.json(allRestaurants);
-//       } catch (error) {
-//         return next(createHttpError(400, "Restaurants could not be created"));
-//       }
-//     } else {
-//       const error = await response.json();
-//       return next(createHttpError(400, error.error_message || "Restaurants could not be fetched"));
-//     }
-//   } catch (error) {
-//     next(createHttpError(500, "Please search for cuisines or restaurants in a city"));
-//   }
-// }
-
-// export async function getAllRestaurants(req, res, next) {
-//    const { search } = req.body;
-
-//    const splitSearch = search.toLowerCase().split(" ");
-
-//    if (!splitSearch.includes("Leipzig") || !splitSearch.includes("Berlin") || !splitSearch.includes("Hannover") || !splitSearch.includes("Düsseldorf")) {
-//     return next(createHttpError(400, "Search city should be Leipzig, Berlin, Hannover or Düsseldorf"));
-//    }
-// }
-
 export async function getAllRestaurants(req, res, next) {
   try {
     const { search } = req.body;
@@ -75,6 +12,8 @@ export async function getAllRestaurants(req, res, next) {
     if (!search) {
       return next(createHttpError(400, "Search term is required"));
     }
+
+    console.log(search);
 
     const splitSearch = search.toLowerCase().split(" ");
     const country = splitSearch[0];
@@ -85,11 +24,11 @@ export async function getAllRestaurants(req, res, next) {
       return next(createHttpError(400, "Search city should be Leipzig, Berlin, Hannover or Düsseldorf"));
     }
 
-    const includesRestaurantOrCuisine = splitSearch.includes("restaurants") || splitSearch.includes("cuisines");
+    // const includesRestaurantOrCuisine = splitSearch.includes("restaurants") || splitSearch.includes("cuisines");
 
-    if (!includesRestaurantOrCuisine) {
-      return next(createHttpError(400, 'Search must include either "restaurants" or "cuisines"'));
-    }
+    // if (!includesRestaurantOrCuisine) {
+    //   return next(createHttpError(400, 'Search must include either "restaurants" or "cuisines"'));
+    // }
 
     const restaurants = await Restaurant.find({});
 
@@ -247,5 +186,66 @@ export async function loginRestaurant(req, res, next) {
   } catch (error) {
     console.error(error);
     next(createHttpError(500, "Server error logging in."));
+  }
+}
+
+export async function updateRestaurant(req, res, next) {
+  const { id, section } = req.params;
+  const updateData = req.body[section];
+
+  if (!updateData) {
+    return next(createHttpError(400, "No update data provided"));
+  }
+
+  // Function to remove all _id fields from an object
+  const removeIds = (obj) => {
+    if (Array.isArray(obj)) {
+      obj.forEach(removeIds);
+    } else if (obj && typeof obj === "object") {
+      delete obj._id;
+      Object.keys(obj).forEach((key) => removeIds(obj[key]));
+    }
+  };
+
+  removeIds(updateData);
+
+  let update = {};
+  switch (section) {
+    case "basicInfo":
+      update = { basicInfo: updateData };
+      break;
+    case "contact":
+      update = { "basicInfo.contact": updateData };
+      break;
+    case "address":
+      update = { "basicInfo.address": updateData };
+      break;
+    case "digitalPresence":
+      update = { digitalPresence: updateData };
+      break;
+    case "openingHours":
+      update = { openAndCloseHours: updateData };
+      break;
+    default:
+      return next(createHttpError(400, "Invalid Section"));
+  }
+
+  console.log(update);
+
+  try {
+    const options = {
+      new: true,
+      runValidators: true,
+    };
+    const updatedRestaurant = await Restaurant.findByIdAndUpdate(id, { $set: update }, options);
+
+    if (!updatedRestaurant) {
+      return next(createHttpError(404, "Restaurant not found"));
+    }
+
+    res.status(200).json(updatedRestaurant);
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error updating restaurant"));
   }
 }
