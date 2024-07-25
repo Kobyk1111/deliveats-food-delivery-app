@@ -90,7 +90,11 @@ const additionalInfoSchema = new Schema({
 
 const historySchema = new Schema(
   {
-    restaurantName: { type: String, /* required: true */ default: "No information" },
+    restaurantName: {
+      type: String,
+      /* required: true */ default: "No information",
+    },
+  
     items: {
       type: [orderItemsSchema],
       required: true,
