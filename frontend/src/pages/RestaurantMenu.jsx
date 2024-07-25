@@ -8,7 +8,7 @@ import Basket from "../components/Basket";
 // import { FaRegHeart } from "react-icons/fa";
 // import { FaHeart } from "react-icons/fa";
 
-import "../style/RestaurantMenu.css"
+import "../style/RestaurantMenu.css";
 
 function RestaurantMenu() {
   const { id } = useParams();
@@ -17,7 +17,7 @@ function RestaurantMenu() {
   // const [isFavorited, setIsFavorited] = useState(false);
   // const [restaurant, setRestaurant] = useState(null);
 
-  // console.log(restaurant);
+  console.log(restaurant);
 
   // const restaurant = restaurants.find((r) => r._id === id);
 
@@ -25,18 +25,38 @@ function RestaurantMenu() {
     await getSearchedRestaurants();
   }, []);
 
-  useEffect(() => {
-    fetchRestaurants();
-  }, [fetchRestaurants]);
+  // useEffect(() => {
+  //   fetchRestaurants();
+  // }, [fetchRestaurants]);
 
   useEffect(() => {
-    const foundRestaurant = restaurants.find((r) => r._id === id);
-    setRestaurant(foundRestaurant);
+    if (!restaurants.length) {
+      fetchRestaurants();
+    }
+  }, [fetchRestaurants, restaurants.length]);
 
-    // if (foundRestaurant && loggedInUser) {
-    //   setIsFavorited(loggedInUser.favoriteRestaurants?.includes(id));
-    // }
-  }, [id, restaurants]);
+  // useEffect(() => {
+  //   const foundRestaurant = restaurants.find((r) => r._id === id);
+  //   setRestaurant(foundRestaurant);
+
+  //   // if (foundRestaurant && loggedInUser) {
+  //   //   setIsFavorited(loggedInUser.favoriteRestaurants?.includes(id));
+  //   // }
+  // }, [id, restaurants]);
+
+  useEffect(() => {
+    if (!restaurant || restaurant._id !== id) {
+      const foundRestaurant = restaurants.find((r) => r._id === id);
+      if (foundRestaurant) {
+        setRestaurant(foundRestaurant);
+      } else {
+        fetchRestaurants().then(() => {
+          const newRestaurant = restaurants.find((r) => r._id === id);
+          setRestaurant(newRestaurant);
+        });
+      }
+    }
+  }, [id, restaurant, restaurants, fetchRestaurants, setRestaurant]);
 
   if (!restaurant) {
     return (
@@ -99,22 +119,38 @@ function RestaurantMenu() {
                 )} */}
               </div>
             ) : null}
-            <h1 className="restaurant-name">{restaurant.name}</h1>
-            <p className="restaurant-address">{restaurant.address}</p>
+            <h1 className="restaurant-name">{restaurant.basicInfo.businessName}</h1>
+            <p className="restaurant-address">
+              {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
+              {restaurant.basicInfo.address.city}
+            </p>
             <div className="menu-items">
-              {restaurant?.menu?.items?.map((item) => (
+              {restaurant?.menu?.map((item) => (
                 <div key={item._id} className="menu-item-card">
                   <div className="item-info">
-                    <p className="item-name">{item.name}</p>
-                    <p className="item-description">{item.description}</p>
+                    <h2>{item.category}</h2>
+                    {item.items.map((food) => (
+                      <div className="item-details" key={food._id}>
+                        <div>
+                          <p className="item-name">{food.name}</p>
+                          <p className="item-description">{food.description}</p>
+                          <p className="item-price">€{food.price}</p>
+                        </div>
+                        <button className="add-button" onClick={() => addItemToBasket(food)}>
+                          Add
+                        </button>
+                      </div>
+                    ))}
                   </div>
-                  <div className="item-actions">
-                    <p className="item-price">€{item.price}</p>
-                    <button className="add-button" onClick={() => addItemToBasket(item)}>
-                      Add
-                    </button>
-                    {/* <span>Quantity: {getItemQuantity(item.id)}</span> */}
-                  </div>
+                  {/* <div className="item-actions">
+                    {item.items.map((food) => (
+                      <>
+                        <button className="add-button" onClick={() => addItemToBasket(food)}>
+                          Add
+                        </button>
+                      </>
+                    ))}
+                  </div> */}
                 </div>
               ))}
             </div>

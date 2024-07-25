@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const DataContext = createContext();
@@ -14,6 +14,14 @@ function DataContextProvider({ children }) {
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (restaurant) {
+      localStorage.setItem("restaurant", JSON.stringify(restaurant));
+    } else {
+      localStorage.removeItem("restaurant");
+    }
+  }, [restaurant]);
 
   async function logout() {
     try {

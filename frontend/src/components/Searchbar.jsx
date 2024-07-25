@@ -45,6 +45,7 @@ function Searchbar({ className }) {
 
   return (
     <>
+
       <div className="search-container">
         <form className="search-form" onSubmit={handleSubmit}>
           <input
@@ -52,10 +53,11 @@ function Searchbar({ className }) {
             className="search-input"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="eg. Italian food, Berlin"
+          placeholder="eg. Brazilian restaurants in Berlin"
           />
           <button className="search-button">Search</button>
         </form>
+
       </div>
     </>
   );

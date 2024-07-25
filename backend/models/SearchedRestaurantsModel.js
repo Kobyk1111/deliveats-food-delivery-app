@@ -112,7 +112,7 @@ const historySchema = new Schema(
   { timestamps: true }
 );
 
-const restaurantSchema = new Schema({
+const searchedRestaurantsSchema = new Schema({
   basicInfo: { type: basicInfoSchema, required: true },
   openAndCloseHours: { type: daysSchema, required: true, default: defaultDays },
   cuisine: { type: [String], required: true, default: [] },
@@ -140,6 +140,6 @@ const restaurantSchema = new Schema({
   orderHistory: { type: [historySchema], default: [] },
 });
 
-const Restaurant = model("Restaurant", restaurantSchema);
+const SearchedRestaurant = model("SearchedRestaurant", searchedRestaurantsSchema);
 
-export default Restaurant;
+export default SearchedRestaurant;

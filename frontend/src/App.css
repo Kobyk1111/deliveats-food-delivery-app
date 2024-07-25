@@ -19,12 +19,22 @@
   --shadow-dark: rgba(0, 0, 0, 0.15);
 }
 
+#root {
+  min-height: 100vh;
+}
+
 body {
   font-size: 1.6rem;
   color: var(--color-1);
+
+  min-height: 100vh;
+
+  
+
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+
 }
 
 .loading-spinner {
