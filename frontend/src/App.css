@@ -14,13 +14,17 @@
   --color-3: #eaba4a;
   --color-4: #feeabc;
   --color-5: #fbf9f5;
+  --background-color: #fbf9f5;
+  --shadow-light: rgba(255, 255, 255, 0.7);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
 }
 
 body {
   font-size: 1.6rem;
-  color: var(--color-5);
-  /* min-height: 40vh; */
-  /* background-color: var(--color-1); */
+  color: var(--color-1);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
 }
 
 .loading-spinner {

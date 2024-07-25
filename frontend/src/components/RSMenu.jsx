@@ -127,7 +127,6 @@ function RSMenu() {
   return (
     <div className="rs-menu-container">
       <div className="cuisine">
-        <p>{loggedInRestaurant.basicInfo.businessName}</p>
         <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
       </div>
       {loggedInRestaurant.menu.map((category) => (
