@@ -5,6 +5,16 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import SearchedRestaurant from "../models/SearchedRestaurantsModel.js";
 
+export async function getRestaurant(req, res, next) {
+  const { id } = req.params;
+  const restaurant = await Restaurant.findById(id);
+  if (restaurant) {
+    res.json(restaurant);
+  } else {
+    res.status(404).json({ message: "Restaurant not found" });
+  }
+}
+
 export async function getAllRestaurants(req, res, next) {
   try {
     const { search } = req.body;
@@ -194,58 +204,57 @@ export async function updateRestaurant(req, res, next) {
   const updateData = req.body[section];
 
   if (!updateData) {
-    return next(createHttpError(400, "No update data provided"));
+    return next(createHttpError(400, "Invalid section or no data provided"));
   }
-
-  // Function to remove all _id fields from an object
-  const removeIds = (obj) => {
-    if (Array.isArray(obj)) {
-      obj.forEach(removeIds);
-    } else if (obj && typeof obj === "object") {
-      delete obj._id;
-      Object.keys(obj).forEach((key) => removeIds(obj[key]));
-    }
-  };
-
-  removeIds(updateData);
-
-  let update = {};
-  switch (section) {
-    case "basicInfo":
-      update = { basicInfo: updateData };
-      break;
-    case "contact":
-      update = { "basicInfo.contact": updateData };
-      break;
-    case "address":
-      update = { "basicInfo.address": updateData };
-      break;
-    case "digitalPresence":
-      update = { digitalPresence: updateData };
-      break;
-    case "openingHours":
-      update = { openAndCloseHours: updateData };
-      break;
-    default:
-      return next(createHttpError(400, "Invalid Section"));
-  }
-
-  console.log(update);
 
   try {
-    const options = {
-      new: true,
-      runValidators: true,
-    };
-    const updatedRestaurant = await Restaurant.findByIdAndUpdate(id, { $set: update }, options);
-
-    if (!updatedRestaurant) {
+    // Find the restaurant by ID and update the specified section
+    const restaurant = await Restaurant.findById(id);
+    if (!restaurant) {
       return next(createHttpError(404, "Restaurant not found"));
     }
 
-    res.status(200).json(updatedRestaurant);
+    // Update the specific section
+    switch (section) {
+      case "basicInfo":
+        restaurant.basicInfo = updateData;
+        break;
+      case "contact":
+        restaurant.basicInfo.contact = updateData;
+        break;
+      case "address":
+        restaurant.basicInfo.address = updateData;
+        break;
+      case "digitalPresence":
+        restaurant.digitalPresence = updateData;
+        break;
+      case "openingHours":
+        restaurant.openAndCloseHours = updateData;
+        break;
+      default:
+        return next(createHttpError(400, "Invalid section"));
+    }
+
+    // Save the changes
+    await restaurant.save();
+    res.json(restaurant);
   } catch (error) {
     console.error(error);
-    return next(createHttpError(500, "Server error updating restaurant"));
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+export async function updateRestaurantMenu(req, res, next) {
+  const { id } = req.params;
+  const { menu } = req.body;
+
+  const restaurant = await Restaurant.findById(id);
+
+  if (restaurant) {
+    restaurant.menu = menu;
+    await restaurant.save();
+    res.json(restaurant);
+  } else {
+    res.status(404).json({ message: "Restaurant not found" });
   }
 }

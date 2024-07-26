@@ -1,5 +1,5 @@
 import "../style/RSMenu.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 function RSMenu() {
@@ -7,14 +7,33 @@ function RSMenu() {
   const [editingCategory, setEditingCategory] = useState(null);
   const [newMenuData, setNewMenuData] = useState({});
 
+  useEffect(() => {
+    async function getRestaurant() {
+      try {
+        const response = await fetch(`http://localhost:5002/restaurants/${loggedInRestaurant._id}`);
+
+        if (response.ok) {
+          const data = await response.json();
+          setLoggedInRestaurant(data);
+        } else {
+          const { error } = await response.json();
+          throw new Error(error.message);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    getRestaurant();
+  }, [loggedInRestaurant]);
+
   const handleEditClick = (category) => {
     setEditingCategory(category);
-    const categoryData = loggedInRestaurant.menu.find(cat => cat.category === category);
+    const categoryData = loggedInRestaurant.menu.find((cat) => cat.category === category);
     setNewMenuData({ ...categoryData });
   };
 
   const handleInputChange = (index, field, value) => {
-    if (field === 'price') {
+    if (field === "price") {
       value = parseFloat(value) || 0; // Ensure price is a number
     }
     const updatedItems = [...newMenuData.items];
@@ -22,12 +41,31 @@ function RSMenu() {
     setNewMenuData({ ...newMenuData, items: updatedItems });
   };
 
-  const handleSaveClick = () => {
-    const updatedMenu = loggedInRestaurant.menu.map(cat =>
-      cat.category === editingCategory ? newMenuData : cat
-    );
-    setLoggedInRestaurant({ ...loggedInRestaurant, menu: updatedMenu });
-    setEditingCategory(null);
+  const handleSaveClick = async () => {
+    const updatedMenu = loggedInRestaurant.menu.map((cat) => (cat.category === editingCategory ? newMenuData : cat));
+
+    const settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/JSON",
+      },
+      body: JSON.stringify({ menu: updatedMenu }),
+    };
+
+    try {
+      const response = await fetch(`http://localhost:5002/restaurants/update/menu/${loggedInRestaurant._id}`, settings);
+
+      if (response.ok) {
+        const data = await response.json();
+        setLoggedInRestaurant(data);
+        setEditingCategory(null);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   const handleCancelClick = () => {
@@ -44,34 +82,31 @@ function RSMenu() {
         <div key={category.category} className="menu-category">
           <div className="category-header">
             <h2>{category.category}</h2>
-            <button
-              className="edit-button"
-              onClick={() => handleEditClick(category.category)}
-            >
-              {editingCategory === category.category ? "Cancel" : "Edit"}
-            </button>
           </div>
 
           {editingCategory === category.category ? (
             <div className="edit-form">
-              <h2>Edit {category.category}</h2>
+              {/* <h2>Edit {category.category}</h2> */}
               {newMenuData.items.map((item, index) => (
                 <div key={index} className="edit-item">
-                  <label>Name:
+                  <label>
+                    Name:
                     <input
                       type="text"
                       value={item.name}
                       onChange={(e) => handleInputChange(index, "name", e.target.value)}
                     />
                   </label>
-                  <label>Description:
+                  <label>
+                    Description:
                     <input
                       type="text"
                       value={item.description}
                       onChange={(e) => handleInputChange(index, "description", e.target.value)}
                     />
                   </label>
-                  <label>Price:
+                  <label>
+                    Price:
                     <input
                       type="number"
                       step="0.01"
@@ -81,8 +116,14 @@ function RSMenu() {
                   </label>
                 </div>
               ))}
-              <button className="save-button" onClick={handleSaveClick}>Save</button>
-              <button className="cancel-button" onClick={handleCancelClick}>Cancel</button>
+              <div className="buttons-container">
+                <button className="save1-button" onClick={handleSaveClick}>
+                  Save
+                </button>
+                <button className="cancel1-button" onClick={handleCancelClick}>
+                  Cancel
+                </button>
+              </div>
             </div>
           ) : (
             category.items.map((item) => (
@@ -94,6 +135,11 @@ function RSMenu() {
                 <div className="item-price">€{Number(item.price).toFixed(2)}</div>
               </div>
             ))
+          )}
+          {editingCategory !== category.category && (
+            <button className="edit-button" onClick={() => handleEditClick(category.category)}>
+              Edit
+            </button>
           )}
         </div>
       ))}
