@@ -18,11 +18,11 @@
 
   padding: 200px;
   /* cover: 100%; */
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-color: rgba(31, 39, 35, 0.6);
+  /* background-color: rgba(31, 39, 35, 0.6); */
   height: 20vh;
 }
 

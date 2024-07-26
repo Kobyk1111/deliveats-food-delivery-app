@@ -11,16 +11,16 @@ function RSProfile() {
   // State for input values and original values
   const [basicInfo, setBasicInfo] = useState(loggedInRestaurant.basicInfo);
   const [originalBasicInfo, setOriginalBasicInfo] = useState(loggedInRestaurant.basicInfo);
-  
+
   const [contact, setContact] = useState(loggedInRestaurant.basicInfo.contact);
   const [originalContact, setOriginalContact] = useState(loggedInRestaurant.basicInfo.contact);
-  
+
   const [address, setAddress] = useState(loggedInRestaurant.basicInfo.address);
   const [originalAddress, setOriginalAddress] = useState(loggedInRestaurant.basicInfo.address);
-  
+
   const [digitalPresence, setDigitalPresence] = useState(loggedInRestaurant.digitalPresence);
   const [originalDigitalPresence, setOriginalDigitalPresence] = useState(loggedInRestaurant.digitalPresence);
-  
+
   const [openingHours, setOpeningHours] = useState(loggedInRestaurant.openAndCloseHours);
   const [originalOpeningHours, setOriginalOpeningHours] = useState(loggedInRestaurant.openAndCloseHours);
 
@@ -64,32 +64,33 @@ function RSProfile() {
 
     try {
       const response = await handleHTTPRequestWithToken(
-        `http://localhost:5002/restaurants/update/${loggedInRestaurant.id}/${section}`,
+        `http://localhost:5002/restaurants/update/profile/${loggedInRestaurant._id}/${section}`,
         settings
       );
 
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         switch (section) {
           case "basicInfo":
             setBasicInfo(data.basicInfo);
             setOriginalBasicInfo(data.basicInfo);
             break;
           case "contact":
-            setContact(data.contact);
-            setOriginalContact(data.contact);
+            setContact(data.basicInfo.contact);
+            setOriginalContact(data.basicInfo.contact);
             break;
           case "address":
-            setAddress(data.address);
-            setOriginalAddress(data.address);
+            setAddress(data.basicInfo.address);
+            setOriginalAddress(data.basicInfo.address);
             break;
           case "digitalPresence":
             setDigitalPresence(data.digitalPresence);
             setOriginalDigitalPresence(data.digitalPresence);
             break;
           case "openingHours":
-            setOpeningHours(data.openingHours);
-            setOriginalOpeningHours(data.openingHours);
+            setOpeningHours(data.openAndCloseHours);
+            setOriginalOpeningHours(data.openAndCloseHours);
             break;
           default:
             break;
@@ -135,7 +136,7 @@ function RSProfile() {
         <div className="rs-profile-section">
           {editingSection === "basicInfo" ? (
             <>
-              <div>
+              <div className="label">
                 <strong>Business Name:</strong>{" "}
                 <input
                   type="text"
@@ -143,7 +144,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("basicInfo", "businessName", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Business ID:</strong>{" "}
                 <input
                   type="text"
@@ -151,7 +152,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("basicInfo", "businessId", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Owner:</strong>{" "}
                 <input
                   type="text"
@@ -159,7 +160,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("basicInfo", "owner", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Venue Name:</strong>{" "}
                 <input
                   type="text"
@@ -167,24 +168,30 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("basicInfo", "venueName", e.target.value)}
                 />
               </div>
-              <button className="edit-button" onClick={() => handleSave("basicInfo")}>Save</button>
-              <button className="edit-button" onClick={() => handleCancel("basicInfo")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("basicInfo")}>
+                Save
+              </button>
+              <button className="edit-button" onClick={() => handleCancel("basicInfo")}>
+                Cancel
+              </button>
             </>
           ) : (
             <>
-              <div>
+              <div className="label">
                 <strong>Business Name:</strong> {basicInfo.businessName}
               </div>
-              <div>
+              <div className="label">
                 <strong>Business ID:</strong> {basicInfo.businessId}
               </div>
-              <div>
+              <div className="label">
                 <strong>Owner:</strong> {basicInfo.owner}
               </div>
-              <div>
+              <div className="label">
                 <strong>Venue Name:</strong> {basicInfo.venueName}
               </div>
-              <button className="edit-button" onClick={() => handleEdit("basicInfo")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("basicInfo")}>
+                Edit
+              </button>
             </>
           )}
         </div>
@@ -195,7 +202,7 @@ function RSProfile() {
         <div className="rs-profile-section">
           {editingSection === "contact" ? (
             <>
-              <div>
+              <div className="label">
                 <strong>Email:</strong>{" "}
                 <input
                   type="email"
@@ -203,7 +210,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("contact", "email", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Phone Number:</strong>{" "}
                 <input
                   type="text"
@@ -211,18 +218,24 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("contact", "phoneNumber", e.target.value)}
                 />
               </div>
-              <button className="edit-button" onClick={() => handleSave("contact")}>Save</button>
-              <button className="edit-button" onClick={() => handleCancel("contact")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("contact")}>
+                Save
+              </button>
+              <button className="edit-button" onClick={() => handleCancel("contact")}>
+                Cancel
+              </button>
             </>
           ) : (
             <>
-              <div>
+              <div className="label">
                 <strong>Email:</strong> {contact.email}
               </div>
-              <div>
+              <div className="label">
                 <strong>Phone Number:</strong> {contact.phoneNumber}
               </div>
-              <button className="edit-button" onClick={() => handleEdit("contact")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("contact")}>
+                Edit
+              </button>
             </>
           )}
         </div>
@@ -233,7 +246,7 @@ function RSProfile() {
         <div className="rs-profile-section">
           {editingSection === "address" ? (
             <>
-              <div>
+              <div className="label">
                 <strong>Street:</strong>{" "}
                 <input
                   type="text"
@@ -241,7 +254,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("address", "street", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>City:</strong>{" "}
                 <input
                   type="text"
@@ -249,7 +262,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("address", "city", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>State:</strong>{" "}
                 <input
                   type="text"
@@ -257,7 +270,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("address", "state", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Postal Code:</strong>{" "}
                 <input
                   type="text"
@@ -265,24 +278,30 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("address", "postalCode", e.target.value)}
                 />
               </div>
-              <button className="edit-button" onClick={() => handleSave("address")}>Save</button>
-              <button className="edit-button" onClick={() => handleCancel("address")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("address")}>
+                Save
+              </button>
+              <button className="edit-button" onClick={() => handleCancel("address")}>
+                Cancel
+              </button>
             </>
           ) : (
             <>
-              <div>
+              <div className="label">
                 <strong>Street:</strong> {address.street}
               </div>
-              <div>
+              <div className="label">
                 <strong>City:</strong> {address.city}
               </div>
-              <div>
+              <div className="label">
                 <strong>State:</strong> {address.state}
               </div>
-              <div>
+              <div className="label">
                 <strong>Postal Code:</strong> {address.postalCode}
               </div>
-              <button className="edit-button" onClick={() => handleEdit("address")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("address")}>
+                Edit
+              </button>
             </>
           )}
         </div>
@@ -293,7 +312,7 @@ function RSProfile() {
         <div className="rs-profile-section">
           {editingSection === "digitalPresence" ? (
             <>
-              <div>
+              <div className="label">
                 <strong>Facebook:</strong>{" "}
                 <input
                   type="text"
@@ -301,7 +320,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("digitalPresence", "facebook", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Instagram:</strong>{" "}
                 <input
                   type="text"
@@ -309,18 +328,24 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("digitalPresence", "instagram", e.target.value)}
                 />
               </div>
-              <button className="edit-button" onClick={() => handleSave("digitalPresence")}>Save</button>
-              <button className="edit-button" onClick={() => handleCancel("digitalPresence")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("digitalPresence")}>
+                Save
+              </button>
+              <button className="edit-button" onClick={() => handleCancel("digitalPresence")}>
+                Cancel
+              </button>
             </>
           ) : (
             <>
-              <div>
+              <div className="label">
                 <strong>Facebook:</strong> {digitalPresence.socialMedia.facebook}
               </div>
-              <div>
+              <div className="label">
                 <strong>Instagram:</strong> {digitalPresence.socialMedia.instagram}
               </div>
-              <button className="edit-button" onClick={() => handleEdit("digitalPresence")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("digitalPresence")}>
+                Edit
+              </button>
             </>
           )}
         </div>
@@ -331,7 +356,7 @@ function RSProfile() {
         <div className="rs-profile-section">
           {editingSection === "openingHours" ? (
             <>
-              <div>
+              <div className="label">
                 <strong>Monday:</strong>{" "}
                 <input
                   type="text"
@@ -339,7 +364,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "monday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Tuesday:</strong>{" "}
                 <input
                   type="text"
@@ -347,7 +372,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "tuesday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Wednesday:</strong>{" "}
                 <input
                   type="text"
@@ -355,7 +380,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "wednesday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Thursday:</strong>{" "}
                 <input
                   type="text"
@@ -363,7 +388,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "thursday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Friday:</strong>{" "}
                 <input
                   type="text"
@@ -371,7 +396,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "friday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Saturday:</strong>{" "}
                 <input
                   type="text"
@@ -379,7 +404,7 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "saturday", e.target.value)}
                 />
               </div>
-              <div>
+              <div className="label">
                 <strong>Sunday:</strong>{" "}
                 <input
                   type="text"
@@ -387,33 +412,39 @@ function RSProfile() {
                   onChange={(e) => handleInputChange("openingHours", "sunday", e.target.value)}
                 />
               </div>
-              <button className="edit-button" onClick={() => handleSave("openingHours")}>Save</button>
-              <button className="edit-button" onClick={() => handleCancel("openingHours")}>Cancel</button>
+              <button className="edit-button" onClick={() => handleSave("openingHours")}>
+                Save
+              </button>
+              <button className="edit-button" onClick={() => handleCancel("openingHours")}>
+                Cancel
+              </button>
             </>
           ) : (
             <>
-              <div>
+              <div className="label">
                 <strong>Monday:</strong> {openingHours.monday}
               </div>
-              <div>
-                <strong>Tuesday:</strong> {openingHours.tuesday}
+              <div className="label">
+                <strong>Tuesday:</strong> {openingHours?.tuesday}
               </div>
-              <div>
+              <div className="label">
                 <strong>Wednesday:</strong> {openingHours.wednesday}
               </div>
-              <div>
+              <div className="label">
                 <strong>Thursday:</strong> {openingHours.thursday}
               </div>
-              <div>
+              <div className="label">
                 <strong>Friday:</strong> {openingHours.friday}
               </div>
-              <div>
+              <div className="label">
                 <strong>Saturday:</strong> {openingHours.saturday}
               </div>
-              <div>
+              <div className="label">
                 <strong>Sunday:</strong> {openingHours.sunday}
               </div>
-              <button className="edit-button" onClick={() => handleEdit("openingHours")}>Edit</button>
+              <button className="edit-button" onClick={() => handleEdit("openingHours")}>
+                Edit
+              </button>
             </>
           )}
         </div>
@@ -423,7 +454,6 @@ function RSProfile() {
 }
 
 export default RSProfile;
-
 
 /* import "../style/RSProfile.css";
 

@@ -21,7 +21,8 @@
 
 .menu-category h2 {
   border-bottom: 2px solid #274691;
-  padding-bottom: 5px;
+  padding-bottom: 1rem;
+  margin-bottom: 1.4rem;
 }
 
 .menu-item {
@@ -51,6 +52,51 @@
   font-weight: bold;
 }
 
+.rs-menu-container .edit-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  gap: 2rem;
+}
+
+.rs-menu-container .edit-item label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.rs-menu-container .edit-item label input {
+  padding: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.rs-menu-container .buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.rs-menu-container .buttons-container button {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rs-menu-container .buttons-container .save1-button {
+  background-color: var(--color-1);
+  color: white;
+}
+
+.rs-menu-container .buttons-container .cancel1-button {
+  background-color: transparent;
+  color: var(--color-1);
+  border: 1px solid var(--color-1);
+}
+
 .update-button {
   display: block;
   margin: 0 auto;
@@ -62,7 +108,6 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
-
 }
 
 .update-button:hover {

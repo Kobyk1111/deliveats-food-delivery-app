@@ -94,7 +94,7 @@ const historySchema = new Schema(
       type: String,
       /* required: true */ default: "No information",
     },
-  
+
     items: {
       type: [orderItemsSchema],
       required: true,
