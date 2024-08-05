@@ -68,15 +68,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -90,8 +82,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+        /* { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -165,15 +166,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.brasilgourmet.de/photos/restaurant1.jpg", "https://www.brasilgourmet.de/photos/dish1.jpg"],
@@ -184,8 +177,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+         /* { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -259,15 +261,6 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
     ],
     digitalPresence: {
       photos: [
@@ -281,8 +274,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+         /* { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -356,15 +358,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.cariocagrill.de/photos/restaurant1.jpg", "https://www.cariocagrill.de/photos/dish1.jpg"],
@@ -375,8 +369,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -450,15 +453,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -472,8 +467,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -547,15 +551,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.acarajeandco.de/photos/restaurant1.jpg", "https://www.acarajeandco.de/photos/dish1.jpg"],
@@ -566,8 +562,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -641,15 +646,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -663,8 +660,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -738,15 +744,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -760,8 +758,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+        /* { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -835,15 +842,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.cafedobrasil.de/photos/restaurant1.jpg", "https://www.cafedobrasil.de/photos/dish1.jpg"],
@@ -854,8 +853,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -929,15 +937,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Fresh coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-          { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-          { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-          { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.sabordobrasil.de/photos/restaurant1.jpg", "https://www.sabordobrasil.de/photos/dish1.jpg"],
@@ -948,8 +948,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1023,15 +1032,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.zagreb-bistro.de/photos/restaurant1.jpg", "https://www.zagreb-bistro.de/photos/dish1.jpg"],
@@ -1042,8 +1043,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1117,15 +1127,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -1139,8 +1141,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1214,15 +1225,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -1236,8 +1239,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1311,15 +1323,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -1333,8 +1337,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1408,15 +1421,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.osijek-oasis.de/photos/restaurant1.jpg", "https://www.osijek-oasis.de/photos/dish1.jpg"],
@@ -1427,8 +1432,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1502,15 +1516,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.pulaplate.de/photos/restaurant1.jpg", "https://www.pulaplate.de/photos/dish1.jpg"],
@@ -1521,8 +1527,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1596,15 +1611,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -1618,8 +1625,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+      /*   { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1693,15 +1709,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-          { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-          { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-          { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.zagrebzest.de/photos/restaurant1.jpg", "https://www.zagrebzest.de/photos/dish1.jpg"],
@@ -1712,8 +1720,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+      /*   { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1787,15 +1804,7 @@ export const restaurants = [
           { name: "Ginger Beer", description: "Homemade ginger drink", price: 3.5 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spiced rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Puff Puff", description: "Sweet fried dough balls", price: 3.0 },
-          { name: "Sobolo", description: "Hibiscus tea drink", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.accradelight.de/photos/restaurant1.jpg", "https://www.accradelight.de/photos/dish1.jpg"],
@@ -1806,8 +1815,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spiced rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Puff Puff", description: "Sweet fried dough balls", price: 3.0 },
+            { name: "Sobolo", description: "Hibiscus tea drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1881,15 +1899,7 @@ export const restaurants = [
           { name: "Coconut Water", description: "Refreshing coconut water", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.accradelight.de/photos/restaurant1.jpg", "https://www.accradelight.de/photos/dish1.jpg"],
@@ -1900,8 +1910,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1975,15 +1994,7 @@ export const restaurants = [
           { name: "Sobolo", description: "Hibiscus tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Kenkey and Fish", description: "Fermented corn dough served with fried fish", price: 11.0 },
-          { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-          { name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.ghanataste.de/photos/restaurant2.jpg", "https://www.ghanataste.de/photos/dish2.jpg"],
@@ -1994,8 +2005,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "15% off on orders over €30", code: "DISCOUNT15" },
-        { description: "Free appetizer with any main course on Fridays", code: "FREE_APPETIZER" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Kenkey and Fish", description: "Fermented corn dough served with fried fish", price: 11.0 },
+            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
+            { name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 3.0 },
+          ],
+        },
+      /*   { description: "15% off on orders over €30", code: "DISCOUNT15" },
+        { description: "Free appetizer with any main course on Fridays", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2069,15 +2089,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Chinchinga", description: "Spicy kebabs", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.ghanagourmet.de/photos/restaurant3.jpg", "https://www.ghanagourmet.de/photos/dish3.jpg"],
@@ -2088,8 +2100,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Buy 2 main courses, get 1 free drink", code: "BOGO_DRINK" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Chinchinga", description: "Spicy kebabs", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first visit", code: "WELCOME10" },
+        { description: "Buy 2 main courses, get 1 free drink", code: "BOGO_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2163,15 +2184,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-          { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.accrabistro.de/photos/restaurant4.jpg", "https://www.accrabistro.de/photos/dish4.jpg"],
@@ -2182,8 +2195,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
+            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+          ],
+        },
+      /*   { description: "10% off on first order", code: "WELCOME10" },
+        { description: "Free dessert with any main course", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2257,15 +2279,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.ghanaflavors.de/photos/restaurant5.jpg", "https://www.ghanaflavors.de/photos/dish5.jpg"],
@@ -2276,8 +2290,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "15% off on orders over €25", code: "DISCOUNT15" },
-        { description: "Free appetizer with main course on weekends", code: "FREE_APPETIZER" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+          ],
+        },
+       /*  { description: "15% off on orders over €25", code: "DISCOUNT15" },
+        { description: "Free appetizer with main course on weekends", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2351,15 +2374,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -2373,8 +2388,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Buy 1 Get 1 Free on Fridays", code: "BOGO_FRIDAY" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
+        { description: "Buy 1 Get 1 Free on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2448,15 +2472,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.kumasikitchen.de/photos/restaurant7.jpg", "https://www.kumasikitchen.de/photos/dish7.jpg"],
@@ -2467,8 +2483,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first meal", code: "WELCOME10" },
-        { description: "Free dessert with any main course on Sundays", code: "FREE_DESSERT_SUNDAY" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first meal", code: "WELCOME10" },
+        { description: "Free dessert with any main course on Sundays", code: "FREE_DESSERT_SUNDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2542,15 +2567,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: ["https://www.ghanagrill.de/photos/restaurant8.jpg", "https://www.ghanagrill.de/photos/dish8.jpg"],
@@ -2561,8 +2578,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all orders", code: "ORDER10" },
-        { description: "Free appetizer with main course on Thursdays", code: "FREE_APPETIZER" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all orders", code: "ORDER10" },
+        { description: "Free appetizer with main course on Thursdays", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2636,15 +2662,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-          { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.ghanasavory.de/photos/restaurant9.jpg", "https://www.ghanasavory.de/photos/dish9.jpg"],
@@ -2655,8 +2673,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Buy 1 Get 1 Free on main courses on Mondays", code: "BOGO_MON" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
+            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
+        { description: "Buy 1 Get 1 Free on main courses on Mondays", code: "BOGO_MON" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2730,15 +2757,7 @@ export const restaurants = [
           { name: "Iced Tea", description: "Refreshing iced tea", price: 3.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-          { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-          { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-          { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: ["https://www.ghanafeast.de/photos/restaurant10.jpg", "https://www.ghanafeast.de/photos/dish10.jpg"],
@@ -2749,8 +2768,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all orders over €20", code: "ORDER20" },
-        { description: "Free drink with main course on Saturdays", code: "FREE_DRINK" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
+            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
+            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
+            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all orders over €20", code: "ORDER20" },
+        { description: "Free drink with main course on Saturdays", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2824,15 +2852,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -2846,8 +2866,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Free dessert with main course on Wednesdays", code: "DESSERT_WED" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+      /*   { description: "10% off on first visit", code: "WELCOME10" },
+        { description: "Free dessert with main course on Wednesdays", code: "DESSERT_WED" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2921,15 +2950,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -2943,8 +2964,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all orders over €25", code: "ORDER25" },
-        { description: "Free appetizer with main course on Fridays", code: "FREE_APP_FRIDAY" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all orders over €25", code: "ORDER25" },
+        { description: "Free appetizer with main course on Fridays", code: "FREE_APP_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3018,15 +3048,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -3040,8 +3062,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on orders over €30", code: "ORDER30" },
-        { description: "Free appetizer on first visit", code: "FREE_APP_FIRST" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on orders over €30", code: "ORDER30" },
+        { description: "Free appetizer on first visit", code: "FREE_APP_FIRST" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3115,15 +3146,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -3137,8 +3160,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Free dessert with main course on Thursdays", code: "DESSERT_THUR" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on first visit", code: "WELCOME10" },
+        { description: "Free dessert with main course on Thursdays", code: "DESSERT_THUR" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3212,15 +3244,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+     
     ],
     digitalPresence: {
       photos: [
@@ -3234,8 +3258,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Free dessert on weekends", code: "WEEKEND_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
+        { description: "Free dessert on weekends", code: "WEEKEND_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3309,15 +3342,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -3331,8 +3356,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all orders over €25", code: "ORDER25" },
-        { description: "Free dessert with main course on Mondays", code: "MONDAY_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all orders over €25", code: "ORDER25" },
+        { description: "Free dessert with main course on Mondays", code: "MONDAY_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3406,15 +3440,7 @@ export const restaurants = [
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
         ],
       },
-      {
-        category: "20 menu",
-        items: [
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-          { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-          { name: "Coke", description: "Classic soft drink", price: 3.0 },
-        ],
-      },
+      
     ],
     digitalPresence: {
       photos: [
@@ -3428,8 +3454,17 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on all orders over €30", code: "ORDER30" },
-        { description: "Free appetizer with main course on weekends", code: "WEEKEND_APP" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+          ],
+        },
+       /*  { description: "10% off on all orders over €30", code: "ORDER30" },
+        { description: "Free appetizer with main course on weekends", code: "WEEKEND_APP" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
