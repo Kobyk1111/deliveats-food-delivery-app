@@ -9,9 +9,7 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
   const [restaurant, setRestaurant] = useState(null);
-  const [sessionId, setSessionId] = useState(
-    JSON.parse(localStorage.getItem("sessionId")) || ""
-  );
+  const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
   const [userOrderHistory, setUserOrderHistory] = useState([]);
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
@@ -26,24 +24,40 @@ function DataContextProvider({ children }) {
   }, [restaurant]);
 
   // OrderHistory.jsx and Preferences.jsx
-  useEffect(() => {
-    async function getOrderHistory() {
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-        );
+  async function getOrderHistory() {
+    try {
+      const response = await fetch(`http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`);
 
-        if (response.ok) {
-          const { orderHistory } = await response.json();
-          setUserOrderHistory(orderHistory);
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
+      if (response.ok) {
+        const { orderHistory } = await response.json();
+        setUserOrderHistory(orderHistory);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
       }
+    } catch (error) {
+      console.log(error.message);
     }
+  }
+
+  useEffect(() => {
+    // async function getOrderHistory() {
+    //   try {
+    //     const response = await fetch(
+    //       `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+    //     );
+
+    //     if (response.ok) {
+    //       const { orderHistory } = await response.json();
+    //       setUserOrderHistory(orderHistory);
+    //     } else {
+    //       const { error } = await response.json();
+    //       throw new Error(error.message);
+    //     }
+    //   } catch (error) {
+    //     console.log(error.message);
+    //   }
+    // }
 
     if (loggedInUser) {
       getOrderHistory();
@@ -96,9 +110,7 @@ function DataContextProvider({ children }) {
 
   async function getSearchedRestaurants() {
     try {
-      const response = await fetch(
-        "http://localhost:5002/search/getRestaurants"
-      );
+      const response = await fetch("http://localhost:5002/search/getRestaurants");
       if (response.ok) {
         const data = await response.json();
         setRestaurants(data);
@@ -131,10 +143,42 @@ function DataContextProvider({ children }) {
 
       console.log("Access Token has expired");
 
-      const refreshResponse = await fetch(
-        "http://localhost:5002/refresh-token",
-        { credentials: "include" }
-      );
+      const refreshResponse = await fetch("http://localhost:5002/refresh-token", { credentials: "include" });
+
+      if (refreshResponse.ok) {
+        console.log("New tokens received");
+
+        const secondAccessResponse = await fetch(url, settings);
+        return secondAccessResponse;
+      } else {
+        return refreshResponse;
+      }
+    }
+  }
+
+  async function handleHTTPRequestWithTokenRestaurant(url, settings) {
+    const firstAccessResponse = await fetch(url, settings);
+
+    if (firstAccessResponse.ok) {
+      return firstAccessResponse;
+    } else {
+      let error;
+      try {
+        const responseClone = firstAccessResponse.clone();
+        error = await responseClone.json();
+      } catch (err) {
+        console.log("Failed to parse JSON response", err);
+      }
+
+      if (error.status !== 401) {
+        return firstAccessResponse;
+      }
+
+      console.log("Access Token has expired");
+
+      const refreshResponse = await fetch("http://localhost:5002/refresh-token/restaurant-token", {
+        credentials: "include",
+      });
 
       if (refreshResponse.ok) {
         console.log("New tokens received");
@@ -151,29 +195,6 @@ function DataContextProvider({ children }) {
   function togglePasswordVisibility() {
     setShowPassword(!showPassword);
   }
-  // useEffect(() => {
-  //   async function getOrderHistory() {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-  //       );
-
-  //       if (response.ok) {
-  //         const { orderHistory } = await response.json();
-  //         setUserOrderHistory(orderHistory);
-  //       } else {
-  //         const { error } = await response.json();
-  //         throw new Error(error.message);
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   }
-
-  //   if (loggedInUser) {
-  //     getOrderHistory();
-  //   }
-  // }, [loggedInUser]);
 
   return (
     <DataContext.Provider
@@ -199,6 +220,8 @@ function DataContextProvider({ children }) {
         loggedInRestaurant,
         setLoggedInRestaurant,
         logoutRestaurant,
+        getOrderHistory,
+        handleHTTPRequestWithTokenRestaurant,
       }}
     >
       {children}

@@ -23,7 +23,8 @@ function Basket({ id }) {
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("deliveryOption", deliveryOption);
     localStorage.setItem("restaurantName", JSON.stringify(restaurant.basicInfo.businessName));
-  }, [basket, deliveryOption, restaurant.basicInfo.businessName]);
+    localStorage.setItem("restaurantId", JSON.stringify(restaurant.restaurantId));
+  }, [basket, deliveryOption, restaurant.basicInfo.businessName, restaurant.restaurantId]);
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);

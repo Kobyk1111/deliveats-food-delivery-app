@@ -5,19 +5,26 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { DataContext } from "../contexts/DataContext";
 
-import "../style/SuccessPage.css"
+import "../style/SuccessPage.css";
 
 function SuccessPage() {
-  const { deliveryOption, totalSum, totalSumPurchasedItems, basket, purchasedItems, completePurchase } =
+  const { deliveryOption, totalSum, totalSumPurchasedItems, basket, purchasedItems, completePurchase, setOrderId } =
     useContext(BasketContext);
   const { sessionId, loggedInUser } = useContext(DataContext);
   const [restaurantName, setRestaurantName] = useState(JSON.parse(localStorage.getItem("restaurantName") || ""));
+  const [restaurantId, setRestaurantId] = useState(JSON.parse(localStorage.getItem("restaurantId") || ""));
+  const [newOrderId, setNewOrderId] = useState("");
 
   useEffect(() => {
     const getRestaurantName = JSON.parse(localStorage.getItem("restaurantName"));
+    const getRestaurantId = JSON.parse(localStorage.getItem("restaurantId"));
 
     if (getRestaurantName) {
       setRestaurantName(getRestaurantName);
+    }
+
+    if (getRestaurantId) {
+      setRestaurantId(getRestaurantId);
     }
   }, []);
 
@@ -36,6 +43,7 @@ function SuccessPage() {
 
         if (response.ok) {
           const { id } = await response.json();
+          setNewOrderId(id);
 
           if (loggedInUser) {
             const settings = {
@@ -96,6 +104,40 @@ function SuccessPage() {
     }
     setOrderDetails();
   }, [sessionId]);
+
+  useEffect(() => {
+    async function sendOrderToRestaurant() {
+      const settings = {
+        body: JSON.stringify({ sessionId, newOrderId }),
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+        method: "POST",
+      };
+
+      try {
+        const response = await fetch(
+          `http://localhost:5002/create-checkout-session/send-to-restaurant/${restaurantId}`,
+          settings
+        );
+
+        if (response.ok) {
+          const { message, orderId } = await response.json();
+          setOrderId(orderId);
+          console.log(message);
+        } else {
+          const { error } = await response.json();
+          throw new Error(error.message);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+
+    if (newOrderId) {
+      sendOrderToRestaurant();
+    }
+  }, [basket, deliveryOption, restaurantId, sessionId, totalSum, newOrderId]);
 
   // useEffect(() => {
   //   async function getOrderHistory() {

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../style/Addressess.css";
 import { useContext, useEffect, useState } from "react";
 import Autocomplete from "react-google-autocomplete";
@@ -39,9 +40,7 @@ function Addresses() {
   useEffect(() => {
     async function getAllAddresses() {
       try {
-        const response = await fetch(
-          `http://localhost:5002/users/getAllAddresses/${loggedInUser.id}`
-        );
+        const response = await fetch(`http://localhost:5002/users/getAllAddresses/${loggedInUser.id}`);
 
         if (response.ok) {
           const data = await response.json();
@@ -156,19 +155,11 @@ function Addresses() {
             <li key={address._id} className="address-item">
               {editingId === address._id ? (
                 <div className="address-edit">
-                  <input
-                    type="text"
-                    value={editedLabel}
-                    onChange={handleLabelChange}
-                    placeholder="Label"
-                    required
-                  />
+                  <input type="text" value={editedLabel} onChange={handleLabelChange} placeholder="Label" required />
                   <Autocomplete
                     apiKey={import.meta.env.VITE_GOOGLE_API}
                     value={editedAddress}
-                    onPlaceSelected={(place) =>
-                      setEditedAddress(place.formatted_address)
-                    }
+                    onPlaceSelected={(place) => setEditedAddress(place.formatted_address)}
                     options={{
                       types: ["address"],
                     }}
@@ -176,10 +167,7 @@ function Addresses() {
                     required
                     onChange={(e) => setEditedAddress(e.target.value)}
                   />
-                  <button
-                    onClick={() => handleSave(address._id)}
-                    className="save-button"
-                  >
+                  <button onClick={() => handleSave(address._id)} className="save-button">
                     Save
                   </button>
                   <button onClick={handleCancel} className="cancel-button">
@@ -189,16 +177,10 @@ function Addresses() {
               ) : (
                 <div className="address-view">
                   <div className="address-actions">
-                    <button
-                      onClick={() => handleEdit(address._id)}
-                      className="edit-address-button"
-                    >
+                    <button onClick={() => handleEdit(address._id)} className="edit-address-button">
                       <FontAwesomeIcon icon={faPenToSquare} />
                     </button>
-                    <button
-                      onClick={() => handleDelete(address._id)}
-                      className="delete-address-button"
-                    >
+                    <button onClick={() => handleDelete(address._id)} className="delete-address-button">
                       <FontAwesomeIcon icon={faTrashCan} />
                     </button>
                   </div>
@@ -233,19 +215,12 @@ function Addresses() {
           <button type="submit" className="save-button">
             Save
           </button>
-          <button
-            type="button"
-            onClick={handleCancel}
-            className="cancel-button"
-          >
+          <button type="button" onClick={handleCancel} className="cancel-button">
             Cancel
           </button>
         </form>
       ) : (
-        <button
-          onClick={() => setAddingNew(true)}
-          className="add-address-button"
-        >
+        <button onClick={() => setAddingNew(true)} className="add-address-button">
           Add New Address
         </button>
       )}

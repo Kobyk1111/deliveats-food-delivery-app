@@ -127,7 +127,7 @@ export async function checkAuthentication(req, res, next) {
 export async function updateUser(req, res, next) {
   const { firstName, lastName, email, password } = req.body;
   const { userId } = req.params;
-  console.log(userId);
+
   try {
     const user = await User.findById(userId);
     if (user) {
@@ -158,7 +158,8 @@ export async function updateUser(req, res, next) {
       return next(createHttpError(404, "User not found"));
     }
   } catch (error) {
-    res.status(400).send(`Error updating user`);
+    console.error(error);
+    return next(createHttpError(500, "Server error updating user"));
   }
 }
 
@@ -170,7 +171,7 @@ export async function deleteUser(req, res, next) {
       message: `User deleted successfully`,
     });
   } catch (error) {
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error deleting user"));
   }
 }
 
@@ -189,7 +190,7 @@ export async function getUserData(req, res, next) {
       return next(createHttpError(404, "User not found"));
     }
   } catch (error) {
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error getting user data"));
   }
 }
 
@@ -218,7 +219,7 @@ export async function addAddress(req, res, next) {
     res.json({ addresses: updatedUser.addresses });
   } catch (error) {
     console.error(error);
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error adding address of user"));
   }
 }
 
@@ -238,7 +239,7 @@ export async function deleteAddress(req, res, next) {
     res.json({ addresses: foundUser.addresses });
   } catch (error) {
     console.error(error);
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error deleting address of user"));
   }
 }
 
@@ -265,7 +266,7 @@ export async function editAddress(req, res, next) {
     res.json({ addresses: foundUser.addresses });
   } catch (error) {
     console.error(error);
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error editing address of user"));
   }
 }
 
@@ -279,12 +280,10 @@ export async function getAllAddresses(req, res, next) {
       return next(createHttpError(404, "No user found"));
     }
 
-    // console.log(foundUser);
-
     res.json({ addresses: foundUser.addresses });
   } catch (error) {
     console.error(error);
-    return next(createHttpError(500, "Server error"));
+    return next(createHttpError(500, "Server error getting all addresses of user"));
   }
 }
 

@@ -1,11 +1,34 @@
 /* ******** RSOrdersActive.css ********* */
 
 .rs-orders-active-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
   padding: 20px;
   background-color: #f9f9f9;
+}
+
+.rs-orders-active-container button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.rs-orders-active-container button {
+  background-color: white;
+  color: black;
+  border: 1px solid #4caf50;
+  padding: 0.6rem 1.6rem;
+  text-align: left;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.rs-orders-active-container button:hover {
+  background-color: #98e79b;
+  color: black;
 }
 
 .cards {
@@ -14,7 +37,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
-  width: 300px;
+  /* width: 300px; */
   transition: transform 0.2s;
 }
 
@@ -24,7 +47,7 @@
 
 .cards p {
   margin: 10px 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
 }
 
@@ -47,7 +70,7 @@
   margin: 10px 0;
   padding: 10px;
   border-radius: 4px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .progress ul li:nth-child(even) {

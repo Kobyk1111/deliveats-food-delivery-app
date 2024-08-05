@@ -23,7 +23,9 @@ function RSMenu() {
         console.log(error.message);
       }
     }
-    getRestaurant();
+    if (loggedInRestaurant) {
+      getRestaurant();
+    }
   }, [loggedInRestaurant]);
 
   const handleEditClick = (category) => {

@@ -33,7 +33,7 @@ function RSNavbar() {
   return (
     <>
       <nav className="rs-nav">
-        <div className="logo-nav" onClick={() => navigate("/")}>
+        <div className="logo-nav" onClick={() => navigate("/rs-register")}>
           DelivEats
           <div>
             <small>for Restaurants</small>
@@ -45,12 +45,10 @@ function RSNavbar() {
         <div className="buttons-nav">
           {loggedInRestaurant ? (
             <div className="user-info">
-              <span className="welcome-message">
-                Welcome, {loggedInRestaurant.basicInfo.businessName}!
-              </span>
+              <span className="welcome-message">Welcome, {loggedInRestaurant.basicInfo.businessName}!</span>
               <button className="logout-button" onClick={logoutRestaurant}>
-                    Logout
-                  </button>
+                Logout
+              </button>
             </div>
           ) : (
             <RSRegisterAndLogin />

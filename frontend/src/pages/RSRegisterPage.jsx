@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../style/RSRegisterPage.css";
 
 import RSNavbar from "../components/RSNavbar";
@@ -24,10 +25,7 @@ function RSRegisterPage() {
               width={400}
             />
             <h3>Grow with DelivEats</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              veniam hic neque minima blanditiis nemo, suscipit deleniti, quasi.
-            </p>
+            <p>Unlock new growth opportunities with DelivEats – where your restaurant's success is our mission.</p>
           </div>
           <div>
             <img
@@ -36,10 +34,7 @@ function RSRegisterPage() {
               width={400}
             />
             <h3>Get more orders</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              veniam hic neque minima blanditiis nemo, suscipit deleniti, quasi.
-            </p>
+            <p>More visibility means more orders – partner with DelivEats today and keep your kitchen busy.</p>
           </div>
           <div>
             <img
@@ -49,8 +44,7 @@ function RSRegisterPage() {
             />
             <h3>Deliver to more customers</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              veniam hic neque minima blanditiis nemo, suscipit deleniti, quasi.
+              Reach customers far and wide with DelivEats – delivering your delicious meals to every corner of the city.
             </p>
           </div>
         </div>

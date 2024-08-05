@@ -4,8 +4,13 @@ import { DataContext } from "../contexts/DataContext";
 import "../style/OrderHistory.css";
 
 function OrderHistory() {
-  const { userOrderHistory } = useContext(DataContext);
+  const { userOrderHistory, getOrderHistory, loggedInUser } = useContext(DataContext);
 
+  useEffect(() => {
+    if (loggedInUser) {
+      getOrderHistory();
+    }
+  }, [loggedInUser]);
 
   // useEffect(() => {
   //   async function getOrderHistory() {
@@ -35,10 +40,7 @@ function OrderHistory() {
     <>
       <div className="order-history-container">
         {userOrderHistory.length === 0 ? (
-          <h2 className="no-history-info">
-            {" "}
-            You have no order history at the moment
-          </h2>
+          <h2 className="no-history-info"> You have no order history at the moment</h2>
         ) : (
           <>
             {userOrderHistory.map((order) => {
