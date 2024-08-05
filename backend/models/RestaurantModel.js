@@ -62,13 +62,15 @@ const digitalPresenceSchema = new Schema({
 });
 
 const offerSchema = new Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
+  name: { type: String, /* required: true */ },
+  description: { type: String, /* required: true */ },
+  price: { type: Number, /* required: true */ },
+  /* description: { type: String, required: true, default: "No offers" },
+  code: { type: String, required: true, default: "No code" }, */
 });
 
 const promotionalInfoSchema = new Schema({
-  currentOffers: { type: [offerSchema], required: true, default: [] },
+  currentOffers: { type: [offerSchema], /* required: true */ default: [] },
   loyaltyPrograms: { type: String, required: true, default: "no loyalties" },
 });
 
@@ -157,9 +159,9 @@ const restaurantSchema = new Schema({
   },
   promotionalInfo: {
     type: promotionalInfoSchema,
-    required: true,
+    /* required: true, */
     default: {
-      currentOffers: [],
+      currentOffers: [offerSchema],
       loyaltyPrograms: "no loyalties",
     },
   },
