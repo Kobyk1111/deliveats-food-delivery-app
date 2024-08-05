@@ -281,8 +281,15 @@ export const restaurants = [
     },
     promotionalInfo: {
       currentOffers: [
-        { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+          ],
+        },
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },

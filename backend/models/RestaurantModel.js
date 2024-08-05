@@ -62,8 +62,9 @@ const digitalPresenceSchema = new Schema({
 });
 
 const offerSchema = new Schema({
-  description: { type: String, required: true, default: "No offers" },
-  code: { type: String, required: true, default: "No code" },
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  price: { type: Number, required: true },
 });
 
 const promotionalInfoSchema = new Schema({
