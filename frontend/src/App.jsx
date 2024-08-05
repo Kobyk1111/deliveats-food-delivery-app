@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate /* useLocation, useNavigate */ } from "react-router-dom";
 import SearchResults from "./pages/SearchResults";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import SuccessPage from "./components/SuccessPage";
@@ -25,19 +25,21 @@ import RSMenu from "./components/RSMenu";
 import RSProfile from "./components/RSProfile";
 
 function App() {
-  const { setLoggedInUser, handleHTTPRequestWithToken, loggedInRestaurant } =
-    useContext(DataContext);
+  const {
+    setLoggedInUser,
+    handleHTTPRequestWithToken,
+    loggedInRestaurant,
+    setLoggedInRestaurant,
+    handleHTTPRequestWithTokenRestaurant,
+  } = useContext(DataContext);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {
     async function checkAuthentication() {
       try {
-        const response = await handleHTTPRequestWithToken(
-          "http://localhost:5002/users/check-auth",
-          {
-            credentials: "include",
-          }
-        );
+        const response = await handleHTTPRequestWithToken("http://localhost:5002/users/check-auth", {
+          credentials: "include",
+        });
 
         if (response.ok) {
           const user = await response.json();
@@ -63,6 +65,39 @@ function App() {
     }
 
     checkAuthentication();
+  }, []);
+
+  useEffect(() => {
+    async function checkAuthenticationOfRestaurant() {
+      try {
+        const response = await handleHTTPRequestWithTokenRestaurant("http://localhost:5002/restaurants/check-auth", {
+          credentials: "include",
+        });
+
+        if (response.ok) {
+          const restaurant = await response.json();
+          setLoggedInRestaurant(restaurant);
+        } else {
+          setLoggedInRestaurant(null);
+          const { error } = await response.json();
+
+          if (!isInitialLoad) {
+            throw new Error(error.message);
+          }
+        }
+      } catch (error) {
+        if (!isInitialLoad) {
+          // alert(`Your session has expired! ${error.message}`);
+          console.log(`Your session has expired! ${error.message}`);
+        }
+      } finally {
+        setTimeout(() => {
+          setIsInitialLoad(false); // Mark initial load as complete after delay
+        }, 500); //
+      }
+    }
+
+    checkAuthenticationOfRestaurant();
   }, []);
 
   if (isInitialLoad) {
@@ -100,22 +135,8 @@ function App() {
 
         {/* ******** restaurant Routes ******** */}
 
-        <Route
-          path="/rs-register"
-          element={
-            loggedInRestaurant ? (
-              <Navigate to="/rs-home/*" />
-            ) : (
-              <RSRegisterPage />
-            )
-          }
-        />
-        <Route
-          path="/rs-home/*"
-          element={
-            loggedInRestaurant ? <RSHomePage /> : <Navigate to="/rs-register" />
-          }
-        >
+        <Route path="/rs-register" element={loggedInRestaurant ? <Navigate to="/rs-home/*" /> : <RSRegisterPage />} />
+        <Route path="/rs-home/*" element={loggedInRestaurant ? <RSHomePage /> : <Navigate to="/rs-register" />}>
           <Route index element={<RSOrdersActive />} />
           <Route path="orders-active" element={<RSOrdersActive />} />
           <Route path="orders-history" element={<RSOrdersHistory />} />

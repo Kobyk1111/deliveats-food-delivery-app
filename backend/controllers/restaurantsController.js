@@ -4,14 +4,40 @@ import Restaurant from "../models/RestaurantModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import SearchedRestaurant from "../models/SearchedRestaurantsModel.js";
+import { io } from "../index.js";
+
+export async function checkAuthenticationOfRestaurant(req, res, next) {
+  try {
+    const restaurant = await Restaurant.findById(req.rest._id);
+
+    if (!restaurant) {
+      return next(400, createHttpError("Restaurant not found, Authentication failed! Please login."));
+    }
+
+    await restaurant.populate("orderHistory.order");
+
+    res.json(restaurant);
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Authentication failed! Please login again."));
+  }
+}
 
 export async function getRestaurant(req, res, next) {
   const { id } = req.params;
-  const restaurant = await Restaurant.findById(id);
-  if (restaurant) {
-    res.json(restaurant);
-  } else {
-    res.status(404).json({ message: "Restaurant not found" });
+
+  try {
+    const restaurant = await Restaurant.findById(id);
+
+    if (restaurant) {
+      await restaurant.populate("orderHistory.order");
+      res.json(restaurant);
+    } else {
+      return next(createHttpError(404, "Restaurant not found"));
+    }
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error getting restaurant"));
   }
 }
 
@@ -22,8 +48,6 @@ export async function getAllRestaurants(req, res, next) {
     if (!search) {
       return next(createHttpError(400, "Search term is required"));
     }
-
-    console.log(search);
 
     const splitSearch = search.toLowerCase().split(" ");
     const country = splitSearch[0];
@@ -51,14 +75,13 @@ export async function getAllRestaurants(req, res, next) {
       return (cityMatch && cuisineMatch) || (cityMatch && restaurantMatch);
     });
 
-    // console.log(filteredRestaurants.length);
-
     if (filteredRestaurants.length === 0) {
       return next(createHttpError(404, "We don't have any restaurant with your search query in our database"));
     }
 
     // Map filtered results to the SearchedRestaurant schema
     const searchedRestaurantsData = filteredRestaurants.map((restaurant) => ({
+      restaurantId: restaurant._id,
       basicInfo: restaurant.basicInfo,
       openAndCloseHours: restaurant.openAndCloseHours,
       cuisine: restaurant.cuisine,
@@ -75,7 +98,7 @@ export async function getAllRestaurants(req, res, next) {
     res.status(200).json(filteredRestaurants);
   } catch (error) {
     console.error(error);
-    next(error);
+    return next(createHttpError(500, "Server error getting all restaurants"));
   }
 }
 
@@ -94,12 +117,9 @@ export async function getSearchedRestaurants(req, res, next) {
 }
 
 export async function registerRestaurant(req, res, next) {
-  console.log(req.body);
   const email = req.body.basicInfo.contact.email;
   const phoneNumber = req.body.basicInfo.contact.phoneNumber;
   const password = req.body.basicInfo.password;
-
-  // console.log(email, phoneNumber);
 
   try {
     const foundRestaurant = await Restaurant.findOne({
@@ -121,6 +141,8 @@ export async function registerRestaurant(req, res, next) {
       },
     });
 
+    await newRestaurant.populate("orderHistory.order");
+
     const restaurantAccessToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
     const restaurantRefreshToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
 
@@ -140,8 +162,8 @@ export async function registerRestaurant(req, res, next) {
       maxAge: 1000 * 60 * 60 * 24,
     };
 
-    res.cookie("accessCookie", restaurantAccessToken, accessOptions);
-    res.cookie("refreshCookie", restaurantRefreshToken, refreshOptions);
+    res.cookie("restaurantAccessCookie", restaurantAccessToken, accessOptions);
+    res.cookie("restaurantRefreshCookie", restaurantRefreshToken, refreshOptions);
 
     res.json({ message: "Restaurant has been created successfully", restaurant: newRestaurant });
   } catch (error) {
@@ -166,6 +188,8 @@ export async function loginRestaurant(req, res, next) {
       return next(createHttpError(400, "Wrong Password, please try again!"));
     }
 
+    await foundRestaurant.populate("orderHistory.order");
+
     const restaurantAccessToken = jwt.sign({ id: foundRestaurant._id }, process.env.JWT_SECRET_KEY, {
       expiresIn: "15m",
     });
@@ -189,8 +213,8 @@ export async function loginRestaurant(req, res, next) {
       maxAge: 1000 * 60 * 60 * 24,
     };
 
-    res.cookie("accessCookie", restaurantAccessToken, accessOptions);
-    res.cookie("refreshCookie", restaurantRefreshToken, refreshOptions);
+    res.cookie("restaurantAccessCookie", restaurantAccessToken, accessOptions);
+    res.cookie("restaurantRefreshCookie", restaurantRefreshToken, refreshOptions);
 
     res.json({ message: "Logging in successful", restaurant: foundRestaurant });
   } catch (error) {
@@ -237,10 +261,12 @@ export async function updateRestaurant(req, res, next) {
 
     // Save the changes
     await restaurant.save();
+
+    await restaurant.populate("orderHistory.order");
     res.json(restaurant);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Internal server error" });
+    return next(createHttpError(500, "Server error updating restaurant"));
   }
 }
 
@@ -248,13 +274,53 @@ export async function updateRestaurantMenu(req, res, next) {
   const { id } = req.params;
   const { menu } = req.body;
 
-  const restaurant = await Restaurant.findById(id);
+  try {
+    const restaurant = await Restaurant.findById(id);
 
-  if (restaurant) {
-    restaurant.menu = menu;
-    await restaurant.save();
-    res.json(restaurant);
-  } else {
-    res.status(404).json({ message: "Restaurant not found" });
+    if (restaurant) {
+      restaurant.menu = menu;
+      await restaurant.save();
+
+      await restaurant.populate("orderHistory.order");
+
+      res.json(restaurant);
+    } else {
+      return next(createHttpError(404, "Restaurant not found"));
+    }
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error updating restaurant menu"));
   }
 }
+
+export const updateOrderStatus = async (req, res) => {
+  const { orderId, status } = req.body;
+
+  try {
+    const restaurant = await Restaurant.findOne({ "orderHistory.order": orderId });
+
+    if (!restaurant) {
+      return next(createHttpError(404, "Order not found"));
+    }
+
+    const orderIndex = restaurant.orderHistory.findIndex((order) => order.order.toString() === orderId);
+
+    if (orderIndex === -1) {
+      return next(createHttpError(404, "Order not found"));
+    }
+
+    restaurant.orderHistory[orderIndex].orderStatus = status; // Assuming orderStatus field exists in historySchema
+    await restaurant.save();
+
+    await restaurant.populate("orderHistory.order");
+
+    io.to(`order_${orderId}`).emit("orderStatusUpdated", { updatedOrderId: orderId, status });
+
+    console.log(`Emitting orderStatusUpdated for orderId: ${orderId}, status: ${status}`);
+
+    res.status(200).json({ message: "Order status updated successfully" });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error, failed to update order status"));
+  }
+};

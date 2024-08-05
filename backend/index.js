@@ -9,6 +9,8 @@ import checkoutRouter from "./routes/checkoutRouter.js";
 import refreshTokenRouter from "./routes/refreshTokenRouter.js";
 import logoutRouter from "./routes/logoutRouter.js";
 import restaurantsRouter from "./routes/restaurantsRouter.js";
+import http from "http";
+import { Server } from "socket.io";
 
 try {
   await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
@@ -18,6 +20,14 @@ try {
 }
 
 const app = express();
+const server = http.createServer(app);
+
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173",
+    credentials: true,
+  },
+});
 
 app.use(cookieParser());
 app.use(express.json());
@@ -38,6 +48,26 @@ app.use("/restaurants", restaurantsRouter);
 app.use("/logout", logoutRouter);
 
 const port = process.env.PORT || 5002;
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+server.listen(port, () => console.log(`Server is running on port ${port}`));
 
 app.use(globalErrorHandler);
+
+// Handle Socket.IO connections
+io.on("connection", (socket) => {
+  console.log("A user connected");
+
+  socket.on("joinRestaurantRoom", (restaurantId) => {
+    socket.join(`restaurant_${restaurantId}`);
+  });
+
+  socket.on("joinOrderRoom", (orderId) => {
+    socket.join(`order_${orderId}`);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("A user disconnected");
+  });
+});
+
+// Export the io instance for use in other modules
+export { io };

@@ -13,7 +13,7 @@ import {
   getAllAddresses,
   // setFavorite,
 } from "../controllers/userController.js";
-import authenticateToken from "../middlewares/authenticateToken.js";
+import { authenticateToken } from "../middlewares/authenticateToken.js";
 
 const router = Router();
 

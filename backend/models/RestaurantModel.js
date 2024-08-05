@@ -71,43 +71,64 @@ const promotionalInfoSchema = new Schema({
   loyaltyPrograms: { type: String, required: true, default: "no loyalties" },
 });
 
-const orderItemsSchema = new Schema({
-  itemName: { type: String, required: true },
-  price: { type: Number, required: true },
-  quantity: { type: Number, required: true },
-  description: { type: String, required: true },
-});
+// const orderItemsSchema = new Schema({
+//   itemName: { type: String, required: true },
+//   price: { type: Number, required: true },
+//   quantity: { type: Number, required: true },
+//   description: { type: String, required: true },
+// });
 
-const paymentDetailsSchema = new Schema({
-  paymentMethod: { type: String, required: true },
-  chargedAmount: { type: Number, required: true },
-});
+// const paymentDetailsSchema = new Schema({
+//   paymentMethod: { type: String, required: true },
+//   chargedAmount: { type: Number, required: true },
+// });
 
-const additionalInfoSchema = new Schema({
-  orderType: { type: String, required: true },
-  orderStatus: { type: String, required: true },
-});
+// const additionalInfoSchema = new Schema({
+//   orderType: { type: String, required: true },
+//   orderStatus: { type: String, required: true },
+// });
 
 const historySchema = new Schema(
   {
-    restaurantName: {
+    order: {
+      type: Schema.Types.ObjectId,
+      ref: "OrderHistory",
+    },
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+    customerName: {
       type: String,
-      /* required: true */ default: "No information",
-    },
-
-    items: {
-      type: [orderItemsSchema],
       required: true,
     },
-    totalSum: { type: Number, required: true },
-    paymentDetails: {
-      type: paymentDetailsSchema,
+    customerEmail: {
+      type: String,
       required: true,
     },
-    additionalInfo: {
-      type: additionalInfoSchema,
+    customerAddress: {
+      type: String,
       required: true,
     },
+    orderStatus: {
+      // Added this field
+      type: String,
+      required: true,
+      default: "Pending",
+    },
+    // items: {
+    //   type: [orderItemsSchema],
+    //   required: true,
+    // },
+    // totalSum: { type: Number, required: true },
+    // paymentDetails: {
+    //   type: paymentDetailsSchema,
+    //   required: true,
+    // },
+    // additionalInfo: {
+    //   type: additionalInfoSchema,
+    //   required: true,
+    // },
     // favorited: {
     //   type: Boolean,
     //   default: false,
@@ -147,3 +168,15 @@ const restaurantSchema = new Schema({
 const Restaurant = model("Restaurant", restaurantSchema);
 
 export default Restaurant;
+
+/* 
+orderHistory: {
+  orderId: 66a2216ea7267ed7b5c5f51a,
+  Date: "August 3, 2024 at 10:12:31 AM",
+  customer: "John Doe",
+  Address: "123 Elm Street, Springfield"
+  Items: 2x Pizza Margherita, 2x Coke
+  Payment: Confirmed
+  Delivery Option: Delivery
+}
+*/

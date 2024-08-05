@@ -113,6 +113,7 @@ const historySchema = new Schema(
 );
 
 const searchedRestaurantsSchema = new Schema({
+  restaurantId: { type: Schema.Types.ObjectId, ref: "Restaurant", required: true },
   basicInfo: { type: basicInfoSchema, required: true },
   openAndCloseHours: { type: daysSchema, required: true, default: defaultDays },
   cuisine: { type: [String], required: true, default: [] },

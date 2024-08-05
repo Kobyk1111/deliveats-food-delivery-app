@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // /* eslint-disable react/prop-types */
 // import Modal from "react-modal";
 
@@ -40,7 +41,6 @@
 // import Modal from "react-modal";
 // Modal.setAppElement("#root");
 
-import React from "react";
 import "../style/CustomModal.css";
 
 function CustomModal({ isOpen, onClose, children }) {

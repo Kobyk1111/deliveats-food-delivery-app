@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 import { Navigate } from "react-router-dom";
