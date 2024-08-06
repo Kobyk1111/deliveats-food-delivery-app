@@ -11,6 +11,7 @@ import {
   deleteAddress,
   editAddress,
   getAllAddresses,
+  deleteOrderHistoryOfUser,
   // setFavorite,
 } from "../controllers/userController.js";
 import { authenticateToken } from "../middlewares/authenticateToken.js";
@@ -26,6 +27,7 @@ router.post("/addAddress/:id", addAddress);
 router.delete("/deleteAddress/:userId/addresses/:id", deleteAddress);
 router.post("/editAddress/:userId/addresses/:id", editAddress);
 router.get("/getAllAddresses/:id", getAllAddresses);
+router.delete("/deleteOrderHistory/:id", deleteOrderHistoryOfUser);
 // router.post("/favorite/:userId/:id", setFavorite);
 
 router.use(authenticateToken);

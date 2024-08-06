@@ -142,7 +142,7 @@ function RSMenu() {
 
   return (
     <div className="rs-menu-container">
-      <button onClick={() => setToAddNewMenu(true)}>Add New Menu</button>
+      <button onClick={() => setToAddNewMenu(!toAddNewMenu)}>Add New Menu</button>
       {toAddNewMenu && (
         <>
           <h3>Add New Menu</h3>
@@ -188,126 +188,126 @@ function RSMenu() {
         </>
       )}
 
-      {!toAddNewMenu && (
-        <>
-          <div className="cuisine">
-            <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
-          </div>
+      {/* {!toAddNewMenu && ( */}
+      <>
+        <div className="cuisine">
+          <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
+        </div>
 
-          {loggedInRestaurant.menu.map((category) => (
-            <div key={category._id} className="menu-category">
-              <div className="category-header">
-                <h2>{category.category}</h2>
-              </div>
+        {loggedInRestaurant.menu.map((category) => (
+          <div key={category._id} className="menu-category">
+            <div className="category-header">
+              <h2>{category.category}</h2>
+            </div>
 
-              {editingCategory === category.category ? (
-                <div className="edit-form">
-                  {newMenuData.items.map((item, index) => (
-                    <div key={index} className="edit-item">
-                      <label>
-                        Name:
-                        <input
-                          type="text"
-                          value={item.name}
-                          onChange={(e) => handleInputChange(index, "name", e.target.value)}
-                        />
-                      </label>
-                      <label>
-                        Description:
-                        <input
-                          type="text"
-                          value={item.description}
-                          onChange={(e) => handleInputChange(index, "description", e.target.value)}
-                        />
-                      </label>
-                      <label>
-                        Price:
-                        <input
-                          type="number"
-                          step="0.01"
-                          value={item.price}
-                          onChange={(e) => handleInputChange(index, "price", e.target.value)}
-                        />
-                      </label>
-                    </div>
-                  ))}
-                  <div
-                    style={{
-                      border: "1px solid black",
-                      width: "fit-content",
-                      padding: "0.4rem 1rem",
-                      fontSize: "3rem",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => setToAddNewItem(!toAddNewItem)}
-                  >
-                    +
-                  </div>
-                  {toAddNewItem && (
-                    <div className="new-item-form">
+            {editingCategory === category.category ? (
+              <div className="edit-form">
+                {newMenuData.items.map((item, index) => (
+                  <div key={index} className="edit-item">
+                    <label>
+                      Name:
                       <input
                         type="text"
-                        name="name"
-                        value={newItemForEdit.name}
-                        onChange={handleNewItemForEditChange}
-                        placeholder="Item Name"
+                        value={item.name}
+                        onChange={(e) => handleInputChange(index, "name", e.target.value)}
                       />
+                    </label>
+                    <label>
+                      Description:
                       <input
                         type="text"
-                        name="description"
-                        value={newItemForEdit.description}
-                        onChange={handleNewItemForEditChange}
-                        placeholder="Item Description"
+                        value={item.description}
+                        onChange={(e) => handleInputChange(index, "description", e.target.value)}
                       />
+                    </label>
+                    <label>
+                      Price:
                       <input
                         type="number"
                         step="0.01"
-                        name="price"
-                        value={newItemForEdit.price}
-                        onChange={handleNewItemForEditChange}
-                        placeholder="Item Price"
+                        value={item.price}
+                        onChange={(e) => handleInputChange(index, "price", e.target.value)}
                       />
-                      <button type="button" onClick={handleAddNewItemForEdit}>
-                        Add Item
-                      </button>
-                    </div>
-                  )}
-
-                  <div className="buttons-container">
-                    <button className="save1-button" onClick={handleSaveClick}>
-                      Save
-                    </button>
-                    <button className="cancel1-button" onClick={handleCancelClick}>
-                      Cancel
-                    </button>
+                    </label>
                   </div>
+                ))}
+                <div
+                  style={{
+                    border: "1px solid black",
+                    width: "fit-content",
+                    padding: "0.4rem 1rem",
+                    fontSize: "3rem",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setToAddNewItem(!toAddNewItem)}
+                >
+                  +
                 </div>
-              ) : (
-                category.items.map((item) => (
-                  <div key={item.name} className="menu-item">
-                    <div className="item-info">
-                      <h3>{item.name}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                    <div className="item-price">€{Number(item.price).toFixed(2)}</div>
+                {toAddNewItem && (
+                  <div className="new-item-form">
+                    <input
+                      type="text"
+                      name="name"
+                      value={newItemForEdit.name}
+                      onChange={handleNewItemForEditChange}
+                      placeholder="Item Name"
+                    />
+                    <input
+                      type="text"
+                      name="description"
+                      value={newItemForEdit.description}
+                      onChange={handleNewItemForEditChange}
+                      placeholder="Item Description"
+                    />
+                    <input
+                      type="number"
+                      step="0.01"
+                      name="price"
+                      value={newItemForEdit.price}
+                      onChange={handleNewItemForEditChange}
+                      placeholder="Item Price"
+                    />
+                    <button type="button" onClick={handleAddNewItemForEdit}>
+                      Add Item
+                    </button>
                   </div>
-                ))
-              )}
-              {editingCategory !== category.category && (
-                <button className="edit-button" onClick={() => handleEditClick(category.category)}>
-                  Edit
-                </button>
-              )}
-            </div>
-          ))}
+                )}
 
-          <div>
-            <h3>Promotionals Info</h3>
-            <div> Current Offers</div>
-            <div> Loyalty Programs</div>
+                <div className="buttons-container">
+                  <button className="save1-button" onClick={handleSaveClick}>
+                    Save
+                  </button>
+                  <button className="cancel1-button" onClick={handleCancelClick}>
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              category.items.map((item) => (
+                <div key={item.name} className="menu-item">
+                  <div className="item-info">
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                  <div className="item-price">€{Number(item.price).toFixed(2)}</div>
+                </div>
+              ))
+            )}
+            {editingCategory !== category.category && (
+              <button className="edit-button" onClick={() => handleEditClick(category.category)}>
+                Edit
+              </button>
+            )}
           </div>
-        </>
-      )}
+        ))}
+
+        <div>
+          <h3>Promotionals Info</h3>
+          <div> Current Offers</div>
+          <div> Loyalty Programs</div>
+        </div>
+      </>
+      {/* )} */}
     </div>
   );
 }

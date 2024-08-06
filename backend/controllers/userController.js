@@ -305,6 +305,31 @@ export async function getAllAddresses(req, res, next) {
   }
 }
 
+export async function deleteOrderHistoryOfUser(req, res, next) {
+  const { id } = req.params;
+
+  console.log(id);
+
+  try {
+    const foundUser = await User.findById(id);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No User found"));
+    }
+
+    // Clear the order history array
+    foundUser.orderHistory = [];
+    await foundUser.save();
+
+    await foundUser.populate("orderHistory");
+
+    res.json({ message: "Order history successfully deleted", orderHistory: foundUser.orderHistory });
+  } catch (error) {
+    console.log(error);
+    next(createHttpError(500, "Order history could not be deleted"));
+  }
+}
+
 // export async function setFavorite(req, res, next) {
 //   const { isFavorited } = req.body;
 //   const { userId, id } = req.params;
