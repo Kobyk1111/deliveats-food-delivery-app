@@ -18,6 +18,8 @@ export async function registerUser(req, res, next) {
 
       const newUser = await User.create({ firstName, lastName, email, password: hashedPassword });
 
+      await newUser.populate("orderHistory");
+
       const accessToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
       const refreshToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
 
@@ -45,6 +47,8 @@ export async function registerUser(req, res, next) {
         firstName: newUser.firstName,
         lastName: newUser.lastName,
         email: newUser.email,
+        orderHistory: newUser.orderHistory,
+        addresses: newUser.addresses,
       });
     } else {
       return next(createHttpError(409, "User already exists"));
@@ -67,6 +71,8 @@ export async function loginUser(req, res, next) {
       if (!matchPasswords) {
         return next(createHttpError(400, "Wrong Password, please try again!"));
       }
+
+      await foundUser.populate("orderHistory");
 
       const accessToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
       const refreshToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
@@ -95,6 +101,8 @@ export async function loginUser(req, res, next) {
         firstName: foundUser.firstName,
         lastName: foundUser.lastName,
         email: foundUser.email,
+        orderHistory: foundUser.orderHistory,
+        addresses: foundUser.addresses,
       });
     } else {
       return next(createHttpError(404, "No user found"));
@@ -112,6 +120,8 @@ export async function checkAuthentication(req, res, next) {
     if (!user) {
       return next(400, createHttpError("User not found, Authentication failed! Please login."));
     }
+
+    await user.populate("orderHistory");
 
     res.json({
       id: user._id,
@@ -137,6 +147,7 @@ export async function updateUser(req, res, next) {
         new: true,
         runValidators: true,
       };
+
       const updatedUser = await User.findByIdAndUpdate(
         userId,
         {
@@ -147,6 +158,9 @@ export async function updateUser(req, res, next) {
         },
         options
       );
+
+      await updatedUser.populate("orderHistory");
+
       res.status(201).json({
         id: updatedUser._id,
         firstName: updatedUser.firstName,
@@ -177,9 +191,13 @@ export async function deleteUser(req, res, next) {
 
 export async function getUserData(req, res, next) {
   const { userId } = req.params;
+
   try {
     const user = await User.findById(userId);
+
     if (user) {
+      await user.populate("orderHistory");
+
       res.json({
         id: user._id,
         firstName: user.firstName,
