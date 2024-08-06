@@ -1,47 +1,53 @@
 import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataContext";
-
 import "../style/OrderHistory.css";
 
 function OrderHistory() {
-  const { userOrderHistory, getOrderHistory, loggedInUser } = useContext(DataContext);
+  const { userOrderHistory, setUserOrderHistory, loggedInUser, getOrderHistory } =
+    useContext(DataContext);
 
   useEffect(() => {
+  
+
     if (loggedInUser) {
       getOrderHistory();
     }
-  }, [loggedInUser]);
+  }, [loggedInUser, setUserOrderHistory]);
 
-  // useEffect(() => {
-  //   async function getOrderHistory() {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-  //       );
+  async function handleDeleteOrderHistory() {
+    try {
+      const response = await fetch(
+        `http://localhost:5002/create-checkout-session/deleteOrderHistory/${loggedInUser.id}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        }
+      );
 
-  //       if (response.ok) {
-  //         const { orderHistory } = await response.json();
-  //         setUserOrderHistory(orderHistory);
-  //       } else {
-  //         const { error } = await response.json();
-  //         throw new Error(error.message);
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   }
+      if (response.ok) {
+        const { orderHistory } = await response.json();
 
-  //   if (loggedInUser) {
-  //     getOrderHistory();
-  //   }
-  // }, [loggedInUser, setUserOrderHistory]);
-  console.log(loggedInUser);
+        setUserOrderHistory(orderHistory);  // Clear the order history on the frontend
+        alert("Order history successfully deleted");
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 
   return (
     <>
       <div className="order-history-container">
+        <button className="delete-history-button" onClick={handleDeleteOrderHistory}>
+          Delete Order History
+        </button>
         {userOrderHistory.length === 0 ? (
-          <h2 className="no-history-info"> You have no order history at the moment</h2>
+          <h2 className="no-history-info">
+            You have no order history at the moment
+          </h2>
         ) : (
           <>
             {userOrderHistory.map((order) => {
@@ -49,7 +55,6 @@ function OrderHistory() {
                 <div key={order._id} className="order">
                   <div className="restaurant-name-container">
                     <h2>{order.restaurantName}</h2>
-                    <div>{order.restaurantId}</div>
                   </div>
                   <h3>Items</h3>
                   <div className="items-container">
