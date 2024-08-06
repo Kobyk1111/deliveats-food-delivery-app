@@ -244,3 +244,27 @@ export async function sendOrderToRestaurant(req, res, next) {
     next(createHttpError(500, "Order could not be sent to the restaurant"));
   }
 }
+
+
+export async function deleteOrderHistory(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const foundUser = await User.findById(id);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No User found"));
+    }
+
+    // Clear the order history array
+    foundUser.orderHistory = [];
+    await foundUser.save();
+
+    await foundUser.populate("orderHistory");
+
+    res.json({ message: "Order history successfully deleted", orderHistory: foundUser.orderHistory });
+  } catch (error) {
+    console.log(error);
+    next(createHttpError(500, "Order history could not be deleted"));
+  }
+}
