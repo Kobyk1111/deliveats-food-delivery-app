@@ -90,8 +90,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /* { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -184,8 +182,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /* { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -281,8 +277,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /* { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Buy 1 Get 1 Free on Caipirinhas on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -375,8 +369,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -472,8 +464,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -566,8 +556,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -663,8 +651,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -760,8 +746,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /* { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -854,8 +838,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -948,8 +930,6 @@ export const restaurants = [
             { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1042,8 +1022,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1139,8 +1117,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1236,8 +1212,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1333,8 +1307,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1408,6 +1380,7 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
+
     ],
     digitalPresence: {
       photos: ["https://www.osijek-oasis.de/photos/restaurant1.jpg", "https://www.osijek-oasis.de/photos/dish1.jpg"],
@@ -1427,8 +1400,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1521,8 +1492,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1618,8 +1587,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*   { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1712,8 +1679,6 @@ export const restaurants = [
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
-        /*   { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course on weekends", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1806,8 +1771,6 @@ export const restaurants = [
             { name: "Sobolo", description: "Hibiscus tea drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1900,8 +1863,6 @@ export const restaurants = [
             { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free drink with any main course on weekends", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1994,8 +1955,6 @@ export const restaurants = [
             { name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 3.0 },
           ],
         },
-        /*   { description: "15% off on orders over €30", code: "DISCOUNT15" },
-        { description: "Free appetizer with any main course on Fridays", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2088,8 +2047,6 @@ export const restaurants = [
             { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Buy 2 main courses, get 1 free drink", code: "BOGO_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2182,8 +2139,6 @@ export const restaurants = [
             { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
           ],
         },
-        /*   { description: "10% off on first order", code: "WELCOME10" },
-        { description: "Free dessert with any main course", code: "FREE_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2276,8 +2231,6 @@ export const restaurants = [
             { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
           ],
         },
-        /*  { description: "15% off on orders over €25", code: "DISCOUNT15" },
-        { description: "Free appetizer with main course on weekends", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2373,8 +2326,6 @@ export const restaurants = [
             { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Buy 1 Get 1 Free on Fridays", code: "BOGO_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2467,8 +2418,6 @@ export const restaurants = [
             { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on first meal", code: "WELCOME10" },
-        { description: "Free dessert with any main course on Sundays", code: "FREE_DESSERT_SUNDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2561,8 +2510,6 @@ export const restaurants = [
             { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all orders", code: "ORDER10" },
-        { description: "Free appetizer with main course on Thursdays", code: "FREE_APPETIZER" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2655,8 +2602,6 @@ export const restaurants = [
             { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Buy 1 Get 1 Free on main courses on Mondays", code: "BOGO_MON" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
@@ -2749,8 +2694,6 @@ export const restaurants = [
             { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all orders over €20", code: "ORDER20" },
-        { description: "Free drink with main course on Saturdays", code: "FREE_DRINK" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2846,8 +2789,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*   { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Free dessert with main course on Wednesdays", code: "DESSERT_WED" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2943,8 +2884,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all orders over €25", code: "ORDER25" },
-        { description: "Free appetizer with main course on Fridays", code: "FREE_APP_FRIDAY" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3040,8 +2979,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on orders over €30", code: "ORDER30" },
-        { description: "Free appetizer on first visit", code: "FREE_APP_FIRST" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3136,9 +3073,7 @@ export const restaurants = [
             { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
-        },
-        /*  { description: "10% off on first visit", code: "WELCOME10" },
-        { description: "Free dessert with main course on Thursdays", code: "DESSERT_THUR" }, */
+        }, 
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3234,8 +3169,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all takeout orders", code: "TAKEOUT10" },
-        { description: "Free dessert on weekends", code: "WEEKEND_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3331,8 +3264,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all orders over €25", code: "ORDER25" },
-        { description: "Free dessert with main course on Mondays", code: "MONDAY_DESSERT" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
@@ -3428,8 +3359,6 @@ export const restaurants = [
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
         },
-        /*  { description: "10% off on all orders over €30", code: "ORDER30" },
-        { description: "Free appetizer with main course on weekends", code: "WEEKEND_APP" }, */
       ],
       loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
