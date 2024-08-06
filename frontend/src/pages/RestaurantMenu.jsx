@@ -12,7 +12,13 @@ import "../style/RestaurantMenu.css";
 
 function RestaurantMenu() {
   const { id } = useParams();
-  const { restaurants, getSearchedRestaurants, restaurant, setRestaurant, loggedInUser } = useContext(DataContext);
+  const {
+    restaurants,
+    getSearchedRestaurants,
+    restaurant,
+    setRestaurant,
+    loggedInUser,
+  } = useContext(DataContext);
   const { addItemToBasket } = useContext(BasketContext);
   // const [isFavorited, setIsFavorited] = useState(false);
   // const [restaurant, setRestaurant] = useState(null);
@@ -119,12 +125,25 @@ function RestaurantMenu() {
                 )} */}
               </div>
             ) : null}
-            <h1 className="restaurant-name">{restaurant.basicInfo.businessName}</h1>
-            <p> restaurant_ID: {restaurant._id}</p>
-            <p className="restaurant-address">
-              {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
-              {restaurant.basicInfo.address.city}
-            </p>
+            <div className="restaurant-info">
+              <div>
+                <h1 className="restaurant-name">
+                  {restaurant.basicInfo.businessName}
+                </h1>
+                <p className="restaurant-address">
+                  {restaurant.basicInfo.address.street},{" "}
+                  {restaurant.basicInfo.address.postalCode},{" "}
+                  {restaurant.basicInfo.address.city}
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://img.freepik.com/premium-vector/vector-design-dinner-icon-style_1134108-28645.jpg?w=1060"
+                  alt=""
+                  width={80}
+                />
+              </div>
+            </div>
             <div className="menu-items">
               {restaurant?.menu?.map((item) => (
                 <div key={item._id} className="menu-item-card">
@@ -132,12 +151,21 @@ function RestaurantMenu() {
                     <h2>{item.category}</h2>
                     {item.items.map((food) => (
                       <div className="item-details" key={food._id}>
+                        <img
+                          src="https://img.freepik.com/free-vectortakeaway-packages-3d-vector-illustration-coffee-soda-cup-burger-fast-food-packs-from-restaurant-cartoon-style-isolated-white-background-fast-food-shop-menu-concept_778687-647.jpg?t=st=1722929708~exp=1722933308~hmac=69f1d3bbaaf8599aa23efb9000feb41a49ed194639a6708d5b43e0c1e14031fa&w=1060"
+                          alt=""
+                          width={100}
+                        />
+
                         <div>
                           <p className="item-name">{food.name}</p>
                           <p className="item-description">{food.description}</p>
                           <p className="item-price">€{food.price}</p>
                         </div>
-                        <button className="add-button" onClick={() => addItemToBasket(food)}>
+                        <button
+                          className="add-button"
+                          onClick={() => addItemToBasket(food)}
+                        >
                           Add
                         </button>
                       </div>
