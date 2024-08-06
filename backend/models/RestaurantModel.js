@@ -13,13 +13,13 @@ const addressSchema = new Schema({
 });
 
 const daysSchema = new Schema({
-  monday: { type: String, required: true, default: "" },
-  tuesday: { type: String, required: true, default: "" },
-  wednesday: { type: String, required: true, default: "" },
-  thursday: { type: String, required: true, default: "" },
-  friday: { type: String, required: true, default: "" },
-  saturday: { type: String, required: true, default: "" },
-  sunday: { type: String, required: true, default: "" },
+  monday: { type: String, /* required: true */ default: "" },
+  tuesday: { type: String, /* required: true */ default: "" },
+  wednesday: { type: String, /* required: true */ default: "" },
+  thursday: { type: String, /* required: true */ default: "" },
+  friday: { type: String, /* required: true */ default: "" },
+  saturday: { type: String, /* required: true */ default: "" },
+  sunday: { type: String, /* required: true */ default: "" },
 });
 
 const defaultDays = {
@@ -62,31 +62,14 @@ const digitalPresenceSchema = new Schema({
 });
 
 const offerSchema = new Schema({
-  description: { type: String, required: true, default: "No offers" },
-  code: { type: String, required: true, default: "No code" },
+  category: { type: String, required: true, default: "No category" },
+  items: { type: [menuItemSchema], required: true, default: [] },
 });
 
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
-  loyaltyPrograms: { type: String, required: true, default: "no loyalties" },
+  loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
 });
-
-// const orderItemsSchema = new Schema({
-//   itemName: { type: String, required: true },
-//   price: { type: Number, required: true },
-//   quantity: { type: Number, required: true },
-//   description: { type: String, required: true },
-// });
-
-// const paymentDetailsSchema = new Schema({
-//   paymentMethod: { type: String, required: true },
-//   chargedAmount: { type: Number, required: true },
-// });
-
-// const additionalInfoSchema = new Schema({
-//   orderType: { type: String, required: true },
-//   orderStatus: { type: String, required: true },
-// });
 
 const historySchema = new Schema(
   {
@@ -116,30 +99,13 @@ const historySchema = new Schema(
       required: true,
       default: "Pending",
     },
-    // items: {
-    //   type: [orderItemsSchema],
-    //   required: true,
-    // },
-    // totalSum: { type: Number, required: true },
-    // paymentDetails: {
-    //   type: paymentDetailsSchema,
-    //   required: true,
-    // },
-    // additionalInfo: {
-    //   type: additionalInfoSchema,
-    //   required: true,
-    // },
-    // favorited: {
-    //   type: Boolean,
-    //   default: false,
-    // },
   },
   { timestamps: true }
 );
 
 const restaurantSchema = new Schema({
   basicInfo: { type: basicInfoSchema, required: true },
-  openAndCloseHours: { type: daysSchema, required: true, default: defaultDays },
+  openAndCloseHours: { type: daysSchema, /* required: true */ default: defaultDays },
   cuisine: { type: [String], required: true, default: [] },
   restaurantType: { type: [String], required: true, default: [] },
   menu: { type: [menuCategorySchema], required: true, default: [] },
@@ -168,15 +134,3 @@ const restaurantSchema = new Schema({
 const Restaurant = model("Restaurant", restaurantSchema);
 
 export default Restaurant;
-
-/* 
-orderHistory: {
-  orderId: 66a2216ea7267ed7b5c5f51a,
-  Date: "August 3, 2024 at 10:12:31 AM",
-  customer: "John Doe",
-  Address: "123 Elm Street, Springfield"
-  Items: 2x Pizza Margherita, 2x Coke
-  Payment: Confirmed
-  Delivery Option: Delivery
-}
-*/

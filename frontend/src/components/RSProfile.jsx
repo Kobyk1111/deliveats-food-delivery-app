@@ -362,6 +362,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.monday}
                   onChange={(e) => handleInputChange("openingHours", "monday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -370,6 +371,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.tuesday}
                   onChange={(e) => handleInputChange("openingHours", "tuesday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -378,6 +380,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.wednesday}
                   onChange={(e) => handleInputChange("openingHours", "wednesday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -386,6 +389,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.thursday}
                   onChange={(e) => handleInputChange("openingHours", "thursday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -394,6 +398,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.friday}
                   onChange={(e) => handleInputChange("openingHours", "friday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -402,6 +407,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.saturday}
                   onChange={(e) => handleInputChange("openingHours", "saturday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <div className="label">
@@ -410,6 +416,7 @@ function RSProfile() {
                   type="text"
                   value={openingHours.sunday}
                   onChange={(e) => handleInputChange("openingHours", "sunday", e.target.value)}
+                  placeholder="eg. 11:00AM - 10:00PM"
                 />
               </div>
               <button className="edit-button" onClick={() => handleSave("openingHours")}>

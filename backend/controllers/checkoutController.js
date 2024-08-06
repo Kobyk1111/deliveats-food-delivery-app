@@ -164,11 +164,11 @@ export async function setOrderOfUser(req, res, next) {
     };
 
     const updatedUser = await User.findByIdAndUpdate(id, {
-      $push: { orders: orderId },
+      $push: { orderHistory: orderId },
       options,
     });
 
-    await updatedUser.populate("orders");
+    await updatedUser.populate("orderHistory");
 
     res.json(updatedUser);
   } catch (error) {
@@ -186,6 +186,8 @@ export async function getOrderHistory(req, res, next) {
     if (!foundUser) {
       return next(createHttpError(404, "No User found"));
     }
+
+    await foundUser.populate("orderHistory");
 
     res.json({ orderHistory: foundUser.orderHistory });
   } catch (error) {

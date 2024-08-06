@@ -35,6 +35,7 @@ function OrderHistory() {
   //     getOrderHistory();
   //   }
   // }, [loggedInUser, setUserOrderHistory]);
+  console.log(loggedInUser);
 
   return (
     <>
