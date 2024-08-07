@@ -12,6 +12,8 @@ function RSMenu() {
   const [newMenu, setNewMenu] = useState([]);
   const [toAddNewMenu, setToAddNewMenu] = useState(false);
   const [toAddNewItem, setToAddNewItem] = useState(false);
+  const [editingCuisine, setEditingCuisine] = useState(false);
+  const [newCuisine, setNewCuisine] = useState(loggedInRestaurant.cuisine || []);
 
   useEffect(() => {
     async function getRestaurant() {
@@ -56,7 +58,7 @@ function RSMenu() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ menu: updatedMenu }),
+      body: JSON.stringify({ menu: updatedMenu, cuisine: newCuisine }),
     };
 
     try {
@@ -66,7 +68,7 @@ function RSMenu() {
         const data = await response.json();
         setLoggedInRestaurant(data);
         setEditingCategory(null);
-        setNewItemForEdit({ name: "", description: "", price: "" });
+        setEditingCuisine(false);
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -98,7 +100,6 @@ function RSMenu() {
   const handleAddNewCategory = async (e) => {
     e.preventDefault();
 
-    // Add the current newItem to newMenu
     const updatedNewMenu = [...newMenu, newItem];
 
     const newMenuCategory = { category: newCategory, items: updatedNewMenu };
@@ -138,6 +139,51 @@ function RSMenu() {
     setNewMenuData({ ...newMenuData, items: updatedItems });
     setNewItemForEdit({ name: "", description: "", price: "" });
     setToAddNewItem(false);
+  };
+
+  const handleCuisineChange = (index, value) => {
+    const updatedCuisine = [...newCuisine];
+    updatedCuisine[index] = value;
+    setNewCuisine(updatedCuisine);
+  };
+
+  const addCuisineField = () => {
+    setNewCuisine([...newCuisine, ""]);
+  };
+
+  const removeCuisineField = (index) => {
+    const updatedCuisine = newCuisine.filter((_, i) => i !== index);
+    setNewCuisine(updatedCuisine);
+  };
+
+  const handleSaveCuisine = async () => {
+    const settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ menu: loggedInRestaurant.menu, cuisine: newCuisine }),
+    };
+
+    try {
+      const response = await fetch(`http://localhost:5002/restaurants/update/menu/${loggedInRestaurant._id}`, settings);
+
+      if (response.ok) {
+        const data = await response.json();
+        setLoggedInRestaurant(data);
+        setEditingCuisine(false);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const handleDeleteItem = (index) => {
+    const updatedItems = newMenuData.items.filter((_, i) => i !== index);
+    setNewMenuData({ ...newMenuData, items: updatedItems });
   };
 
   return (
@@ -188,11 +234,26 @@ function RSMenu() {
         </>
       )}
 
-      {/* {!toAddNewMenu && ( */}
       <>
-        <div className="cuisine">
-          <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
-        </div>
+        {editingCuisine ? (
+          <div className="edit-cuisine">
+            <h2>Edit Cuisine</h2>
+            {newCuisine.map((cuisine, index) => (
+              <div key={index}>
+                <input type="text" value={cuisine} onChange={(e) => handleCuisineChange(index, e.target.value)} />
+                <button onClick={() => removeCuisineField(index)}>Remove</button>
+              </div>
+            ))}
+            <button onClick={addCuisineField}>Add Cuisine</button>
+            <button onClick={handleSaveCuisine}>Save Cuisine</button>
+            <button onClick={() => setEditingCuisine(false)}>Cancel</button>
+          </div>
+        ) : (
+          <div className="cuisine">
+            <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
+            <button onClick={() => setEditingCuisine(true)}>Edit Cuisine</button>
+          </div>
+        )}
 
         {loggedInRestaurant.menu.map((category) => (
           <div key={category._id} className="menu-category">
@@ -229,6 +290,7 @@ function RSMenu() {
                         onChange={(e) => handleInputChange(index, "price", e.target.value)}
                       />
                     </label>
+                    <button onClick={() => handleDeleteItem(index)}>Delete Item</button>
                   </div>
                 ))}
                 <div
@@ -307,7 +369,6 @@ function RSMenu() {
           <div> Loyalty Programs</div>
         </div>
       </>
-      {/* )} */}
     </div>
   );
 }

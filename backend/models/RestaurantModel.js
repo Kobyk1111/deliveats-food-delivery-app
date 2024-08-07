@@ -62,7 +62,6 @@ const digitalPresenceSchema = new Schema({
 });
 
 const offerSchema = new Schema({
-
   category: { type: String, required: true, default: "No category" },
   items: { type: [menuItemSchema], required: true, default: [] },
 });
@@ -70,7 +69,6 @@ const offerSchema = new Schema({
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
   loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
-
 });
 
 const historySchema = new Schema(
@@ -100,6 +98,11 @@ const historySchema = new Schema(
       type: String,
       required: true,
       default: "Pending",
+    },
+    statusTimestamp: {
+      // Added this field
+      type: Date,
+      default: Date.now,
     },
   },
   { timestamps: true }
@@ -131,6 +134,7 @@ const restaurantSchema = new Schema({
     },
   },
   orderHistory: { type: [historySchema], default: [] },
+  activeOrders: { type: [historySchema], default: [] },
 });
 
 const Restaurant = model("Restaurant", restaurantSchema);

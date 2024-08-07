@@ -1,5 +1,4 @@
 import createHttpError from "http-errors";
-import menus from "../menu.js";
 import Restaurant from "../models/RestaurantModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -272,13 +271,14 @@ export async function updateRestaurant(req, res, next) {
 
 export async function updateRestaurantMenu(req, res, next) {
   const { id } = req.params;
-  const { menu } = req.body;
+  const { menu, cuisine } = req.body;
 
   try {
     const restaurant = await Restaurant.findById(id);
 
     if (restaurant) {
       restaurant.menu = menu;
+      restaurant.cuisine = cuisine;
       await restaurant.save();
 
       await restaurant.populate("orderHistory.order");
@@ -292,6 +292,42 @@ export async function updateRestaurantMenu(req, res, next) {
     return next(createHttpError(500, "Server error updating restaurant menu"));
   }
 }
+
+// export const updateOrderStatus = async (req, res) => {
+//   const { orderId, status } = req.body;
+
+//   try {
+//     const restaurant = await Restaurant.findOne({ "orderHistory.order": orderId });
+
+//     if (!restaurant) {
+//       return next(createHttpError(404, "Order not found"));
+//     }
+
+//     const orderIndex = restaurant.orderHistory.findIndex((order) => order.order.toString() === orderId);
+
+//     if (orderIndex === -1) {
+//       return next(createHttpError(404, "Order not found"));
+//     }
+
+//     restaurant.orderHistory[orderIndex].orderStatus = status; // Assuming orderStatus field exists in historySchema
+//     await restaurant.save();
+
+//     await restaurant.populate("orderHistory.order");
+
+//     io.to(`order_${orderId}`).emit("orderStatusUpdated", { updatedOrderId: orderId, status });
+
+//     console.log(`Emitting orderStatusUpdated for orderId: ${orderId}, status: ${status}`);
+
+//     // res.status(200).json({ message: "Order status updated successfully" });
+//     res.status(200).json({
+//       message: "Order status updated successfully",
+//       updatedOrder: restaurant.orderHistory[orderIndex],
+//     });
+//   } catch (error) {
+//     console.error(error);
+//     return next(createHttpError(500, "Server error, failed to update order status"));
+//   }
+// };
 
 export const updateOrderStatus = async (req, res) => {
   const { orderId, status } = req.body;
@@ -309,16 +345,25 @@ export const updateOrderStatus = async (req, res) => {
       return next(createHttpError(404, "Order not found"));
     }
 
-    restaurant.orderHistory[orderIndex].orderStatus = status; // Assuming orderStatus field exists in historySchema
-    await restaurant.save();
+    // Update order status and timestamp
+    restaurant.orderHistory[orderIndex].orderStatus = status;
+    restaurant.orderHistory[orderIndex].statusTimestamp = new Date(); // Save the current timestamp
 
+    await restaurant.save();
     await restaurant.populate("orderHistory.order");
 
-    io.to(`order_${orderId}`).emit("orderStatusUpdated", { updatedOrderId: orderId, status });
+    io.to(`order_${orderId}`).emit("orderStatusUpdated", {
+      updatedOrderId: orderId,
+      status,
+      timestamp: restaurant.orderHistory[orderIndex].statusTimestamp,
+    });
 
     console.log(`Emitting orderStatusUpdated for orderId: ${orderId}, status: ${status}`);
 
-    res.status(200).json({ message: "Order status updated successfully" });
+    res.status(200).json({
+      message: "Order status updated successfully",
+      timestamp: restaurant.orderHistory[orderIndex].statusTimestamp,
+    });
   } catch (error) {
     console.error(error);
     return next(createHttpError(500, "Server error, failed to update order status"));
