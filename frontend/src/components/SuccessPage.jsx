@@ -13,11 +13,13 @@ function SuccessPage() {
   const { sessionId, loggedInUser } = useContext(DataContext);
   const [restaurantName, setRestaurantName] = useState(JSON.parse(localStorage.getItem("restaurantName") || ""));
   const [restaurantId, setRestaurantId] = useState(JSON.parse(localStorage.getItem("restaurantId") || ""));
+  const [restaurantAddress, setRestaurantAddress] = useState(JSON.parse(localStorage.getItem("restaurantAddress")));
   const [newOrderId, setNewOrderId] = useState("");
 
   useEffect(() => {
     const getRestaurantName = JSON.parse(localStorage.getItem("restaurantName"));
     const getRestaurantId = JSON.parse(localStorage.getItem("restaurantId"));
+    const getRestaurantAddress = JSON.parse(localStorage.getItem("restaurantAddress"));
 
     if (getRestaurantName) {
       setRestaurantName(getRestaurantName);
@@ -26,12 +28,16 @@ function SuccessPage() {
     if (getRestaurantId) {
       setRestaurantId(getRestaurantId);
     }
+
+    if (getRestaurantAddress) {
+      setRestaurantAddress(getRestaurantAddress);
+    }
   }, []);
 
   useEffect(() => {
     async function setOrder() {
       const settings = {
-        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
+        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName, restaurantAddress }),
         headers: {
           "Content-Type": "application/JSON",
         },
@@ -76,34 +82,34 @@ function SuccessPage() {
     setOrder();
   }, [sessionId]);
 
-  useEffect(() => {
-    async function setOrderDetails() {
-      const settings = {
-        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
-        headers: {
-          "Content-Type": "application/JSON",
-        },
-        method: "POST",
-      };
+  // useEffect(() => {
+  //   async function setOrderDetails() {
+  //     const settings = {
+  //       body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
+  //       headers: {
+  //         "Content-Type": "application/JSON",
+  //       },
+  //       method: "POST",
+  //     };
 
-      try {
-        const response = await fetch(
-          `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
-          settings
-        );
-        if (response.ok) {
-          await response.json();
-          completePurchase(); // Clear the basket and set purchasedItems
-        } else {
-          const { error } = await response.json();
-          throw new Error(error.message);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
-    setOrderDetails();
-  }, [sessionId]);
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
+  //         settings
+  //       );
+  //       if (response.ok) {
+  //         await response.json();
+  //         completePurchase(); // Clear the basket and set purchasedItems
+  //       } else {
+  //         const { error } = await response.json();
+  //         throw new Error(error.message);
+  //       }
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   }
+  //   setOrderDetails();
+  // }, [sessionId]);
 
   useEffect(() => {
     async function sendOrderToRestaurant() {
@@ -138,30 +144,6 @@ function SuccessPage() {
       sendOrderToRestaurant();
     }
   }, [basket, deliveryOption, restaurantId, sessionId, totalSum, newOrderId]);
-
-  // useEffect(() => {
-  //   async function getOrderHistory() {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-  //       );
-
-  //       if (response.ok) {
-  //         const { orderHistory } = await response.json();
-  //         setUserOrderHistory(orderHistory);
-  //       } else {
-  //         const { error } = await response.json();
-  //         throw new Error(error.message);
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   }
-
-  //   if (loggedInUser) {
-  //     getOrderHistory();
-  //   }
-  // }, [loggedInUser, setUserOrderHistory]);
 
   useEffect(() => {
     completePurchase();

@@ -19,12 +19,15 @@ function Basket({ id }) {
   const { restaurant } = useContext(DataContext);
   // const { setSessionId } = useContext(DataContext);
 
+  const restaurantAddress = `${restaurant?.basicInfo.address.street}, ${restaurant?.basicInfo.address.postalCode}, ${restaurant?.basicInfo.address.city}`;
+
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("deliveryOption", deliveryOption);
-    localStorage.setItem("restaurantName", JSON.stringify(restaurant.basicInfo.businessName));
-    localStorage.setItem("restaurantId", JSON.stringify(restaurant.restaurantId));
-  }, [basket, deliveryOption, restaurant.basicInfo.businessName, restaurant.restaurantId]);
+    localStorage.setItem("restaurantName", JSON.stringify(restaurant?.basicInfo.businessName));
+    localStorage.setItem("restaurantId", JSON.stringify(restaurant?.restaurantId));
+    localStorage.setItem("restaurantAddress", JSON.stringify(restaurantAddress));
+  }, [basket, deliveryOption, restaurant?.basicInfo.businessName, restaurant?.restaurantId, restaurantAddress]);
 
   async function handleCheckout() {
     const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);

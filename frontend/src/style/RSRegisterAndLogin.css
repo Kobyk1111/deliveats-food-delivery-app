@@ -1,16 +1,39 @@
 /* RSRegisterAndLogin.css */
 
-/* .restaurant-register-login-container {
+.rs-register-login-page {
+  min-height: 80vh;
+  padding: 6rem 0;
+  margin: 7rem 0 0;
+  position: relative;
+}
+
+.rs-register-login-page h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.rs-register-login-page .rs-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 10px;
-} */
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  max-width: 600px;
+}
 
-/* .button-container {} */
+.rs-register-login-page .rs-form .name-fields {
+  display: flex;
+  flex-direction: column;
+}
 
-.toggle-button {
+.rs-register-login-page .toggle-button {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
@@ -22,11 +45,11 @@
   transition: background-color 0.3s ease;
 }
 
-.toggle-button.active {
+.rs-register-login-page .toggle-button.active {
   background-color: #57635c;
 }
 
-.toggle-button:hover {
+.rs-register-login-page .toggle-button:hover {
   background-color: #163825;
 }
 
@@ -98,40 +121,53 @@
   flex-direction: column;
 } */
 
-.form-label {
+.rs-register-login-page .form-label {
   margin-bottom: 10px;
   font-size: 14px;
 }
 
-.form-input {
-  /* width: 100%; */
+.rs-register-login-page .form-input {
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #eee2e2;
   border-radius: 5px;
 }
 
-.form-input:focus {
+.rs-register-login-page .form-input:focus {
   border-color: #266241;
   outline: none;
 }
 
-.restaurant-register-login-container .checkbox-form-label {
+.rs-register-login-page .checkbox-form-label {
   display: flex;
 }
 
-.submit-button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #266241;
-  color: white;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.rs-register-login-page .buttons-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1.6rem;
 }
 
-.submit-button:hover {
+.rs-register-login-page .buttons-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.rs-register-login-page .buttons-container .submit-button {
+  background-color: #266241;
+  color: white;
+}
+
+.rs-register-login-page .submit-button:hover {
   background-color: #163825;
+}
+
+.rs-register-login-page .buttons-container .cancel-button {
+  margin-top: 0;
+  width: fit-content;
 }

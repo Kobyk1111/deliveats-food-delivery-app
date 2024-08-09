@@ -330,6 +330,29 @@ export async function deleteOrderHistoryOfUser(req, res, next) {
   }
 }
 
+export async function deleteOrder(req, res, next) {
+  const { userId, orderId } = req.params;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return next(createHttpError(404, "User not found"));
+    }
+    // Remove the order from the order history
+    user.orderHistory = user.orderHistory.filter((order) => order._id.toString() !== orderId);
+    await user.save();
+    // Optionally, repopulate orderHistory if needed
+    await user.populate("orderHistory");
+    res.json({
+      message: "Order successfully deleted",
+      orderHistory: user.orderHistory,
+    });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error deleting order"));
+  }
+}
+
 // export async function setFavorite(req, res, next) {
 //   const { isFavorited } = req.body;
 //   const { userId, id } = req.params;

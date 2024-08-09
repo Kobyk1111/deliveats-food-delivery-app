@@ -35,6 +35,11 @@ const defaultDays = {
 const basicInfoSchema = new Schema({
   businessName: { type: String, required: true },
   businessId: { type: String, required: true },
+  coverImage: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
+  },
   owner: { type: String, required: true },
   password: { type: String, required: true },
   venueName: { type: String, required: true },
@@ -46,6 +51,11 @@ const menuItemSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
+  image: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vectortakeaway-packages-3d-vector-illustration-coffee-soda-cup-burger-fast-food-packs-from-restaurant-cartoon-style-isolated-white-background-fast-food-shop-menu-concept_778687-647.jpg?t=st=1722929708~exp=1722933308~hmac=69f1d3bbaaf8599aa23efb9000feb41a49ed194639a6708d5b43e0c1e14031fa&w=1060",
+  },
 });
 
 const menuCategorySchema = new Schema({

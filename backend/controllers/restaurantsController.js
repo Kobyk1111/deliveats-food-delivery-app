@@ -14,6 +14,7 @@ export async function checkAuthenticationOfRestaurant(req, res, next) {
     }
 
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
 
     res.json(restaurant);
   } catch (error) {
@@ -30,6 +31,8 @@ export async function getRestaurant(req, res, next) {
 
     if (restaurant) {
       await restaurant.populate("orderHistory.order");
+      await restaurant.populate("activeOrders.order");
+
       res.json(restaurant);
     } else {
       return next(createHttpError(404, "Restaurant not found"));
@@ -141,6 +144,7 @@ export async function registerRestaurant(req, res, next) {
     });
 
     await newRestaurant.populate("orderHistory.order");
+    await newRestaurant.populate("activeOrders.order");
 
     const restaurantAccessToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
     const restaurantRefreshToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
@@ -188,6 +192,7 @@ export async function loginRestaurant(req, res, next) {
     }
 
     await foundRestaurant.populate("orderHistory.order");
+    await foundRestaurant.populate("activeOrders.order");
 
     const restaurantAccessToken = jwt.sign({ id: foundRestaurant._id }, process.env.JWT_SECRET_KEY, {
       expiresIn: "15m",
@@ -262,6 +267,8 @@ export async function updateRestaurant(req, res, next) {
     await restaurant.save();
 
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
+
     res.json(restaurant);
   } catch (error) {
     console.error(error);
@@ -278,10 +285,15 @@ export async function updateRestaurantMenu(req, res, next) {
 
     if (restaurant) {
       restaurant.menu = menu;
-      restaurant.cuisine = cuisine;
+
+      if (cuisine) {
+        restaurant.cuisine = cuisine;
+      }
+
       await restaurant.save();
 
       await restaurant.populate("orderHistory.order");
+      await restaurant.populate("activeOrders.order");
 
       res.json(restaurant);
     } else {
@@ -333,39 +345,77 @@ export const updateOrderStatus = async (req, res) => {
   const { orderId, status } = req.body;
 
   try {
-    const restaurant = await Restaurant.findOne({ "orderHistory.order": orderId });
+    const restaurant = await Restaurant.findOne({ "activeOrders.order": orderId });
 
     if (!restaurant) {
       return next(createHttpError(404, "Order not found"));
     }
 
-    const orderIndex = restaurant.orderHistory.findIndex((order) => order.order.toString() === orderId);
+    const orderIndex = restaurant.activeOrders.findIndex((order) => order.order.toString() === orderId);
 
     if (orderIndex === -1) {
       return next(createHttpError(404, "Order not found"));
     }
 
     // Update order status and timestamp
-    restaurant.orderHistory[orderIndex].orderStatus = status;
-    restaurant.orderHistory[orderIndex].statusTimestamp = new Date(); // Save the current timestamp
+    restaurant.activeOrders[orderIndex].orderStatus = status;
+    restaurant.activeOrders[orderIndex].statusTimestamp = new Date(); // Save the current timestamp
 
     await restaurant.save();
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
 
     io.to(`order_${orderId}`).emit("orderStatusUpdated", {
       updatedOrderId: orderId,
       status,
-      timestamp: restaurant.orderHistory[orderIndex].statusTimestamp,
+      timestamp: restaurant.activeOrders[orderIndex].statusTimestamp,
     });
 
     console.log(`Emitting orderStatusUpdated for orderId: ${orderId}, status: ${status}`);
 
     res.status(200).json({
       message: "Order status updated successfully",
-      timestamp: restaurant.orderHistory[orderIndex].statusTimestamp,
+      timestamp: restaurant.activeOrders[orderIndex].statusTimestamp,
     });
   } catch (error) {
     console.error(error);
     return next(createHttpError(500, "Server error, failed to update order status"));
   }
 };
+
+export async function getRestaurantOrderHistory(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const restaurant = await Restaurant.findById(id);
+
+    if (!restaurant) {
+      return next(createHttpError(404, "No restaurant found"));
+    }
+
+    // Filter orders with status "Delivery Completed"
+    const completedOrders = restaurant.activeOrders.filter((order) => order.orderStatus === "Delivery Completed");
+
+    const options = {
+      new: true,
+      runValidators: true,
+    };
+
+    const updatedRestaurant = await Restaurant.findByIdAndUpdate(
+      id,
+      {
+        $push: { orderHistory: { $each: completedOrders } },
+        $pull: { activeOrders: { orderStatus: "Delivery Completed" } },
+      },
+      options
+    );
+
+    await updatedRestaurant.populate("orderHistory.order");
+    await updatedRestaurant.populate("activeOrders.order");
+
+    res.json(updatedRestaurant);
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error, failed to get restaurant history"));
+  }
+}

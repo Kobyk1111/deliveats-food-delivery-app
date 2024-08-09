@@ -3,6 +3,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Sabor do Brasil",
       businessId: "23/456/78901",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ana Souza",
       venueName: "Sabor",
       contact: {
@@ -98,6 +100,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Brasil Gourmet",
       businessId: "23/456/78902",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Carlos Oliveira",
       venueName: "Brasil Gourmet",
       contact: {
@@ -190,6 +194,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Churrascaria do Brasil",
       businessId: "23/456/78903",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ricardo Costa",
       venueName: "Churrascaria",
       contact: {
@@ -285,6 +291,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Carioca Grill",
       businessId: "23/456/78904",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Fernanda Lima",
       venueName: "Carioca",
       contact: {
@@ -377,6 +385,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Ginga Restaurant",
       businessId: "23/456/78905",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Luana Silva",
       venueName: "Ginga",
       contact: {
@@ -472,6 +482,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Acarajé & Co.",
       businessId: "23/456/78906",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Mariana Almeida",
       venueName: "Acarajé",
       contact: {
@@ -564,6 +576,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Sabor Brasileiro",
       businessId: "23/456/78907",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ana Costa",
       venueName: "Sabor",
       contact: {
@@ -1380,7 +1394,6 @@ export const restaurants = [
           { name: "Juice", description: "Freshly squeezed juice", price: 3.5 },
         ],
       },
-
     ],
     digitalPresence: {
       photos: ["https://www.osijek-oasis.de/photos/restaurant1.jpg", "https://www.osijek-oasis.de/photos/dish1.jpg"],
@@ -3073,7 +3086,7 @@ export const restaurants = [
             { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
             { name: "Coke", description: "Classic soft drink", price: 3.0 },
           ],
-        }, 
+        },
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
