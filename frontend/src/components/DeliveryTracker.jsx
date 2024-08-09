@@ -112,12 +112,13 @@ function DeliveryTracker() {
 
       <div className="current-stage">
         {currentStage === stages.length - 1 && (
-          <div className="completion">
-            {/* <p>Delivery Completed!</p> */}
-            <button onClick={handleBackToMainPage} className="back-to-main-button">
-              Back to main page
-            </button>
-          </div>
+          <>
+            <div className="completion">
+              <button onClick={handleBackToMainPage} className="back-to-main-button">
+                Back to main page
+              </button>
+            </div>
+          </>
         )}
       </div>
     </div>

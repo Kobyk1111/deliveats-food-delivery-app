@@ -1,32 +1,9 @@
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
+import "../style/Preferences.css";
 
 function Preferences() {
   const { userOrderHistory } = useContext(DataContext);
-
-  // useEffect(() => {
-  //   async function getOrderHistory() {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-  //       );
-
-  //       if (response.ok) {
-  //         const { orderHistory } = await response.json();
-  //         setUserOrderHistory(orderHistory);
-  //       } else {
-  //         const { error } = await response.json();
-  //         throw new Error(error.message);
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   }
-
-  //   if (loggedInUser) {
-  //     getOrderHistory();
-  //   }
-  // }, [loggedInUser, setUserOrderHistory]);
 
   return (
     <>
@@ -35,7 +12,7 @@ function Preferences() {
         <h3>Your favorites</h3>
         <div>work on this part later</div>
       </div>
-      <div>
+      <div className="order-again-container">
         <h3>Order again</h3>
         <div className="order-history-container">
           {userOrderHistory.length === 0 ? (

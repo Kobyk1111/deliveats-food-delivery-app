@@ -3,19 +3,21 @@
 .successPage {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
+  padding: 6rem 0;
   background-color: #f9f9f9;
   min-height: 80vh;
   margin-top: 7rem;
+  gap: 15rem;
 }
 
 .success-card-container {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .success-card {
@@ -71,6 +73,6 @@
 }
 
 .success-trackerContainer {
-    flex-grow: 1;
-    max-width: 600px;
-  }
+  flex-grow: 1;
+  max-width: 420px;
+}

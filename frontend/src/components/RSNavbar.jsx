@@ -1,26 +1,27 @@
-import { useContext, useState, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
-import RSRegisterAndLogin from "./RSRegisterAndLogin";
+// import RSRegisterAndLogin from "./RSRegisterAndLogin";
 import "../style/RSNavbar.css";
 
 // import RSNavStatus from "./RSNavStatus";
 
 function RSNavbar() {
-  const { loggedInRestaurant, logoutRestaurant } = useContext(DataContext);
+  const { loggedInRestaurant, logoutRestaurant, setToggleRegisterOrLoginRestaurant, setIsToRegisterRestaurant } =
+    useContext(DataContext);
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen(!isDropdownOpen);
+  // };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+        // setIsDropdownOpen(false);
       }
     };
 
@@ -51,7 +52,31 @@ function RSNavbar() {
               </button>
             </div>
           ) : (
-            <RSRegisterAndLogin />
+            <>
+              {/* <RSRegisterAndLogin /> */}
+              <div className="button-container">
+                <button
+                  className={`toggle-button`}
+                  onClick={() => {
+                    setIsToRegisterRestaurant(false);
+                    setToggleRegisterOrLoginRestaurant(true);
+                    // setIsModalOpen(true);
+                  }}
+                >
+                  Login
+                </button>
+                <button
+                  className={`toggle-button`}
+                  onClick={() => {
+                    setIsToRegisterRestaurant(true);
+                    setToggleRegisterOrLoginRestaurant(true);
+                    // setIsModalOpen(true);
+                  }}
+                >
+                  Register
+                </button>
+              </div>
+            </>
           )}
         </div>
       </nav>
