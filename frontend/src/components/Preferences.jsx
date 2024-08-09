@@ -15,11 +15,14 @@ function Preferences() {
       <div className="order-again-container">
         <h3>Order again</h3>
         <div className="order-history-container">
-          {userOrderHistory.length === 0 ? (
-            <h2 className="no-history-info"> You have no saved orders at the moment</h2>
+          {userOrderHistory?.length === 0 ? (
+            <h2 className="no-history-info">
+              {" "}
+              You have no saved orders at the moment
+            </h2>
           ) : (
             <>
-              {userOrderHistory.map((order) => {
+              {userOrderHistory?.map((order) => {
                 return (
                   <div key={order._id} className="order">
                     <div className="restaurant-name-container">
