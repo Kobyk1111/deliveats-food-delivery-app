@@ -54,7 +54,7 @@ export const restaurants = [
           { name: "Macaxeira Frita", description: "Fried cassava sticks", price: 4.0 },
           { name: "Salame", description: "Brazilian salami", price: 3.0 },
           { name: "Torresmo", description: "Pork cracklings", price: 3.0 },
-        { name: "Farofa", description: "Toasted cassava flour mixture", price: 3.0 },
+          { name: "Farofa", description: "Toasted cassava flour mixture", price: 3.0 },
 
 
 
@@ -181,10 +181,55 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+            
+            {
+              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
+            },
           ],
         },
       ],
@@ -2275,10 +2320,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            {
+            appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            },
+            {
+              appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+              mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+              mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+              dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+              drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+              mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+              dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+              drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+              mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+              dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+              drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+              mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+              dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+              drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+              mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+              dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+              drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", "price": 3.0 },
+              mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+              dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+              drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+            }
           ],
         },
       ],
@@ -2587,10 +2676,55 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            
+            {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -2743,10 +2877,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -2897,10 +3075,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -3050,10 +3272,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -3206,10 +3472,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+            {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -3359,10 +3669,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              {
+              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+              },
+              {
+                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
+              },
+              {
+                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
+                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
+                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
+                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
+                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
+                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
+              },
+              {
+                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
+                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
+                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
+              }
           ],
         },
       ],
@@ -3588,10 +3942,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spiced rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Puff Puff", description: "Sweet fried dough balls", price: 3.0 },
-            { name: "Sobolo", description: "Hibiscus tea drink", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -3814,10 +4212,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -4044,10 +4486,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Kenkey and Fish", description: "Fermented corn dough served with fried fish", price: 11.0 },
-            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-            { name: "Fresh Mango Juice", description: "Juice made from fresh mangoes", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -4271,10 +4757,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Chinchinga", description: "Spicy kebabs", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -4497,10 +5027,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -4723,10 +5297,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -4952,10 +5570,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -5178,10 +5840,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -5404,10 +6110,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Kelewele", description: "Spicy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fresh Juice", description: "Freshly squeezed fruit juice", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -5630,10 +6380,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Pudding", description: "Creamy mango pudding", price: 3.0 },
-            { name: "Fruit Punch", description: "Mixed fruit punch", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -5856,10 +6650,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fried Plantains", description: "Sweet and crispy fried plantains", price: 3.0 },
-            { name: "Jollof Rice", description: "Spicy rice cooked with tomatoes and vegetables", price: 11.0 },
-            { name: "Mango Sorbet", description: "Refreshing mango sorbet", price: 3.0 },
-            { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", price: 3.0 },
+            {
+              appetizer: { name: "Puff Puff", description: "Deep-fried dough balls", "price": 3.0 },
+              mainCourse: { name: "Waakye", description: "Rice and beans with plantains", "price": 11.0 },
+              dessert: { name: "Bofrot", description: "Sweet fried dough balls", "price": 3.0 },
+              drink: { name: "Fresh Pineapple Juice", description: "Juice made from fresh pineapples", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Chibom", description: "Bread with beans and spices", "price": 3.0 },
+              mainCourse: { name: "Fufu with Light Soup", description: "Cassava and plantain dough with spicy soup", "price": 11.0 },
+              dessert: { name: "Kelewele Cake", description: "Cake flavored with spicy plantains", "price": 3.0 },
+              drink: { name: "Palm Wine", description: "Traditional fermented palm drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Spring Rolls", description: "Crispy rolls filled with vegetables", "price": 3.0 },
+              mainCourse: { name: "Banku and Tilapia", description: "Fermented corn dough with grilled fish", "price": 11.0 },
+              dessert: { name: "Millets Porridge", description: "Sweet millet porridge", "price": 3.0 },
+              drink: { name: "Bissap", description: "Hibiscus flower drink", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Jollof Balls", description: "Fried rice balls with tomato sauce", "price": 3.0 },
+              mainCourse: { name: "Kenkey with Fish", description: "Fermented corn dough with fried fish", "price": 11.0 },
+              dessert: { name: "Coconut Cake", description: "Cake made with fresh coconut", "price": 3.0 },
+              drink: { name: "Tamarind Juice", description: "Juice made from tamarind", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Akara", description: "Deep-fried bean cakes", "price": 3.0 },
+              mainCourse: { name: "Gari Fortor", description: "Spicy gari dough with vegetables", "price": 11.0 },
+              dessert: { name: "Sweet Plantain", description: "Ripe plantains cooked with honey", "price": 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Fried Yam", description: "Crispy fried yam slices", "price": 3.0 },
+              mainCourse: { name: "Ghanaian Jollof Rice", description: "Tomato-based rice with vegetables and spices", "price": 11.0 },
+              dessert: { name: "Peanut Butter Cake", description: "Cake made with peanut butter", "price": 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Plantain Chips", description: "Crispy fried plantain slices", "price": 3.0 },
+              mainCourse: { name: "Jollof Rice and Chicken", description: "Tomato rice with grilled chicken", "price": 11.0 },
+              dessert: { name: "Mango Pudding", description: "Sweet pudding made with mangoes", "price": 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Tomato Soup", description: "Spicy tomato soup with herbs", "price": 3.0 },
+              mainCourse: { name: "Gari and Beans", description: "Gari served with spicy beans", "price": 11.0 },
+              dessert: { name: "Banana Fritters", description: "Deep-fried banana slices", "price": 3.0 },
+              drink: { name: "Coconut Water", description: "Fresh coconut water", "price": 3.0 }
+            },
           ],
         },
       ],
@@ -5903,6 +6741,27 @@ export const restaurants = [
           { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
           { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -5913,6 +6772,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -5923,6 +6798,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -5933,6 +6823,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -5951,10 +6856,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
@@ -5993,21 +6942,58 @@ export const restaurants = [
       {
         category: "Appetizers",
         items: [
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 6.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
+          { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
         category: "Main Courses",
         items: [
-          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
+          { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 12.0 },
           { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 10.0 },
-          { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 12.0 },
-          { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 12.0 },
+          { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
+          { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6018,6 +7004,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6028,6 +7029,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6046,10 +7062,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
@@ -6089,10 +7149,31 @@ export const restaurants = [
         category: "Appetizers",
         items: [
           { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -6103,6 +7184,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6113,6 +7210,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6123,6 +7235,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6141,10 +7268,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
@@ -6184,10 +7355,31 @@ export const restaurants = [
         category: "Appetizers",
         items: [
           { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -6198,6 +7390,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6208,6 +7416,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6218,6 +7441,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6236,10 +7474,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         }, 
       ],
@@ -6279,10 +7561,31 @@ export const restaurants = [
         category: "Appetizers",
         items: [
           { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -6293,6 +7596,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6303,6 +7622,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6313,6 +7647,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6331,10 +7680,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
@@ -6374,10 +7767,31 @@ export const restaurants = [
         category: "Appetizers",
         items: [
           { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -6388,6 +7802,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6398,6 +7828,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6408,6 +7853,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6426,10 +7886,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
@@ -6469,10 +7973,31 @@ export const restaurants = [
         category: "Appetizers",
         items: [
           { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 5.5 },
-          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 6.5 },
-          { name: "Kackavall", description: "Grilled cheese with herbs", price: 5.0 },
-          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.5 },
+          { name: "Tavë Kosi", description: "Baked lamb with yogurt", price: 7.0 },
+          { name: "Kackavall", description: "Grilled cheese with herbs", price: 6.5 },
+          { name: "Burek", description: "Flaky pastry filled with meat and cheese", price: 5.0 },
           { name: "Meze Platter", description: "Assorted cold appetizers", price: 6.0 },
+          { name: "Byrek me Spinaq", description: "Spinach and feta pie", price: 5.0 },
+          { name: "Byrek me Qumësht", description: "Milk pie", price: 5.0 },
+          { name: "Fli", description: "Traditional Albanian crepe", price: 5.5 },
+          { name: "Petulla", description: "Fried dough", price: 4.5 },
+          { name: "Kofte të Vogla", description: "Small meatballs", price: 5.0 },
+          { name: "Sallatë e Freskët", description: "Fresh salad", price: 4.0 },
+          { name: "Byrek me Mish", description: "Meat-filled pie", price: 5.0 },
+          { name: "Sallatë Me Domate dhe Kastravec", description: "Tomato and cucumber salad", price: 4.0 },
+          { name: "Suxhuk i Pjekur", description: "Grilled sausage", price: 5.5 },
+          { name: "Fasule të Pjekura", description: "Baked beans", price: 4.5 },
+          { name: "Kackavall i Pjekur", description: "Grilled cheese", price: 6.0 },
+          { name: "Peshk i Tiganisur", description: "Fried fish", price: 5.5 },
+          { name: "Qofte Me Presh", description: "Meatballs with leeks", price: 5.0 },
+          { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 4.5 },
+          { name: "Raki Me Presh", description: "Leek rakia", price: 5.5 },
+          { name: "Hapëza me Majonezë", description: "Mayonnaise dip", price: 4.0 },
+          { name: "Sallatë e Lajthive", description: "Nut salad", price: 4.5 },
+          { name: "Supa e Qumështit", description: "Milk soup", price: 4.0 },
+          { name: "Sallatë e Shijshme", description: "Delicious salad", price: 4.0 },
+          { name: "Patate të Pjekura", description: "Roasted potatoes", price: 4.5 },
+          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 }
         ],
       },
       {
@@ -6483,6 +8008,22 @@ export const restaurants = [
           { name: "Grilled Fish", description: "Seasonal fish grilled with herbs", price: 13.0 },
           { name: "Fërgesë e Shijshme", description: "Baked vegetables and meat stew", price: 11.0 },
           { name: "Sofra", description: "Mixed grill platter", price: 14.0 },
+          { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 12.0 },
+          { name: "Fasule me Mish", description: "Beans with meat", price: 12.0 },
+          { name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+          { name: "Pite", description: "Stuffed flatbread", price: 12.0 },
+          { name: "Biftek i Pjekur", description: "Roast beef", price: 13.0 },
+          { name: "Kosi i Pjekur", description: "Baked yogurt", price: 11.0 },
+          { name: "Shqetë e Kambës", description: "Lamb shanks", price: 13.0 },
+          { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+          { name: "Tave Dheu", description: "Traditional earth oven dish", price: 12.0 },
+          { name: "Supa e Mishit", description: "Meat soup", price: 11.0 },
+          { name: "Krek", description: "Roasted pork", price: 12.0 },
+          { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+          { name: "Sallatë e Mishit", description: "Meat salad", price: 12.0 },
+          { name: "Pita me Mish", description: "Meat pie", price: 11.0 },
+          { name: "Zgare", description: "Grilled assorted meats", price: 12.0 },
+          { name: "Pule me Perime", description: "Chicken with vegetables", price: 11.0 }
         ],
       },
       {
@@ -6493,6 +8034,21 @@ export const restaurants = [
           { name: "Raki Cake", description: "Cake infused with raki", price: 5.0 },
           { name: "Almond Cookies", description: "Soft almond cookies", price: 3.5 },
           { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 4.0 },
+          { name: "Revani", description: "Semolina cake with syrup", price: 3.5 },
+          { name: "Gështenjë të Pjekura", description: "Roasted chestnuts", price: 4.0 },
+          { name: "Mëngjes i Frutave", description: "Fruit breakfast bowl", price: 4.0 },
+          { name: "Qumështor", description: "Milk pudding", price: 3.5 },
+          { name: "Mango Sorbet", description: "Refreshing mango ice dessert", price: 4.5 },
+          { name: "Përshesh", description: "Corn pudding", price: 3.5 },
+          { name: "Kek me Arrat", description: "Nut cake", price: 4.0 },
+          { name: "Pina Colada Cake", description: "Cake with pineapple and coconut", price: 4.5 },
+          { name: "Sallatë Me Molla", description: "Apple salad", price: 3.5 },
+          { name: "Shije e Frutave", description: "Fruit taste", price: 3.0 },
+          { name: "Kek i Thjeshtë", description: "Simple cake", price: 3.5 },
+          { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 4.0 },
+          { name: "Mocca Cake", description: "Coffee-flavored cake", price: 4.5 },
+          { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 4.0 },
+          { name: "Torte me Mjedra", description: "Berry tart", price: 4.5 }
         ],
       },
       {
@@ -6503,6 +8059,21 @@ export const restaurants = [
           { name: "Coke", description: "Classic soft drink", price: 2.5 },
           { name: "Beer", description: "Selection of local beers", price: 4.0 },
           { name: "Albanian Wine", description: "Red or white wine from Albania", price: 6.0 },
+          { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 },
+          { name: "Kafe", description: "Espresso coffee", price: 2.5 },
+          { name: "Çaj", description: "Tea", price: 2.0 },
+          { name: "Lëng Limoni", description: "Lemon juice", price: 3.0 },
+          { name: "Freska", description: "Fruit punch", price: 3.5 },
+          { name: "Raki e Rëndë", description: "Strong rakia", price: 5.0 },
+          { name: "Koktej Frutash", description: "Fruit cocktail", price: 3.5 },
+          { name: "Birrë e Zezë", description: "Dark beer", price: 4.5 },
+          { name: "Lëng Molla", description: "Apple juice", price: 3.0 },
+          { name: "Pije Energjike", description: "Energy drink", price: 3.5 },
+          { name: "Lëng Perime", description: "Vegetable juice", price: 3.0 },
+          { name: "Raki e Butë", description: "Smooth rakia", price: 5.0 },
+          { name: "Koktej i Bardhë", description: "White cocktail", price: 4.0 },
+          { name: "Lëng Mango", description: "Mango juice", price: 3.5 },
+          { name: "Vino i Kuq", description: "Red wine", price: 6.0 }
         ],
       },
     ],
@@ -6521,10 +8092,54 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
-            { name: "Pasticcio", description: "Layered pasta with meat sauce", price: 11.0 },
-            { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
-            { name: "Coke", description: "Classic soft drink", price: 3.0 },
+            {
+              appetizer: { name: "Fërgesë", description: "Baked peppers and tomatoes with cheese", price: 3.0 },
+              mainCourse: { name: "Tave Kosi", description: "Baked lamb with yogurt", price: 11.0 },
+              dessert: { name: "Baklava", description: "Sweet pastry with nuts and honey", price: 3.0 },
+              drink: { name: "Raki", description: "Traditional Albanian spirit", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Fli", description: "Traditional Albanian crepe", price: 3.0 },
+              mainCourse: { name: "Fasule me Mish", description: "Beans with meat", price: 11.0 },
+              dessert: { name: "Kadaif", description: "Shredded pastry with syrup", price: 3.0 },
+              drink: { name: "Jus Portokalli", description: "Fresh orange juice", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Meze Platter", description: "Assorted cold appetizers", price: 3.0 },
+              mainCourse: {name: "Kebab", description: "Grilled meat skewers", price: 11.0 },
+              dessert: { name: "Fruit Salad", description: "Mixed seasonal fruits", price: 3.0 },
+              drink: { name: "Albanian Wine", description: "Red or white wine from Albania", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Petulla", description: "Fried dough", price: 3.0 },
+              mainCourse: { name: "Shqetë e Kambës", description: "Lamb shanks", price: 11.0 },
+              dessert: { name: "Revani", description: "Semolina cake with syrup", price: 3.0 },
+              drink: { name: "Shërbet", description: "Traditional fruit drink", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Kofte të Vogla", description: "Small meatballs", price: 3.0  },
+              mainCourse: { name: "Pule me Erëza", description: "Spiced chicken", price: 11.0 },
+              dessert: { name: "Qumështor", description: "Milk pudding", price: 3.0 },
+              drink: { name: "Lemonade", description: "Freshly squeezed lemonade", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Freskët", description: "Fresh salad", price: 3.0 },
+              mainCourse: { name: "Krek", description: "Roasted pork", price: 12.0 },
+              dessert: { name: "Puding i Çokollatës", description: "Chocolate pudding", price: 3.0 },
+              drink: { name: "Orange Juice", description: "Freshly squeezed orange juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë Me Qepë dhe Feta", description: "Onion and feta salad", price: 3.0 },
+              mainCourse: { name: "Fergese", description: "Mixed vegetables and meat", price: 11.0 },
+              dessert: { name: "Kremë e Vaniljes", description: "Vanilla cream", price: 3.0 },
+              drink: { name: "Apple Juice", description: "Freshly squeezed apple juice", "price": 3.0 }
+            },
+            {
+              appetizer: { name: "Sallatë e Lajthive", description: "Nut salad", price: 3.0 },
+              mainCourse: { name: "Pita me Mish", description: "Meat pie", price: 11.00 },
+              dessert: { name: "Torte me Mjedra", description: "Berry tart", price: 3.0 },
+              drink: { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 }
+            },
           ],
         },
       ],
