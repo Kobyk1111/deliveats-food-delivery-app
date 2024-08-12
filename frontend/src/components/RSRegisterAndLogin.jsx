@@ -1,8 +1,11 @@
 import { useState, useContext } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext.jsx";
 // import CustomModal from "./CustomModal.jsx";
 import "../style/RSRegisterAndLogin.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 function RSRegisterAndLogin() {
   // State to check all inputs here
@@ -40,7 +43,7 @@ function RSRegisterAndLogin() {
   } = useContext(DataContext);
 
   // initialize useNavigate hook
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // function to handle inputs
   function handleChange(e) {
@@ -130,6 +133,7 @@ function RSRegisterAndLogin() {
         console.log(data.message);
         setLoggedInRestaurant(data.restaurant);
         // setIsModalOpen(false);
+        navigate("/rs-home");
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -223,50 +227,54 @@ function RSRegisterAndLogin() {
                   className="form-input"
                 />
               </label>
-              <label className="form-label">
-                Street
-                <input
-                  type="text"
-                  name="basicInfo.address.street"
-                  value={loginInputs.basicInfo.address.street}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </label>
-              <label className="form-label">
-                City
-                <input
-                  type="text"
-                  name="basicInfo.address.city"
-                  value={loginInputs.basicInfo.address.city}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </label>
-              <label className="form-label">
-                State
-                <input
-                  type="text"
-                  name="basicInfo.address.state"
-                  value={loginInputs.basicInfo.address.state}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </label>
-              <label className="form-label">
-                Postal Code
-                <input
-                  type="text"
-                  name="basicInfo.address.postalCode"
-                  value={loginInputs.basicInfo.address.postalCode}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </label>
+              <div className="form-items-line">
+                <label className="form-label">
+                  Street
+                  <input
+                    type="text"
+                    name="basicInfo.address.street"
+                    value={loginInputs.basicInfo.address.street}
+                    onChange={handleChange}
+                    required
+                    className="form-input"
+                  />
+                </label>
+                <label className="form-label">
+                  City
+                  <input
+                    type="text"
+                    name="basicInfo.address.city"
+                    value={loginInputs.basicInfo.address.city}
+                    onChange={handleChange}
+                    required
+                    className="form-input"
+                  />
+                </label>
+              </div>
+              <div className="form-items-line">
+                <label className="form-label">
+                  State
+                  <input
+                    type="text"
+                    name="basicInfo.address.state"
+                    value={loginInputs.basicInfo.address.state}
+                    onChange={handleChange}
+                    required
+                    className="form-input"
+                  />
+                </label>
+                <label className="form-label">
+                  Postal Code
+                  <input
+                    type="text"
+                    name="basicInfo.address.postalCode"
+                    value={loginInputs.basicInfo.address.postalCode}
+                    onChange={handleChange}
+                    required
+                    className="form-input"
+                  />
+                </label>
+              </div>
             </div>
           )}
           <label className="form-label">
@@ -291,8 +299,15 @@ function RSRegisterAndLogin() {
                 required
                 className="form-input password-input"
               />
-              <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
-                {showPassword ? "🙈" : "👁️"}
+              <span
+                className="password-toggle-icon"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? (
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                ) : (
+                  <FontAwesomeIcon icon={faEye} />
+                )}
               </span>
             </div>
           </label>
@@ -305,7 +320,10 @@ function RSRegisterAndLogin() {
                 required
                 className="form-checkbox"
               />
-              <span className="terms-of-use-span" style={{ whiteSpace: "pre-wrap" }}>
+              <span
+                className="terms-of-use-span"
+                style={{ whiteSpace: "pre-wrap" }}
+              >
                 {" "}
                 I agree to the Terms of Use.
               </span>
@@ -313,8 +331,14 @@ function RSRegisterAndLogin() {
           )}
 
           <div className="buttons-container">
-            <button className="submit-button">{isToRegisterRestaurant ? "Register" : "Login"}</button>
-            <button type="button" className="cancel-button" onClick={() => setToggleRegisterOrLoginRestaurant(false)}>
+            <button className="submit-button">
+              {isToRegisterRestaurant ? "Register" : "Login"}
+            </button>
+            <button
+              type="button"
+              className="cancel-button"
+              onClick={() => setToggleRegisterOrLoginRestaurant(false)}
+            >
               Cancel
             </button>
           </div>
