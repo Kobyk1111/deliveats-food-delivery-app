@@ -11,7 +11,7 @@
   margin-bottom: 2rem;
   text-align: center;
   font-size: 3rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .rs-register-login-page .rs-form {
@@ -22,11 +22,19 @@
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
+  border-radius: 15px;
+  gap: 5px;
+}
+
+.rs-register-login-page .rs-form .form-items-line {
+  display: flex;
+  gap: 10px;
 }
 
 .rs-register-login-page .rs-form .name-fields {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .rs-register-login-page .toggle-button {
@@ -50,7 +58,7 @@
 }
 
 .rs-register-login-page .form-label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 14px;
 }
 
@@ -68,12 +76,14 @@
 
 .rs-register-login-page .checkbox-form-label {
   display: flex;
+  margin-top: 5px;
 }
 
 .rs-register-login-page .buttons-container {
   display: flex;
+  justify-content: center;
   gap: 2rem;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 1.6rem;
 }
 

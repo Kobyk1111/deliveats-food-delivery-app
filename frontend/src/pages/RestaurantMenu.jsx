@@ -94,10 +94,11 @@ function RestaurantMenu() {
   //   }
   // }
 
+  console.log(restaurant);
   return (
     <>
       <Navbar />
-      <div className="page-container">
+      <div className="restaurant-menu-page-container">
         <div className="main-content">
           <div className="menu-card">
             {loggedInUser ? (
@@ -135,6 +136,41 @@ function RestaurantMenu() {
                 />
               </div>
             </div>
+
+            <div className="menu-offers">
+              <div className="current-offers">
+                <h2>Current Offers</h2>
+                {restaurant?.promotionalInfo?.currentOffers?.map(
+                  (offer, index) => (
+                    <div key={index} className="offer-category">
+                      <h3>{offer.category}</h3>
+                      <div className="offer-items">
+                        {offer.items.map((item) => (
+                          <div key={item._id} className="offer-item-card">
+                            <div className="offer-details">
+                              <div>
+                                <p className="offer-name">{item.name}</p>
+                                <p className="offer-description">
+                                  {item.description}
+                                </p>
+                                <p className="offer-price">€{item.price}</p>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                )}
+                <button
+                  className="add-button"
+                  onClick={() => addItemToBasket(food)}
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+
             <div className="menu-items">
               {restaurant?.menu?.map((item) => (
                 <div key={item._id} className="menu-item-card">
@@ -142,11 +178,13 @@ function RestaurantMenu() {
                     <h2>{item.category}</h2>
                     {item.items.map((food) => (
                       <div className="item-details" key={food._id}>
+
                         <img
                           src={food.image.startsWith("uploads") ? `http://localhost:5002/${food.image}` : food.image}
                           alt=""
                           width={100}
                         />
+
 
                         <div>
                           <p className="item-name">{food.name}</p>
