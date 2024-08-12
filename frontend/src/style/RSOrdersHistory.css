@@ -1,4 +1,60 @@
 .rs-orderHistory-container {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  position: relative;
+  min-height: 100vh;
+}
+
+.rs-orderHistory-container .delete-history-button {
+  margin: 2rem 0 0.4rem;
+  padding: 1rem 3rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: rgb(211, 29, 29);
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.rs-orderHistory-container .no-order-history-info {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+}
+
+.rs-orderHistory-container .orders-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 4rem;
+  padding-top: 2rem 0;
+}
+
+.rs-orderHistory-container .cards {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  /* width: 300px; */
+  transition: transform 0.2s;
+}
+
+.rs-orderHistory-container .cards p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rs-orderHistory-container .delete-button {
+  margin: 2rem 0 0.4rem;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: rgb(211, 29, 29);
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
 }

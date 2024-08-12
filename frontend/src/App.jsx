@@ -18,6 +18,7 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "./contexts/DataContext";
 import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
+import RSProtectedRouteLoggedInRestaurant from "./components/RSProtectedRouteLoggedInRestaurant";
 
 import RegisterLoginPage from "./pages/RegisterLoginPage";
 
@@ -149,20 +150,14 @@ function App() {
 
         {/* ******** restaurant Routes ******** */}
 
-        <Route
-          path="/rs-register"
-          element={
-            loggedInRestaurant ? (
-              <Navigate to="/rs-home/*" />
-            ) : (
-              <RSRegisterPage />
-            )
-          }
-        />
+        <Route path="/rs-register" element={<RSRegisterPage />} />
+
         <Route
           path="/rs-home/*"
           element={
-            loggedInRestaurant ? <RSHomePage /> : <Navigate to="/rs-register" />
+            <RSProtectedRouteLoggedInRestaurant>
+              <RSHomePage />
+            </RSProtectedRouteLoggedInRestaurant>
           }
         >
           <Route index element={<RSOrdersActive />} />

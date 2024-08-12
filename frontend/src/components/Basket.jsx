@@ -15,6 +15,7 @@ function Basket({ id }) {
     increaseItemQuantity,
     decreaseItemQuantity,
     totalSum,
+    setOrderSent,
   } = useContext(BasketContext);
   const { restaurant } = useContext(DataContext);
   // const { setSessionId } = useContext(DataContext);
@@ -47,6 +48,8 @@ function Basket({ id }) {
         const session = await response.json();
         // setSessionId(session.id);
         localStorage.setItem("sessionId", JSON.stringify(session.id));
+        setOrderSent(false);
+        localStorage.setItem("orderSent", JSON.stringify(false));
 
         stripe.redirectToCheckout({
           sessionId: session.id,

@@ -181,53 +181,47 @@
       "drink": { "name": "Ginger Beer", "description": "Spicy, refreshing ginger drink", "price": 3.0 }
     },
     {
-      "appetizer": { "name": "Puff Puff", "description": "Deep-fried dough balls", "price": 3.0 },
-      "mainCourse": { "name": "Waakye", "description": "Rice and beans with plantains", "price": 11.0 },
-      "dessert": { "name": "Bofrot", "description": "Sweet fried dough balls", "price": 3.0 },
-      "drink": { "name": "Fresh Pineapple Juice", "description": "Juice made from fresh pineapples", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Chibom", "description": "Bread with beans and spices", "price": 3.0 },
-      "mainCourse": { "name": "Fufu with Light Soup", "description": "Cassava and plantain dough with spicy soup", "price": 11.0 },
-      "dessert": { "name": "Kelewele Cake", "description": "Cake flavored with spicy plantains", "price": 3.0 },
-      "drink": { "name": "Palm Wine", "description": "Traditional fermented palm drink", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Spring Rolls", "description": "Crispy rolls filled with vegetables", "price": 3.0 },
-      "mainCourse": { "name": "Banku and Tilapia", "description": "Fermented corn dough with grilled fish", "price": 11.0 },
-      "dessert": { "name": "Millets Porridge", "description": "Sweet millet porridge", "price": 3.0 },
-      "drink": { "name": "Bissap", "description": "Hibiscus flower drink", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Jollof Balls", "description": "Fried rice balls with tomato sauce", "price": 3.0 },
-      "mainCourse": { "name": "Kenkey with Fish", "description": "Fermented corn dough with fried fish", "price": 11.0 },
-      "dessert": { "name": "Coconut Cake", "description": "Cake made with fresh coconut", "price": 3.0 },
-      "drink": { "name": "Tamarind Juice", "description": "Juice made from tamarind", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Akara", "description": "Deep-fried bean cakes", "price": 3.0 },
-      "mainCourse": { "name": "Gari Fortor", "description": "Spicy gari dough with vegetables", "price": 11.0 },
-      "dessert": { "name": "Sweet Plantain", "description": "Ripe plantains cooked with honey", "price": 3.0 },
-      "drink": { "name": "Lemonade", "description": "Freshly squeezed lemonade", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Fried Yam", "description": "Crispy fried yam slices", "price": 3.0 },
-      "mainCourse": { "name": "Ghanaian Jollof Rice", "description": "Tomato-based rice with vegetables and spices", "price": 11.0 },
-      "dessert": { "name": "Peanut Butter Cake", "description": "Cake made with peanut butter", "price": 3.0 },
-      "drink": { "name": "Orange Juice", "description": "Freshly squeezed orange juice", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Plantain Chips", "description": "Crispy fried plantain slices", "price": 3.0 },
-      "mainCourse": { "name": "Jollof Rice and Chicken", "description": "Tomato rice with grilled chicken", "price": 11.0 },
-      "dessert": { "name": "Mango Pudding", "description": "Sweet pudding made with mangoes", "price": 3.0 },
-      "drink": { "name": "Apple Juice", "description": "Freshly squeezed apple juice", "price": 3.0 }
-    },
-    {
-      "appetizer": { "name": "Tomato Soup", "description": "Spicy tomato soup with herbs", "price": 3.0 },
-      "mainCourse": { "name": "Gari and Beans", "description": "Gari served with spicy beans", "price": 11.0 },
-      "dessert": { "name": "Banana Fritters", "description": "Deep-fried banana slices", "price": 3.0 },
-      "drink": { "name": "Coconut Water", "description": "Fresh coconut water", "price": 3.0 }
-    },
+              appetizer: { name: "Bruschetta", description: "Grilled bread topped with tomatoes and basil", price: 3.0 },
+              mainCourse: { name: "Margherita Pizza", description: "Tomato, mozzarella, and basil", price: 11.0 },
+              dessert: {name: "Panna Cotta", description: "Creamy dessert with berry sauce", price: 3.0 },
+              drink: { name: "Chianti Wine", description: "Classic red wine from Tuscany", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Caprese Salad", description: "Fresh mozzarella, tomatoes, and basil", price: 3.0 },
+              mainCourse: { name: "Spaghetti Carbonara", description: "Pasta with pancetta, egg, and Parmesan cheese", price: 11.0 },
+              dessert: { name: "Tiramisu", description: "Classic Italian dessert with coffee and mascarpone", price: 3.0 },
+              drink: { name: "Latte Macchiato", description: "Coffee with steamed milk", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Bruschetta al Pomodoro", description: "Grilled bread topped with fresh tomatoes and basil", price: 3.0 },
+              mainCourse: { name: "Lasagna alla Bolognese", description: "Layers of pasta, meat sauce, and cheese", price: 11.0 },
+              dessert: { name: "Torta della Nonna", description: "Custard tart topped with pine nuts", price: 3.0 },
+              drink: { name: "Negroni", description: "Classic Italian cocktail with gin, vermouth, and Campari", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Calamari Fritti", description: "Fried calamari with lemon and marinara sauce", price: 3.0 },
+              mainCourse: {  name: "Risotto ai Funghi", description: "Creamy risotto with wild mushrooms", price: 11.0 },
+              dessert: { name: "Tartufo", description: "Chocolate truffle ice cream", price: 3.0 },
+              drink: { name: "Cappuccino", description: "Italian coffee with steamed milk", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Olive Ascolane", description: "Fried stuffed olives", price: 3.0 },
+              mainCourse: { name: "Agnello al Forno", description: "Oven-roasted lamb with herbs", price: 11.0 },
+              dessert: { name: "Cassata Siciliana", description: "Traditional Sicilian sponge cake with ricotta", price: 3.0 },
+              drink: { name: "Frascati", description: "White wine from Lazio", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Carpaccio di Manzo", description: "Thinly sliced raw beef with arugula and Parmesan", price: 3.0 },
+              mainCourse: { name: "Linguine alle Vongole", description: "Pasta with clams in white wine sauce", price: 11.0 },
+              dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+              drink: { name: "Campari Soda", description: "Campari with soda water", price: 3.0 }
+            },
+            {
+              appetizer: { name: "Crostini Toscani", description: "Grilled bread topped with chicken liver pâté", price: 3.0 },
+              mainCourse: { name: "Gnocchi al Pesto", description: "Potato dumplings in a basil pesto sauce", price: 11.0 },
+              dessert: { name: "Chocolate Soufflé", description: "Rich chocolate dessert with a molten center", price: 3.0 },
+              drink: { name: "Espresso", description: "Strong Italian coffee", price: 3.0 }
+            }
     {
       "appetizer": { "name": "Corn Balls", "description": "Deep-fried corn dough balls", "price": 3.0 },
       "mainCourse": { "name": "Porridge with Sugar", "description": "Sweet corn porridge", "price": 11.0 },

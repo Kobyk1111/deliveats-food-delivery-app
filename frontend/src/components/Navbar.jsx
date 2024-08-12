@@ -64,7 +64,7 @@ function Navbar() {
 
               {isDropdownOpen && (
                 <div className="dropdown-menu">
-                  <Link to="/profile" className="dropdown-item">
+                  <Link to="/profile" className="dropdown-item" onClick={toggleDropdown}>
                     Profile
                   </Link>
 

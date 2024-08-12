@@ -11,7 +11,7 @@
   margin-bottom: 2rem;
   text-align: center;
   font-size: 3rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .rs-register-login-page .rs-form {
@@ -21,16 +21,20 @@
   margin: 0 auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   max-width: 600px;
+  border-radius: 15px;
+  gap: 5px;
+}
+
+.rs-register-login-page .rs-form .form-items-line {
+  display: flex;
+  gap: 10px;
 }
 
 .rs-register-login-page .rs-form .name-fields {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .rs-register-login-page .toggle-button {
@@ -53,76 +57,8 @@
   background-color: #163825;
 }
 
-/* MODAL */
-
-/* .restaurant-register-login-modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 10px;
-  width: 100%;
-} */
-
-/* .restaurant-register-login-container .form {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}  */
-
-/* .restaurant-register-login-container .name-fields {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  max-height: 40vh;
-} */
-
-/* .restaurant-register-login-container label {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .restaurant-register-login-container .monday-container,
-.restaurant-register-login-container .tuesday-container,
-.restaurant-register-login-container .wednesday-container,
-.restaurant-register-login-container .thursday-container,
-.restaurant-register-login-container .friday-container,
-.restaurant-register-login-container .saturday-container,
-.restaurant-register-login-container .sunday-container {
-  display: flex;
-  gap: 2rem;
-} */
-
-/* .register-login-page .button-container {
-  display: flex;
-  justify-content: center;
-}
-
-
-
-/* *********** REGISTER LOGIN - NAVBAR - MODAL  *********** */
-/* 
-.register-login-container {
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
-
-/* .restaurant-register-login-container .form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.restaurant-register-login-container .name-fields {
-  display: flex;
-  flex-direction: column;
-} */
-
 .rs-register-login-page .form-label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 14px;
 }
 
@@ -140,12 +76,14 @@
 
 .rs-register-login-page .checkbox-form-label {
   display: flex;
+  margin-top: 5px;
 }
 
 .rs-register-login-page .buttons-container {
   display: flex;
+  justify-content: center;
   gap: 2rem;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 1.6rem;
 }
 
