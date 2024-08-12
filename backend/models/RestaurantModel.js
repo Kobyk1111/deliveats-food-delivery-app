@@ -48,9 +48,9 @@ const basicInfoSchema = new Schema({
 });
 
 const menuItemSchema = new Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
+  name: { type: String },
+  description: { type: String },
+  price: { type: Number },
   image: {
     type: String,
     default:
@@ -78,7 +78,11 @@ const offerSchema = new Schema({
 
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
-  loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
+  loyaltyPrograms: {
+    type: String,
+    required: true,
+    default: "no loyalty program",
+  },
 });
 
 const historySchema = new Schema(

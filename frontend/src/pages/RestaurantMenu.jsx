@@ -12,7 +12,13 @@ import "../style/RestaurantMenu.css";
 
 function RestaurantMenu() {
   const { id } = useParams();
-  const { restaurants, getSearchedRestaurants, restaurant, setRestaurant, loggedInUser } = useContext(DataContext);
+  const {
+    restaurants,
+    getSearchedRestaurants,
+    restaurant,
+    setRestaurant,
+    loggedInUser,
+  } = useContext(DataContext);
   const { addItemToBasket } = useContext(BasketContext);
   // const [isFavorited, setIsFavorited] = useState(false);
   // const [restaurant, setRestaurant] = useState(null);
@@ -122,9 +128,12 @@ function RestaurantMenu() {
             ) : null}
             <div className="restaurant-info">
               <div>
-                <h1 className="restaurant-name">{restaurant.basicInfo.businessName}</h1>
+                <h1 className="restaurant-name">
+                  {restaurant.basicInfo.businessName}
+                </h1>
                 <p className="restaurant-address">
-                  {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
+                  {restaurant.basicInfo.address.street},{" "}
+                  {restaurant.basicInfo.address.postalCode},{" "}
                   {restaurant.basicInfo.address.city}
                 </p>
               </div>
@@ -178,20 +187,25 @@ function RestaurantMenu() {
                     <h2>{item.category}</h2>
                     {item.items.map((food) => (
                       <div className="item-details" key={food._id}>
-
                         <img
-                          src={food.image.startsWith("uploads") ? `http://localhost:5002/${food.image}` : food.image}
+                          src={
+                            food.image.startsWith("uploads")
+                              ? `http://localhost:5002/${food.image}`
+                              : food.image
+                          }
                           alt=""
                           width={100}
                         />
-
 
                         <div>
                           <p className="item-name">{food.name}</p>
                           <p className="item-description">{food.description}</p>
                           <p className="item-price">€{food.price}</p>
                         </div>
-                        <button className="add-button" onClick={() => addItemToBasket(food)}>
+                        <button
+                          className="add-button"
+                          onClick={() => addItemToBasket(food)}
+                        >
                           Add
                         </button>
                       </div>
