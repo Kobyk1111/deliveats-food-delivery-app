@@ -54,8 +54,6 @@ function OrderHistory() {
     }
   }
 
-  console.log(userOrderHistory);
-
   return (
     <>
       <div className="order-history-container">
@@ -77,6 +75,7 @@ function OrderHistory() {
                       day: "numeric",
                       hour: "numeric",
                       minute: "numeric",
+                      second: "numeric",
                       hour12: true,
                     });
                 return (

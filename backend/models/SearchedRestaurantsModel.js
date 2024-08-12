@@ -1,27 +1,23 @@
 import { Schema, model } from "mongoose";
-
 const contactSchema = new Schema({
   email: { type: String, required: true },
   phoneNumber: { type: String, required: true },
 });
-
 const addressSchema = new Schema({
   street: { type: String, required: true },
   city: { type: String, required: true },
   state: { type: String, required: true },
   postalCode: { type: String, required: true },
 });
-
 const daysSchema = new Schema({
-  monday: { type: String, /* required: true */ default: "" },
-  tuesday: { type: String, /* required: true */ default: "" },
-  wednesday: { type: String, /* required: true */ default: "" },
-  thursday: { type: String, /* required: true */ default: "" },
-  friday: { type: String, /* required: true */ default: "" },
-  saturday: { type: String, /* required: true */ default: "" },
-  sunday: { type: String, /* required: true */ default: "" },
+  monday: { type: String, default: "" },
+  tuesday: { type: String, default: "" },
+  wednesday: { type: String, default: "" },
+  thursday: { type: String, default: "" },
+  friday: { type: String, default: "" },
+  saturday: { type: String, default: "" },
+  sunday: { type: String, default: "" },
 });
-
 const defaultDays = {
   monday: "",
   tuesday: "",
@@ -31,7 +27,6 @@ const defaultDays = {
   saturday: "",
   sunday: "",
 };
-
 const basicInfoSchema = new Schema({
   businessName: { type: String, required: true },
   businessId: { type: String, required: true },
@@ -46,7 +41,6 @@ const basicInfoSchema = new Schema({
   contact: { type: contactSchema, required: true },
   address: { type: addressSchema, required: true },
 });
-
 const menuItemSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
@@ -57,12 +51,10 @@ const menuItemSchema = new Schema({
       "https://img.freepik.com/free-vectortakeaway-packages-3d-vector-illustration-coffee-soda-cup-burger-fast-food-packs-from-restaurant-cartoon-style-isolated-white-background-fast-food-shop-menu-concept_778687-647.jpg?t=st=1722929708~exp=1722933308~hmac=69f1d3bbaaf8599aa23efb9000feb41a49ed194639a6708d5b43e0c1e14031fa&w=1060",
   },
 });
-
 const menuCategorySchema = new Schema({
   category: { type: String, required: true },
   items: { type: [menuItemSchema], required: true },
 });
-
 const digitalPresenceSchema = new Schema({
   photos: { type: [String], required: true, default: [] },
   socialMedia: {
@@ -70,65 +62,56 @@ const digitalPresenceSchema = new Schema({
     instagram: { type: String, required: true, default: "Social" },
   },
 });
-
 const offerSchema = new Schema({
   category: { type: String, required: true, default: "No category" },
   items: { type: [menuItemSchema], required: true, default: [] },
 });
-
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
-  loyaltyPrograms: {
-    type: String,
-    required: true,
-    default: "no loyalty program",
-  },
+  loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
 });
-
+const orderItemsSchema = new Schema({
+  itemName: { type: String, required: true },
+  price: { type: Number, required: true },
+  quantity: { type: Number, required: true },
+  description: { type: String, required: true },
+});
+const paymentDetailsSchema = new Schema({
+  paymentMethod: { type: String, required: true },
+  chargedAmount: { type: Number, required: true },
+});
+const additionalInfoSchema = new Schema({
+  orderType: { type: String, required: true },
+  orderStatus: { type: String, required: true },
+});
 const historySchema = new Schema(
   {
-    order: {
-      type: Schema.Types.ObjectId,
-      ref: "OrderHistory",
-    },
-    date: {
-      type: Date,
-      default: Date.now,
-    },
-    customerName: {
-      type: String,
+    restaurantName: { type: String, default: "No information" },
+    items: {
+      type: [orderItemsSchema],
       required: true,
     },
-    customerEmail: {
-      type: String,
+    totalSum: { type: Number, required: true },
+    paymentDetails: {
+      type: paymentDetailsSchema,
       required: true,
     },
-    customerAddress: {
-      type: String,
+    additionalInfo: {
+      type: additionalInfoSchema,
       required: true,
     },
-    orderStatus: {
-      // Added this field
-      type: String,
-      required: true,
-      default: "Pending",
-    },
-    statusTimestamp: {
-      // Added this field
-      type: Date,
-      default: Date.now,
-    },
+    // favorited: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   { timestamps: true }
 );
-
 const searchedRestaurantsSchema = new Schema({
+  restaurantId: { type: Schema.Types.ObjectId, ref: "Restaurant", required: true },
   basicInfo: { type: basicInfoSchema, required: true },
-  openAndCloseHours: {
-    type: daysSchema,
-    /* required: true */ default: defaultDays,
-  },
-  cuisine: { type: [String], required: true, default: [] },
+  openAndCloseHours: { type: daysSchema, default: defaultDays },
+  keywords: { type: [String], required: true, default: [] },
   restaurantType: { type: [String], required: true, default: [] },
   menu: { type: [menuCategorySchema], required: true, default: [] },
   digitalPresence: {
@@ -144,18 +127,13 @@ const searchedRestaurantsSchema = new Schema({
   },
   promotionalInfo: {
     type: promotionalInfoSchema,
-    /* required: true, */
+    required: true,
     default: {
       currentOffers: [offerSchema],
       loyaltyPrograms: "no loyalties",
     },
   },
   orderHistory: { type: [historySchema], default: [] },
-  activeOrders: { type: [historySchema], default: [] },
 });
-
-const SearchedRestaurant = model(
-  "SearchedRestaurant",
-  searchedRestaurantsSchema
-);
+const SearchedRestaurant = model("SearchedRestaurant", searchedRestaurantsSchema);
 export default SearchedRestaurant;

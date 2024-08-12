@@ -6,20 +6,33 @@ import Footer from "./Footer";
 import { DataContext } from "../contexts/DataContext";
 
 import "../style/SuccessPage.css";
+// import { useNavigate } from "react-router-dom";
 
 function SuccessPage() {
-  const { deliveryOption, totalSum, totalSumPurchasedItems, basket, purchasedItems, completePurchase, setOrderId } =
-    useContext(BasketContext);
+  const {
+    deliveryOption,
+    totalSum,
+    totalSumPurchasedItems,
+    basket,
+    purchasedItems,
+    // setPurchasedItems,
+    completePurchase,
+    setOrderId,
+    orderSent,
+    setOrderSent,
+  } = useContext(BasketContext);
   const { sessionId, loggedInUser } = useContext(DataContext);
   const [restaurantName, setRestaurantName] = useState(JSON.parse(localStorage.getItem("restaurantName") || ""));
   const [restaurantId, setRestaurantId] = useState(JSON.parse(localStorage.getItem("restaurantId") || ""));
   const [restaurantAddress, setRestaurantAddress] = useState(JSON.parse(localStorage.getItem("restaurantAddress")));
   const [newOrderId, setNewOrderId] = useState("");
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const getRestaurantName = JSON.parse(localStorage.getItem("restaurantName"));
     const getRestaurantId = JSON.parse(localStorage.getItem("restaurantId"));
     const getRestaurantAddress = JSON.parse(localStorage.getItem("restaurantAddress"));
+    // const getPurchasedItems = JSON.parse(localStorage.getItem("purchasedItems"));
 
     if (getRestaurantName) {
       setRestaurantName(getRestaurantName);
@@ -32,6 +45,10 @@ function SuccessPage() {
     if (getRestaurantAddress) {
       setRestaurantAddress(getRestaurantAddress);
     }
+
+    // if (getPurchasedItems) {
+    //   setPurchasedItems(getPurchasedItems);
+    // }
   }, []);
 
   useEffect(() => {
@@ -79,37 +96,17 @@ function SuccessPage() {
       }
     }
 
-    setOrder();
-  }, [sessionId]);
+    const savedOrderSent = JSON.parse(localStorage.getItem("orderSent"));
+    if (savedOrderSent) {
+      setOrderSent(true);
+    } else {
+      setOrder();
+    }
 
-  // useEffect(() => {
-  //   async function setOrderDetails() {
-  //     const settings = {
-  //       body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName }),
-  //       headers: {
-  //         "Content-Type": "application/JSON",
-  //       },
-  //       method: "POST",
-  //     };
-
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:5002/create-checkout-session/setOrderDetails/${loggedInUser.id}`,
-  //         settings
-  //       );
-  //       if (response.ok) {
-  //         await response.json();
-  //         completePurchase(); // Clear the basket and set purchasedItems
-  //       } else {
-  //         const { error } = await response.json();
-  //         throw new Error(error.message);
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   }
-  //   setOrderDetails();
-  // }, [sessionId]);
+    // if (!orderSent) {
+    //   setOrder();
+    // }
+  }, [sessionId, orderSent]);
 
   useEffect(() => {
     async function sendOrderToRestaurant() {
@@ -131,6 +128,10 @@ function SuccessPage() {
           const { message, orderId } = await response.json();
           setOrderId(orderId);
           console.log(message);
+
+          // Update state and localStorage after successful order
+          setOrderSent(true);
+          localStorage.setItem("orderSent", JSON.stringify(true));
         } else {
           const { error } = await response.json();
           throw new Error(error.message);
@@ -140,7 +141,7 @@ function SuccessPage() {
       }
     }
 
-    if (newOrderId) {
+    if (newOrderId && !orderSent) {
       sendOrderToRestaurant();
     }
   }, [basket, deliveryOption, restaurantId, sessionId, totalSum, newOrderId]);

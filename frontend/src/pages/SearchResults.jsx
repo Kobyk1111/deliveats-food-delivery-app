@@ -185,8 +185,7 @@ import "../style/SearchResults.css";
 //   );
 // }
 function SearchResults() {
-  const { restaurants, getSearchedRestaurants, setRestaurant } =
-    useContext(DataContext);
+  const { restaurants, getSearchedRestaurants, setRestaurant } = useContext(DataContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -194,9 +193,7 @@ function SearchResults() {
   }, []);
 
   function handleCardClick(id) {
-    const selectedRestaurant = restaurants.find(
-      (restaurant) => restaurant._id === id
-    );
+    const selectedRestaurant = restaurants.find((restaurant) => restaurant._id === id);
     setRestaurant(selectedRestaurant);
     navigate(`/restaurant/${id}`);
   }
@@ -221,18 +218,22 @@ function SearchResults() {
           // const loyaltyProgram = restaurant.promotionalInfo.loyaltyPrograms;
 
           return (
-            <div
-              key={restaurant._id}
-              className="card-results"
-              onClick={() => handleCardClick(restaurant._id)}
-            >
+
+            <div key={restaurant._id} className="card-results" onClick={() => handleCardClick(restaurant._id)}>
+              {" "}
+
               <div className="restaurant-image">
                 <img
-                  src="https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060"
+                  src={
+                    restaurant.basicInfo.coverImage.startsWith("uploads")
+                      ? `http://localhost:5002/${restaurant.basicInfo.coverImage}`
+                      : restaurant.basicInfo.coverImage
+                  }
                   alt=""
                   // width={100}
                 />
               </div>
+
               <div className="restaurant-info">
                 <h1>{restaurant.basicInfo.businessName}</h1>
                 <div className="restaurant-card">
@@ -267,6 +268,7 @@ function SearchResults() {
                       />
                     </div>
                   )} */}
+
                 </div>
               </div>
             </div>

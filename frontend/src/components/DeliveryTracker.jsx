@@ -4,19 +4,9 @@ import { BasketContext } from "../contexts/BasketContext";
 import io from "socket.io-client";
 import "../style/DeliveryTracker.css";
 
-// const socket = io.connect("http://localhost:5002");
-
 const socket = io.connect("http://localhost:5002", {
   transports: ["websocket"],
   upgrade: false,
-});
-
-socket.on("connect", () => {
-  console.log("Connected to the server");
-});
-
-socket.on("connect_error", (err) => {
-  console.error("Connection error:", err);
 });
 
 const deliveryStages = [
@@ -40,9 +30,19 @@ const pickupStages = [
 ];
 
 function DeliveryTracker() {
-  const { deliveryOption, orderId } = useContext(BasketContext);
-  const [currentStage, setCurrentStage] = useState(0);
-  const [completedStages, setCompletedStages] = useState([]);
+  const { deliveryOption, orderId: contextOrderId } = useContext(BasketContext);
+  const [currentStage, setCurrentStage] = useState(() => {
+    const savedStage = localStorage.getItem("currentStage");
+    return savedStage ? JSON.parse(savedStage) : 0;
+  });
+  const [completedStages, setCompletedStages] = useState(() => {
+    const savedStages = localStorage.getItem("completedStages");
+    return savedStages ? JSON.parse(savedStages) : [];
+  });
+  const [orderId, setOrderId] = useState(() => {
+    const savedOrderId = localStorage.getItem("orderId");
+    return savedOrderId || contextOrderId;
+  });
   const navigate = useNavigate();
 
   const stages = deliveryOption === "delivery" ? deliveryStages : pickupStages;
@@ -50,11 +50,11 @@ function DeliveryTracker() {
   useEffect(() => {
     if (orderId) {
       socket.emit("joinOrderRoom", orderId);
-      console.log(`Joined order room: ${orderId}`);
+      console.log(`Rejoined order room: ${orderId}`);
 
-      socket.on("orderStatusUpdated", ({ updatedOrderId: orderIdNew, status }) => {
-        console.log(`Received orderStatusUpdated for orderId: ${orderIdNew}, status: ${status}`);
-        if (orderIdNew === orderId) {
+      socket.on("orderStatusUpdated", ({ updatedOrderId, status }) => {
+        console.log(`Received orderStatusUpdated for orderId: ${updatedOrderId}, status: ${status}`);
+        if (updatedOrderId === orderId) {
           const stageIndex = stages.indexOf(status);
           if (stageIndex !== -1) {
             const currentTime = new Date().toLocaleString("en-US", {
@@ -70,21 +70,45 @@ function DeliveryTracker() {
             setCompletedStages((prev) => {
               const newStages = [...prev];
               newStages[stageIndex] = { status, timestamp: currentTime };
+              localStorage.setItem("completedStages", JSON.stringify(newStages)); // Save to localStorage
               return newStages;
             });
             setCurrentStage(stageIndex);
+            localStorage.setItem("currentStage", stageIndex); // Save to localStorage
           }
         }
       });
 
-      // Clean up event listener on unmount
       return () => {
         socket.off("orderStatusUpdated");
       };
     }
   }, [orderId, stages]);
 
+  useEffect(() => {
+    if (contextOrderId) {
+      setOrderId(contextOrderId);
+      localStorage.setItem("orderId", contextOrderId);
+    } else if (!contextOrderId && !orderId) {
+      // Reset everything when there is no active order
+      setCurrentStage(0);
+      setCompletedStages([]);
+      localStorage.removeItem("currentStage");
+      localStorage.removeItem("completedStages");
+    }
+  }, [contextOrderId]);
+
   const handleBackToMainPage = () => {
+    // Clear local storage and reset state before navigating
+    localStorage.removeItem("currentStage");
+    localStorage.removeItem("completedStages");
+    localStorage.removeItem("orderId");
+    localStorage.removeItem("purchasedItems");
+    setCurrentStage(0);
+    setCompletedStages([]);
+    setOrderId(null);
+
+    // Navigate back to the main page
     navigate("/");
   };
 
