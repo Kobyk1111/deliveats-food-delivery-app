@@ -181,58 +181,77 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
+        
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
@@ -463,57 +482,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -739,57 +776,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-           
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1012,56 +1067,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1287,56 +1361,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1560,56 +1653,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -1835,56 +1947,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2110,56 +2241,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2382,56 +2532,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2655,56 +2824,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
-              mainCourse: { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
-              dessert: { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
-              drink: { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
-              mainCourse: { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
-              dessert: { name: "Quindim", description: "Coconut custard", price: 3.0 },
-              drink: { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
-              mainCourse: {  name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
-              dessert: { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
-              drink: { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
-              mainCourse: { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
-              dessert: { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
-              drink: { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
-              mainCourse: { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
-              dessert: { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
-              drink: { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
-              mainCourse: { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
-              dessert: { name: "Banana Frita", description: "Fried banana", price: 3.0 },
-              drink: { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
-              mainCourse: { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
-              dessert: { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
-              drink: { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
-              mainCourse: { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
-              dessert: { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
-              drink: { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3.0 },
-            },
+            { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
+            { name: "Feijoada", description: "Brazilian black bean stew with pork", price: 11.0 },
+            { name: "Brigadeiro", description: "Chocolate truffles", price: 3.0 },
+            { name: "Guaraná", description: "Brazilian guaraná soda", price: 3.0 },
           ],
         },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Pão de Queijo", description: "Cheese bread rolls", price: 3.0 },
+              { name: "Picanha", description: "Grilled rump steak", price: 11.0 },
+              { name: "Quindim", description: "Coconut custard", price: 3.0 },
+              { name: "Caipirinha", description: "Brazilian lime cocktail", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Biscoito de Polvilho", description: "Cassava starch biscuits", price: 3.0 },
+              { name: "Moqueca", description: "Brazilian fish stew with coconut milk", price: 11.0 },
+              { name: "Romeu e Julieta", description: "Guava paste with cheese", price: 3.0 },
+              { name: "Suco de Maracujá", description: "Passion fruit juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Tábua de Frios", description: "Cold cuts and cheese platter", price: 3.0 },
+              { name: "Carne de Sol com Mandioca", description: "Sun-dried meat with cassava", price: 11.0 },
+              { name: "Torta de Limão", description: "Lemon tart", price: 3.0 },
+              { name: "Caipiroska", description: "Vodka-based caipirinha", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Ovo de Codorna", description: "Quail eggs with herbs", price: 3.0 },
+              { name: "Costela no Bafo", description: "Steamed ribs", price: 11.0 },
+              { name: "Bolo de Cenoura", description: "Carrot cake with chocolate", price: 3.0 },
+              { name: "Cachaça", description: "Brazilian sugarcane spirit", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Mandioca Frita", description: "Fried cassava sticks", price: 3.0 },
+              { name: "Feijão Tropeiro", description: "Beans with sausage and collard greens", price: 11.0 },
+              { name: "Banana Frita", description: "Fried banana", price: 3.0 },
+              { name: "Xarope de Groselha", description: "Redcurrant syrup drink", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Polenta Frita", description: "Fried polenta sticks", price: 3.5 },
+              { name: "Vaca Atolada", description: "Beef ribs with cassava", price: 11.0 },
+              { name: "Sagu", description: "Tapioca pearls in wine", price: 3.0 },
+              { name: "Vitamina de Mamão", description: "Papaya smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+              { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
+              { name: "Tainha Assada", description: "Grilled mullet fish", price: 11.0 },
+              { name: "Doce de Leite", description: "Milk caramel", price: 3.0 },
+              { name: "Licor de Jabuticaba", description: "Jabuticaba liqueur", price: 3. },
+          ],
+        },     
       ],
       loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
@@ -2854,54 +3042,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-            appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-            mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-            dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-            drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-            },
-            {
-              appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-              mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-            },
-            {
-              appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-              mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-              dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-              drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-            },
-            {
-              appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-              mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-              dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-              drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-            },
-            {
-              appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-              mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-              dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-              drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-            },
-            {
-              appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-              mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-              dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-              drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-            },
-            {
-              appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-              mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-              dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-              drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-            },
-            {
-              appetizer: { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", "price": 3.0 },
-              mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-              dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-              drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-            }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -3054,9 +3264,75 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
             { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
             { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
             { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
@@ -3210,55 +3486,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
             
-            {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -3411,54 +3708,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -3609,54 +3928,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -3806,54 +4147,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -4006,54 +4369,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-            {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
@@ -4203,54 +4588,76 @@ export const restaurants = [
         {
           category: "20 menu",
           items: [
-              {
-              appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-              mainCourse: { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
-              dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-              drink: { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
-              },
-              {
-                appetizer: { name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
-                mainCourse: { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
-                dessert: { name: "Krempita", description: "Custard cream pie", price: 3.0 },
-                drink: { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
-                mainCourse: { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
-                dessert: { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
-                drink: { name: "Juice", description: "Freshly squeezed juice", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
-                mainCourse: { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
-                dessert: { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
-                drink: { name: "Cappuccino", description: "Espresso with steamed milk and foam", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
-                mainCourse: { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
-                dessert: { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
-                drink: { name: "Black Tea", description: "Strong brewed black tea", price: 3.0 }
-              },
-              {
-                appetizer: { name: "Fritule", description: "Croatian doughnuts with powdered sugar", "price": 3.0 },
-                mainCourse: { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", "price": 11.0 },
-                dessert: { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", "price": 3.0 },
-                drink: { name: "Fruit Smoothie", description: "Blended fruit smoothie", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
-                mainCourse: { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", "price": 11.0 },
-                dessert: { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", "price": 3.0 },
-                drink: { name: "Ginger Ale", description: "Spicy ginger-flavored soda", "price": 3.0 }
-              },
-              {
-                appetizer: { name: "Soparnik", description: "Dalmatian Swiss chard pie", price: 3.0 },
-                mainCourse: { name: "Seafood Paella", description: "Rice dish with seafood", "price": 11.0 },
-                dessert: { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", "price": 3.0 },
-                drink: { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.0 }
-              }
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Pašticada", description: "Beef stew in a rich sauce", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            {name: "Pršut", description: "Cured ham served with cheese", price: 3.0 },
+            { name: "Sarma", description: "Cabbage rolls stuffed with meat and rice", price: 11.0 },
+            { name: "Krempita", description: "Custard cream pie", price: 3.0 },
+            { name: "Herbal Tea", description: "Traditional Croatian herbal tea", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Ćevapi", description: "Grilled minced meat sausages", price: 3.0 },
+            { name: "Peka", description: "Traditional slow-cooked dish with meat and vegetables", price: 11.0 },
+            { name: "Štrukli", description: "Pastry filled with cheese and cream", price: 3.0 },
+            { name: "Juice", description: "Freshly squeezed juice", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Grilled Cheese", description: "Cheese grilled with herbs", price: 3.0 },
+            { name: "Black Risotto", description: "Risotto with cuttlefish ink", price: 11.0 },
+            { name: "Palačinke", description: "Crepes with sweet fillings", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            { name: "Caprese Salad", description: "Tomato and mozzarella salad", "price": 3.0 },
+            { name: "Grilled Fish", description: "Freshly grilled fish with lemon and herbs", price: 11.0 },
+            { name: "Berry Tart", description: "Pastry tart filled with fresh berries", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Burek", description: "Pastry filled with meat or cheese", price: 3.0 },
+            { name: "Beef Stroganoff", description: "Beef in creamy mushroom sauce", price: 11.0 },
+            { name: "Ricotta Cheesecake", description: "Cheesecake made with ricotta cheese", price: 3.0 },
+            { name: "Ginger Ale", description: "Spicy ginger-flavored soda", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Fritule", description: "Croatian doughnuts with powdered sugar", price: 3.0 },
+            { name: "Chicken Cacciatore", description: "Chicken stewed with tomatoes and herbs", price: 11.0 },
+            { name: "Chocolate Lava Cake", description: "Chocolate cake with molten center", price: 3.0 },
+            { name: "Fruit Smoothie", description: "Blended fruit smoothie", price: 3.0 },
+          ],
+        },
+        {
+          category: "20 menu",
+          items: [
+            
+            { name: "Grilled Octopus", description: "Octopus grilled with garlic and herbs", price: 5.0 },
+            { name: "Seafood Paella", description: "Rice dish with seafood", price: 10.0 },
+            { name: "Peach Cobbler", description: "Baked peach dessert with biscuit topping", price: 3.0 },
+            { name: "Croatian Wine", description: "Selection of local wines", price: 3.0 },
           ],
         },
       ],
