@@ -182,7 +182,7 @@ export async function deleteUser(req, res, next) {
   try {
     await User.findByIdAndDelete(userId);
     res.status(200).json({
-      message: `User deleted successfully`,
+      message: `Your Account has been deleted successfully`,
     });
   } catch (error) {
     return next(createHttpError(500, "Server error deleting user"));

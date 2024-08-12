@@ -11,6 +11,8 @@ import logoutRouter from "./routes/logoutRouter.js";
 import restaurantsRouter from "./routes/restaurantsRouter.js";
 import http from "http";
 import { Server } from "socket.io";
+import path from "path";
+import { fileURLToPath } from "url";
 
 try {
   await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
@@ -38,6 +40,11 @@ app.use(
     credentials: true,
   })
 );
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/users", userRouter);
 app.use("/search", searchRouter);

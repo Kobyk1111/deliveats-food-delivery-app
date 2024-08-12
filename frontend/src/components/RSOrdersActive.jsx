@@ -3,6 +3,7 @@ import "../style/RSOrdersActive.css";
 import { DataContext } from "../contexts/DataContext";
 import io from "socket.io-client";
 
+//* Remember to change url to VITE_API import during deployment
 const socket = io.connect("http://localhost:5002", {
   transports: ["websocket"],
   upgrade: false,

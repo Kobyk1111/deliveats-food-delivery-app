@@ -13,13 +13,13 @@ const addressSchema = new Schema({
 });
 
 const daysSchema = new Schema({
-  monday: { type: String, /* required: true */ default: "" },
-  tuesday: { type: String, /* required: true */ default: "" },
-  wednesday: { type: String, /* required: true */ default: "" },
-  thursday: { type: String, /* required: true */ default: "" },
-  friday: { type: String, /* required: true */ default: "" },
-  saturday: { type: String, /* required: true */ default: "" },
-  sunday: { type: String, /* required: true */ default: "" },
+  monday: { type: String, default: "" },
+  tuesday: { type: String, default: "" },
+  wednesday: { type: String, default: "" },
+  thursday: { type: String, default: "" },
+  friday: { type: String, default: "" },
+  saturday: { type: String, default: "" },
+  sunday: { type: String, default: "" },
 });
 
 const defaultDays = {
@@ -120,8 +120,8 @@ const historySchema = new Schema(
 
 const restaurantSchema = new Schema({
   basicInfo: { type: basicInfoSchema, required: true },
-  openAndCloseHours: { type: daysSchema, /* required: true */ default: defaultDays },
-  cuisine: { type: [String], required: true, default: [] },
+  openAndCloseHours: { type: daysSchema, default: defaultDays },
+  keywords: { type: [String], required: true, default: [] },
   restaurantType: { type: [String], required: true, default: [] },
   menu: { type: [menuCategorySchema], required: true, default: [] },
   digitalPresence: {

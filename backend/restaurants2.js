@@ -27,7 +27,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -124,7 +124,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -218,7 +218,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -315,7 +315,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -409,7 +409,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -506,7 +506,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -600,7 +600,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -695,7 +695,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -790,7 +790,7 @@ export const restaurants = [
       saturday: "9:00 AM - 9:00 PM",
       sunday: "9:00 AM - 7:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -882,7 +882,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Brazilian"],
+    keywords: ["Brazilian"],
     restaurantType: ["Brazilian"],
     menu: [
       {
@@ -974,7 +974,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1066,7 +1066,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1161,7 +1161,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1256,7 +1256,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1351,7 +1351,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1443,7 +1443,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1535,7 +1535,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1630,7 +1630,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Croatian"],
+    keywords: ["Croatian"],
     restaurantType: ["Croatian"],
     menu: [
       {
@@ -1722,7 +1722,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -1814,7 +1814,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -1906,7 +1906,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -1998,7 +1998,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2090,7 +2090,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2182,7 +2182,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2274,7 +2274,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2369,7 +2369,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2461,7 +2461,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2553,7 +2553,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2645,7 +2645,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "11:00 AM - 9:00 PM",
     },
-    cuisine: ["Ghanaian"],
+    keywords: ["Ghanaian"],
     restaurantType: ["Ghanaian"],
     menu: [
       {
@@ -2737,7 +2737,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -2832,7 +2832,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -2927,7 +2927,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -3022,7 +3022,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -3117,7 +3117,7 @@ export const restaurants = [
       saturday: "11:00 AM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -3212,7 +3212,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {
@@ -3307,7 +3307,7 @@ export const restaurants = [
       saturday: "12:00 PM - 11:00 PM",
       sunday: "12:00 PM - 9:00 PM",
     },
-    cuisine: ["Albanian"],
+    keywords: ["Albanian"],
     restaurantType: ["Albanian"],
     menu: [
       {

@@ -1,10 +1,9 @@
 /* ******** RSMenu.css ********* */
 
 .rs-menu-container {
-  font-family: Arial, sans-serif;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #fbfffc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 900px;
@@ -24,12 +23,16 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 1rem 0 3rem;
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid rgb(199, 197, 197);
 }
 
 .rs-menu-container .inputs-container {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .rs-menu-container .add-menu-form button {
@@ -46,9 +49,10 @@
 .rs-menu-container .add-menu-form input {
   padding: 0.6rem;
   font-size: 1.4rem;
+  border: 1px solid rgb(202, 202, 202);
 }
 
-.rs-menu-container .cuisine {
+.rs-menu-container .keywords {
   text-align: center;
   margin: 2rem 0;
   display: flex;
@@ -57,7 +61,7 @@
   gap: 1rem;
 }
 
-.rs-menu-container .edit-cuisine {
+.rs-menu-container .edit-keywords {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +69,7 @@
   position: relative;
 }
 
-.rs-menu-container .edit-cuisine .change-cuisine-container {
+.rs-menu-container .edit-keywords .change-keywords-container {
   display: flex;
   align-items: center;
   margin: 1rem 0;
@@ -73,36 +77,37 @@
   width: 40%;
 }
 
-.rs-menu-container .edit-cuisine .change-cuisine-container input {
+.rs-menu-container .edit-keywords .change-keywords-container input {
   padding: 0.6rem;
   font-size: 1.4rem;
   width: 100%;
+  border: 1px solid rgb(202, 202, 202);
 }
 
-.rs-menu-container .edit-cuisine .add-cuisine-icon {
+.rs-menu-container .edit-keywords .add-keywords-icon {
   position: absolute;
   top: 3.5rem;
   left: 20rem;
   cursor: pointer;
 }
 
-.rs-menu-container .edit-cuisine .buttons-container {
+.rs-menu-container .edit-keywords .buttons-container {
   display: flex;
 }
 
-.rs-menu-container .edit-cuisine .save-cuisine-button {
+.rs-menu-container .edit-keywords .save-keywords-button {
   background-color: var(--color-1);
   color: white;
   font-size: 1.4rem;
 }
 
-.rs-menu-container .edit-cuisine .cancel-cuisine-button {
+.rs-menu-container .edit-keywords .cancel-keywords-button {
   font-size: 1.4rem;
   border: 1px solid var(--color-1);
   color: var(--color-1);
 }
 
-.cuisine .cuisine-edit-icon {
+.keywords .keywords-edit-icon {
   cursor: pointer;
 }
 
@@ -111,7 +116,7 @@
 }
 
 .menu-category h2 {
-  border-bottom: 2px solid #274691;
+  border-bottom: 2px solid #bcbcbd;
   padding-bottom: 1rem;
   margin-bottom: 1.4rem;
   width: 100%;
@@ -133,18 +138,36 @@
 .menu-category .category-header input {
   padding: 0.6rem;
   font-size: 1.4rem;
+  border: 1px solid rgb(202, 202, 202);
 }
 
 .menu-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* align-items: flex-start; */
-  padding: 10px;
+  padding: 2rem 1rem;
   border-bottom: 1px solid #ccc;
 }
 
 .menu-item:last-child {
   border-bottom: none;
+}
+
+.rs-menu-container .menu-item .image-and-info-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rs-menu-container .menu-item .image-and-info-container .image-container {
+  width: 8rem;
+}
+
+.rs-menu-container .menu-item .image-and-info-container .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .rs-menu-container .edit-form {
@@ -168,33 +191,44 @@
 
 .rs-menu-container .edit-item {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  /* padding: 0.6rem; */
-  gap: 2rem;
+  /* margin: 3rem 0; */
+  padding: 2rem 1rem;
+  /* gap: 2rem; */
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.rs-menu-container .labels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .rs-menu-container .edit-item label {
   display: flex;
   gap: 1rem;
   align-items: center;
+
   /* width: fit-content; */
   /* flex-wrap: wrap; */
 }
 
-.rs-menu-container .price-label {
+/* .rs-menu-container .price-label {
   width: 24%;
-}
+} */
 
 .rs-menu-container .edit-item label input {
   padding: 0.6rem;
   font-size: 1.4rem;
+  width: 100%;
+  border: 1px solid rgb(202, 202, 202);
 }
 
-.rs-menu-container .edit-item .price {
+/* .rs-menu-container .edit-item .price {
   width: 70%;
-}
+} */
 
 .rs-menu-container .delete-icon {
   color: rgb(196, 50, 50);
@@ -206,10 +240,13 @@
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(202, 202, 202);
 }
 
 .rs-menu-container .new-item-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -255,6 +292,17 @@
   background-color: transparent;
   color: var(--color-1);
   border: 1px solid var(--color-1);
+}
+
+.rs-menu-container .edit-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #165e4b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .update-button {
