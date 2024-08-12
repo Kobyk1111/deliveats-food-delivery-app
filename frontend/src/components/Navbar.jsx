@@ -54,6 +54,12 @@ function Navbar() {
     <>
       <nav>
         <h1 onClick={() => navigate("/")}>DelivEats</h1>
+        <div className="navbar-cities-keywords">
+        <p>We are proud to offer our services in <b>Berlin</b>, <b>Düsseldorf</b>, <b>Hannover</b> and <b>Leipzig</b>.</p>
+        <p>Search and find your next meal among <b>Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish</b> and <b>Ukrainian</b> restaurants.</p>
+
+        </div>
+       
         <div className="basket-and-register-container">
           {loggedInUser ? (
             <div className="user-info" ref={dropdownRef}>

@@ -123,7 +123,9 @@ function Searchbar({ className }) {
             />
             <button className="search-button">Search</button>
           </form>
+         {/*  <p>Search and find your next meal among Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish and Ukrainian restaurants.</p> */}
         </div>
+        
       </div>
     </>
   );

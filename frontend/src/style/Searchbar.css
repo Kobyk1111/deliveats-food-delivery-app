@@ -2,12 +2,18 @@
 
 .search-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
   top: 0;
   right: 0;
   width: 100%;
   margin-top: 50px;
+  gap: 8rem;
+}
+.search-container p {
+  align-self: center;
+  font-weight: 550;
 }
 
 /* .home-searchbar */
@@ -23,7 +29,7 @@
   background-position: center;
   background-attachment: fixed;
   /* background-color: rgba(31, 39, 35, 0.6); */
-  height: 20vh;
+  height: 70vh;
 }
 
 .search-form {
