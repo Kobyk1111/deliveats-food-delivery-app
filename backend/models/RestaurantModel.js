@@ -13,13 +13,13 @@ const addressSchema = new Schema({
 });
 
 const daysSchema = new Schema({
-  monday: { type: String, /* required: true */ default: "" },
-  tuesday: { type: String, /* required: true */ default: "" },
-  wednesday: { type: String, /* required: true */ default: "" },
-  thursday: { type: String, /* required: true */ default: "" },
-  friday: { type: String, /* required: true */ default: "" },
-  saturday: { type: String, /* required: true */ default: "" },
-  sunday: { type: String, /* required: true */ default: "" },
+  monday: { type: String, default: "" },
+  tuesday: { type: String, default: "" },
+  wednesday: { type: String, default: "" },
+  thursday: { type: String, default: "" },
+  friday: { type: String, default: "" },
+  saturday: { type: String, default: "" },
+  sunday: { type: String, default: "" },
 });
 
 const defaultDays = {
@@ -35,6 +35,11 @@ const defaultDays = {
 const basicInfoSchema = new Schema({
   businessName: { type: String, required: true },
   businessId: { type: String, required: true },
+  coverImage: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
+  },
   owner: { type: String, required: true },
   password: { type: String, required: true },
   venueName: { type: String, required: true },
@@ -46,6 +51,11 @@ const menuItemSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
+  image: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vectortakeaway-packages-3d-vector-illustration-coffee-soda-cup-burger-fast-food-packs-from-restaurant-cartoon-style-isolated-white-background-fast-food-shop-menu-concept_778687-647.jpg?t=st=1722929708~exp=1722933308~hmac=69f1d3bbaaf8599aa23efb9000feb41a49ed194639a6708d5b43e0c1e14031fa&w=1060",
+  },
 });
 
 const menuCategorySchema = new Schema({
@@ -62,7 +72,6 @@ const digitalPresenceSchema = new Schema({
 });
 
 const offerSchema = new Schema({
-
   category: { type: String, required: true, default: "No category" },
   items: { type: [menuItemSchema], required: true, default: [] },
 });
@@ -70,7 +79,6 @@ const offerSchema = new Schema({
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
   loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
-
 });
 
 const historySchema = new Schema(
@@ -101,14 +109,19 @@ const historySchema = new Schema(
       required: true,
       default: "Pending",
     },
+    statusTimestamp: {
+      // Added this field
+      type: Date,
+      default: Date.now,
+    },
   },
   { timestamps: true }
 );
 
 const restaurantSchema = new Schema({
   basicInfo: { type: basicInfoSchema, required: true },
-  openAndCloseHours: { type: daysSchema, /* required: true */ default: defaultDays },
-  cuisine: { type: [String], required: true, default: [] },
+  openAndCloseHours: { type: daysSchema, default: defaultDays },
+  keywords: { type: [String], required: true, default: [] },
   restaurantType: { type: [String], required: true, default: [] },
   menu: { type: [menuCategorySchema], required: true, default: [] },
   digitalPresence: {
@@ -131,6 +144,7 @@ const restaurantSchema = new Schema({
     },
   },
   orderHistory: { type: [historySchema], default: [] },
+  activeOrders: { type: [historySchema], default: [] },
 });
 
 const Restaurant = model("Restaurant", restaurantSchema);

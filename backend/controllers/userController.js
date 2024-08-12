@@ -182,7 +182,7 @@ export async function deleteUser(req, res, next) {
   try {
     await User.findByIdAndDelete(userId);
     res.status(200).json({
-      message: `User deleted successfully`,
+      message: `Your Account has been deleted successfully`,
     });
   } catch (error) {
     return next(createHttpError(500, "Server error deleting user"));
@@ -302,6 +302,54 @@ export async function getAllAddresses(req, res, next) {
   } catch (error) {
     console.error(error);
     return next(createHttpError(500, "Server error getting all addresses of user"));
+  }
+}
+
+export async function deleteOrderHistoryOfUser(req, res, next) {
+  const { id } = req.params;
+
+  console.log(id);
+
+  try {
+    const foundUser = await User.findById(id);
+
+    if (!foundUser) {
+      return next(createHttpError(404, "No User found"));
+    }
+
+    // Clear the order history array
+    foundUser.orderHistory = [];
+    await foundUser.save();
+
+    await foundUser.populate("orderHistory");
+
+    res.json({ message: "Order history successfully deleted", orderHistory: foundUser.orderHistory });
+  } catch (error) {
+    console.log(error);
+    next(createHttpError(500, "Order history could not be deleted"));
+  }
+}
+
+export async function deleteOrder(req, res, next) {
+  const { userId, orderId } = req.params;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return next(createHttpError(404, "User not found"));
+    }
+    // Remove the order from the order history
+    user.orderHistory = user.orderHistory.filter((order) => order._id.toString() !== orderId);
+    await user.save();
+    // Optionally, repopulate orderHistory if needed
+    await user.populate("orderHistory");
+    res.json({
+      message: "Order successfully deleted",
+      orderHistory: user.orderHistory,
+    });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error deleting order"));
   }
 }
 

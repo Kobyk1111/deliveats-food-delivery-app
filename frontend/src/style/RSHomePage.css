@@ -1,13 +1,17 @@
 /* RSHomePage.css */
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-  }
+  } */
 
-  .rs-components {
-    height: 80vh;
-    margin-top: 75px;
-  }
+.rs-components {
+  height: 80vh;
+  margin-top: 75px;
+}
+
+.rs-content-profile {
+  margin-top: 3rem;
+}

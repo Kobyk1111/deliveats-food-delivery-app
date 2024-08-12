@@ -1,6 +1,10 @@
 import "../style/RSMenu.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
+import { MdOutlineDeleteForever } from "react-icons/md";
+import { FaSquarePlus } from "react-icons/fa6";
+import { FaSquareMinus } from "react-icons/fa6";
+import { FaEdit } from "react-icons/fa";
 
 function RSMenu() {
   const { loggedInRestaurant, setLoggedInRestaurant } = useContext(DataContext);
@@ -12,6 +16,14 @@ function RSMenu() {
   const [newMenu, setNewMenu] = useState([]);
   const [toAddNewMenu, setToAddNewMenu] = useState(false);
   const [toAddNewItem, setToAddNewItem] = useState(false);
+  const [editingKeywords, setEditingKeywords] = useState(false);
+  const [newKeywords, setNewKeywords] = useState(loggedInRestaurant.keywords || []);
+  const [toggleAdd, setToggleAdd] = useState(true);
+  const [toggleAddNewMenu, setToggleAddNewMenu] = useState(false);
+  const [newCategoryName, setNewCategoryName] = useState("");
+  const [image, setImage] = useState("");
+  const imageInput = useRef(null);
+  const editedImageInput = useRef(null);
 
   useEffect(() => {
     async function getRestaurant() {
@@ -37,6 +49,12 @@ function RSMenu() {
     setEditingCategory(category);
     const categoryData = loggedInRestaurant.menu.find((cat) => cat.category === category);
     setNewMenuData({ ...categoryData });
+    setNewCategoryName(category); // Set the current category name for editing
+  };
+
+  // New function to handle category name change
+  const handleCategoryNameChange = (e) => {
+    setNewCategoryName(e.target.value);
   };
 
   const handleInputChange = (index, field, value) => {
@@ -48,15 +66,86 @@ function RSMenu() {
     setNewMenuData({ ...newMenuData, items: updatedItems });
   };
 
+  const handleDeleteCategory = async (category) => {
+    if (confirm("Are you sure you want to delete this category? All items will be deleted.")) {
+      const updatedMenu = loggedInRestaurant.menu.filter((cat) => cat.category !== category);
+
+      const settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ menu: updatedMenu }),
+      };
+
+      try {
+        const response = await fetch(
+          `http://localhost:5002/restaurants/update/menu/${loggedInRestaurant._id}`,
+          settings
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          setLoggedInRestaurant(data);
+        } else {
+          const { error } = await response.json();
+          throw new Error(error.message);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+  };
+
+  const handleImageChange = (e, index) => {
+    const file = e.target.files[0]; // Get the selected file
+    if (file) {
+      const updatedItems = [...newMenuData.items]; // Copy the current items
+      updatedItems[index].newImage = file; // Set the newImage property for the specific item
+      setNewMenuData({ ...newMenuData, items: updatedItems }); // Update state with the new data
+    }
+  };
+
   const handleSaveClick = async () => {
-    const updatedMenu = loggedInRestaurant.menu.map((cat) => (cat.category === editingCategory ? newMenuData : cat));
+    const updatedMenuData = { ...newMenuData, category: newCategoryName };
+
+    const updatedItems = await Promise.all(
+      updatedMenuData.items.map(async (item) => {
+        let imageURL = item.image;
+
+        if (item.newImage) {
+          const formData = new FormData();
+          formData.append("image", item.newImage);
+
+          const imageUploadResponse = await fetch("http://localhost:5002/restaurants/upload-image", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (imageUploadResponse.ok) {
+            const imageData = await imageUploadResponse.json();
+            imageURL = imageData.imageUrl;
+          }
+        }
+
+        return { ...item, image: imageURL };
+      })
+    );
+
+    updatedMenuData.items = updatedItems;
+
+    // const updatedMenuData = { ...newMenuData, category: newCategoryName };
+
+    const updatedMenu = loggedInRestaurant.menu.map((cat) =>
+      cat.category === editingCategory ? updatedMenuData : cat
+    );
 
     const settings = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ menu: updatedMenu }),
+      body: JSON.stringify({ menu: updatedMenu, keywords: newKeywords }),
     };
 
     try {
@@ -66,7 +155,8 @@ function RSMenu() {
         const data = await response.json();
         setLoggedInRestaurant(data);
         setEditingCategory(null);
-        setNewItemForEdit({ name: "", description: "", price: "" });
+        setEditingKeywords(false);
+        // setEditedImage("");
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -79,6 +169,8 @@ function RSMenu() {
   const handleCancelClick = () => {
     setEditingCategory(null);
     setNewItemForEdit({ name: "", description: "", price: "" });
+    setToggleAdd(true);
+    setToAddNewItem(false);
   };
 
   const handleNewCategoryChange = (e) => {
@@ -98,8 +190,27 @@ function RSMenu() {
   const handleAddNewCategory = async (e) => {
     e.preventDefault();
 
-    // Add the current newItem to newMenu
+    //* Comment in this code if we decide to add an image the first time we are creating an item when creating a category.
+    // Upload new item image if available
+    // let imageURL = "";
+    // if (image) {
+    //   const formData = new FormData();
+    //   formData.append("image", image);
+    //   // Assuming there's an endpoint for uploading images
+    //   const imageUploadResponse = await fetch("http://localhost:5002/restaurants/upload-image", {
+    //     method: "POST",
+    //     body: formData,
+    //   });
+    //   if (imageUploadResponse.ok) {
+    //     const imageData = await imageUploadResponse.json();
+    //     imageURL = imageData.imageUrl;
+    //   }
+    // }
+
     const updatedNewMenu = [...newMenu, newItem];
+
+    //* Comment in this code if we decide to add an image the first time we are creating an item when creating a category.
+    // const updatedNewMenu = [...newMenu, { ...newItem, image: imageURL }]; // Updated: Add image URL to item
 
     const newMenuCategory = { category: newCategory, items: updatedNewMenu };
 
@@ -130,80 +241,228 @@ function RSMenu() {
       console.log(error.message);
     }
 
-    setNewItem({ name: "", description: "", price: "" });
+    setNewItem({ name: "", description: "", price: "", image: "" });
+    setToggleAddNewMenu(false);
+    setImage("");
+    imageInput.current.value = "";
+    editedImageInput.current.value = "";
   };
 
-  const handleAddNewItemForEdit = () => {
-    const updatedItems = [...newMenuData.items, newItemForEdit];
+  const handleAddNewItemForEdit = async (e) => {
+    e.preventDefault();
+
+    //* Upload new item image if available
+    let imageURL = "";
+    if (image) {
+      const formData = new FormData();
+      formData.append("image", image);
+      // Assuming there's an endpoint for uploading images
+      const imageUploadResponse = await fetch("http://localhost:5002/restaurants/upload-image", {
+        method: "POST",
+        body: formData,
+      });
+      if (imageUploadResponse.ok) {
+        const imageData = await imageUploadResponse.json();
+        imageURL = imageData.imageUrl;
+      }
+    }
+
+    // const updatedItems = [...newMenuData.items, newItemForEdit];
+
+    //*new
+    const updatedItems = [...newMenuData.items, { ...newItemForEdit, image: imageURL }]; // Updated: Add image URL to item
+
     setNewMenuData({ ...newMenuData, items: updatedItems });
-    setNewItemForEdit({ name: "", description: "", price: "" });
+    setNewItemForEdit({ name: "", description: "", price: "", image: "" });
     setToAddNewItem(false);
+    setToggleAdd(true);
+    setImage("");
+    imageInput.current.value = "";
+    editedImageInput.current.value = "";
+  };
+
+  const handleKeywordsChange = (index, value) => {
+    const updatedKeywords = [...newKeywords];
+    updatedKeywords[index] = value;
+    setNewKeywords(updatedKeywords);
+  };
+
+  const addKeywordsField = () => {
+    setNewKeywords([...newKeywords, ""]);
+  };
+
+  const removeKeywordsField = (index) => {
+    if (newKeywords.length > 1) {
+      const updatedKeywords = newKeywords.filter((_, i) => i !== index);
+      setNewKeywords(updatedKeywords);
+    } else {
+      alert("You cannot delete a keyword. Add another keyword name before deleting");
+    }
+  };
+
+  const handleSaveKeywords = async () => {
+    const settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ menu: loggedInRestaurant.menu, keywords: newKeywords }),
+    };
+
+    try {
+      const response = await fetch(`http://localhost:5002/restaurants/update/menu/${loggedInRestaurant._id}`, settings);
+
+      if (response.ok) {
+        const data = await response.json();
+        setLoggedInRestaurant(data);
+        setEditingKeywords(false);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const handleDeleteItem = (index) => {
+    if (confirm("Are you sure you want to delete this item?")) {
+      const updatedItems = newMenuData.items.filter((_, i) => i !== index);
+      setNewMenuData({ ...newMenuData, items: updatedItems });
+    }
   };
 
   return (
     <div className="rs-menu-container">
-      <button onClick={() => setToAddNewMenu(true)}>Add New Menu</button>
+      <button
+        onClick={() => {
+          setToAddNewMenu(!toAddNewMenu);
+          setToggleAddNewMenu(!toggleAddNewMenu);
+        }}
+        className="create-new-menu-button"
+      >
+        {!toggleAddNewMenu ? "Create New Category" : "Cancel"}
+      </button>
       {toAddNewMenu && (
         <>
-          <h3>Add New Menu</h3>
-          <form onSubmit={handleAddNewCategory}>
-            <input
-              type="text"
-              name="newCategory"
-              value={newCategory}
-              onChange={handleNewCategoryChange}
-              placeholder="New Category"
-            />
-            {newMenu.map((item, index) => (
-              <div key={index} className="new-item">
-                <p>
-                  {item.name} - {item.description} - €{Number(item.price).toFixed(2)}
-                </p>
-              </div>
-            ))}
-            <input
-              type="text"
-              name="name"
-              value={newItem.name}
-              onChange={handleNewItemChange}
-              placeholder="Item Name"
-            />
-            <input
-              type="text"
-              name="description"
-              value={newItem.description}
-              onChange={handleNewItemChange}
-              placeholder="Item Description"
-            />
-            <input
-              type="number"
-              step="0.01"
-              name="price"
-              value={newItem.price}
-              onChange={handleNewItemChange}
-              placeholder="Item Price"
-            />
-            <button type="submit">Add Menu</button>
+          <h3>Add New Category</h3>
+          <form onSubmit={handleAddNewCategory} className="add-menu-form">
+            <div className="inputs-container">
+              <input
+                type="text"
+                name="newCategory"
+                value={newCategory}
+                onChange={handleNewCategoryChange}
+                placeholder="New Category"
+              />
+              {newMenu.map((item, index) => (
+                <div key={index} className="new-item">
+                  <p>
+                    {item.name} - {item.description} - €{Number(item.price).toFixed(2)}
+                  </p>
+                </div>
+              ))}
+              <input
+                type="text"
+                name="name"
+                value={newItem.name}
+                onChange={handleNewItemChange}
+                placeholder="Item Name"
+              />
+              <input
+                type="text"
+                name="description"
+                value={newItem.description}
+                onChange={handleNewItemChange}
+                placeholder="Item Description"
+              />
+              <input
+                type="number"
+                step="0.01"
+                name="price"
+                value={newItem.price}
+                onChange={handleNewItemChange}
+                placeholder="Item Price"
+              />
+            </div>
+            <button>Add Category</button>
           </form>
         </>
       )}
 
-      {!toAddNewMenu && (
-        <>
-          <div className="cuisine">
-            <h2>Cuisine: {loggedInRestaurant.cuisine.join(", ")}</h2>
-          </div>
-
-          {loggedInRestaurant.menu.map((category) => (
-            <div key={category._id} className="menu-category">
-              <div className="category-header">
-                <h2>{category.category}</h2>
+      <>
+        {editingKeywords ? (
+          <div className="edit-keywords">
+            <h2>Edit Keywords</h2>
+            {newKeywords.map((keyword, index) => (
+              <div key={index} className="change-keywords-container">
+                <input
+                  type="text"
+                  value={keyword}
+                  onChange={(e) => handleKeywordsChange(index, e.target.value)}
+                  placeholder="add keyword here..."
+                />
+                <MdOutlineDeleteForever
+                  onClick={() => removeKeywordsField(index)}
+                  size="2.5rem"
+                  className="delete-icon"
+                />
               </div>
+            ))}
+            <FaSquarePlus className="add-keywords-icon" size="4rem" onClick={addKeywordsField} />
+            <div className="buttons-container">
+              <button onClick={handleSaveKeywords} className="save-keywords-button">
+                Save Keywords
+              </button>
+              <button onClick={() => setEditingKeywords(false)} className="cancel-keywords-button">
+                Cancel
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="keywords">
+            <h2>Keywords: {loggedInRestaurant.keywords.join(", ")}</h2>
+            <FaEdit onClick={() => setEditingKeywords(true)} size="2rem" className="keywords-edit-icon" />
+          </div>
+        )}
 
+        {loggedInRestaurant.menu.map((category) => (
+          <div key={category._id} className="menu-category">
+            <div className="category-header">
+              {/* Conditional rendering for category name editing */}
               {editingCategory === category.category ? (
-                <div className="edit-form">
-                  {newMenuData.items.map((item, index) => (
-                    <div key={index} className="edit-item">
+                <>
+                  <label>
+                    Category Name:
+                    <input
+                      type="text"
+                      value={newCategoryName}
+                      onChange={handleCategoryNameChange}
+                      placeholder="Edit Category Name"
+                      className="edit-category-name-input"
+                    />
+                  </label>
+                  <MdOutlineDeleteForever
+                    onClick={() => handleDeleteCategory(category.category)}
+                    size="2.5rem"
+                    className="delete-icon"
+                  />
+                </>
+              ) : (
+                <h2>{category.category}</h2>
+              )}
+            </div>
+
+            {editingCategory === category.category ? (
+              <div className="edit-form">
+                {newMenuData.items.map((item, index) => (
+                  <div key={index} className="edit-item">
+                    <img
+                      src={item.image.startsWith("uploads") ? `http://localhost:5002/${item.image}` : item.image}
+                      alt=""
+                      width={100}
+                    />
+                    <div className="labels-container">
                       <label>
                         Name:
                         <input
@@ -220,37 +479,68 @@ function RSMenu() {
                           onChange={(e) => handleInputChange(index, "description", e.target.value)}
                         />
                       </label>
-                      <label>
+                    </div>
+                    <div className="labels-container">
+                      <label className="price-label">
                         Price:
                         <input
                           type="number"
+                          className="price"
                           step="0.01"
                           value={item.price}
                           onChange={(e) => handleInputChange(index, "price", e.target.value)}
                         />
                       </label>
+                      <label>
+                        Image:
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => handleImageChange(e, index)}
+                          ref={editedImageInput}
+                        />
+                      </label>
                     </div>
-                  ))}
-                  <div
-                    style={{
-                      border: "1px solid black",
-                      width: "fit-content",
-                      padding: "0.4rem 1rem",
-                      fontSize: "3rem",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => setToAddNewItem(!toAddNewItem)}
-                  >
-                    +
+
+                    {/* {editedImage && <img src={editedImage && URL.createObjectURL(editedImage)} width={100} alt="" />} */}
+                    <MdOutlineDeleteForever
+                      onClick={() => handleDeleteItem(index)}
+                      size="2.5rem"
+                      className="delete-icon"
+                      title="delete item"
+                    />
                   </div>
+                ))}
+                <div className="add-item-container">
+                  {toggleAdd ? (
+                    <FaSquarePlus
+                      className="add-icon"
+                      size="4rem"
+                      onClick={() => {
+                        setToAddNewItem(!toAddNewItem);
+                        setToggleAdd(false);
+                      }}
+                    />
+                  ) : (
+                    <FaSquareMinus
+                      className="add-icon"
+                      size="4rem"
+                      onClick={() => {
+                        setToAddNewItem(!toAddNewItem);
+                        setToggleAdd(true);
+                      }}
+                    />
+                  )}
+
                   {toAddNewItem && (
-                    <div className="new-item-form">
+                    <form className="new-item-form" onSubmit={handleAddNewItemForEdit}>
                       <input
                         type="text"
                         name="name"
                         value={newItemForEdit.name}
                         onChange={handleNewItemForEditChange}
                         placeholder="Item Name"
+                        required
                       />
                       <input
                         type="text"
@@ -258,6 +548,7 @@ function RSMenu() {
                         value={newItemForEdit.description}
                         onChange={handleNewItemForEditChange}
                         placeholder="Item Description"
+                        required
                       />
                       <input
                         type="number"
@@ -266,48 +557,63 @@ function RSMenu() {
                         value={newItemForEdit.price}
                         onChange={handleNewItemForEditChange}
                         placeholder="Item Price"
+                        required
                       />
-                      <button type="button" onClick={handleAddNewItemForEdit}>
-                        Add Item
-                      </button>
-                    </div>
-                  )}
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => setImage(e.target.files[0])}
+                        required
+                        ref={imageInput}
+                      />
+                      {/* {image && <img src={image && URL.createObjectURL(image)} width={100} alt="" />} */}
 
-                  <div className="buttons-container">
-                    <button className="save1-button" onClick={handleSaveClick}>
-                      Save
-                    </button>
-                    <button className="cancel1-button" onClick={handleCancelClick}>
-                      Cancel
-                    </button>
-                  </div>
+                      <button>Add Item</button>
+                    </form>
+                  )}
                 </div>
-              ) : (
-                category.items.map((item) => (
-                  <div key={item.name} className="menu-item">
+
+                <div className="buttons-container">
+                  <button className="save1-button" onClick={handleSaveClick}>
+                    Save
+                  </button>
+                  <button className="cancel1-button" onClick={handleCancelClick}>
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              category.items.map((item) => (
+                <div key={item._id} className="menu-item">
+                  <div className="image-and-info-container">
+                    <div className="image-container">
+                      <img
+                        src={item.image.startsWith("uploads") ? `http://localhost:5002/${item.image}` : item.image}
+                        alt=""
+                      />
+                    </div>
                     <div className="item-info">
                       <h3>{item.name}</h3>
                       <p>{item.description}</p>
                     </div>
-                    <div className="item-price">€{Number(item.price).toFixed(2)}</div>
                   </div>
-                ))
-              )}
-              {editingCategory !== category.category && (
-                <button className="edit-button" onClick={() => handleEditClick(category.category)}>
-                  Edit
-                </button>
-              )}
-            </div>
-          ))}
-
-          <div>
-            <h3>Promotionals Info</h3>
-            <div> Current Offers</div>
-            <div> Loyalty Programs</div>
+                  <div className="item-price">€{Number(item.price).toFixed(2)}</div>
+                </div>
+              ))
+            )}
+            {editingCategory !== category.category && (
+              <button className="edit-button" onClick={() => handleEditClick(category.category)}>
+                Edit
+              </button>
+            )}
           </div>
-        </>
-      )}
+        ))}
+
+        <div>
+          <h3>Promotions Info</h3>
+          <div> Current Offers</div>
+        </div>
+      </>
     </div>
   );
 }

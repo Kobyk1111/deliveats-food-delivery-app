@@ -3,6 +3,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Sabor do Brasil",
       businessId: "23/456/78901",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ana Souza",
       venueName: "Sabor",
       contact: {
@@ -259,6 +261,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Brasil Gourmet",
       businessId: "23/456/78902",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Carlos Oliveira",
       venueName: "Brasil Gourmet",
       contact: {
@@ -559,6 +563,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Churrascaria do Brasil",
       businessId: "23/456/78903",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ricardo Costa",
       venueName: "Churrascaria",
       contact: {
@@ -853,6 +859,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Carioca Grill",
       businessId: "23/456/78904",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Fernanda Lima",
       venueName: "Carioca",
       contact: {
@@ -1144,6 +1152,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Ginga Restaurant",
       businessId: "23/456/78905",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Luana Silva",
       venueName: "Ginga",
       contact: {
@@ -1438,6 +1448,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Acarajé & Co.",
       businessId: "23/456/78906",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Mariana Almeida",
       venueName: "Acarajé",
       contact: {
@@ -1730,6 +1742,8 @@ export const restaurants = [
     basicInfo: {
       businessName: "Sabor Brasileiro",
       businessId: "23/456/78907",
+      coverImage:
+        "https://img.freepik.com/free-vector/beautiful-vintage-restaurant-facade_23-2147635517.jpg?t=st=1722937567~exp=1722941167~hmac=bfc674eac2d353dc0d787456c3b7e6578591625bba4f1991e05273a11f8cef0e&w=1060",
       owner: "Ana Costa",
       venueName: "Sabor",
       contact: {
@@ -3914,7 +3928,6 @@ export const restaurants = [
           { name: "Almond Milkshake", description: "Milkshake made with almond milk", "price": 3.5 }
         ],
       },
-
     ],
     digitalPresence: {
       photos: ["https://www.osijek-oasis.de/photos/restaurant1.jpg", "https://www.osijek-oasis.de/photos/dish1.jpg"],
@@ -8860,6 +8873,7 @@ export const restaurants = [
             { name: "Apple Juice", description: "Freshly squeezed apple juice", price: 3.0 },
           ],
         },
+
         {
           category: "20 menu",
           items: [
@@ -8870,6 +8884,7 @@ export const restaurants = [
             { name: "Birrë e Zezë", description: "Dark beer", price: 3.0 },
           ],
         },
+
       ],
       loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
@@ -11050,7 +11065,8 @@ export const restaurants = [
           { name: "Bruschetta al Pomodoro", description: "Grilled bread topped with fresh tomatoes and basil", price: 5.0 },
           { name: "Caprese Salad", description: "Fresh mozzarella, tomatoes, and basil", price: 6.5 },
           { name: "Arancini", description: "Sicilian rice balls filled with cheese", price: 6.0 },
-          { name: "Calamari Fritti", description: "Fried calamari with lemon and marinara sauce", price: 7.5 },              { "name": "Prosciutto e Melone", "description": "Cured Italian ham served with sweet melon", "price": 7.0 },
+          { name: "Calamari Fritti", description: "Fried calamari with lemon and marinara sauce", price: 7.5 }, 
+          { name: "Prosciutto e Melone", description: "Cured Italian ham served with sweet melon", price: 7.0 },
           { name: "Garlic Bread", description: "Toasted bread with garlic butter", price: 4.0 },
           { name: "Olive Ascolane", description: "Fried stuffed olives", price: 5.5 },
           { name: "Antipasto Misto", description: "Mixed Italian appetizers with meats and cheeses", price: 8.5 },
@@ -11071,9 +11087,11 @@ export const restaurants = [
           { name: "Spaghetti Carbonara", description: "Pasta with pancetta, egg, and Parmesan cheese", price: 12.0 },
           { name: "Lasagna alla Bolognese", description: "Layers of pasta, meat sauce, and cheese", price: 13.5 },
           { name: "Risotto ai Funghi", description: "Creamy risotto with wild mushrooms", price: 14.0 },
-          { name: "Pizza Margherita", description: "Classic pizza with tomato, mozzarella, and basil", price: 9.0 },             { "name": "Pollo alla Parmigiana", "description": "Breaded chicken with tomato sauce and mozzarella", "price": 14.5 },
+          { name: "Pizza Margherita", description: "Classic pizza with tomato, mozzarella, and basil", price: 9.0 }, 
+          { name: "Pollo alla Parmigiana", description: "Breaded chicken with tomato sauce and mozzarella", price: 14.5 },
           { name: "Fettuccine Alfredo", description: "Pasta with a creamy Parmesan sauce", price: 11.5 },
-          { name: "Tagliatelle al Ragu", description: "Pasta with traditional Bolognese sauce", price: 13.0 },             { "name": "Gnocchi al Pesto", "description": "Potato dumplings in a basil pesto sauce", "price": 11.0 },
+          { name: "Tagliatelle al Ragu", description: "Pasta with traditional Bolognese sauce", price: 13.0 }, 
+          { name: "Gnocchi al Pesto", description: "Potato dumplings in a basil pesto sauce", price: 11.0 },
           { name: "Osso Buco", description: "Braised veal shanks with vegetables", price: 18.0 },
           { name: "Pizza Quattro Stagioni", description: "Pizza with four different toppings", price: 10.5 },
           { name: "Tortellini alla Panna", description: "Pasta filled with cheese in a creamy sauce", price: 12.0 },

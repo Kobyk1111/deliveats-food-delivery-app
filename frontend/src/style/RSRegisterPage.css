@@ -1,11 +1,11 @@
 /*  RSRegisterPage.css */
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-}
+} */
 
 .rs-section-register {
   margin-top: 70px;
@@ -30,14 +30,14 @@ body {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background-color: white;
-  color: #343a40;
+  background-color: var(--color-1);
+  color: white;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .rs-section-register button:hover {
-  background-color: rgb(52, 58, 64);
+  background-color: #298b71;
 }
 
 .rs-section-partner {

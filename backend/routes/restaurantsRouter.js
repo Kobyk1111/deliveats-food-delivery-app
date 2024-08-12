@@ -7,8 +7,14 @@ import {
   updateRestaurantMenu,
   updateOrderStatus,
   checkAuthenticationOfRestaurant,
+  getRestaurantOrderHistory,
+  deleteRestaurantAccount,
+  uploadImage,
+  deleteOrder,
+  deleteOrderHistory,
 } from "../controllers/restaurantsController.js";
 import { authenticateTokenOfRestaurant } from "../middlewares/authenticateToken.js";
+import upload from "../middlewares/multerConfig.js";
 
 const router = Router();
 
@@ -17,8 +23,13 @@ router.get("/check-auth", authenticateTokenOfRestaurant, checkAuthenticationOfRe
 router.get("/:id", getRestaurant);
 router.post("/register", registerRestaurant);
 router.post("/login", loginRestaurant);
-router.post("/update/profile/:id/:section", updateRestaurant);
+router.post("/update/profile/:id/:section", upload.single("image"), updateRestaurant);
 router.post("/update/menu/:id", updateRestaurantMenu);
 router.post("/update-order-status", updateOrderStatus);
+router.get("/get-restaurant-order-history/:id", getRestaurantOrderHistory);
+router.delete("/deleteRestaurantAccount/:id", deleteRestaurantAccount);
+router.post("/upload-image", upload.single("image"), uploadImage);
+router.delete("/deleteOrder/:id/:orderId", deleteOrder);
+router.delete("/deleteOrderHistory/:id", deleteOrderHistory);
 
 export default router;

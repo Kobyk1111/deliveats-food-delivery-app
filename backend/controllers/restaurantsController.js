@@ -1,5 +1,4 @@
 import createHttpError from "http-errors";
-import menus from "../menu.js";
 import Restaurant from "../models/RestaurantModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -15,6 +14,7 @@ export async function checkAuthenticationOfRestaurant(req, res, next) {
     }
 
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
 
     res.json(restaurant);
   } catch (error) {
@@ -31,6 +31,8 @@ export async function getRestaurant(req, res, next) {
 
     if (restaurant) {
       await restaurant.populate("orderHistory.order");
+      await restaurant.populate("activeOrders.order");
+
       res.json(restaurant);
     } else {
       return next(createHttpError(404, "Restaurant not found"));
@@ -58,21 +60,15 @@ export async function getAllRestaurants(req, res, next) {
       return next(createHttpError(400, "Search city should be Leipzig, Berlin, Hannover or Düsseldorf"));
     }
 
-    // const includesRestaurantOrCuisine = splitSearch.includes("restaurants") || splitSearch.includes("cuisines");
-
-    // if (!includesRestaurantOrCuisine) {
-    //   return next(createHttpError(400, 'Search must include either "restaurants" or "cuisines"'));
-    // }
-
     const restaurants = await Restaurant.find({});
 
     const filteredRestaurants = restaurants.filter((restaurant) => {
       const cityMatch = restaurant.basicInfo.address.city.toLowerCase() === cityInSearch;
-      const cuisineMatch = restaurant.cuisine.some((cuisine) => cuisine.toLowerCase() === country.toLowerCase());
+      const keywordsMatch = restaurant.keywords.some((keyword) => keyword.toLowerCase() === country.toLowerCase());
       const restaurantMatch = restaurant.restaurantType.some(
         (restaurant) => restaurant.toLowerCase() === country.toLowerCase()
       );
-      return (cityMatch && cuisineMatch) || (cityMatch && restaurantMatch);
+      return (cityMatch && keywordsMatch) || (cityMatch && restaurantMatch);
     });
 
     if (filteredRestaurants.length === 0) {
@@ -84,7 +80,7 @@ export async function getAllRestaurants(req, res, next) {
       restaurantId: restaurant._id,
       basicInfo: restaurant.basicInfo,
       openAndCloseHours: restaurant.openAndCloseHours,
-      cuisine: restaurant.cuisine,
+      keywords: restaurant.keywords,
       restaurantType: restaurant.restaurantType,
       menu: restaurant.menu,
       digitalPresence: restaurant.digitalPresence,
@@ -142,6 +138,7 @@ export async function registerRestaurant(req, res, next) {
     });
 
     await newRestaurant.populate("orderHistory.order");
+    await newRestaurant.populate("activeOrders.order");
 
     const restaurantAccessToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
     const restaurantRefreshToken = jwt.sign({ id: newRestaurant._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
@@ -189,6 +186,7 @@ export async function loginRestaurant(req, res, next) {
     }
 
     await foundRestaurant.populate("orderHistory.order");
+    await foundRestaurant.populate("activeOrders.order");
 
     const restaurantAccessToken = jwt.sign({ id: foundRestaurant._id }, process.env.JWT_SECRET_KEY, {
       expiresIn: "15m",
@@ -225,13 +223,26 @@ export async function loginRestaurant(req, res, next) {
 
 export async function updateRestaurant(req, res, next) {
   const { id, section } = req.params;
-  const updateData = req.body[section];
+  let updateData = req.body[section];
 
   if (!updateData) {
     return next(createHttpError(400, "Invalid section or no data provided"));
   }
 
   try {
+    // Ensure updateData is an object for basicInfo, contact, and address sections
+    if (
+      section === "basicInfo" ||
+      section === "contact" ||
+      section === "address" ||
+      section === "digitalPresence" ||
+      section === "openingHours"
+    ) {
+      if (typeof updateData === "string") {
+        updateData = JSON.parse(updateData);
+      }
+    }
+
     // Find the restaurant by ID and update the specified section
     const restaurant = await Restaurant.findById(id);
     if (!restaurant) {
@@ -242,6 +253,9 @@ export async function updateRestaurant(req, res, next) {
     switch (section) {
       case "basicInfo":
         restaurant.basicInfo = updateData;
+        if (req.file) {
+          restaurant.basicInfo.coverImage = req.file.path;
+        }
         break;
       case "contact":
         restaurant.basicInfo.contact = updateData;
@@ -263,6 +277,8 @@ export async function updateRestaurant(req, res, next) {
     await restaurant.save();
 
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
+
     res.json(restaurant);
   } catch (error) {
     console.error(error);
@@ -270,18 +286,37 @@ export async function updateRestaurant(req, res, next) {
   }
 }
 
+export async function uploadImage(req, res, next) {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: "No image file uploaded" });
+    }
+    const imageUrl = req.file.path; // Construct the image URL or path
+    console.log(imageUrl);
+    res.json({ imageUrl });
+  } catch (error) {
+    next(error); // Pass any errors to the error handler
+  }
+}
+
 export async function updateRestaurantMenu(req, res, next) {
   const { id } = req.params;
-  const { menu } = req.body;
+  const { menu, keywords } = req.body;
 
   try {
     const restaurant = await Restaurant.findById(id);
 
     if (restaurant) {
       restaurant.menu = menu;
+
+      if (keywords) {
+        restaurant.keywords = keywords;
+      }
+
       await restaurant.save();
 
       await restaurant.populate("orderHistory.order");
+      await restaurant.populate("activeOrders.order");
 
       res.json(restaurant);
     } else {
@@ -297,30 +332,142 @@ export const updateOrderStatus = async (req, res) => {
   const { orderId, status } = req.body;
 
   try {
-    const restaurant = await Restaurant.findOne({ "orderHistory.order": orderId });
+    const restaurant = await Restaurant.findOne({ "activeOrders.order": orderId });
 
     if (!restaurant) {
       return next(createHttpError(404, "Order not found"));
     }
 
-    const orderIndex = restaurant.orderHistory.findIndex((order) => order.order.toString() === orderId);
+    const orderIndex = restaurant.activeOrders.findIndex((order) => order.order.toString() === orderId);
 
     if (orderIndex === -1) {
       return next(createHttpError(404, "Order not found"));
     }
 
-    restaurant.orderHistory[orderIndex].orderStatus = status; // Assuming orderStatus field exists in historySchema
+    // Update order status and timestamp
+    restaurant.activeOrders[orderIndex].orderStatus = status;
+    restaurant.activeOrders[orderIndex].statusTimestamp = new Date(); // Save the current timestamp
+
     await restaurant.save();
-
     await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
 
-    io.to(`order_${orderId}`).emit("orderStatusUpdated", { updatedOrderId: orderId, status });
+    io.to(`order_${orderId}`).emit("orderStatusUpdated", {
+      updatedOrderId: orderId,
+      status,
+      timestamp: restaurant.activeOrders[orderIndex].statusTimestamp,
+    });
 
     console.log(`Emitting orderStatusUpdated for orderId: ${orderId}, status: ${status}`);
 
-    res.status(200).json({ message: "Order status updated successfully" });
+    res.status(200).json({
+      message: "Order status updated successfully",
+      timestamp: restaurant.activeOrders[orderIndex].statusTimestamp,
+    });
   } catch (error) {
     console.error(error);
     return next(createHttpError(500, "Server error, failed to update order status"));
   }
 };
+
+export async function getRestaurantOrderHistory(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const restaurant = await Restaurant.findById(id);
+
+    if (!restaurant) {
+      return next(createHttpError(404, "No restaurant found"));
+    }
+
+    // Filter orders with status "Delivery Completed"
+    const completedOrders = restaurant.activeOrders.filter((order) => order.orderStatus === "Delivery Completed");
+
+    const options = {
+      new: true,
+      runValidators: true,
+    };
+
+    const updatedRestaurant = await Restaurant.findByIdAndUpdate(
+      id,
+      {
+        $push: { orderHistory: { $each: completedOrders } },
+        $pull: { activeOrders: { orderStatus: "Delivery Completed" } },
+      },
+      options
+    );
+
+    await updatedRestaurant.populate("orderHistory.order");
+    await updatedRestaurant.populate("activeOrders.order");
+
+    res.json(updatedRestaurant);
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error, failed to get restaurant history"));
+  }
+}
+
+export async function deleteRestaurantAccount(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    await Restaurant.findByIdAndDelete(id);
+    await SearchedRestaurant.findOneAndDelete({ restaurantId: id });
+
+    res.status(200).json({
+      message: `Your Account has been deleted successfully`,
+    });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error deleting your account"));
+  }
+}
+
+export async function deleteOrder(req, res, next) {
+  const { id, orderId } = req.params;
+
+  try {
+    const restaurant = await Restaurant.findById(id);
+    if (!restaurant) {
+      return next(createHttpError(404, "Restaurant not found"));
+    }
+    // Remove the order from the order history
+    restaurant.orderHistory = restaurant.orderHistory.filter((order) => order._id.toString() !== orderId);
+    await restaurant.save();
+
+    await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
+
+    res.json({
+      message: "Order successfully deleted",
+      restaurant: restaurant,
+    });
+  } catch (error) {
+    console.error(error);
+    return next(createHttpError(500, "Server error deleting order"));
+  }
+}
+
+export async function deleteOrderHistory(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const restaurant = await Restaurant.findById(id);
+
+    if (!restaurant) {
+      return next(createHttpError(404, "No restaurant found"));
+    }
+
+    // Clear the order history array
+    restaurant.orderHistory = [];
+    await restaurant.save();
+
+    await restaurant.populate("orderHistory.order");
+    await restaurant.populate("activeOrders.order");
+
+    res.json({ message: "Order history successfully deleted", restaurant: restaurant });
+  } catch (error) {
+    console.log(error);
+    next(createHttpError(500, "Order history could not be deleted"));
+  }
+}

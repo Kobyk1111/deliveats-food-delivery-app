@@ -5,9 +5,14 @@ export const BasketContext = createContext();
 
 const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useState([]);
-  const [purchasedItems, setPurchasedItems] = useState([]);
+  // const [purchasedItems, setPurchasedItems] = useState([]);
+  const [purchasedItems, setPurchasedItems] = useState(() => {
+    const savedPurchasedItems = localStorage.getItem("purchasedItems");
+    return savedPurchasedItems ? JSON.parse(savedPurchasedItems) : [];
+  });
   const [deliveryOption, setDeliveryOption] = useState("delivery");
   const [orderId, setOrderId] = useState("");
+  const [orderSent, setOrderSent] = useState(JSON.parse(localStorage.getItem("orderSent")) || false);
 
   useEffect(() => {
     const savedBasket = localStorage.getItem("basket");
@@ -31,9 +36,16 @@ const BasketProvider = ({ children }) => {
   }, []);
 
   function completePurchase() {
-    setPurchasedItems([...basket]);
-    setBasket([]);
+    if (basket.length !== 0) {
+      setPurchasedItems([...basket]);
+      setBasket([]);
+    }
   }
+
+  useEffect(() => {
+    //new
+    localStorage.setItem("purchasedItems", JSON.stringify(purchasedItems));
+  }, [purchasedItems]);
 
   // const totalSum = basket.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -42,10 +54,10 @@ const BasketProvider = ({ children }) => {
   }, [basket]);
 
   const totalSumPurchasedItems = useMemo(() => {
-    return purchasedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    return purchasedItems?.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }, [purchasedItems]);
 
-  // to atualize the number of items in the basketICON
+  // to actualize the number of items in the basketICON
   const totalItemCount = basket.reduce((sum, item) => sum + item.quantity, 0);
 
   const addItemToBasket = (item) => {
@@ -86,10 +98,13 @@ const BasketProvider = ({ children }) => {
         totalSum,
         completePurchase,
         purchasedItems,
+        setPurchasedItems,
         totalSumPurchasedItems,
         totalItemCount,
         orderId,
         setOrderId,
+        orderSent,
+        setOrderSent,
       }}
     >
       {children}

@@ -1,6 +1,10 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { Routes, Route, Navigate /* useLocation, useNavigate */ } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate /* useLocation, useNavigate */,
+} from "react-router-dom";
 import SearchResults from "./pages/SearchResults";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import SuccessPage from "./components/SuccessPage";
@@ -14,6 +18,10 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "./contexts/DataContext";
 import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
+import RSProtectedRouteLoggedInRestaurant from "./components/RSProtectedRouteLoggedInRestaurant";
+
+import RegisterLoginPage from "./pages/RegisterLoginPage";
+
 // import RestaurantHome from "./pages/RestaurantHome";
 
 // RESTAURANT SIDE
@@ -37,9 +45,12 @@ function App() {
   useEffect(() => {
     async function checkAuthentication() {
       try {
-        const response = await handleHTTPRequestWithToken("http://localhost:5002/users/check-auth", {
-          credentials: "include",
-        });
+        const response = await handleHTTPRequestWithToken(
+          "http://localhost:5002/users/check-auth",
+          {
+            credentials: "include",
+          }
+        );
 
         if (response.ok) {
           const user = await response.json();
@@ -70,9 +81,12 @@ function App() {
   useEffect(() => {
     async function checkAuthenticationOfRestaurant() {
       try {
-        const response = await handleHTTPRequestWithTokenRestaurant("http://localhost:5002/restaurants/check-auth", {
-          credentials: "include",
-        });
+        const response = await handleHTTPRequestWithTokenRestaurant(
+          "http://localhost:5002/restaurants/check-auth",
+          {
+            credentials: "include",
+          }
+        );
 
         if (response.ok) {
           const restaurant = await response.json();
@@ -117,6 +131,7 @@ function App() {
         <Route path="/BasketPage" element={<BasketPage />} />
         <Route path="/success" element={<SuccessPage />} />
         {/* <Route path="/restaurantHome" element={<RestaurantHome />} /> */}
+        <Route path="/register-login" element={<RegisterLoginPage />} />
 
         <Route
           path="/profile/*"
@@ -135,8 +150,16 @@ function App() {
 
         {/* ******** restaurant Routes ******** */}
 
-        <Route path="/rs-register" element={loggedInRestaurant ? <Navigate to="/rs-home/*" /> : <RSRegisterPage />} />
-        <Route path="/rs-home/*" element={loggedInRestaurant ? <RSHomePage /> : <Navigate to="/rs-register" />}>
+        <Route path="/rs-register" element={<RSRegisterPage />} />
+
+        <Route
+          path="/rs-home/*"
+          element={
+            <RSProtectedRouteLoggedInRestaurant>
+              <RSHomePage />
+            </RSProtectedRouteLoggedInRestaurant>
+          }
+        >
           <Route index element={<RSOrdersActive />} />
           <Route path="orders-active" element={<RSOrdersActive />} />
           <Route path="orders-history" element={<RSOrdersHistory />} />

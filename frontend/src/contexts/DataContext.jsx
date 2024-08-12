@@ -13,6 +13,11 @@ function DataContextProvider({ children }) {
   const [userOrderHistory, setUserOrderHistory] = useState([]);
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
+  const [isToRegister, setIsToRegister] = useState(null);
+  const [isToRegisterRestaurant, setIsToRegisterRestaurant] = useState(null);
+  const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] = useState(false);
+  const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,7 +29,7 @@ function DataContextProvider({ children }) {
   }, [restaurant]);
 
   // OrderHistory.jsx and Preferences.jsx
-  async function getOrderHistory() {
+  async function getUserOrderHistory() {
     try {
       const response = await fetch(`http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`);
 
@@ -41,26 +46,8 @@ function DataContextProvider({ children }) {
   }
 
   useEffect(() => {
-    // async function getOrderHistory() {
-    //   try {
-    //     const response = await fetch(
-    //       `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-    //     );
-
-    //     if (response.ok) {
-    //       const { orderHistory } = await response.json();
-    //       setUserOrderHistory(orderHistory);
-    //     } else {
-    //       const { error } = await response.json();
-    //       throw new Error(error.message);
-    //     }
-    //   } catch (error) {
-    //     console.log(error.message);
-    //   }
-    // }
-
     if (loggedInUser) {
-      getOrderHistory();
+      getUserOrderHistory();
     }
   }, [loggedInUser, setUserOrderHistory]);
 
@@ -98,6 +85,7 @@ function DataContextProvider({ children }) {
         alert(message);
         setLoggedInRestaurant(null);
         navigate("/rs-register");
+        setToggleRegisterOrLoginRestaurant(false);
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -120,6 +108,24 @@ function DataContextProvider({ children }) {
       }
     } catch (error) {
       alert(error.message);
+    }
+  }
+
+  async function getRestaurantOrderHistory() {
+    try {
+      const response = await fetch(
+        `http://localhost:5002/restaurants/get-restaurant-order-history/${loggedInRestaurant._id}`
+      );
+
+      if (response.ok) {
+        const updatedRestaurant = await response.json();
+        setLoggedInRestaurant(updatedRestaurant);
+      } else {
+        const { error } = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error.message);
     }
   }
 
@@ -220,8 +226,19 @@ function DataContextProvider({ children }) {
         loggedInRestaurant,
         setLoggedInRestaurant,
         logoutRestaurant,
-        getOrderHistory,
+        getUserOrderHistory,
         handleHTTPRequestWithTokenRestaurant,
+        getRestaurantOrderHistory,
+        isToRegister,
+        setIsToRegister,
+        isToRegisterRestaurant,
+        setIsToRegisterRestaurant,
+        toggleRegisterOrLoginUser,
+        setToggleRegisterOrLoginUser,
+        isDropdownOpen,
+        setIsDropdownOpen,
+        toggleRegisterOrLoginRestaurant,
+        setToggleRegisterOrLoginRestaurant,
       }}
     >
       {children}

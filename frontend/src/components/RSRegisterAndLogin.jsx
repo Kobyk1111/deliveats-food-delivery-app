@@ -1,8 +1,11 @@
 import { useState, useContext } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext.jsx";
-import CustomModal from "./CustomModal.jsx";
+// import CustomModal from "./CustomModal.jsx";
 import "../style/RSRegisterAndLogin.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 function RSRegisterAndLogin() {
   // State to check all inputs here
@@ -26,14 +29,21 @@ function RSRegisterAndLogin() {
     },
   });
   // state to check if user wants to register
-  const [isToRegister, setIsToRegister] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isToRegister, setIsToRegister] = useState(null);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTermsChecked, setIsTermsChecked] = useState(false); // state variable to control the checkbox
 
-  const { setLoggedInRestaurant, showPassword, togglePasswordVisibility } = useContext(DataContext);
+  const {
+    setLoggedInRestaurant,
+    showPassword,
+    togglePasswordVisibility,
+    isToRegisterRestaurant,
+    setToggleRegisterOrLoginRestaurant,
+    // setIsToRegisterRestaurant,
+  } = useContext(DataContext);
 
   // initialize useNavigate hook
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // function to handle inputs
   function handleChange(e) {
@@ -63,7 +73,7 @@ function RSRegisterAndLogin() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (isToRegister && !isTermsChecked) {
+    if (isToRegisterRestaurant && !isTermsChecked) {
       alert("You must agree to the Terms of Use before proceeding.");
       return;
     }
@@ -73,7 +83,7 @@ function RSRegisterAndLogin() {
 
     // If isToRegister is true, it means the user is registering so we send an object that includes the username field
     // If isToRegister is false, it means the user is logging in so we don't add the username field
-    if (isToRegister) {
+    if (isToRegisterRestaurant) {
       user = {
         basicInfo: {
           businessName: loginInputs.basicInfo.businessName,
@@ -112,7 +122,9 @@ function RSRegisterAndLogin() {
     // If isToRegister is true, we send the request to the register route, if isToRegister is false, then we send the request to the login route
     try {
       const response = await fetch(
-        isToRegister ? "http://localhost:5002/restaurants/register" : "http://localhost:5002/restaurants/login",
+        isToRegisterRestaurant
+          ? "http://localhost:5002/restaurants/register"
+          : "http://localhost:5002/restaurants/login",
         settings
       );
 
@@ -120,7 +132,8 @@ function RSRegisterAndLogin() {
         const data = await response.json();
         console.log(data.message);
         setLoggedInRestaurant(data.restaurant);
-        setIsModalOpen(false);
+        // setIsModalOpen(false);
+        navigate("/rs-home");
       } else {
         const { error } = await response.json();
         throw new Error(error.message);
@@ -153,92 +166,68 @@ function RSRegisterAndLogin() {
   }
 
   return (
-    <>
-      <div className="button-container">
-        <button
-          className={`toggle-button ${isToRegister === false ? "active" : ""}`}
-          onClick={() => {
-            setIsToRegister(false);
-            setIsModalOpen(true);
-          }}
-        >
-          Login
-        </button>
-        <button
-          className={`toggle-button ${isToRegister === true ? "active" : ""}`}
-          onClick={() => {
-            setIsToRegister(true);
-            setIsModalOpen(true);
-          }}
-        >
-          Register
-        </button>
-      </div>
-
-      <CustomModal
-        className="restaurant-register-login-modal"
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      >
-        {isToRegister !== null && (
-          <form onSubmit={handleSubmit} className="form">
-            {isToRegister && (
-              <div className="name-fields">
-                <label className="form-label">
-                  Business Name
-                  <input
-                    type="text"
-                    name="basicInfo.businessName"
-                    value={loginInputs.basicInfo.businessName}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </label>
-                <label className="form-label">
-                  Business Id
-                  <input
-                    type="text"
-                    name="basicInfo.businessId"
-                    value={loginInputs.basicInfo.businessId}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </label>
-                <label className="form-label">
-                  Owner
-                  <input
-                    type="text"
-                    name="basicInfo.owner"
-                    value={loginInputs.basicInfo.owner}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </label>
-                <label className="form-label">
-                  Venue Name
-                  <input
-                    type="text"
-                    name="basicInfo.venueName"
-                    value={loginInputs.basicInfo.venueName}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </label>
-                <label className="form-label">
-                  Phone Number
-                  <input
-                    type="text"
-                    name="basicInfo.contact.phoneNumber"
-                    value={loginInputs.basicInfo.contact.phoneNumber}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </label>
+    <div className="rs-register-login-page">
+      {isToRegisterRestaurant ? <h2>Register</h2> : <h2>Login</h2>}
+      {isToRegisterRestaurant !== null && (
+        <form onSubmit={handleSubmit} className="rs-form">
+          {isToRegisterRestaurant && (
+            <div className="name-fields">
+              <label className="form-label">
+                Business Name
+                <input
+                  type="text"
+                  name="basicInfo.businessName"
+                  value={loginInputs.basicInfo.businessName}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </label>
+              <label className="form-label">
+                Business Id
+                <input
+                  type="text"
+                  name="basicInfo.businessId"
+                  value={loginInputs.basicInfo.businessId}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </label>
+              <label className="form-label">
+                Owner
+                <input
+                  type="text"
+                  name="basicInfo.owner"
+                  value={loginInputs.basicInfo.owner}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </label>
+              <label className="form-label">
+                Venue Name
+                <input
+                  type="text"
+                  name="basicInfo.venueName"
+                  value={loginInputs.basicInfo.venueName}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </label>
+              <label className="form-label">
+                Phone Number
+                <input
+                  type="text"
+                  name="basicInfo.contact.phoneNumber"
+                  value={loginInputs.basicInfo.contact.phoneNumber}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </label>
+              <div className="form-items-line">
                 <label className="form-label">
                   Street
                   <input
@@ -261,6 +250,8 @@ function RSRegisterAndLogin() {
                     className="form-input"
                   />
                 </label>
+              </div>
+              <div className="form-items-line">
                 <label className="form-label">
                   State
                   <input
@@ -284,55 +275,76 @@ function RSRegisterAndLogin() {
                   />
                 </label>
               </div>
-            )}
-            <label className="form-label">
-              Email
+            </div>
+          )}
+          <label className="form-label">
+            Email
+            <input
+              type="email"
+              name="basicInfo.contact.email"
+              value={loginInputs.basicInfo.contact.email}
+              onChange={handleChange}
+              required
+              className="form-input"
+            />
+          </label>
+          <label className="form-label password-field">
+            Password
+            <div className="password-input-container">
               <input
-                type="email"
-                name="basicInfo.contact.email"
-                value={loginInputs.basicInfo.contact.email}
+                type={showPassword ? "text" : "password"}
+                name="basicInfo.password"
+                value={loginInputs.basicInfo.password}
                 onChange={handleChange}
                 required
-                className="form-input"
+                className="form-input password-input"
               />
+              <span
+                className="password-toggle-icon"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? (
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                ) : (
+                  <FontAwesomeIcon icon={faEye} />
+                )}
+              </span>
+            </div>
+          </label>
+          {isToRegisterRestaurant && (
+            <label className="checkbox-form-label">
+              <input
+                type="checkbox"
+                checked={isTermsChecked}
+                onChange={handleCheckboxChange}
+                required
+                className="form-checkbox"
+              />
+              <span
+                className="terms-of-use-span"
+                style={{ whiteSpace: "pre-wrap" }}
+              >
+                {" "}
+                I agree to the Terms of Use.
+              </span>
             </label>
-            <label className="form-label password-field">
-              Password
-              <div className="password-input-container">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  name="basicInfo.password"
-                  value={loginInputs.basicInfo.password}
-                  onChange={handleChange}
-                  required
-                  className="form-input password-input"
-                />
-                <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
-                  {showPassword ? "🙈" : "👁️"}
-                </span>
-              </div>
-            </label>
-            {isToRegister && (
-              <label className="checkbox-form-label">
-                <input
-                  type="checkbox"
-                  checked={isTermsChecked}
-                  onChange={handleCheckboxChange}
-                  required
-                  className="form-checkbox"
-                />
-                <span className="terms-of-use-span" style={{ whiteSpace: "pre-wrap" }}>
-                  {" "}
-                  I agree to the Terms of Use.
-                </span>
-              </label>
-            )}
+          )}
 
-            <button className="submit-button">{isToRegister ? "Register" : "Login"}</button>
-          </form>
-        )}
-      </CustomModal>
-    </>
+          <div className="buttons-container">
+            <button className="submit-button">
+              {isToRegisterRestaurant ? "Register" : "Login"}
+            </button>
+            <button
+              type="button"
+              className="cancel-button"
+              onClick={() => setToggleRegisterOrLoginRestaurant(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      )}
+    </div>
   );
 }
 

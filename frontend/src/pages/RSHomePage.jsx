@@ -1,9 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
-
 import RSNavbar from "../components/RSNavbar";
 import Footer from "../components/Footer";
-
-// import "../style/RSHomePage.css";
+import "../style/RSHomePage.css";
 
 function RSHomePage() {
   return (
@@ -26,8 +24,8 @@ function RSHomePage() {
             </li>
           </ul>
         </div>
-        <div className="content-profile"></div>
-        <div className="content-profile">
+        {/* <div className="content-profile"></div> */}
+        <div className="rs-content-profile">
           <Outlet />
         </div>
       </div>

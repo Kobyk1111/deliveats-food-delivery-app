@@ -103,25 +103,36 @@ form.address-edit {
   border: 1px solid #ccc;
 }
 
-.save-button,
-.cancel-button {
+.address-save-cancel-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.address-save-cancel-container .save-button,
+.address-save-cancel-container .cancel-button {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 30%;
+  margin-top: 1rem;
 }
 
-.save-button {
+.address-save-cancel-container .save-button {
   background-color: var(--color-2);
   color: white;
-  width: 30%;
-  margin: 0.5rem auto;
 }
 
-.cancel-button {
+.address-save-cancel-container .save-button:hover {
+  background-color: var(--color-1);
+}
+
+.address-save-cancel-container .cancel-button {
   background-color: white;
   border: 1px solid var(--color-3);
   color: var(--color-3);
-  width: 30%;
-  margin: 0 auto;
+}
+
+.address-save-cancel-container .cancel-button:hover {
+  background-color: #ffe;
 }

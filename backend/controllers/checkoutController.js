@@ -41,77 +41,8 @@ export async function checkout(req, res, next) {
   }
 }
 
-export async function setOrderDetails(req, res, next) {
-  const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
-  const { id } = req.params;
-
-  try {
-    // Promise.all will make the two functions run at the same time since none of them depends on the other.
-    const result = Promise.all([
-      stripe.checkout.sessions.retrieve(sessionId, {
-        expand: ["payment_intent.payment_method"],
-      }),
-      stripe.checkout.sessions.listLineItems(sessionId),
-    ]);
-
-    // const session = await stripe.checkout.sessions.retrieve(sessionId, { expand: ["payment_intent.payment_method"] });
-    // const lineItems = await stripe.checkout.sessions.listLineItems(sessionId);
-    // console.log(session);
-    // console.log(lineItems);
-    // console.log(JSON.stringify(await result));
-    const orderHistory = JSON.stringify(await result);
-
-    if (!orderHistory) {
-      return next(createHttpError(400, "Order History could not be retrieved"));
-    }
-
-    const basketItems = basket.map((item) => {
-      return {
-        itemName: item.name,
-        price: item.price,
-        quantity: item.quantity,
-        description: item.description,
-      };
-    });
-
-    const orderHistorySaved = {
-      restaurantName: restaurantName,
-      items: basketItems,
-      totalSum: totalSum,
-      paymentDetails: {
-        paymentMethod: "Paypal",
-        chargedAmount: totalSum,
-      },
-      additionalInfo: {
-        orderType: deliveryOption,
-        orderStatus: "Delivered",
-      },
-    };
-
-    const foundUser = await User.findById(id);
-
-    if (!foundUser) {
-      return next(createHttpError(404, "No User found"));
-    }
-
-    const options = {
-      new: true,
-      runValidators: true,
-    };
-
-    const updatedUser = await User.findByIdAndUpdate(id, { $push: { orderHistory: orderHistorySaved } }, options);
-
-    console.log("Order history saved");
-
-    res.json({ orderHistory: updatedUser.orderHistory });
-  } catch (error) {
-    console.log(error);
-    next(createHttpError(500, "Server error"));
-  }
-}
-
 export async function setOrder(req, res, next) {
-  const { sessionId, basket, totalSum, deliveryOption, restaurantName } = req.body;
+  const { basket, totalSum, deliveryOption, restaurantName, restaurantAddress } = req.body;
 
   try {
     const basketItems = basket.map((item) => {
@@ -125,11 +56,11 @@ export async function setOrder(req, res, next) {
 
     const orderHistorySaved = {
       restaurantName: restaurantName,
-
+      restaurantAddress: restaurantAddress,
       items: basketItems,
       totalSum: totalSum,
       paymentDetails: {
-        paymentMethod: "Paypal",
+        paymentMethod: "Card",
         chargedAmount: totalSum,
       },
       additionalInfo: {
@@ -229,14 +160,17 @@ export async function sendOrderToRestaurant(req, res, next) {
       runValidators: true,
     };
 
-    await Restaurant.findByIdAndUpdate(id, { $push: { orderHistory: orderObj } }, options);
+    await Restaurant.findByIdAndUpdate(id, { $push: { activeOrders: orderObj } }, options);
 
-    const updatedRestaurant = await Restaurant.findById(id).populate("orderHistory.order");
+    const updatedRestaurant = await Restaurant.findById(id);
+
+    await updatedRestaurant.populate("orderHistory.order");
+    await updatedRestaurant.populate("activeOrders.order");
 
     // Emit a real-time update event
     io.to(`restaurant_${id}`).emit("newOrder", updatedRestaurant);
 
-    console.log(`Emitting newOrder to room: restaurant_${id} with data:`, updatedRestaurant);
+    // console.log(`Emitting newOrder to room: restaurant_${id} with data:`, updatedRestaurant);
 
     res.json({ message: `Your Order has been sent to the restaurant successfully`, orderId: orderObj.order });
   } catch (error) {
