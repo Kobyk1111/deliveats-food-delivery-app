@@ -4,6 +4,8 @@ import { DataContext } from "../contexts/DataContext.jsx";
 // import CustomModal from "./CustomModal.jsx";
 
 import "../style/RegisterAndLogin.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 function RegisterAndLogin() {
   // State to check all inputs here
@@ -187,7 +189,7 @@ function RegisterAndLogin() {
                   className="form-input password-input"
                 />
                 <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
-                  {showPassword ? "🙈" : "👁️"}
+                  {showPassword ? <FontAwesomeIcon icon={faEyeSlash}/> : <FontAwesomeIcon icon={faEye}/>}
                 </span>
               </div>
             </label>
