@@ -16,6 +16,7 @@
 
 .basket {
   padding: 20px;
+  width: 300px;
 }
 
 .basket h2 {
@@ -52,7 +53,7 @@
 }
 
 .delivery-toggle button.active {
-  background-color: rgb(38, 98, 65);
+  background-color: var(--color-2);
   color: white;
 }
 
@@ -66,28 +67,29 @@
   border-bottom: 1px solid #eee;
 }
 
-.basket .item-details {
+.basket .basket-item-details {
   margin-bottom: 10px;
 }
 
-.basket .item-name {
-  display: block;
+.basket .basket-item-name {
+  text-align: left;
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
-.basket .item-controls {
+.basket .basket-item-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.basket .item-quantity {
+.basket .basket-item-quantity {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.basket .item-quantity button {
+.basket .basket-item-quantity button {
   padding: 5px 10px;
   border: none;
   border-radius: 20px;
@@ -96,20 +98,20 @@
   font-size: 16px;
 }
 
-.basket .item-quantity button:hover {
+/* .basket .item-quantity button:hover {
   background-color: #ddd;
-}
+} */
 
-.basket .item-quantity span {
+.basket .basket-item-quantity span {
   padding: 0 10px;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 
-.basket .item-total {
+.basket .basket-item-total {
   color: #666;
 }
 
-.basket .remove-button {
+.basket .basket-remove-button {
   padding: 5px 10px;
   border: none;
   border-radius: 20px;
@@ -119,7 +121,7 @@
   font-size: 16px;
 }
 
-.basket .remove-button:hover {
+.basket .basket-remove-button:hover {
   background-color: #ff1a1a;
 }
 
@@ -129,19 +131,19 @@
   font-size: 20px;
 }
 
-.basket .checkout-button {
+.basket .basket-checkout-button {
   display: block;
   width: 100%;
   padding: 10px 30px;
   margin-top: 20px;
   border: none;
   border-radius: 25px;
-  background: rgb(38, 98, 65);
+  background: var(--color-2);
   color: white;
   cursor: pointer;
   font-size: 18px;
 }
 
-.basket .checkout-button:hover {
-  background-color: #163825;
+.basket .basket-checkout-button:hover {
+  background-color: var(--color-1);
 }
