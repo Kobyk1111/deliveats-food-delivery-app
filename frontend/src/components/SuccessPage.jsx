@@ -22,16 +22,26 @@ function SuccessPage() {
     setOrderSent,
   } = useContext(BasketContext);
   const { sessionId, loggedInUser } = useContext(DataContext);
-  const [restaurantName, setRestaurantName] = useState(JSON.parse(localStorage.getItem("restaurantName") || ""));
-  const [restaurantId, setRestaurantId] = useState(JSON.parse(localStorage.getItem("restaurantId") || ""));
-  const [restaurantAddress, setRestaurantAddress] = useState(JSON.parse(localStorage.getItem("restaurantAddress")));
+  const [restaurantName, setRestaurantName] = useState(
+    JSON.parse(localStorage.getItem("restaurantName") || "")
+  );
+  const [restaurantId, setRestaurantId] = useState(
+    JSON.parse(localStorage.getItem("restaurantId") || "")
+  );
+  const [restaurantAddress, setRestaurantAddress] = useState(
+    JSON.parse(localStorage.getItem("restaurantAddress"))
+  );
   const [newOrderId, setNewOrderId] = useState("");
   // const navigate = useNavigate();
 
   useEffect(() => {
-    const getRestaurantName = JSON.parse(localStorage.getItem("restaurantName"));
+    const getRestaurantName = JSON.parse(
+      localStorage.getItem("restaurantName")
+    );
     const getRestaurantId = JSON.parse(localStorage.getItem("restaurantId"));
-    const getRestaurantAddress = JSON.parse(localStorage.getItem("restaurantAddress"));
+    const getRestaurantAddress = JSON.parse(
+      localStorage.getItem("restaurantAddress")
+    );
     // const getPurchasedItems = JSON.parse(localStorage.getItem("purchasedItems"));
 
     if (getRestaurantName) {
@@ -54,7 +64,14 @@ function SuccessPage() {
   useEffect(() => {
     async function setOrder() {
       const settings = {
-        body: JSON.stringify({ sessionId, basket, totalSum, deliveryOption, restaurantName, restaurantAddress }),
+        body: JSON.stringify({
+          sessionId,
+          basket,
+          totalSum,
+          deliveryOption,
+          restaurantName,
+          restaurantAddress,
+        }),
         headers: {
           "Content-Type": "application/JSON",
         },
@@ -62,7 +79,10 @@ function SuccessPage() {
       };
 
       try {
-        const response = await fetch(`http://localhost:5002/create-checkout-session/setOrder`, settings);
+        const response = await fetch(
+          `http://localhost:5002/create-checkout-session/setOrder`,
+          settings
+        );
 
         if (response.ok) {
           const { id } = await response.json();
@@ -159,17 +179,23 @@ function SuccessPage() {
             <h1 className="success-title">Thank you! 🎉</h1>
             <h1 className="success-title">Order Successful.</h1>
             <p className="success-message">
-              Your order will be {deliveryOption === "delivery" ? "delivered" : "ready for pickup"} soon.
+              Your order will be{" "}
+              {deliveryOption === "delivery" ? "delivered" : "ready for pickup"}{" "}
+              soon.
             </p>
           </div>
           <div className="success-card-order-details">
             <h2>Order Details</h2>
+            {/* <small>order: {newOrderId}</small> */}
+
             {purchasedItems.map((item) => (
               <p key={item._id}>
                 {item.quantity} x {item.name}
               </p>
             ))}
-            <p className="success-total">Total: €{totalSumPurchasedItems.toFixed(2)}</p>
+            <p className="success-total">
+              Total: €{totalSumPurchasedItems.toFixed(2)}
+            </p>
           </div>
         </div>
         <div className="success-trackerContainer">
