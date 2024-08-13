@@ -23,12 +23,7 @@ nav h1 {
   cursor: pointer;
   color: var(--color-1);
 }
-.navbar-cities-keywords {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
+
 
 .basket-and-register-container {
   display: flex;
