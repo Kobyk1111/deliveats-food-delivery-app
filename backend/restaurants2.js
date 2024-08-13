@@ -574,7 +574,7 @@ export const restaurants = [
             {
               name: "Polenta Frita",
               description: "Fried polenta sticks",
-              price: 3.5,
+              price: 3.0,
             },
             {
               name: "Vaca Atolada",
