@@ -439,7 +439,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -460,7 +460,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -477,7 +477,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -502,7 +502,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -523,7 +523,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -548,7 +548,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -569,12 +569,12 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
               description: "Fried polenta sticks",
-              price: 3.5,
+              price: 3.0,
             },
             {
               name: "Vaca Atolada",
@@ -590,7 +590,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -1274,7 +1274,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -1295,7 +1295,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -1312,7 +1312,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -1337,7 +1337,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -1358,7 +1358,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -1383,7 +1383,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -1404,7 +1404,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -1425,7 +1425,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -2071,7 +2071,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -2092,7 +2092,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -2109,7 +2109,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -2134,7 +2134,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -2155,7 +2155,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -2180,7 +2180,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -2201,7 +2201,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -2222,7 +2222,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -2868,7 +2868,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -2889,7 +2889,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -2906,7 +2906,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -2931,7 +2931,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -2952,7 +2952,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -2977,7 +2977,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -2998,7 +2998,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -3019,7 +3019,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -3665,7 +3665,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -3686,7 +3686,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -3703,7 +3703,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -3728,7 +3728,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -3749,7 +3749,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -3774,7 +3774,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -3795,7 +3795,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -3816,7 +3816,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -4462,7 +4462,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -4483,7 +4483,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -4500,7 +4500,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -4525,7 +4525,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -4546,7 +4546,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -4571,7 +4571,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -4592,7 +4592,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -4613,7 +4613,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -5259,7 +5259,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -5280,7 +5280,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -5297,7 +5297,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -5322,7 +5322,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -5343,7 +5343,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -5368,7 +5368,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -5389,7 +5389,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -5410,7 +5410,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -6054,7 +6054,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -6075,7 +6075,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -6092,7 +6092,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -6117,7 +6117,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -6138,7 +6138,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -6163,7 +6163,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -6184,7 +6184,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -6205,7 +6205,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -6849,7 +6849,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -6870,7 +6870,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -6887,7 +6887,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -6912,7 +6912,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -6933,7 +6933,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -6958,7 +6958,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -6979,7 +6979,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -7000,7 +7000,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -7644,7 +7644,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -7665,7 +7665,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -7682,7 +7682,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -7707,7 +7707,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -7728,7 +7728,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -7753,7 +7753,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -7774,7 +7774,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -7795,7 +7795,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -8269,7 +8269,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -8290,7 +8290,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -8311,7 +8311,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -8337,7 +8337,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -8362,7 +8362,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -8387,7 +8387,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -8412,7 +8412,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -8437,7 +8437,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -8919,7 +8919,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -8940,7 +8940,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -8961,7 +8961,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -8987,7 +8987,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -9012,7 +9012,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -9037,7 +9037,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -9062,7 +9062,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -9087,7 +9087,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -9569,7 +9569,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -9590,7 +9590,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -9611,7 +9611,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -9637,7 +9637,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -9662,7 +9662,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -9687,7 +9687,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -9712,7 +9712,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -9737,7 +9737,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -10219,7 +10219,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -10240,7 +10240,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -10261,7 +10261,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -10287,7 +10287,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -10312,7 +10312,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -10337,7 +10337,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -10362,7 +10362,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -10387,7 +10387,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -10869,7 +10869,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -10890,7 +10890,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -10911,7 +10911,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -10937,7 +10937,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -10962,7 +10962,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -10987,7 +10987,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -11012,7 +11012,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -11037,7 +11037,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -11519,7 +11519,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -11540,7 +11540,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -11561,7 +11561,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -11587,7 +11587,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -11612,7 +11612,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -11637,7 +11637,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -11662,7 +11662,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -11687,7 +11687,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -12169,7 +12169,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -12190,7 +12190,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -12211,7 +12211,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -12237,7 +12237,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -12262,7 +12262,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -12287,7 +12287,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -12312,7 +12312,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -12337,7 +12337,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -12819,7 +12819,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pršut",
@@ -12840,7 +12840,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pršut",
@@ -12861,7 +12861,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Ćevapi",
@@ -12887,7 +12887,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Grilled Cheese",
@@ -12912,7 +12912,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Caprese Salad",
@@ -12937,7 +12937,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Burek",
@@ -12962,7 +12962,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Fritule",
@@ -12987,7 +12987,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Grilled Octopus",
@@ -13767,7 +13767,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -13792,7 +13792,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -13817,7 +13817,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -13842,7 +13842,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -13867,7 +13867,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -13888,7 +13888,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -13913,7 +13913,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -13938,7 +13938,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -14712,7 +14712,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -14737,7 +14737,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -14762,7 +14762,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -14787,7 +14787,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -14812,7 +14812,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -14833,7 +14833,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -14858,7 +14858,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -14883,7 +14883,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -15677,7 +15677,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -15702,7 +15702,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -15727,7 +15727,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -15752,7 +15752,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -15777,7 +15777,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -15798,7 +15798,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -15823,7 +15823,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -15848,7 +15848,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -16627,7 +16627,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -16652,7 +16652,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -16677,7 +16677,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -16702,7 +16702,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -16727,7 +16727,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -16748,7 +16748,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -16773,7 +16773,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -16798,7 +16798,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -17572,7 +17572,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -17597,7 +17597,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -17622,7 +17622,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -17647,7 +17647,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -17672,7 +17672,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -17693,7 +17693,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -17718,7 +17718,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -17743,7 +17743,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -18517,7 +18517,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -18542,7 +18542,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -18567,7 +18567,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -18592,7 +18592,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -18617,7 +18617,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -18638,7 +18638,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -18663,7 +18663,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -18688,7 +18688,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -19462,7 +19462,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -19487,7 +19487,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -19512,7 +19512,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -19537,7 +19537,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -19562,7 +19562,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -19583,7 +19583,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -19608,7 +19608,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -19633,7 +19633,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -20407,7 +20407,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -20432,7 +20432,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -20457,7 +20457,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -20482,7 +20482,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -20507,7 +20507,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -20528,7 +20528,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -20553,7 +20553,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -20578,7 +20578,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -21352,7 +21352,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -21377,7 +21377,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -21402,7 +21402,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -21427,7 +21427,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -21452,7 +21452,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -21473,7 +21473,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -21498,7 +21498,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -21523,7 +21523,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -22297,7 +22297,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -22322,7 +22322,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -22347,7 +22347,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -22372,7 +22372,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -22397,7 +22397,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -22418,7 +22418,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -22443,7 +22443,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -22468,7 +22468,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -23242,7 +23242,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Puff Puff",
@@ -23267,7 +23267,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Chibom",
@@ -23292,7 +23292,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Spring Rolls",
@@ -23317,7 +23317,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Jollof Balls",
@@ -23342,7 +23342,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             { name: "Akara", description: "Deep-fried bean cakes", price: 3.0 },
             {
@@ -23363,7 +23363,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Fried Yam",
@@ -23388,7 +23388,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Plantain Chips",
@@ -23413,7 +23413,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Tomato Soup",
@@ -23764,7 +23764,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -23789,7 +23789,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -23814,7 +23814,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -23835,7 +23835,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -23856,7 +23856,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -23877,7 +23877,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -23898,7 +23898,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -23923,7 +23923,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -24262,7 +24262,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -24287,7 +24287,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -24312,7 +24312,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -24333,7 +24333,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -24354,7 +24354,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -24375,7 +24375,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -24396,7 +24396,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -24421,7 +24421,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -24760,7 +24760,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -24785,7 +24785,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -24810,7 +24810,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -24831,7 +24831,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -24852,7 +24852,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -24873,7 +24873,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -24894,7 +24894,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -24919,7 +24919,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -25258,7 +25258,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -25283,7 +25283,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -25308,7 +25308,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -25329,7 +25329,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -25350,7 +25350,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -25371,7 +25371,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -25392,7 +25392,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -25416,9 +25416,8 @@ export const restaurants = [
             },
           ],
         },
-
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -25757,7 +25756,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -25782,7 +25781,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -25807,7 +25806,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -25828,7 +25827,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -25849,7 +25848,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -25870,7 +25869,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -25891,7 +25890,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -25916,7 +25915,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -26255,7 +26254,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -26280,7 +26279,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -26305,7 +26304,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -26326,7 +26325,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -26347,7 +26346,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -26368,7 +26367,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -26389,7 +26388,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -26414,7 +26413,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -26753,7 +26752,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Fërgesë",
@@ -26778,7 +26777,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Fli",
@@ -26803,7 +26802,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Meze Platter",
@@ -26824,7 +26823,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             { name: "Petulla", description: "Fried dough", price: 3.0 },
             {
@@ -26845,7 +26844,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Kofte të Vogla",
@@ -26866,7 +26865,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Sallatë e Freskët",
@@ -26887,7 +26886,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Sallatë Me Qepë dhe Feta",
@@ -26912,7 +26911,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Sallatë e Lajthive",
@@ -27304,7 +27303,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -27325,7 +27324,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -27350,7 +27349,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -27375,7 +27374,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -27401,7 +27400,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -27426,7 +27425,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -27451,7 +27450,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -27476,7 +27475,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -27894,7 +27893,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -27915,7 +27914,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -27940,7 +27939,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -27965,7 +27964,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -27991,7 +27990,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -28016,7 +28015,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -28041,7 +28040,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -28066,7 +28065,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -28484,7 +28483,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -28505,7 +28504,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -28530,7 +28529,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -28555,7 +28554,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -28581,7 +28580,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -28606,7 +28605,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -28631,7 +28630,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -28656,7 +28655,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -29074,7 +29073,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -29095,7 +29094,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -29120,7 +29119,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -29145,7 +29144,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -29171,7 +29170,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -29196,7 +29195,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -29221,7 +29220,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -29246,7 +29245,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -29664,7 +29663,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -29685,7 +29684,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -29710,7 +29709,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -29735,7 +29734,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -29761,7 +29760,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -29786,7 +29785,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -29811,7 +29810,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -29836,7 +29835,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -30254,7 +30253,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -30275,7 +30274,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -30300,7 +30299,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -30325,7 +30324,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -30351,7 +30350,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -30376,7 +30375,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -30401,7 +30400,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -30426,7 +30425,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -30844,7 +30843,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -30865,7 +30864,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -30890,7 +30889,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -30915,7 +30914,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -30941,7 +30940,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -30966,7 +30965,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -30991,7 +30990,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -31016,7 +31015,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -31434,7 +31433,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Minestrone Soup",
@@ -31455,7 +31454,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Bruschetta",
@@ -31480,7 +31479,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Caprese Salad",
@@ -31505,7 +31504,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Bruschetta al Pomodoro",
@@ -31531,7 +31530,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Calamari Fritti",
@@ -31556,7 +31555,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Olive Ascolane",
@@ -31581,7 +31580,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Carpaccio di Manzo",
@@ -31606,7 +31605,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Crostini Toscani",
@@ -32024,7 +32023,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -32049,7 +32048,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -32070,7 +32069,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -32095,7 +32094,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -32120,7 +32119,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -32145,7 +32144,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -32166,7 +32165,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -32187,7 +32186,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -32605,7 +32604,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -32630,7 +32629,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -32651,7 +32650,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -32676,7 +32675,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -32701,7 +32700,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -32726,7 +32725,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -32747,7 +32746,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -32768,7 +32767,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -33186,7 +33185,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -33211,7 +33210,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -33232,7 +33231,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -33257,7 +33256,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -33282,7 +33281,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -33307,7 +33306,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -33328,7 +33327,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -33349,7 +33348,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -33767,7 +33766,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -33792,7 +33791,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -33813,7 +33812,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -33838,7 +33837,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -33863,7 +33862,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -33888,7 +33887,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -33909,7 +33908,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -33930,7 +33929,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -34348,7 +34347,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -34373,7 +34372,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -34394,7 +34393,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -34419,7 +34418,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -34444,7 +34443,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -34469,7 +34468,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -34490,7 +34489,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -34511,7 +34510,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -34929,7 +34928,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -34954,7 +34953,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -34975,7 +34974,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -35000,7 +34999,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -35025,7 +35024,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -35050,7 +35049,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -35071,7 +35070,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -35092,7 +35091,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -35510,7 +35509,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -35535,7 +35534,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -35556,7 +35555,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -35581,7 +35580,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -35606,7 +35605,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -35631,7 +35630,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -35652,7 +35651,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -35673,7 +35672,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -36091,7 +36090,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Salade Verte",
@@ -36116,7 +36115,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Soupe de Poisson",
@@ -36137,7 +36136,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Madeleines",
@@ -36162,7 +36161,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salade Verte",
@@ -36187,7 +36186,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Amuse Bouche",
@@ -36212,7 +36211,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Tartelette aux Tomates",
@@ -36233,7 +36232,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salade Verte",
@@ -36254,7 +36253,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pain Perdu",
@@ -36622,7 +36621,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -36647,7 +36646,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -36672,7 +36671,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -36697,7 +36696,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -36722,7 +36721,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -36743,7 +36742,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -36768,7 +36767,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -36793,7 +36792,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -36818,7 +36817,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -36843,7 +36842,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -37211,7 +37210,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37236,7 +37235,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -37261,7 +37260,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -37286,7 +37285,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -37311,7 +37310,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -37332,7 +37331,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37357,7 +37356,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -37382,7 +37381,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37407,7 +37406,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -37432,7 +37431,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -37800,7 +37799,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37825,7 +37824,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -37850,7 +37849,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -37875,7 +37874,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -37900,7 +37899,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -37921,7 +37920,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37946,7 +37945,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -37971,7 +37970,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -37996,7 +37995,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -38021,7 +38020,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -38389,7 +38388,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -38414,7 +38413,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -38439,7 +38438,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -38464,7 +38463,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -38489,7 +38488,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -38510,7 +38509,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -38535,7 +38534,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -38560,7 +38559,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -38585,7 +38584,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -38610,7 +38609,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -38978,7 +38977,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39003,7 +39002,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -39028,7 +39027,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -39053,7 +39052,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -39078,7 +39077,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -39099,7 +39098,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39124,7 +39123,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -39149,7 +39148,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39174,7 +39173,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -39199,7 +39198,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -39567,7 +39566,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39592,7 +39591,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -39617,7 +39616,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -39642,7 +39641,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -39667,7 +39666,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -39688,7 +39687,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39713,7 +39712,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -39738,7 +39737,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -39763,7 +39762,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -39788,7 +39787,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -40156,7 +40155,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40181,7 +40180,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -40206,7 +40205,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -40231,7 +40230,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -40256,7 +40255,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -40277,7 +40276,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40302,7 +40301,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -40327,7 +40326,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40352,7 +40351,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -40377,7 +40376,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -40745,7 +40744,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40770,7 +40769,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -40795,7 +40794,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -40820,7 +40819,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -40845,7 +40844,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -40866,7 +40865,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40891,7 +40890,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -40916,7 +40915,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -40941,7 +40940,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -40966,7 +40965,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -41334,7 +41333,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -41359,7 +41358,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -41384,7 +41383,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -41409,7 +41408,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -41434,7 +41433,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -41455,7 +41454,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -41480,7 +41479,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -41505,7 +41504,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -41530,7 +41529,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -41555,7 +41554,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -41923,7 +41922,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -41948,7 +41947,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Patlıcan Salatası",
@@ -41973,7 +41972,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Zeytinyağlı Enginar",
@@ -41998,7 +41997,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Fava",
@@ -42023,7 +42022,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Baba Ghanoush",
@@ -42044,7 +42043,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -42069,7 +42068,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Çiğ Köfte",
@@ -42094,7 +42093,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Mercimek Çorbası",
@@ -42119,7 +42118,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 9",
           items: [
             {
               name: "Patlıcan Ezmesi",
@@ -42144,7 +42143,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 10",
           items: [
             {
               name: "Zeytinyağlı Yaprak Sarma",
@@ -42354,7 +42353,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -42379,7 +42378,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -42404,7 +42403,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -42429,7 +42428,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -42455,7 +42454,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -42480,7 +42479,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -42506,7 +42505,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -42531,7 +42530,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -42741,7 +42740,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -42766,7 +42765,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -42791,7 +42790,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -42816,7 +42815,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -42842,7 +42841,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -42867,7 +42866,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -42893,7 +42892,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -42918,7 +42917,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43128,7 +43127,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43153,7 +43152,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -43178,7 +43177,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -43203,7 +43202,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -43229,7 +43228,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -43254,7 +43253,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -43280,7 +43279,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -43305,7 +43304,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43515,7 +43514,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43540,7 +43539,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -43565,7 +43564,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -43590,7 +43589,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -43616,7 +43615,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -43641,7 +43640,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -43667,7 +43666,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -43692,7 +43691,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43902,7 +43901,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -43927,7 +43926,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -43952,7 +43951,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -43977,7 +43976,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -44003,7 +44002,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -44028,7 +44027,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -44054,7 +44053,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -44079,7 +44078,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -44289,7 +44288,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -44314,7 +44313,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -44339,7 +44338,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -44364,7 +44363,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -44390,7 +44389,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -44415,7 +44414,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -44441,7 +44440,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -44466,7 +44465,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -44676,7 +44675,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -44701,7 +44700,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -44726,7 +44725,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -44751,7 +44750,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -44777,7 +44776,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -44802,7 +44801,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -44828,7 +44827,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -44853,7 +44852,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
@@ -45063,7 +45062,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             {
               name: "Pickled Vegetables",
@@ -45088,7 +45087,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Salo",
@@ -45113,7 +45112,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Borscht",
@@ -45138,7 +45137,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Salo",
@@ -45164,7 +45163,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Borscht",
@@ -45189,7 +45188,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Varenyky",
@@ -45215,7 +45214,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Salo",
@@ -45240,7 +45239,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             {
               name: "Pickled Vegetables",
