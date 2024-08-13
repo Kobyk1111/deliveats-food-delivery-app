@@ -439,7 +439,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -460,7 +460,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -477,7 +477,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -502,7 +502,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -523,7 +523,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -548,7 +548,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -569,7 +569,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -590,7 +590,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -1274,7 +1274,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -1295,7 +1295,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -1312,7 +1312,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -1337,7 +1337,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -1358,7 +1358,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -1383,7 +1383,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -1404,7 +1404,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -1425,7 +1425,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
@@ -2071,7 +2071,7 @@ export const restaurants = [
     promotionalInfo: {
       currentOffers: [
         {
-          category: "20 menu",
+          category: "20 menu - 1",
           items: [
             { name: "Coxinha", description: "Chicken croquettes", price: 3.0 },
             {
@@ -2092,7 +2092,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 2",
           items: [
             {
               name: "Pão de Queijo",
@@ -2109,7 +2109,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 3",
           items: [
             {
               name: "Biscoito de Polvilho",
@@ -2134,7 +2134,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 4",
           items: [
             {
               name: "Tábua de Frios",
@@ -2155,7 +2155,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 5",
           items: [
             {
               name: "Ovo de Codorna",
@@ -2180,7 +2180,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 6",
           items: [
             {
               name: "Mandioca Frita",
@@ -2201,7 +2201,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 7",
           items: [
             {
               name: "Polenta Frita",
@@ -2222,7 +2222,7 @@ export const restaurants = [
           ],
         },
         {
-          category: "20 menu",
+          category: "20 menu - 8",
           items: [
             { name: "Bolinho de Carne", description: "Meatballs", price: 3.0 },
             {
