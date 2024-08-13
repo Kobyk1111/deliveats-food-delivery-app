@@ -9,6 +9,7 @@ import {
   faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
 
+
 import "../style/Settings.css";
 
 function Settings() {

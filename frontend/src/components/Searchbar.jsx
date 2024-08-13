@@ -73,7 +73,7 @@ import { DataContext } from "../contexts/DataContext";
 import "../style/Searchbar.css";
 
 function Searchbar({ className }) {
-  const { setRestaurants } = useContext(DataContext);
+  const { restaurants, setRestaurants } = useContext(DataContext);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
@@ -123,12 +123,15 @@ function Searchbar({ className }) {
             />
             <button className="search-button">Search</button>
           </form>
-          <div className="cities-keywords-greet">
-        <p>We are proud to offer our services in <b>Berlin</b>, <b>Düsseldorf</b>, <b>Hannover</b> and <b>Leipzig</b>.</p>
-        <p>Search and find your next meal among <strong>Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish</strong> and <strong>Ukrainian</strong> restaurants.</p>
-
-        </div>
-         {/*  <p>Search and find your next meal among Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish and Ukrainian restaurants.</p> */}
+          {restaurants.length === 0 && (
+            <div className="cities-keywords-greet">
+            <p>We are proud to offer our services in <b>Berlin</b>, <b>Düsseldorf</b>, <b>Hannover</b> and <b>Leipzig</b>.</p>
+            <p>Search and find your next meal among <b>Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish</b> and <b>Ukrainian</b> restaurants.</p>
+    
+            </div>
+          )}
+          
+         
         </div>
         
       </div>
