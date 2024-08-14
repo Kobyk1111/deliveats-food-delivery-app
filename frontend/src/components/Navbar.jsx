@@ -54,6 +54,7 @@ function Navbar() {
     <>
       <nav>
         <h1 onClick={() => navigate("/")}>DelivEats</h1>
+       
         <div className="basket-and-register-container">
           {loggedInUser ? (
             <div className="user-info" ref={dropdownRef}>

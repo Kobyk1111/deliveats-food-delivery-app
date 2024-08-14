@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect /* useState */ } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import { BasketContext } from "../contexts/BasketContext";
+import { useSwipeable } from "react-swipeable";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Basket from "../components/Basket";
@@ -100,6 +101,11 @@ function RestaurantMenu() {
   //   }
   // }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => console.log("Swiped Left"),
+    onSwipedRight: () => console.log("Swiped Right"),
+  });
+
   console.log(restaurant);
   return (
     <>
@@ -127,56 +133,70 @@ function RestaurantMenu() {
               </div>
             ) : null}
             <div className="restaurant-info">
-              <div>
-                <h1 className="restaurant-name">
-                  {restaurant.basicInfo.businessName}
-                </h1>
-                <p className="restaurant-address">
-                  {restaurant.basicInfo.address.street},{" "}
-                  {restaurant.basicInfo.address.postalCode},{" "}
-                  {restaurant.basicInfo.address.city}
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://img.freepik.com/premium-vector/vector-design-dinner-icon-style_1134108-28645.jpg?w=1060"
-                  alt=""
-                  width={80}
-                />
-              </div>
+              <h1 className="restaurant-name">
+                {restaurant.basicInfo.venueName}
+              </h1>
+              <p className="restaurant-address">
+                {restaurant.basicInfo.address.street},{" "}
+                {restaurant.basicInfo.address.postalCode},{" "}
+                {restaurant.basicInfo.address.city}
+              </p>
             </div>
 
             <div className="menu-offers">
-              <div className="current-offers">
-                <h2>Current Offers</h2>
+              {/* <h2>Current Offers</h2> */}
+              <div className="current-offers" {...handlers}>
                 {restaurant?.promotionalInfo?.currentOffers?.map(
-                  (offer, index) => (
-                    <div key={index} className="offer-category">
-                      <h3>{offer.category}</h3>
-                      <div className="offer-items">
-                        {offer.items.map((item) => (
-                          <div key={item._id} className="offer-item-card">
-                            <div className="offer-details">
+                  (offer, index) => {
+                    const totalOfferPrice = offer.items.reduce(
+                      (total, item) => total + item.price,
+                      0
+                    );
+
+                    // Get the names of all items in the offer
+                    const itemNames = offer.items
+                      .map((item) => item.name)
+                      .join(", ");
+
+                    const offerCategoryMenu = {
+                      _id: offer._id,
+                      name: offer.category,
+                      description: itemNames,
+                      price: totalOfferPrice,
+                      items: offer.items,
+                    };
+
+                    return (
+                      <div key={index} className="offer-category">
+                        <h3>{offer.category}</h3>
+                        <div className="offer-items">
+                          {offer.items.map((item) => (
+                            <div key={item._id} className="offer-item-card">
                               <div>
                                 <p className="offer-name">{item.name}</p>
                                 <p className="offer-description">
                                   {item.description}
                                 </p>
+                              </div>
+                              <div>
                                 <p className="offer-price">€{item.price}</p>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
+                        <div className="offer-total-price">
+                          <p>Offer: €{totalOfferPrice}</p>
+                          <button
+                            className="offer-add-button"
+                            onClick={() => addItemToBasket(offerCategoryMenu)}
+                          >
+                            Add
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  )
+                    );
+                  }
                 )}
-                <button
-                  className="add-button"
-                  onClick={() => addItemToBasket(food)}
-                >
-                  Add
-                </button>
               </div>
             </div>
 
@@ -211,15 +231,6 @@ function RestaurantMenu() {
                       </div>
                     ))}
                   </div>
-                  {/* <div className="item-actions">
-                    {item.items.map((food) => (
-                      <>
-                        <button className="add-button" onClick={() => addItemToBasket(food)}>
-                          Add
-                        </button>
-                      </>
-                    ))}
-                  </div> */}
                 </div>
               ))}
             </div>

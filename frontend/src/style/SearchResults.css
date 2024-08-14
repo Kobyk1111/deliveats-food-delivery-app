@@ -1,74 +1,5 @@
 /* SearchResults.css */
 
-/* .search-results-page {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 20vh 1fr 26.2rem;
-}
-
-.cards-results-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 3rem 4rem;
-  margin-bottom: 3rem;
-}
-
-.card-results {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 70%;
-  margin: 0 auto;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.restaurant-card {
-  display: flex;
-  gap: 1rem;
-}
-.restaurant-image img {
-  border-radius: 8px;
-} */
-
-/* .card-results:hover {
-  background-color: #f1f1f1;
-} */
-
-/* .card-title-results {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: bold;
-} */
-
-/* .details-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-} */
-
-/* .rating-container {
-  display: flex;
-  align-items: center;
-  font-size: 1em;
-  color: #ffa500;
-} */
-
-/* .price-level {
-  font-size: 1em;
-  color: #666;
-} */
-
-/* .open-status {
-  font-size: 1em;
-  font-weight: bold;
-} */
-
 /* Container for the search results page */
 .search-results-page {
   display: flex;
@@ -86,28 +17,6 @@
   width: 90%;
   max-width: 800px;
 
-  .restaurant-image {
-    height: 150px;
-  }
-
-  .restaurant-image img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
-  }
-
-  .restaurant-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .restaurant-info h1 {
-    padding: 1rem;
-    width: 100%;
-  }
-
-  /* Individual card styling */
   .card-results {
     background: #fff;
     border-radius: 12px;
@@ -124,11 +33,36 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
+  .restaurant-image {
+    height: 200px;
+  }
+
+  .restaurant-image img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+
+  .restaurant-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .restaurant-info h1 {
+    padding: 1rem;
+    width: 100%;
+  }
+
   /* Restaurant card details */
   .restaurant-card {
     padding: 1rem;
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
+  }
+
+  .restaurant-card .restaurant-details {
+    min-width: 40%;
   }
 
   .restaurant-card small {
@@ -136,20 +70,25 @@
     font-size: 14px;
   }
 
-  .restaurant-currentOffers div {
+  .restaurant-current-offers div {
     font-size: 18px;
     font-weight: 600;
   }
 
-  .restaurant-currentOffers ul {
+  .restaurant-current-offers ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
-  .restaurant-currentOffers li {
-    background: #f0f4f8;
-    padding: 6px 12px;
+  .restaurant-current-offers li {
+    background-color:var(--color-4);
+    padding: 4px 10px;
     margin: 0;
     border-radius: 8px;
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
+    /* flex: 1 1 100px; */
+    text-align: center;
   }
 }

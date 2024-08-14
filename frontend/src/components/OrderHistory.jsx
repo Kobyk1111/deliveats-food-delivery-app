@@ -57,7 +57,7 @@ function OrderHistory() {
   return (
     <>
       <div className="order-history-container">
-        {userOrderHistory.length === 0 ? (
+        {userOrderHistory?.length === 0 ? (
           <h2 className="no-history-info">You have no order history at the moment</h2>
         ) : (
           <>
@@ -65,7 +65,7 @@ function OrderHistory() {
               Delete All
             </button>
             <div className="orders-container">
-              {userOrderHistory.map((order) => {
+              {userOrderHistory?.map((order) => {
                 const date = new Date(order.createdAt);
                 const formattedDate = isNaN(date.getTime())
                   ? "Invalid Date"
