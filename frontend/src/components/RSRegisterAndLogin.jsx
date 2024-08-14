@@ -241,14 +241,20 @@ function RSRegisterAndLogin() {
                 </label>
                 <label className="form-label">
                   City
-                  <input
-                    type="text"
+                  <select
                     name="basicInfo.address.city"
                     value={loginInputs.basicInfo.address.city}
                     onChange={handleChange}
                     required
-                    className="form-input"
-                  />
+                  >
+                    <option disabled value="">
+                      Choose City
+                    </option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Düsseldorf">Düsseldorf</option>
+                    <option value="Hannover">Hannover</option>
+                    <option value="Leipzig">Leipzig</option>
+                  </select>
                 </label>
               </div>
               <div className="form-items-line">
@@ -299,15 +305,8 @@ function RSRegisterAndLogin() {
                 required
                 className="form-input password-input"
               />
-              <span
-                className="password-toggle-icon"
-                onClick={togglePasswordVisibility}
-              >
-                {showPassword ? (
-                  <FontAwesomeIcon icon={faEyeSlash} />
-                ) : (
-                  <FontAwesomeIcon icon={faEye} />
-                )}
+              <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
+                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
               </span>
             </div>
           </label>
@@ -320,10 +319,7 @@ function RSRegisterAndLogin() {
                 required
                 className="form-checkbox"
               />
-              <span
-                className="terms-of-use-span"
-                style={{ whiteSpace: "pre-wrap" }}
-              >
+              <span className="terms-of-use-span" style={{ whiteSpace: "pre-wrap" }}>
                 {" "}
                 I agree to the Terms of Use.
               </span>
@@ -331,14 +327,8 @@ function RSRegisterAndLogin() {
           )}
 
           <div className="buttons-container">
-            <button className="submit-button">
-              {isToRegisterRestaurant ? "Register" : "Login"}
-            </button>
-            <button
-              type="button"
-              className="cancel-button"
-              onClick={() => setToggleRegisterOrLoginRestaurant(false)}
-            >
+            <button className="submit-button">{isToRegisterRestaurant ? "Register" : "Login"}</button>
+            <button type="button" className="cancel-button" onClick={() => setToggleRegisterOrLoginRestaurant(false)}>
               Cancel
             </button>
           </div>

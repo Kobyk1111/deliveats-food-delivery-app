@@ -62,6 +62,19 @@
   font-size: 14px;
 }
 
+.rs-register-login-page .form-label select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #eee2e2;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.rs-register-login-page .form-label select:focus {
+  border-color: #266241;
+  outline: none;
+}
+
 .rs-register-login-page .form-input {
   padding: 8px;
   margin-top: 5px;

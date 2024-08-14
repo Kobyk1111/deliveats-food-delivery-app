@@ -1,7 +1,7 @@
 import "../style/RSProfile.css";
 import { useContext, useRef, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RSProfile() {
   const {
@@ -34,7 +34,7 @@ function RSProfile() {
   const imageInput = useRef(null);
   // const editedImageInput = useRef(null);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Handle input changes
   const handleInputChange = (section, field, value) => {
@@ -167,7 +167,7 @@ function RSProfile() {
           alert(message);
           setLoggedInRestaurant(null);
           setToggleRegisterOrLoginRestaurant(false);
-          // navigate("/rs-register");
+          navigate("/rs-register");
         } else {
           const { error } = await response.json();
           throw new Error(error.message);

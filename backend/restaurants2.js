@@ -608,8 +608,7 @@ export const restaurants = [
         },
       ],
 
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -1262,10 +1261,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.brasilgourmet.de/photos/restaurant1.jpg",
-        "https://www.brasilgourmet.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.brasilgourmet.de/photos/restaurant1.jpg", "https://www.brasilgourmet.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/brasilgourmet",
         instagram: "http://www.instagram.com/brasilgourmet",
@@ -1442,8 +1438,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -2239,8 +2234,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -2856,10 +2850,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.cariocagrill.de/photos/restaurant1.jpg",
-        "https://www.cariocagrill.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.cariocagrill.de/photos/restaurant1.jpg", "https://www.cariocagrill.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/cariocagrill",
         instagram: "http://www.instagram.com/cariocagrill",
@@ -3036,8 +3027,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -3833,8 +3823,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -4450,10 +4439,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.acarajeandco.de/photos/restaurant1.jpg",
-        "https://www.acarajeandco.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.acarajeandco.de/photos/restaurant1.jpg", "https://www.acarajeandco.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/acarajeandco",
         instagram: "http://www.instagram.com/acarajeandco",
@@ -4630,8 +4616,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -5427,8 +5412,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -6222,8 +6206,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -6837,10 +6820,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.cafedobrasil.de/photos/restaurant1.jpg",
-        "https://www.cafedobrasil.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.cafedobrasil.de/photos/restaurant1.jpg", "https://www.cafedobrasil.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/cafedobrasil",
         instagram: "http://www.instagram.com/cafedobrasil",
@@ -7017,8 +6997,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -7632,10 +7611,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.sabordobrasil.de/photos/restaurant1.jpg",
-        "https://www.sabordobrasil.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.sabordobrasil.de/photos/restaurant1.jpg", "https://www.sabordobrasil.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/sabordobrasil",
         instagram: "http://www.instagram.com/sabordobrasil",
@@ -7812,8 +7788,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -7966,8 +7941,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -8257,10 +8231,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.zagreb-bistro.de/photos/restaurant1.jpg",
-        "https://www.zagreb-bistro.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.zagreb-bistro.de/photos/restaurant1.jpg", "https://www.zagreb-bistro.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/zagreb-bistro",
         instagram: "http://www.instagram.com/zagreb-bistro",
@@ -8320,8 +8291,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -8462,8 +8432,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -8616,8 +8585,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -8970,8 +8938,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -9112,8 +9079,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -9266,8 +9232,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -9620,8 +9585,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -9762,8 +9726,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -9916,8 +9879,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -10270,8 +10232,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -10412,8 +10373,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -10566,8 +10526,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -10857,10 +10816,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.osijek-oasis.de/photos/restaurant1.jpg",
-        "https://www.osijek-oasis.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.osijek-oasis.de/photos/restaurant1.jpg", "https://www.osijek-oasis.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/osijek-oasis",
         instagram: "http://www.instagram.com/osijek-oasis",
@@ -10920,8 +10876,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -11062,8 +11017,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -11216,8 +11170,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -11507,10 +11460,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.pulaplate.de/photos/restaurant1.jpg",
-        "https://www.pulaplate.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.pulaplate.de/photos/restaurant1.jpg", "https://www.pulaplate.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/pulaplate",
         instagram: "http://www.instagram.com/pulaplate",
@@ -11570,8 +11520,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -11712,8 +11661,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -11866,8 +11814,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -12220,8 +12167,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -12362,8 +12308,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -12516,8 +12461,7 @@ export const restaurants = [
           },
           {
             name: "Peka",
-            description:
-              "Traditional slow-cooked dish with meat and vegetables",
+            description: "Traditional slow-cooked dish with meat and vegetables",
             price: 15.0,
           },
           {
@@ -12807,10 +12751,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.zagrebzest.de/photos/restaurant1.jpg",
-        "https://www.zagrebzest.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.zagrebzest.de/photos/restaurant1.jpg", "https://www.zagrebzest.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/zagrebzest",
         instagram: "http://www.instagram.com/zagrebzest",
@@ -12870,8 +12811,7 @@ export const restaurants = [
             },
             {
               name: "Peka",
-              description:
-                "Traditional slow-cooked dish with meat and vegetables",
+              description: "Traditional slow-cooked dish with meat and vegetables",
               price: 11.0,
             },
             {
@@ -13012,8 +12952,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -13755,10 +13694,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.accradelight.de/photos/restaurant1.jpg",
-        "https://www.accradelight.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.accradelight.de/photos/restaurant1.jpg", "https://www.accradelight.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/accradelight",
         instagram: "http://www.instagram.com/accradelight",
@@ -13963,8 +13899,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -14700,10 +14635,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.accradelight.de/photos/restaurant1.jpg",
-        "https://www.accradelight.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.accradelight.de/photos/restaurant1.jpg", "https://www.accradelight.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/accradelight",
         instagram: "http://www.instagram.com/accradelight",
@@ -14908,8 +14840,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -15665,10 +15596,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanataste.de/photos/restaurant2.jpg",
-        "https://www.ghanataste.de/photos/dish2.jpg",
-      ],
+      photos: ["https://www.ghanataste.de/photos/restaurant2.jpg", "https://www.ghanataste.de/photos/dish2.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanataste",
         instagram: "http://www.instagram.com/ghanataste",
@@ -15873,8 +15801,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
+      loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
   },
   {
@@ -16615,10 +16542,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanagourmet.de/photos/restaurant3.jpg",
-        "https://www.ghanagourmet.de/photos/dish3.jpg",
-      ],
+      photos: ["https://www.ghanagourmet.de/photos/restaurant3.jpg", "https://www.ghanagourmet.de/photos/dish3.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanagourmet",
         instagram: "http://www.instagram.com/ghanagourmet",
@@ -16823,8 +16747,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
   },
   {
@@ -17560,10 +17483,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.accrabistro.de/photos/restaurant4.jpg",
-        "https://www.accrabistro.de/photos/dish4.jpg",
-      ],
+      photos: ["https://www.accrabistro.de/photos/restaurant4.jpg", "https://www.accrabistro.de/photos/dish4.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/accrabistro",
         instagram: "http://www.instagram.com/accrabistro",
@@ -17768,8 +17688,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -18505,10 +18424,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanaflavors.de/photos/restaurant5.jpg",
-        "https://www.ghanaflavors.de/photos/dish5.jpg",
-      ],
+      photos: ["https://www.ghanaflavors.de/photos/restaurant5.jpg", "https://www.ghanaflavors.de/photos/dish5.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanaflavors",
         instagram: "http://www.instagram.com/ghanaflavors",
@@ -18713,8 +18629,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
+      loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
   },
   {
@@ -19658,8 +19573,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -20395,10 +20309,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.kumasikitchen.de/photos/restaurant7.jpg",
-        "https://www.kumasikitchen.de/photos/dish7.jpg",
-      ],
+      photos: ["https://www.kumasikitchen.de/photos/restaurant7.jpg", "https://www.kumasikitchen.de/photos/dish7.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/kumasikitchen",
         instagram: "http://www.instagram.com/kumasikitchen",
@@ -20603,8 +20514,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €10 discount.",
     },
   },
   {
@@ -21340,10 +21250,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanagrill.de/photos/restaurant8.jpg",
-        "https://www.ghanagrill.de/photos/dish8.jpg",
-      ],
+      photos: ["https://www.ghanagrill.de/photos/restaurant8.jpg", "https://www.ghanagrill.de/photos/dish8.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanagrill",
         instagram: "http://www.instagram.com/ghanagrill",
@@ -21548,8 +21455,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -22285,10 +22191,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanasavory.de/photos/restaurant9.jpg",
-        "https://www.ghanasavory.de/photos/dish9.jpg",
-      ],
+      photos: ["https://www.ghanasavory.de/photos/restaurant9.jpg", "https://www.ghanasavory.de/photos/dish9.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanasavory",
         instagram: "http://www.instagram.com/ghanasavory",
@@ -22493,8 +22396,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
+      loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €10 discount.",
     },
   },
   {
@@ -23230,10 +23132,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ghanafeast.de/photos/restaurant10.jpg",
-        "https://www.ghanafeast.de/photos/dish10.jpg",
-      ],
+      photos: ["https://www.ghanafeast.de/photos/restaurant10.jpg", "https://www.ghanafeast.de/photos/dish10.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ghanafeast",
         instagram: "http://www.instagram.com/ghanafeast",
@@ -23438,8 +23337,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €12 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -23936,8 +23834,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -24434,8 +24331,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -24932,8 +24828,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -25430,8 +25325,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €15 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -25928,8 +25822,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -26426,8 +26319,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -26924,8 +26816,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €20 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -27237,8 +27128,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -27393,8 +27283,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -27500,8 +27389,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -27828,8 +27716,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -27881,10 +27768,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.trattoriaroma.de/photos/restaurant2.jpg",
-        "https://www.trattoriaroma.de/photos/dish2.jpg",
-      ],
+      photos: ["https://www.trattoriaroma.de/photos/restaurant2.jpg", "https://www.trattoriaroma.de/photos/dish2.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/trattoriaroma",
         instagram: "http://www.instagram.com/trattoriaroma",
@@ -27983,8 +27867,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -28090,8 +27973,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -28418,8 +28300,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -28471,10 +28352,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.osteriaamici.de/photos/restaurant3.jpg",
-        "https://www.osteriaamici.de/photos/dish3.jpg",
-      ],
+      photos: ["https://www.osteriaamici.de/photos/restaurant3.jpg", "https://www.osteriaamici.de/photos/dish3.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/osteriaamici",
         instagram: "http://www.instagram.com/osteriaamici",
@@ -28573,8 +28451,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -28680,8 +28557,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -29008,8 +28884,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -29061,10 +28936,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.ilgusto.de/photos/restaurant4.jpg",
-        "https://www.ilgusto.de/photos/dish4.jpg",
-      ],
+      photos: ["https://www.ilgusto.de/photos/restaurant4.jpg", "https://www.ilgusto.de/photos/dish4.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/ilgusto",
         instagram: "http://www.instagram.com/ilgusto",
@@ -29163,8 +29035,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -29270,8 +29141,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -29598,8 +29468,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -29753,8 +29622,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -29860,8 +29728,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -30188,8 +30055,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -30343,8 +30209,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -30450,8 +30315,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -30778,8 +30642,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -30933,8 +30796,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -31040,8 +30902,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -31368,8 +31229,7 @@ export const restaurants = [
           },
           {
             name: "Negroni",
-            description:
-              "Classic Italian cocktail with gin, vermouth, and Campari",
+            description: "Classic Italian cocktail with gin, vermouth, and Campari",
             price: 6.5,
           },
           {
@@ -31523,8 +31383,7 @@ export const restaurants = [
             },
             {
               name: "Negroni",
-              description:
-                "Classic Italian cocktail with gin, vermouth, and Campari",
+              description: "Classic Italian cocktail with gin, vermouth, and Campari",
               price: 3.0,
             },
           ],
@@ -31630,8 +31489,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -32211,8 +32069,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -32792,8 +32649,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -33173,10 +33029,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.cafedeflore.de/photos/restaurant3.jpg",
-        "https://www.cafedeflore.de/photos/dish3.jpg",
-      ],
+      photos: ["https://www.cafedeflore.de/photos/restaurant3.jpg", "https://www.cafedeflore.de/photos/dish3.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/cafedeflore",
         instagram: "http://www.instagram.com/cafedeflore",
@@ -33373,8 +33226,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -33954,8 +33806,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -34535,8 +34386,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -34916,10 +34766,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.chezmarcel.de/photos/restaurant6.jpg",
-        "https://www.chezmarcel.de/photos/dish6.jpg",
-      ],
+      photos: ["https://www.chezmarcel.de/photos/restaurant6.jpg", "https://www.chezmarcel.de/photos/dish6.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/chezmarcel",
         instagram: "http://www.instagram.com/chezmarcel",
@@ -35116,8 +34963,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -35497,10 +35343,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.lebistrolyon.de/photos/restaurant7.jpg",
-        "https://www.lebistrolyon.de/photos/dish7.jpg",
-      ],
+      photos: ["https://www.lebistrolyon.de/photos/restaurant7.jpg", "https://www.lebistrolyon.de/photos/dish7.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/lebistrolyon",
         instagram: "http://www.instagram.com/lebistrolyon",
@@ -35697,8 +35540,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -36278,8 +36120,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -36351,8 +36192,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -36609,10 +36449,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.sultansfeast.de/photos/restaurant1.jpg",
-        "https://www.sultansfeast.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.sultansfeast.de/photos/restaurant1.jpg", "https://www.sultansfeast.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/sultansfeast",
         instagram: "http://www.instagram.com/sultansfeast",
@@ -36867,8 +36704,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -36940,8 +36776,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -37456,8 +37291,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -37529,8 +37363,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -37787,10 +37620,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.bosporusgrill.de/photos/restaurant3.jpg",
-        "https://www.bosporusgrill.de/photos/dish3.jpg",
-      ],
+      photos: ["https://www.bosporusgrill.de/photos/restaurant3.jpg", "https://www.bosporusgrill.de/photos/dish3.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/bosporusgrill",
         instagram: "http://www.instagram.com/bosporusgrill",
@@ -38045,8 +37875,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -38118,8 +37947,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -38634,8 +38462,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -38707,8 +38534,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -38965,10 +38791,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.kapadokya.de/photos/restaurant5.jpg",
-        "https://www.kapadokya.de/photos/dish5.jpg",
-      ],
+      photos: ["https://www.kapadokya.de/photos/restaurant5.jpg", "https://www.kapadokya.de/photos/dish5.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/kapadokya",
         instagram: "http://www.instagram.com/kapadokya",
@@ -39223,8 +39046,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -39296,8 +39118,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -39812,8 +39633,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -39885,8 +39705,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -40143,10 +39962,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.antepsofrasi.de/photos/restaurant7.jpg",
-        "https://www.antepsofrasi.de/photos/dish7.jpg",
-      ],
+      photos: ["https://www.antepsofrasi.de/photos/restaurant7.jpg", "https://www.antepsofrasi.de/photos/dish7.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/antepsofrasi",
         instagram: "http://www.instagram.com/antepsofrasi",
@@ -40401,8 +40217,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -40474,8 +40289,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -40990,8 +40804,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -41063,8 +40876,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -41321,10 +41133,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.pamukkale.de/photos/restaurant9.jpg",
-        "https://www.pamukkale.de/photos/dish9.jpg",
-      ],
+      photos: ["https://www.pamukkale.de/photos/restaurant9.jpg", "https://www.pamukkale.de/photos/dish9.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/pamukkale",
         instagram: "http://www.instagram.com/pamukkale",
@@ -41579,8 +41388,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -41652,8 +41460,7 @@ export const restaurants = [
           },
           {
             name: "Çoban Salatası",
-            description:
-              "Shepherd's salad with tomatoes, cucumbers, and peppers",
+            description: "Shepherd's salad with tomatoes, cucumbers, and peppers",
             price: 5.0,
           },
           {
@@ -42168,8 +41975,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -42341,10 +42147,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.kyivtable.de/photos/restaurant1.jpg",
-        "https://www.kyivtable.de/photos/dish1.jpg",
-      ],
+      photos: ["https://www.kyivtable.de/photos/restaurant1.jpg", "https://www.kyivtable.de/photos/dish1.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/kyivtable",
         instagram: "http://www.instagram.com/kyivtable",
@@ -42437,8 +42240,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -42483,8 +42285,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -42555,8 +42356,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -42728,10 +42528,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.lvivhouse.de/photos/restaurant2.jpg",
-        "https://www.lvivhouse.de/photos/dish2.jpg",
-      ],
+      photos: ["https://www.lvivhouse.de/photos/restaurant2.jpg", "https://www.lvivhouse.de/photos/dish2.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/lvivhouse",
         instagram: "http://www.instagram.com/lvivhouse",
@@ -42824,8 +42621,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -42870,8 +42666,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -42942,8 +42737,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -43211,8 +43005,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -43257,8 +43050,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -43329,8 +43121,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -43598,8 +43389,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -43644,8 +43434,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -43716,8 +43505,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -43889,10 +43677,7 @@ export const restaurants = [
       },
     ],
     digitalPresence: {
-      photos: [
-        "https://www.dniprodelight.de/photos/restaurant5.jpg",
-        "https://www.dniprodelight.de/photos/dish5.jpg",
-      ],
+      photos: ["https://www.dniprodelight.de/photos/restaurant5.jpg", "https://www.dniprodelight.de/photos/dish5.jpg"],
       socialMedia: {
         facebook: "http://www.facebook.com/dniprodelight",
         instagram: "http://www.instagram.com/dniprodelight",
@@ -43985,8 +43770,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -44031,8 +43815,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -44103,8 +43886,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -44372,8 +44154,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -44418,8 +44199,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -44490,8 +44270,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -44759,8 +44538,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -44805,8 +44583,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -44877,8 +44654,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
   {
@@ -45146,8 +44922,7 @@ export const restaurants = [
             },
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and cheese",
+              description: "Ukrainian dumplings filled with potatoes and cheese",
               price: 11.0,
             },
             {
@@ -45192,8 +44967,7 @@ export const restaurants = [
           items: [
             {
               name: "Varenyky",
-              description:
-                "Ukrainian dumplings filled with potatoes and mushrooms",
+              description: "Ukrainian dumplings filled with potatoes and mushrooms",
               price: 3.0,
             },
             {
@@ -45264,8 +45038,7 @@ export const restaurants = [
           ],
         },
       ],
-      loyaltyPrograms:
-        "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
+      loyaltyPrograms: "Earn 1 point for every €10 spent. Redeem 50 points for a €5 discount.",
     },
   },
 ];

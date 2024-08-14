@@ -3,45 +3,53 @@ import createHttpError from "http-errors";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+//* Function to register a new user
 export async function registerUser(req, res, next) {
   const { firstName, lastName, email, password } = req.body;
 
+  // Validate that all required fields are provided
   if (!firstName || !lastName || !email || !password) {
     return next(createHttpError(400, "All fields are required"));
   }
 
   try {
-    const foundUser = await User.findOne({ firstName, lastName, email });
+    const foundUser = await User.findOne({ firstName, lastName, email }); // Check if a user with the same name and email already exists
 
+    // If the user does not exist, proceed to register a new user
     if (!foundUser) {
-      const hashedPassword = await bcrypt.hash(password, 10);
+      const hashedPassword = await bcrypt.hash(password, 10); // Hash the user's password for secure storage
 
+      // Create a new user with the hashed password and provided details
       const newUser = await User.create({ firstName, lastName, email, password: hashedPassword });
 
+      // Populate the user's order history (initially empty) before returning the response
       await newUser.populate("orderHistory");
 
+      // Generate access and refresh tokens for the newly registered user
       const accessToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
       const refreshToken = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
 
       const cookieOptions = {
-        httpOnly: true,
-        secure: true,
-        sameSite: "Strict",
+        httpOnly: true, // Prevent client-side access to cookies
+        secure: true, // Ensure cookies are sent over HTTPS only
+        sameSite: "Strict", // Prevent cross-site request forgery (CSRF)
       };
 
       const accessOptions = {
         ...cookieOptions,
-        maxAge: 1000 * 60 * 15,
+        maxAge: 1000 * 60 * 15, // 15-minute expiration for access token
       };
 
       const refreshOptions = {
         ...cookieOptions,
-        maxAge: 1000 * 60 * 60 * 24,
+        maxAge: 1000 * 60 * 60 * 24, // 24-hour expiration for refresh token
       };
 
+      // Set the access and refresh tokens as cookies in the response
       res.cookie("accessCookie", accessToken, accessOptions);
       res.cookie("refreshCookie", refreshToken, refreshOptions);
 
+      // Return the newly registered user's details in the response
       res.status(201).json({
         id: newUser._id,
         firstName: newUser.firstName,
@@ -51,7 +59,7 @@ export async function registerUser(req, res, next) {
         addresses: newUser.addresses,
       });
     } else {
-      return next(createHttpError(409, "User already exists"));
+      return next(createHttpError(409, "User already exists")); // If the user already exists, return a conflict error
     }
   } catch (error) {
     console.error("Registration error:", error);
@@ -59,43 +67,52 @@ export async function registerUser(req, res, next) {
   }
 }
 
+//* Function to log in an existing user
 export async function loginUser(req, res, next) {
   const { email, password } = req.body;
 
   try {
-    const foundUser = await User.findOne({ email });
+    const foundUser = await User.findOne({ email }); // Look for a user with the provided email address
 
+    // If user is found, compare the provided password with the stored hashed password
     if (foundUser) {
       const matchPasswords = await bcrypt.compare(password, foundUser.password);
 
+      // If passwords don't match, return an error
       if (!matchPasswords) {
         return next(createHttpError(400, "Wrong Password, please try again!"));
       }
 
+      // Populate the user's order history before returning the response
       await foundUser.populate("orderHistory");
 
+      // Generate access and refresh tokens for the logged-in user
       const accessToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "15m" });
       const refreshToken = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
 
+      // Define secure cookie options for storing the tokens in the user's browser
       const cookieOptions = {
         httpOnly: true,
         secure: true,
         sameSite: "Strict",
       };
 
+      // Set expiration options for access and refresh cookies
       const accessOptions = {
         ...cookieOptions,
-        maxAge: 1000 * 60 * 15,
+        maxAge: 1000 * 60 * 15, // 15-minute expiration
       };
 
       const refreshOptions = {
         ...cookieOptions,
-        maxAge: 1000 * 60 * 60 * 24,
+        maxAge: 1000 * 60 * 60 * 24, // 24-hour expiration
       };
 
+      // Set the access and refresh tokens as cookies in the response
       res.cookie("accessCookie", accessToken, accessOptions);
       res.cookie("refreshCookie", refreshToken, refreshOptions);
 
+      // Return the logged-in user's details in the response
       res.json({
         id: foundUser._id,
         firstName: foundUser.firstName,
@@ -105,6 +122,7 @@ export async function loginUser(req, res, next) {
         addresses: foundUser.addresses,
       });
     } else {
+      // If no user is found with the provided email, return a not found error
       return next(createHttpError(404, "No user found"));
     }
   } catch (error) {
@@ -113,16 +131,21 @@ export async function loginUser(req, res, next) {
   }
 }
 
+//* Function to check authentication of the user
 export async function checkAuthentication(req, res, next) {
   try {
+    // Find the user by their ID from the request object
     const user = await User.findById(req.user._id);
 
+    // If no user is found, return an authentication error
     if (!user) {
       return next(400, createHttpError("User not found, Authentication failed! Please login."));
     }
 
+    // Populate the user's order history before returning the response
     await user.populate("orderHistory");
 
+    // Return the authenticated user's details in the response
     res.json({
       id: user._id,
       firstName: user.firstName,
@@ -134,20 +157,24 @@ export async function checkAuthentication(req, res, next) {
   }
 }
 
+//* Function to update the user details
 export async function updateUser(req, res, next) {
   const { firstName, lastName, email, password } = req.body;
   const { userId } = req.params;
 
   try {
-    const user = await User.findById(userId);
+    const user = await User.findById(userId); // Find the user by their ID
+
+    // If the user is found, proceed with the update
     if (user) {
-      const hashedPassword = await bcrypt.hash(password, 10);
+      const hashedPassword = await bcrypt.hash(password, 10); // Hash the new password before updating
 
       const options = {
         new: true,
         runValidators: true,
       };
 
+      // Update the user's details with the provided data
       const updatedUser = await User.findByIdAndUpdate(
         userId,
         {
@@ -159,8 +186,10 @@ export async function updateUser(req, res, next) {
         options
       );
 
+      // Populate the user's order history before returning the response
       await updatedUser.populate("orderHistory");
 
+      // Return the updated user's details in the response
       res.status(201).json({
         id: updatedUser._id,
         firstName: updatedUser.firstName,
@@ -169,7 +198,7 @@ export async function updateUser(req, res, next) {
         message: `User updated successfully`,
       });
     } else {
-      return next(createHttpError(404, "User not found"));
+      return next(createHttpError(404, "User not found")); // If the user is not found, return a not found error
     }
   } catch (error) {
     console.error(error);
