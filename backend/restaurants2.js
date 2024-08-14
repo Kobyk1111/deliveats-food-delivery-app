@@ -23461,7 +23461,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -23958,7 +23958,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -24455,7 +24455,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -24952,7 +24952,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -25449,7 +25449,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -25946,7 +25946,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {
@@ -26443,7 +26443,7 @@ export const restaurants = [
             description: "Roasted potatoes",
             price: 4.5,
           },
-          { nam: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
+          { name: "Keke i Pjekur", description: "Baked cake", price: 5.0 },
         ],
       },
       {

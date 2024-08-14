@@ -3,12 +3,14 @@ const contactSchema = new Schema({
   email: { type: String, required: true },
   phoneNumber: { type: String, required: true },
 });
+
 const addressSchema = new Schema({
   street: { type: String, required: true },
   city: { type: String, required: true },
   state: { type: String, required: true },
   postalCode: { type: String, required: true },
 });
+
 const daysSchema = new Schema({
   monday: { type: String, default: "" },
   tuesday: { type: String, default: "" },
@@ -18,6 +20,7 @@ const daysSchema = new Schema({
   saturday: { type: String, default: "" },
   sunday: { type: String, default: "" },
 });
+
 const defaultDays = {
   monday: "",
   tuesday: "",
@@ -27,6 +30,7 @@ const defaultDays = {
   saturday: "",
   sunday: "",
 };
+
 const basicInfoSchema = new Schema({
   businessName: { type: String, required: true },
   businessId: { type: String, required: true },
@@ -41,6 +45,7 @@ const basicInfoSchema = new Schema({
   contact: { type: contactSchema, required: true },
   address: { type: addressSchema, required: true },
 });
+
 const menuItemSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
@@ -51,10 +56,12 @@ const menuItemSchema = new Schema({
       "https://img.freepik.com/free-vectortakeaway-packages-3d-vector-illustration-coffee-soda-cup-burger-fast-food-packs-from-restaurant-cartoon-style-isolated-white-background-fast-food-shop-menu-concept_778687-647.jpg?t=st=1722929708~exp=1722933308~hmac=69f1d3bbaaf8599aa23efb9000feb41a49ed194639a6708d5b43e0c1e14031fa&w=1060",
   },
 });
+
 const menuCategorySchema = new Schema({
   category: { type: String, required: true },
   items: { type: [menuItemSchema], required: true },
 });
+
 const digitalPresenceSchema = new Schema({
   photos: { type: [String], required: true, default: [] },
   socialMedia: {
@@ -62,28 +69,34 @@ const digitalPresenceSchema = new Schema({
     instagram: { type: String, required: true, default: "Social" },
   },
 });
+
 const offerSchema = new Schema({
   category: { type: String, required: true, default: "No category" },
   items: { type: [menuItemSchema], required: true, default: [] },
 });
+
 const promotionalInfoSchema = new Schema({
   currentOffers: { type: [offerSchema], required: true, default: [] },
   loyaltyPrograms: { type: String, required: true, default: "no loyalty program" },
 });
+
 const orderItemsSchema = new Schema({
   itemName: { type: String, required: true },
   price: { type: Number, required: true },
   quantity: { type: Number, required: true },
   description: { type: String, required: true },
 });
+
 const paymentDetailsSchema = new Schema({
   paymentMethod: { type: String, required: true },
   chargedAmount: { type: Number, required: true },
 });
+
 const additionalInfoSchema = new Schema({
   orderType: { type: String, required: true },
   orderStatus: { type: String, required: true },
 });
+
 const historySchema = new Schema(
   {
     restaurantName: { type: String, default: "No information" },
@@ -107,6 +120,7 @@ const historySchema = new Schema(
   },
   { timestamps: true }
 );
+
 const searchedRestaurantsSchema = new Schema({
   restaurantId: { type: Schema.Types.ObjectId, ref: "Restaurant", required: true },
   basicInfo: { type: basicInfoSchema, required: true },
@@ -135,5 +149,7 @@ const searchedRestaurantsSchema = new Schema({
   },
   orderHistory: { type: [historySchema], default: [] },
 });
+
 const SearchedRestaurant = model("SearchedRestaurant", searchedRestaurantsSchema);
+
 export default SearchedRestaurant;
