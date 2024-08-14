@@ -90,7 +90,10 @@ function Searchbar({ className }) {
         credentials: "include",
       };
 
-      const response = await fetch("http://localhost:5002/search/restaurants", settings);
+      const response = await fetch(
+        "http://localhost:5002/search/restaurants",
+        settings
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -117,23 +120,26 @@ function Searchbar({ className }) {
               className="search-input"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-
               placeholder="eg. Brazilian Berlin"
-
             />
             <button className="search-button">Search</button>
           </form>
-          {restaurants.length === 0 && (
-            <div className="cities-keywords-greet">
-            <p>We are proud to offer our services in <b>Berlin</b>, <b>Düsseldorf</b>, <b>Hannover</b> and <b>Leipzig</b>.</p>
-            <p>Search and find your next meal among <b>Albanian, Brazilian, Croatian, French, Ghanaian, Italian, Turkish</b> and <b>Ukrainian</b> restaurants.</p>
-    
-            </div>
-          )}
-          
-         
+
+          <div className="cities-keywords-greet">
+            <p className="black">
+              We are proud to offer our services in <b>Berlin</b>,{" "}
+              <b>Düsseldorf</b>, <b>Hannover</b> and <b>Leipzig</b>.
+            </p>
+            <p className="black">
+              Search and find your next meal among{" "}
+              <b>
+                Albanian, Brazilian, Croatian, French, Ghanaian, Italian,
+                Turkish
+              </b>{" "}
+              and <b>Ukrainian</b> restaurants.
+            </p>
+          </div>
         </div>
-        
       </div>
     </>
   );
