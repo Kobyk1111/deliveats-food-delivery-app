@@ -18,7 +18,13 @@ socket.on("connect_error", (err) => {
 });
 
 function RSOrdersActive() {
-  const { loggedInRestaurant, setLoggedInRestaurant, getRestaurantOrderHistory } = useContext(DataContext);
+  const {
+    loggedInRestaurant,
+    setLoggedInRestaurant,
+    getRestaurantOrderHistory,
+    orderCounts,
+    updateOrderCounts,
+  } = useContext(DataContext);
   const [orderStatuses, setOrderStatuses] = useState({});
   const [statusTimestamps, setStatusTimestamps] = useState({});
 
@@ -49,41 +55,52 @@ function RSOrdersActive() {
         console.log("Received newOrder update:", updatedRestaurant);
       });
 
-      socket.on("orderStatusUpdated", ({ updatedOrderId, status, timestamp }) => {
-        if (updatedOrderId) {
-          setOrderStatuses((prev) => ({
-            ...prev,
-            [updatedOrderId]: status,
-          }));
-          setStatusTimestamps((prev) => ({
-            ...prev,
-            [updatedOrderId]: {
-              ...prev[updatedOrderId],
-              [status]: formatTimestamp(timestamp),
-            },
-          }));
-          setLoggedInRestaurant((prev) => {
-            const updatedActiveOrders = prev.activeOrders.map((order) =>
-              order.order._id === updatedOrderId ? { ...order, orderStatus: status, statusTimestamp: timestamp } : order
-            );
-            return { ...prev, activeOrders: updatedActiveOrders };
-          });
+      socket.on(
+        "orderStatusUpdated",
+        ({ updatedOrderId, status, timestamp }) => {
+          if (updatedOrderId) {
+            setOrderStatuses((prev) => ({
+              ...prev,
+              [updatedOrderId]: status,
+            }));
+            setStatusTimestamps((prev) => ({
+              ...prev,
+              [updatedOrderId]: {
+                ...prev[updatedOrderId],
+                [status]: formatTimestamp(timestamp),
+              },
+            }));
+            setLoggedInRestaurant((prev) => {
+              const updatedActiveOrders = prev.activeOrders.map((order) =>
+                order.order._id === updatedOrderId
+                  ? {
+                      ...order,
+                      orderStatus: status,
+                      statusTimestamp: timestamp,
+                    }
+                  : order
+              );
+              return { ...prev, activeOrders: updatedActiveOrders };
+            });
 
-          if (status === "Delivery Completed") {
-            alert(
-              "Order has been delivered successfully and no longer an active order. Order will be moved to order history now!"
-            );
-            getRestaurantOrderHistory();
+            updateOrderCounts();
+
+            if (status === "Delivery Completed") {
+              alert(
+                "Order has been delivered successfully and no longer an active order. Order will be moved to order history now!"
+              );
+              getRestaurantOrderHistory();
+            }
           }
         }
-      });
+      );
 
       return () => {
         socket.off("newOrder");
         socket.off("orderStatusUpdated");
       };
     }
-  }, [loggedInRestaurant?._id, setLoggedInRestaurant]);
+  }, [loggedInRestaurant?._id, setLoggedInRestaurant, updateOrderCounts]);
 
   useEffect(() => {
     if (loggedInRestaurant?.activeOrders) {
@@ -93,7 +110,9 @@ function RSOrdersActive() {
         statuses[eachOrder.order._id] = eachOrder.orderStatus;
         timestamps[eachOrder.order._id] = eachOrder.statusTimestamp
           ? {
-              [eachOrder.orderStatus]: formatTimestamp(eachOrder.statusTimestamp),
+              [eachOrder.orderStatus]: formatTimestamp(
+                eachOrder.statusTimestamp
+              ),
             }
           : {};
       });
@@ -104,13 +123,16 @@ function RSOrdersActive() {
 
   const handleStatusUpdate = async (orderId, status) => {
     try {
-      const response = await fetch("http://localhost:5002/restaurants/update-order-status", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ orderId, status }),
-      });
+      const response = await fetch(
+        "http://localhost:5002/restaurants/update-order-status",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ orderId, status }),
+        }
+      );
 
       if (response.ok) {
         const { timestamp } = await response.json();
@@ -129,12 +151,18 @@ function RSOrdersActive() {
 
         setLoggedInRestaurant((prev) => {
           const updatedActiveOrders = prev.activeOrders.map((order) =>
-            order.order._id === orderId ? { ...order, orderStatus: status, statusTimestamp: timestamp } : order
+            order.order._id === orderId
+              ? { ...order, orderStatus: status, statusTimestamp: timestamp }
+              : order
           );
           return { ...prev, activeOrders: updatedActiveOrders };
         });
 
-        console.log(`Updated status for orderId: ${orderId} to status: ${status}`);
+        updateOrderCounts();
+
+        console.log(
+          `Updated status for orderId: ${orderId} to status: ${status}`
+        );
       } else {
         console.error("Failed to update order status");
       }
@@ -186,7 +214,9 @@ function RSOrdersActive() {
   return (
     <div className="rs-orders-active-container">
       {loggedInRestaurant.activeOrders.length === 0 ? (
-        <h2 className="no-active-order-info">You have no active orders at the moment</h2>
+        <h2 className="no-active-order-info">
+          You have no active orders at the moment
+        </h2>
       ) : (
         <>
           {loggedInRestaurant.activeOrders.map((eachOrder) => {
@@ -202,7 +232,9 @@ function RSOrdersActive() {
                   second: "numeric",
                   hour12: true,
                 });
-            const currentStatusOrder = getStatusOrder(orderStatuses[eachOrder.order._id]);
+            const currentStatusOrder = getStatusOrder(
+              orderStatuses[eachOrder.order._id]
+            );
 
             return (
               <div className="cards" key={eachOrder._id}>
@@ -219,13 +251,17 @@ function RSOrdersActive() {
                   <strong>Address:</strong> {eachOrder.customerAddress}
                 </p>
                 <p>
-                  <strong>Items:</strong> {eachOrder.order.items?.map((item) => item.itemName).join(", ")}
+                  <strong>Items:</strong>{" "}
+                  {eachOrder.order.items
+                    ?.map((item) => item.itemName)
+                    .join(", ")}
                 </p>
                 <p>
                   <strong>Payment:</strong> Confirmed
                 </p>
                 <p>
-                  <strong>Delivery Option:</strong> {eachOrder.order.additionalInfo?.orderType}
+                  <strong>Delivery Option:</strong>{" "}
+                  {eachOrder.order.additionalInfo?.orderType}
                 </p>
 
                 <div className="progress">
@@ -236,89 +272,175 @@ function RSOrdersActive() {
                     <li>
                       <button
                         className={
-                          orderStatuses[eachOrder.order._id] === "Order received by the restaurant. ✅" ? "active" : ""
+                          orderStatuses[eachOrder.order._id] ===
+                          "Order received by the restaurant. ✅"
+                            ? "active"
+                            : ""
                         }
-                        onClick={() => handleStatusUpdate(eachOrder.order._id, "Order received by the restaurant. ✅")}
-                        disabled={currentStatusOrder >= getStatusOrder("Order received by the restaurant. ✅")}
+                        onClick={() =>
+                          handleStatusUpdate(
+                            eachOrder.order._id,
+                            "Order received by the restaurant. ✅"
+                          )
+                        }
+                        disabled={
+                          currentStatusOrder >=
+                          getStatusOrder("Order received by the restaurant. ✅")
+                        }
                       >
                         Order received by the restaurant. ✅
                       </button>
                       {statusTimestamps[eachOrder.order._id] &&
-                        statusTimestamps[eachOrder.order._id]["Order received by the restaurant. ✅"] && (
+                        statusTimestamps[eachOrder.order._id][
+                          "Order received by the restaurant. ✅"
+                        ] && (
                           <p className="status-timestamp">
-                            {statusTimestamps[eachOrder.order._id]["Order received by the restaurant. ✅"]}
+                            {
+                              statusTimestamps[eachOrder.order._id][
+                                "Order received by the restaurant. ✅"
+                              ]
+                            }
                           </p>
                         )}
                     </li>
                     <li>
                       <button
-                        className={orderStatuses[eachOrder.order._id] === "Food is being prepared. 🧑‍🍳" ? "active" : ""}
-                        onClick={() => handleStatusUpdate(eachOrder.order._id, "Food is being prepared. 🧑‍🍳")}
-                        disabled={currentStatusOrder >= getStatusOrder("Food is being prepared. 🧑‍🍳")}
+                        className={
+                          orderStatuses[eachOrder.order._id] ===
+                          "Food is being prepared. 🧑‍🍳"
+                            ? "active"
+                            : ""
+                        }
+                        onClick={() =>
+                          handleStatusUpdate(
+                            eachOrder.order._id,
+                            "Food is being prepared. 🧑‍🍳"
+                          )
+                        }
+                        disabled={
+                          currentStatusOrder >=
+                          getStatusOrder("Food is being prepared. 🧑‍🍳")
+                        }
                       >
                         Food is being prepared. 🧑‍🍳
                       </button>
                       {statusTimestamps[eachOrder.order._id] &&
-                        statusTimestamps[eachOrder.order._id]["Food is being prepared. 🧑‍🍳"] && (
+                        statusTimestamps[eachOrder.order._id][
+                          "Food is being prepared. 🧑‍🍳"
+                        ] && (
                           <p className="status-timestamp">
-                            {statusTimestamps[eachOrder.order._id]["Food is being prepared. 🧑‍🍳"]}
+                            {
+                              statusTimestamps[eachOrder.order._id][
+                                "Food is being prepared. 🧑‍🍳"
+                              ]
+                            }
                           </p>
                         )}
                     </li>
                     <li>
                       <button
-                        className={orderStatuses[eachOrder.order._id] === "Food is ready to go! 🍽" ? "active" : ""}
-                        onClick={() => handleStatusUpdate(eachOrder.order._id, "Food is ready to go! 🍽")}
-                        disabled={currentStatusOrder >= getStatusOrder("Food is ready to go! 🍽")}
+                        className={
+                          orderStatuses[eachOrder.order._id] ===
+                          "Food is ready to go! 🍽"
+                            ? "active"
+                            : ""
+                        }
+                        onClick={() =>
+                          handleStatusUpdate(
+                            eachOrder.order._id,
+                            "Food is ready to go! 🍽"
+                          )
+                        }
+                        disabled={
+                          currentStatusOrder >=
+                          getStatusOrder("Food is ready to go! 🍽")
+                        }
                       >
                         Food is ready to go! 🍽
                       </button>
                       {statusTimestamps[eachOrder.order._id] &&
-                        statusTimestamps[eachOrder.order._id]["Food is ready to go! 🍽"] && (
+                        statusTimestamps[eachOrder.order._id][
+                          "Food is ready to go! 🍽"
+                        ] && (
                           <p className="status-timestamp">
-                            {statusTimestamps[eachOrder.order._id]["Food is ready to go! 🍽"]}
+                            {
+                              statusTimestamps[eachOrder.order._id][
+                                "Food is ready to go! 🍽"
+                              ]
+                            }
                           </p>
                         )}
                     </li>
-                    {eachOrder.order.additionalInfo?.orderType === "delivery" && (
+                    {eachOrder.order.additionalInfo?.orderType ===
+                      "delivery" && (
                       <>
                         <li>
                           <button
                             className={
-                              orderStatuses[eachOrder.order._id] === "Your order is on its way. 🚗" ? "active" : ""
+                              orderStatuses[eachOrder.order._id] ===
+                              "Your order is on its way. 🚗"
+                                ? "active"
+                                : ""
                             }
-                            onClick={() => handleStatusUpdate(eachOrder.order._id, "Your order is on its way. 🚗")}
-                            disabled={currentStatusOrder >= getStatusOrder("Your order is on its way. 🚗")}
+                            onClick={() =>
+                              handleStatusUpdate(
+                                eachOrder.order._id,
+                                "Your order is on its way. 🚗"
+                              )
+                            }
+                            disabled={
+                              currentStatusOrder >=
+                              getStatusOrder("Your order is on its way. 🚗")
+                            }
                           >
                             Your order is on its way. 🚗
                           </button>
                           {statusTimestamps[eachOrder.order._id] &&
-                            statusTimestamps[eachOrder.order._id]["Your order is on its way. 🚗"] && (
+                            statusTimestamps[eachOrder.order._id][
+                              "Your order is on its way. 🚗"
+                            ] && (
                               <p className="status-timestamp">
-                                {statusTimestamps[eachOrder.order._id]["Your order is on its way. 🚗"]}
+                                {
+                                  statusTimestamps[eachOrder.order._id][
+                                    "Your order is on its way. 🚗"
+                                  ]
+                                }
                               </p>
                             )}
                         </li>
                         <li>
                           <button
                             className={
-                              orderStatuses[eachOrder.order._id] === "Knock, knock! Your order is at the door. 🛎"
+                              orderStatuses[eachOrder.order._id] ===
+                              "Knock, knock! Your order is at the door. 🛎"
                                 ? "active"
                                 : ""
                             }
                             onClick={() =>
-                              handleStatusUpdate(eachOrder.order._id, "Knock, knock! Your order is at the door. 🛎")
+                              handleStatusUpdate(
+                                eachOrder.order._id,
+                                "Knock, knock! Your order is at the door. 🛎"
+                              )
                             }
                             disabled={
-                              currentStatusOrder >= getStatusOrder("Knock, knock! Your order is at the door. 🛎")
+                              currentStatusOrder >=
+                              getStatusOrder(
+                                "Knock, knock! Your order is at the door. 🛎"
+                              )
                             }
                           >
                             Knock, knock! Your order is at the door. 🛎
                           </button>
                           {statusTimestamps[eachOrder.order._id] &&
-                            statusTimestamps[eachOrder.order._id]["Knock, knock! Your order is at the door. 🛎"] && (
+                            statusTimestamps[eachOrder.order._id][
+                              "Knock, knock! Your order is at the door. 🛎"
+                            ] && (
                               <p className="status-timestamp">
-                                {statusTimestamps[eachOrder.order._id]["Knock, knock! Your order is at the door. 🛎"]}
+                                {
+                                  statusTimestamps[eachOrder.order._id][
+                                    "Knock, knock! Your order is at the door. 🛎"
+                                  ]
+                                }
                               </p>
                             )}
                         </li>
@@ -329,28 +451,44 @@ function RSOrdersActive() {
                         <li>
                           <button
                             className={
-                              orderStatuses[eachOrder.order._id] === "Your order is ready for pickup! 🛍️"
+                              orderStatuses[eachOrder.order._id] ===
+                              "Your order is ready for pickup! 🛍️"
                                 ? "active"
                                 : ""
                             }
                             onClick={() =>
-                              handleStatusUpdate(eachOrder.order._id, "Your order is ready for pickup! 🛍️")
+                              handleStatusUpdate(
+                                eachOrder.order._id,
+                                "Your order is ready for pickup! 🛍️"
+                              )
                             }
-                            disabled={currentStatusOrder >= getStatusOrder("Your order is ready for pickup! 🛍️")}
+                            disabled={
+                              currentStatusOrder >=
+                              getStatusOrder(
+                                "Your order is ready for pickup! 🛍️"
+                              )
+                            }
                           >
                             Your order is ready for pickup! 🛍️
                           </button>
                           {statusTimestamps[eachOrder.order._id] &&
-                            statusTimestamps[eachOrder.order._id]["Your order is ready for pickup! 🛍️"] && (
+                            statusTimestamps[eachOrder.order._id][
+                              "Your order is ready for pickup! 🛍️"
+                            ] && (
                               <p className="status-timestamp">
-                                {statusTimestamps[eachOrder.order._id]["Your order is ready for pickup! 🛍️"]}
+                                {
+                                  statusTimestamps[eachOrder.order._id][
+                                    "Your order is ready for pickup! 🛍️"
+                                  ]
+                                }
                               </p>
                             )}
                         </li>
                         <li>
                           <button
                             className={
-                              orderStatuses[eachOrder.order._id] === "You can now pick up your order at the counter 🏃"
+                              orderStatuses[eachOrder.order._id] ===
+                              "You can now pick up your order at the counter 🏃"
                                 ? "active"
                                 : ""
                             }
@@ -361,7 +499,10 @@ function RSOrdersActive() {
                               )
                             }
                             disabled={
-                              currentStatusOrder >= getStatusOrder("You can now pick up your order at the counter 🏃")
+                              currentStatusOrder >=
+                              getStatusOrder(
+                                "You can now pick up your order at the counter 🏃"
+                              )
                             }
                           >
                             You can now pick up your order at the counter 🏃
@@ -383,16 +524,35 @@ function RSOrdersActive() {
                     )}
                     <li>
                       <button
-                        className={orderStatuses[eachOrder.order._id] === "Delivery Completed" ? "active" : ""}
-                        onClick={() => handleStatusUpdate(eachOrder.order._id, "Delivery Completed")}
-                        disabled={currentStatusOrder >= getStatusOrder("Delivery Completed")}
+                        className={
+                          orderStatuses[eachOrder.order._id] ===
+                          "Delivery Completed"
+                            ? "active"
+                            : ""
+                        }
+                        onClick={() =>
+                          handleStatusUpdate(
+                            eachOrder.order._id,
+                            "Delivery Completed"
+                          )
+                        }
+                        disabled={
+                          currentStatusOrder >=
+                          getStatusOrder("Delivery Completed")
+                        }
                       >
                         Delivery Completed
                       </button>
                       {statusTimestamps[eachOrder.order._id] &&
-                        statusTimestamps[eachOrder.order._id]["Delivery Completed"] && (
+                        statusTimestamps[eachOrder.order._id][
+                          "Delivery Completed"
+                        ] && (
                           <p className="status-timestamp">
-                            {statusTimestamps[eachOrder.order._id]["Delivery Completed"]}
+                            {
+                              statusTimestamps[eachOrder.order._id][
+                                "Delivery Completed"
+                              ]
+                            }
                           </p>
                         )}
                     </li>

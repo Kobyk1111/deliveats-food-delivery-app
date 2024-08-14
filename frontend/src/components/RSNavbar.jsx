@@ -4,11 +4,15 @@ import { DataContext } from "../contexts/DataContext";
 // import RSRegisterAndLogin from "./RSRegisterAndLogin";
 import "../style/RSNavbar.css";
 
-// import RSNavStatus from "./RSNavStatus";
+import RSNavStatus from "./RSNavStatus";
 
 function RSNavbar() {
-  const { loggedInRestaurant, logoutRestaurant, setToggleRegisterOrLoginRestaurant, setIsToRegisterRestaurant } =
-    useContext(DataContext);
+  const {
+    loggedInRestaurant,
+    logoutRestaurant,
+    setToggleRegisterOrLoginRestaurant,
+    setIsToRegisterRestaurant,
+  } = useContext(DataContext);
 
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -46,7 +50,10 @@ function RSNavbar() {
         <div className="buttons-nav">
           {loggedInRestaurant ? (
             <div className="user-info">
-              <span className="welcome-message">Welcome, {loggedInRestaurant.basicInfo.businessName}!</span>
+              <RSNavStatus />
+              <span className="welcome-message">
+                Welcome, {loggedInRestaurant.basicInfo.businessName}!
+              </span>
               <button className="logout-button" onClick={logoutRestaurant}>
                 Logout
               </button>
