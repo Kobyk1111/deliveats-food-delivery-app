@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
+import RegisterAndLogin from "../components/RegisterAndLogin";
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAward } from "@fortawesome/free-solid-svg-icons";
@@ -11,8 +12,7 @@ import Footer from "../components/Footer";
 import "../style/SearchResults.css";
 
 function SearchResults() {
-  const { restaurants, getSearchedRestaurants, setRestaurant } =
-    useContext(DataContext);
+  const { restaurants, getSearchedRestaurants, setRestaurant, toggleRegisterOrLoginUser } = useContext(DataContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,9 +20,7 @@ function SearchResults() {
   }, []);
 
   function handleCardClick(id) {
-    const selectedRestaurant = restaurants.find(
-      (restaurant) => restaurant._id === id
-    );
+    const selectedRestaurant = restaurants.find((restaurant) => restaurant._id === id);
     setRestaurant(selectedRestaurant);
     navigate(`/restaurant/${id}`);
   }
@@ -36,72 +34,56 @@ function SearchResults() {
   return (
     <div className="search-results-page">
       <Navbar />
+      {toggleRegisterOrLoginUser ? (
+        <RegisterAndLogin />
+      ) : (
+        <>
+          <Searchbar className="results-searchbar" />
 
-      <Searchbar className="results-searchbar" />
-
-      <div className="cards-results-container">
-        {restaurants.map((restaurant) => {
-          const todayHours = getTodayHours(restaurant.openAndCloseHours);
-          // const loyaltyProgram = restaurant.promotionalInfo.loyaltyPrograms;
-
-          return (
-
-            <div
-              key={restaurant._id}
-              className="card-results"
-              onClick={() => handleCardClick(restaurant._id)}
-            >
-
-              {" "}
-              <div className="restaurant-image">
-                <img
-                  src={
-                    restaurant.basicInfo.coverImage.startsWith("uploads")
-                      ? `http://localhost:5002/${restaurant.basicInfo.coverImage}`
-                      : restaurant.basicInfo.coverImage
-                  }
-                  alt=""
-                  // width={100}
-                />
-              </div>
-              <div className="restaurant-info">
-                <h1>{restaurant.basicInfo.venueName}</h1>
-                <div className="restaurant-card">
-                  <div className="restaurant-details">
-                    <p>
-                      {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
-                      {restaurant.basicInfo.address.city}
-                    </p>
-                    <small>Today: {todayHours}</small>
+          <div className="cards-results-container">
+            {restaurants.map((restaurant) => {
+              const todayHours = getTodayHours(restaurant.openAndCloseHours);
+              return (
+                <div key={restaurant._id} className="card-results" onClick={() => handleCardClick(restaurant._id)}>
+                  {" "}
+                  <div className="restaurant-image">
+                    <img
+                      src={
+                        restaurant.basicInfo.coverImage.startsWith("uploads")
+                          ? `http://localhost:5002/${restaurant.basicInfo.coverImage}`
+                          : restaurant.basicInfo.coverImage
+                      }
+                      alt=""
+                      // width={100}
+                    />
                   </div>
+                  <div className="restaurant-info">
+                    <h1>{restaurant.basicInfo.venueName}</h1>
+                    <div className="restaurant-card">
+                      <div className="restaurant-details">
+                        <p>
+                          {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
+                          {restaurant.basicInfo.address.city}
+                        </p>
+                        <small>Today: {todayHours}</small>
+                      </div>
 
-
-                  <div className="restaurant-current-offers">
-
-                    <div>Offers</div>
-                    <ul>
-                      {restaurant.promotionalInfo.currentOffers.map((offer, index) => {
-                        return <li key={index}>{offer.category}</li>;
-                      })}
-                    </ul>
-                  </div>
-
-                  {/* Conditional rendering of the text "Loyalty Programs" */}
-                  {/* {loyaltyProgram && loyaltyProgram.trim() !== "" && (
-                    <div className="restaurant-loyaltyPrograms">
-                      Loyalty Program{"   "}
-                      <FontAwesomeIcon
-                        icon={faAward}
-                        style={{ color: "#FFD43B" }}
-                      />
+                      <div className="restaurant-current-offers">
+                        <div>Offers</div>
+                        <ul>
+                          {restaurant.promotionalInfo.currentOffers.map((offer, index) => {
+                            return <li key={index}>{offer.category}</li>;
+                          })}
+                        </ul>
+                      </div>
                     </div>
-                  )} */}
+                  </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+              );
+            })}
+          </div>
+        </>
+      )}
       <Footer />
     </div>
   );

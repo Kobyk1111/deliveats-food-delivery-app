@@ -114,27 +114,6 @@ function RegisterAndLogin() {
   return (
     <div className="register-login-page">
       {isToRegister ? <h2>Register</h2> : <h2>Login</h2>}
-      {/* <div className="button-container">
-        <button
-          className={`toggle-button ${isToRegister === false ? "active" : ""}`}
-          onClick={() => {
-            setIsToRegister(false);
-            // setIsModalOpen(true);
-          }}
-        >
-          Login
-        </button>
-        <button
-          className={`toggle-button ${isToRegister === true ? "active" : ""}`}
-          onClick={() => {
-            setIsToRegister(true);
-            // setIsModalOpen(true);
-          }}
-        >
-          Register
-        </button>
-      </div> */}
-
       {/* <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}> */}
       {isToRegister !== null && (
         <>
@@ -189,7 +168,7 @@ function RegisterAndLogin() {
                   className="form-input password-input"
                 />
                 <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
-                  {showPassword ? <FontAwesomeIcon icon={faEyeSlash}/> : <FontAwesomeIcon icon={faEye}/>}
+                  {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                 </span>
               </div>
             </label>

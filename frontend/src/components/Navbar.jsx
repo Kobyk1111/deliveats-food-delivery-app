@@ -13,8 +13,16 @@ import { faCartShopping, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import "../style/Navbar.css";
 
 function Navbar() {
-  const { loggedInUser, logout, setIsToRegister, setToggleRegisterOrLoginUser, isDropdownOpen, setIsDropdownOpen } =
-    useContext(DataContext);
+  const {
+    loggedInUser,
+    logout,
+    setIsToRegister,
+    setToggleRegisterOrLoginUser,
+    isDropdownOpen,
+    setIsDropdownOpen,
+    setCompletedStages,
+    setCurrentStage,
+  } = useContext(DataContext);
   const { totalItemCount } = useContext(BasketContext);
 
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -50,11 +58,26 @@ function Navbar() {
     };
   }, [dropdownRef]);
 
+  const handleBackToMainPage = () => {
+    // Clear local storage and reset state before navigating
+    localStorage.removeItem("currentStage");
+    localStorage.removeItem("completedStages");
+    localStorage.removeItem("orderId");
+    localStorage.removeItem("purchasedItems");
+    setCurrentStage(0);
+    setCompletedStages([]);
+    // setOrderId(null);
+    setToggleRegisterOrLoginUser(false);
+
+    // Navigate back to the main page
+    navigate("/");
+  };
+
   return (
     <>
       <nav>
-        <h1 onClick={() => navigate("/")}>DelivEats</h1>
-       
+        <h1 onClick={handleBackToMainPage}>DelivEats</h1>
+
         <div className="basket-and-register-container">
           {loggedInUser ? (
             <div className="user-info" ref={dropdownRef}>

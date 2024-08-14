@@ -18,6 +18,18 @@ function DataContextProvider({ children }) {
   const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] = useState(false);
   const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [currentStage, setCurrentStage] = useState(() => {
+    const savedStage = localStorage.getItem("currentStage");
+    return savedStage ? JSON.parse(savedStage) : 0;
+  });
+  const [completedStages, setCompletedStages] = useState(() => {
+    const savedStages = localStorage.getItem("completedStages");
+    return savedStages ? JSON.parse(savedStages) : [];
+  });
+  // const [orderId, setOrderId] = useState(() => {
+  //   const savedOrderId = localStorage.getItem("orderId");
+  //   return savedOrderId || contextOrderId;
+  // });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -239,6 +251,12 @@ function DataContextProvider({ children }) {
         setIsDropdownOpen,
         toggleRegisterOrLoginRestaurant,
         setToggleRegisterOrLoginRestaurant,
+        currentStage,
+        setCurrentStage,
+        completedStages,
+        setCompletedStages,
+        // orderId,
+        // setOrderId,
       }}
     >
       {children}
