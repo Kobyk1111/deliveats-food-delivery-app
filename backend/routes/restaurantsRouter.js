@@ -12,6 +12,7 @@ import {
   uploadImage,
   deleteOrder,
   deleteOrderHistory,
+  updateRestaurantOffers,
 } from "../controllers/restaurantsController.js";
 import { authenticateTokenOfRestaurant } from "../middlewares/authenticateToken.js";
 import upload from "../middlewares/multerConfig.js";
@@ -26,6 +27,7 @@ router.post("/login", loginRestaurant);
 router.post("/update/profile/:id/:section", upload.single("image"), updateRestaurant);
 router.post("/update/menu/:id", updateRestaurantMenu);
 router.post("/update-order-status", updateOrderStatus);
+router.post("/update/offers/:id", updateRestaurantOffers);
 router.get("/get-restaurant-order-history/:id", getRestaurantOrderHistory);
 router.delete("/deleteRestaurantAccount/:id", deleteRestaurantAccount);
 router.post("/upload-image", upload.single("image"), uploadImage);

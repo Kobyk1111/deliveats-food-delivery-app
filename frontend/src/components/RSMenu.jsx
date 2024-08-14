@@ -5,6 +5,7 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 import { FaSquarePlus } from "react-icons/fa6";
 import { FaSquareMinus } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
+import RSOffers from "./RSOffers";
 
 function RSMenu() {
   const { loggedInRestaurant, setLoggedInRestaurant } = useContext(DataContext);
@@ -24,6 +25,8 @@ function RSMenu() {
   const [image, setImage] = useState("");
   const imageInput = useRef(null);
   const editedImageInput = useRef(null);
+
+  // console.log("new menu data:", newMenuData);
 
   useEffect(() => {
     async function getRestaurant() {
@@ -501,8 +504,6 @@ function RSMenu() {
                         />
                       </label>
                     </div>
-
-                    {/* {editedImage && <img src={editedImage && URL.createObjectURL(editedImage)} width={100} alt="" />} */}
                     <MdOutlineDeleteForever
                       onClick={() => handleDeleteItem(index)}
                       size="2.5rem"
@@ -566,8 +567,6 @@ function RSMenu() {
                         required
                         ref={imageInput}
                       />
-                      {/* {image && <img src={image && URL.createObjectURL(image)} width={100} alt="" />} */}
-
                       <button>Add Item</button>
                     </form>
                   )}
@@ -609,10 +608,7 @@ function RSMenu() {
           </div>
         ))}
 
-        <div>
-          <h3>Promotions Info</h3>
-          <div> Current Offers</div>
-        </div>
+        <RSOffers />
       </>
     </div>
   );

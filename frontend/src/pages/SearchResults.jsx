@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAward } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAward } from "@fortawesome/free-solid-svg-icons";
 
 import "../style/SearchResults.css";
 
@@ -199,9 +199,7 @@ function SearchResults() {
   }
 
   const getTodayHours = (openAndCloseHours) => {
-    const today = new Date()
-      .toLocaleString("en-us", { weekday: "long" })
-      .toLowerCase();
+    const today = new Date().toLocaleString("en-us", { weekday: "long" }).toLowerCase();
     return openAndCloseHours[today];
   };
 
@@ -218,10 +216,8 @@ function SearchResults() {
           // const loyaltyProgram = restaurant.promotionalInfo.loyaltyPrograms;
 
           return (
-
             <div key={restaurant._id} className="card-results" onClick={() => handleCardClick(restaurant._id)}>
               {" "}
-
               <div className="restaurant-image">
                 <img
                   src={
@@ -233,28 +229,23 @@ function SearchResults() {
                   // width={100}
                 />
               </div>
-
               <div className="restaurant-info">
                 <h1>{restaurant.basicInfo.businessName}</h1>
                 <div className="restaurant-card">
                   <div className="restaurant-details">
                     <p>
-                      {restaurant.basicInfo.address.street},{" "}
-                      {restaurant.basicInfo.address.postalCode},{" "}
+                      {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
                       {restaurant.basicInfo.address.city}
                     </p>
                     <small>Today: {todayHours}</small>
                   </div>
 
-
                   <div className="restaurant-currentOffers">
                     <div>Offers</div>
                     <ul>
-                      {restaurant.promotionalInfo.currentOffers.map(
-                        (offer, index) => {
-                          return <li key={index}>{offer.category}</li>;
-                        }
-                      )}
+                      {restaurant.promotionalInfo.currentOffers.map((offer, index) => {
+                        return <li key={index}>{offer.category}</li>;
+                      })}
                     </ul>
                   </div>
 
@@ -268,7 +259,6 @@ function SearchResults() {
                       />
                     </div>
                   )} */}
-
                 </div>
               </div>
             </div>
