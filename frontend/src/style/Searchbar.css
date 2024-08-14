@@ -86,9 +86,12 @@
 
 .results-searchbar {
   background-color: transparent;
-  /* margin-top: 60px; */
+ /*  margin-top: 60px; */
   border-radius: none;
   border: none;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .results-searchbar .search-container {
