@@ -414,12 +414,13 @@ function RSMenu() {
             ))}
             <FaSquarePlus className="add-keywords-icon" size="4rem" onClick={addKeywordsField} />
             <div className="buttons-container">
-              <button onClick={handleSaveKeywords} className="save-keywords-button">
-                Save Keywords
-              </button>
               <button onClick={() => setEditingKeywords(false)} className="cancel-keywords-button">
                 Cancel
               </button>
+              <button onClick={handleSaveKeywords} className="save-keywords-button">
+                Save Keywords
+              </button>
+              
             </div>
           </div>
         ) : (
@@ -573,12 +574,13 @@ function RSMenu() {
                 </div>
 
                 <div className="buttons-container">
-                  <button className="save1-button" onClick={handleSaveClick}>
-                    Save
-                  </button>
                   <button className="cancel1-button" onClick={handleCancelClick}>
                     Cancel
                   </button>
+                  <button className="save1-button" onClick={handleSaveClick}>
+                    Save
+                  </button>
+                  
                 </div>
               </div>
             ) : (
