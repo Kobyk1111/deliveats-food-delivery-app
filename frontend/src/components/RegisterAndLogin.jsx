@@ -210,12 +210,13 @@ function RegisterAndLogin() {
             )}
 
             <div className="buttons-container">
-              <button type="submit" className="submit-button">
-                {isToRegister ? "Register" : "Login"}
-              </button>
               <button type="button" className="cancel-button" onClick={() => setToggleRegisterOrLoginUser(false)}>
                 Cancel
               </button>
+              <button type="submit" className="submit-button">
+                {isToRegister ? "Register" : "Login"}
+              </button>
+              
             </div>
           </form>
           {/* </div> */}

@@ -327,10 +327,11 @@ function RSRegisterAndLogin() {
           )}
 
           <div className="buttons-container">
-            <button className="submit-button">{isToRegisterRestaurant ? "Register" : "Login"}</button>
             <button type="button" className="cancel-button" onClick={() => setToggleRegisterOrLoginRestaurant(false)}>
               Cancel
             </button>
+            <button className="submit-button">{isToRegisterRestaurant ? "Register" : "Login"}</button>
+            
           </div>
         </form>
       )}
