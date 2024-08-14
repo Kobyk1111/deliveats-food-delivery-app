@@ -9,15 +9,28 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
   const [restaurant, setRestaurant] = useState(null);
-  const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
+  const [sessionId, setSessionId] = useState(
+    JSON.parse(localStorage.getItem("sessionId")) || ""
+  );
   const [userOrderHistory, setUserOrderHistory] = useState([]);
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
   const [isToRegister, setIsToRegister] = useState(null);
   const [isToRegisterRestaurant, setIsToRegisterRestaurant] = useState(null);
-  const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] = useState(false);
-  const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] = useState(false);
+  const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] =
+    useState(false);
+  const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] =
+    useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const [orderCounts, setOrderCounts] = useState({
+    received: 0,
+    preparing: 0,
+    ready: 0,
+    delivery: 0,
+    completed: 0,
+  });
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +44,9 @@ function DataContextProvider({ children }) {
   // OrderHistory.jsx and Preferences.jsx
   async function getUserOrderHistory() {
     try {
-      const response = await fetch(`http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`);
+      const response = await fetch(
+        `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
+      );
 
       if (response.ok) {
         const { orderHistory } = await response.json();
@@ -98,7 +113,9 @@ function DataContextProvider({ children }) {
 
   async function getSearchedRestaurants() {
     try {
-      const response = await fetch("http://localhost:5002/search/getRestaurants");
+      const response = await fetch(
+        "http://localhost:5002/search/getRestaurants"
+      );
       if (response.ok) {
         const data = await response.json();
         setRestaurants(data);
@@ -149,7 +166,10 @@ function DataContextProvider({ children }) {
 
       console.log("Access Token has expired");
 
-      const refreshResponse = await fetch("http://localhost:5002/refresh-token", { credentials: "include" });
+      const refreshResponse = await fetch(
+        "http://localhost:5002/refresh-token",
+        { credentials: "include" }
+      );
 
       if (refreshResponse.ok) {
         console.log("New tokens received");
@@ -182,9 +202,12 @@ function DataContextProvider({ children }) {
 
       console.log("Access Token has expired");
 
-      const refreshResponse = await fetch("http://localhost:5002/refresh-token/restaurant-token", {
-        credentials: "include",
-      });
+      const refreshResponse = await fetch(
+        "http://localhost:5002/refresh-token/restaurant-token",
+        {
+          credentials: "include",
+        }
+      );
 
       if (refreshResponse.ok) {
         console.log("New tokens received");
@@ -201,6 +224,47 @@ function DataContextProvider({ children }) {
   function togglePasswordVisibility() {
     setShowPassword(!showPassword);
   }
+
+  const updateOrderCounts = () => {
+    if (loggedInRestaurant?.activeOrders) {
+      const counts = {
+        received: 0,
+        preparing: 0,
+        ready: 0,
+        delivery: 0,
+        completed: 0,
+      };
+
+      loggedInRestaurant.activeOrders.forEach((order) => {
+        switch (order.orderStatus) {
+          case "Order received by the restaurant. ✅":
+            counts.received += 1;
+            break;
+          case "Food is being prepared. 🧑‍🍳":
+            counts.preparing += 1;
+            break;
+          case "Food is ready to go! 🍽":
+            counts.ready += 1;
+            break;
+          case "Your order is on its way. 🚗":
+          case "Knock, knock! Your order is at the door. 🛎":
+            counts.delivery += 1;
+            break;
+          case "Delivery Completed":
+            counts.completed += 1;
+            break;
+          default:
+            break;
+        }
+      });
+
+      setOrderCounts(counts);
+    }
+  };
+
+  useEffect(() => {
+    updateOrderCounts();
+  }, [loggedInRestaurant]);
 
   return (
     <DataContext.Provider
@@ -239,6 +303,9 @@ function DataContextProvider({ children }) {
         setIsDropdownOpen,
         toggleRegisterOrLoginRestaurant,
         setToggleRegisterOrLoginRestaurant,
+        getRestaurantOrderHistory,
+        orderCounts,
+        updateOrderCounts,
       }}
     >
       {children}
