@@ -23,6 +23,20 @@ function DataContextProvider({ children }) {
     useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const [currentStage, setCurrentStage] = useState(() => {
+    const savedStage = localStorage.getItem("currentStage");
+    return savedStage ? JSON.parse(savedStage) : 0;
+  });
+  const [completedStages, setCompletedStages] = useState(() => {
+    const savedStages = localStorage.getItem("completedStages");
+    return savedStages ? JSON.parse(savedStages) : [];
+  });
+  // const [orderId, setOrderId] = useState(() => {
+  //   const savedOrderId = localStorage.getItem("orderId");
+  //   return savedOrderId || contextOrderId;
+  // });
+
+
   const [orderCounts, setOrderCounts] = useState({
     received: 0,
     preparing: 0,
@@ -30,6 +44,7 @@ function DataContextProvider({ children }) {
     delivery: 0,
     completed: 0,
   });
+
 
   const navigate = useNavigate();
 
@@ -303,9 +318,18 @@ function DataContextProvider({ children }) {
         setIsDropdownOpen,
         toggleRegisterOrLoginRestaurant,
         setToggleRegisterOrLoginRestaurant,
+
+        currentStage,
+        setCurrentStage,
+        completedStages,
+        setCompletedStages,
+        // orderId,
+        // setOrderId,
+
         getRestaurantOrderHistory,
         orderCounts,
         updateOrderCounts,
+
       }}
     >
       {children}

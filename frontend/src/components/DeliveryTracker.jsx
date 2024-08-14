@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
 import io from "socket.io-client";
 import "../style/DeliveryTracker.css";
+import { DataContext } from "../contexts/DataContext";
 
 const socket = io.connect("http://localhost:5002", {
   transports: ["websocket"],
@@ -31,14 +32,15 @@ const pickupStages = [
 
 function DeliveryTracker() {
   const { deliveryOption, orderId: contextOrderId } = useContext(BasketContext);
-  const [currentStage, setCurrentStage] = useState(() => {
-    const savedStage = localStorage.getItem("currentStage");
-    return savedStage ? JSON.parse(savedStage) : 0;
-  });
-  const [completedStages, setCompletedStages] = useState(() => {
-    const savedStages = localStorage.getItem("completedStages");
-    return savedStages ? JSON.parse(savedStages) : [];
-  });
+  const { currentStage, setCurrentStage, completedStages, setCompletedStages } = useContext(DataContext);
+  // const [currentStage, setCurrentStage] = useState(() => {
+  //   const savedStage = localStorage.getItem("currentStage");
+  //   return savedStage ? JSON.parse(savedStage) : 0;
+  // });
+  // const [completedStages, setCompletedStages] = useState(() => {
+  //   const savedStages = localStorage.getItem("completedStages");
+  //   return savedStages ? JSON.parse(savedStages) : [];
+  // });
   const [orderId, setOrderId] = useState(() => {
     const savedOrderId = localStorage.getItem("orderId");
     return savedOrderId || contextOrderId;

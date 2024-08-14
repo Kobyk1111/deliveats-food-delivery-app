@@ -6,6 +6,7 @@ import { useSwipeable } from "react-swipeable";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Basket from "../components/Basket";
+import RegisterAndLogin from "../components/RegisterAndLogin";
 // import { FaRegHeart } from "react-icons/fa";
 // import { FaHeart } from "react-icons/fa";
 
@@ -13,13 +14,8 @@ import "../style/RestaurantMenu.css";
 
 function RestaurantMenu() {
   const { id } = useParams();
-  const {
-    restaurants,
-    getSearchedRestaurants,
-    restaurant,
-    setRestaurant,
-    loggedInUser,
-  } = useContext(DataContext);
+  const { restaurants, getSearchedRestaurants, restaurant, setRestaurant, loggedInUser, toggleRegisterOrLoginUser } =
+    useContext(DataContext);
   const { addItemToBasket } = useContext(BasketContext);
   // const [isFavorited, setIsFavorited] = useState(false);
   // const [restaurant, setRestaurant] = useState(null);
@@ -101,6 +97,7 @@ function RestaurantMenu() {
   //   }
   // }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const handlers = useSwipeable({
     onSwipedLeft: () => console.log("Swiped Left"),
     onSwipedRight: () => console.log("Swiped Right"),
@@ -110,12 +107,15 @@ function RestaurantMenu() {
   return (
     <>
       <Navbar />
-      <div className="restaurant-menu-page-container">
-        <div className="main-content">
-          <div className="menu-card">
-            {loggedInUser ? (
-              <div className="favorite-icon-container">
-                {/* {isFavorited ? (
+      {toggleRegisterOrLoginUser ? (
+        <RegisterAndLogin />
+      ) : (
+        <div className="restaurant-menu-page-container">
+          <div className="main-content">
+            <div className="menu-card">
+              {loggedInUser ? (
+                <div className="favorite-icon-container">
+                  {/* {isFavorited ? (
                   <FaHeart
                     size="3rem"
                     color="red"
@@ -130,33 +130,24 @@ function RestaurantMenu() {
                     // onClick={() => handleSetFavoriteRestaurant(restaurant._id)}
                   />
                 )} */}
+                </div>
+              ) : null}
+              <div className="restaurant-info">
+                <h1 className="restaurant-name">{restaurant.basicInfo.venueName}</h1>
+                <p className="restaurant-address">
+                  {restaurant.basicInfo.address.street}, {restaurant.basicInfo.address.postalCode},{" "}
+                  {restaurant.basicInfo.address.city}
+                </p>
               </div>
-            ) : null}
-            <div className="restaurant-info">
-              <h1 className="restaurant-name">
-                {restaurant.basicInfo.venueName}
-              </h1>
-              <p className="restaurant-address">
-                {restaurant.basicInfo.address.street},{" "}
-                {restaurant.basicInfo.address.postalCode},{" "}
-                {restaurant.basicInfo.address.city}
-              </p>
-            </div>
 
-            <div className="menu-offers">
-              {/* <h2>Current Offers</h2> */}
-              <div className="current-offers" {...handlers}>
-                {restaurant?.promotionalInfo?.currentOffers?.map(
-                  (offer, index) => {
-                    const totalOfferPrice = offer.items.reduce(
-                      (total, item) => total + item.price,
-                      0
-                    );
+              <div className="menu-offers">
+                {/* <h2>Current Offers</h2> */}
+                <div className="current-offers" {...handlers}>
+                  {restaurant?.promotionalInfo?.currentOffers?.map((offer, index) => {
+                    const totalOfferPrice = offer.items.reduce((total, item) => total + item.price, 0);
 
                     // Get the names of all items in the offer
-                    const itemNames = offer.items
-                      .map((item) => item.name)
-                      .join(", ");
+                    const itemNames = offer.items.map((item) => item.name).join(", ");
 
                     const offerCategoryMenu = {
                       _id: offer._id,
@@ -174,9 +165,7 @@ function RestaurantMenu() {
                             <div key={item._id} className="offer-item-card">
                               <div>
                                 <p className="offer-name">{item.name}</p>
-                                <p className="offer-description">
-                                  {item.description}
-                                </p>
+                                <p className="offer-description">{item.description}</p>
                               </div>
                               <div>
                                 <p className="offer-price">€{item.price}</p>
@@ -186,58 +175,48 @@ function RestaurantMenu() {
                         </div>
                         <div className="offer-total-price">
                           <p>Offer: €{totalOfferPrice}</p>
-                          <button
-                            className="offer-add-button"
-                            onClick={() => addItemToBasket(offerCategoryMenu)}
-                          >
+                          <button className="offer-add-button" onClick={() => addItemToBasket(offerCategoryMenu)}>
                             Add
                           </button>
                         </div>
                       </div>
                     );
-                  }
-                )}
+                  })}
+                </div>
+              </div>
+
+              <div className="menu-items">
+                {restaurant?.menu?.map((item) => (
+                  <div key={item._id} className="menu-item-card">
+                    <div className="item-info">
+                      <h2>{item.category}</h2>
+                      {item.items.map((food) => (
+                        <div className="item-details" key={food._id}>
+                          <img
+                            src={food.image.startsWith("uploads") ? `http://localhost:5002/${food.image}` : food.image}
+                            alt=""
+                            width={100}
+                          />
+
+                          <div>
+                            <p className="item-name">{food.name}</p>
+                            <p className="item-description">{food.description}</p>
+                            <p className="item-price">€{food.price}</p>
+                          </div>
+                          <button className="add-button" onClick={() => addItemToBasket(food)}>
+                            Add
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-
-            <div className="menu-items">
-              {restaurant?.menu?.map((item) => (
-                <div key={item._id} className="menu-item-card">
-                  <div className="item-info">
-                    <h2>{item.category}</h2>
-                    {item.items.map((food) => (
-                      <div className="item-details" key={food._id}>
-                        <img
-                          src={
-                            food.image.startsWith("uploads")
-                              ? `http://localhost:5002/${food.image}`
-                              : food.image
-                          }
-                          alt=""
-                          width={100}
-                        />
-
-                        <div>
-                          <p className="item-name">{food.name}</p>
-                          <p className="item-description">{food.description}</p>
-                          <p className="item-price">€{food.price}</p>
-                        </div>
-                        <button
-                          className="add-button"
-                          onClick={() => addItemToBasket(food)}
-                        >
-                          Add
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
+          <Basket id={id} />
         </div>
-        <Basket id={id} />
-      </div>
+      )}
 
       <Footer />
     </>

@@ -1,10 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import {
-  Routes,
-  Route,
-  Navigate /* useLocation, useNavigate */,
-} from "react-router-dom";
+import { Routes, Route /* useLocation, useNavigate */ } from /* Navigate */ "react-router-dom";
 import SearchResults from "./pages/SearchResults";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import SuccessPage from "./components/SuccessPage";
@@ -36,7 +32,7 @@ function App() {
   const {
     setLoggedInUser,
     handleHTTPRequestWithToken,
-    loggedInRestaurant,
+    // loggedInRestaurant,
     setLoggedInRestaurant,
     handleHTTPRequestWithTokenRestaurant,
   } = useContext(DataContext);
@@ -45,12 +41,9 @@ function App() {
   useEffect(() => {
     async function checkAuthentication() {
       try {
-        const response = await handleHTTPRequestWithToken(
-          "http://localhost:5002/users/check-auth",
-          {
-            credentials: "include",
-          }
-        );
+        const response = await handleHTTPRequestWithToken("http://localhost:5002/users/check-auth", {
+          credentials: "include",
+        });
 
         if (response.ok) {
           const user = await response.json();
@@ -81,12 +74,9 @@ function App() {
   useEffect(() => {
     async function checkAuthenticationOfRestaurant() {
       try {
-        const response = await handleHTTPRequestWithTokenRestaurant(
-          "http://localhost:5002/restaurants/check-auth",
-          {
-            credentials: "include",
-          }
-        );
+        const response = await handleHTTPRequestWithTokenRestaurant("http://localhost:5002/restaurants/check-auth", {
+          credentials: "include",
+        });
 
         if (response.ok) {
           const restaurant = await response.json();
