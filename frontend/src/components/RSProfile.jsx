@@ -229,12 +229,13 @@ function RSProfile() {
                 />
               </div>
               <div className="buttons-container">
+              <button className="cancel-button" onClick={() => handleCancel("basicInfo")}>
+                  Cancel
+                </button>
                 <button className="save-button" onClick={() => handleSave("basicInfo")}>
                   Save
                 </button>
-                <button className="cancel-button" onClick={() => handleCancel("basicInfo")}>
-                  Cancel
-                </button>
+                
               </div>
             </>
           ) : (
@@ -294,12 +295,13 @@ function RSProfile() {
                 />
               </div>
               <div className="buttons-container">
-                <button className="save-button" onClick={() => handleSave("contact")}>
-                  Save
-                </button>
                 <button className="cancel-button" onClick={() => handleCancel("contact")}>
                   Cancel
                 </button>
+                <button className="save-button" onClick={() => handleSave("contact")}>
+                  Save
+                </button>
+                
               </div>
             </>
           ) : (
@@ -356,12 +358,13 @@ function RSProfile() {
                 />
               </div>
               <div className="buttons-container">
-                <button className="save-button" onClick={() => handleSave("address")}>
-                  Save
-                </button>
                 <button className="cancel-button" onClick={() => handleCancel("address")}>
                   Cancel
                 </button>
+                <button className="save-button" onClick={() => handleSave("address")}>
+                  Save
+                </button>
+                
               </div>
             </>
           ) : (
@@ -408,12 +411,13 @@ function RSProfile() {
                 />
               </div>
               <div className="buttons-container">
-                <button className="save-button" onClick={() => handleSave("digitalPresence")}>
-                  Save
-                </button>
                 <button className="cancel-button" onClick={() => handleCancel("digitalPresence")}>
                   Cancel
                 </button>
+                <button className="save-button" onClick={() => handleSave("digitalPresence")}>
+                  Save
+                </button>
+                
               </div>
             </>
           ) : (
@@ -501,12 +505,13 @@ function RSProfile() {
                 />
               </div>
               <div className="buttons-container">
-                <button className="save-button" onClick={() => handleSave("openingHours")}>
-                  Save
-                </button>
                 <button className="cancel-button" onClick={() => handleCancel("openingHours")}>
                   Cancel
                 </button>
+                <button className="save-button" onClick={() => handleSave("openingHours")}>
+                  Save
+                </button>
+                
               </div>
             </>
           ) : (

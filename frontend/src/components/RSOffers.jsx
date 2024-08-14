@@ -445,12 +445,13 @@ function RSOffers() {
                 </div>
 
                 <div className="buttons-container">
-                  <button className="save1-button" onClick={handleSaveClick}>
-                    Save
-                  </button>
                   <button className="cancel1-button" onClick={handleCancelClick}>
                     Cancel
                   </button>
+                  <button className="save1-button" onClick={handleSaveClick}>
+                    Save
+                  </button>
+                  
                 </div>
               </div>
             ) : (
