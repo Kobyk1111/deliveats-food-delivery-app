@@ -9,18 +9,14 @@ function DataContextProvider({ children }) {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
   const [restaurant, setRestaurant] = useState(null);
-  const [sessionId, setSessionId] = useState(
-    JSON.parse(localStorage.getItem("sessionId")) || ""
-  );
+  const [sessionId, setSessionId] = useState(JSON.parse(localStorage.getItem("sessionId")) || "");
   const [userOrderHistory, setUserOrderHistory] = useState([]);
   const [showPassword, setShowPassword] = useState(false); // state variable for password visibility
   const [loggedInRestaurant, setLoggedInRestaurant] = useState(null);
   const [isToRegister, setIsToRegister] = useState(null);
   const [isToRegisterRestaurant, setIsToRegisterRestaurant] = useState(null);
-  const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] =
-    useState(false);
-  const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] =
-    useState(false);
+  const [toggleRegisterOrLoginUser, setToggleRegisterOrLoginUser] = useState(false);
+  const [toggleRegisterOrLoginRestaurant, setToggleRegisterOrLoginRestaurant] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const [currentStage, setCurrentStage] = useState(() => {
@@ -36,7 +32,6 @@ function DataContextProvider({ children }) {
   //   return savedOrderId || contextOrderId;
   // });
 
-
   const [orderCounts, setOrderCounts] = useState({
     received: 0,
     preparing: 0,
@@ -44,7 +39,6 @@ function DataContextProvider({ children }) {
     delivery: 0,
     completed: 0,
   });
-
 
   const navigate = useNavigate();
 
@@ -59,9 +53,7 @@ function DataContextProvider({ children }) {
   // OrderHistory.jsx and Preferences.jsx
   async function getUserOrderHistory() {
     try {
-      const response = await fetch(
-        `http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`
-      );
+      const response = await fetch(`http://localhost:5002/create-checkout-session/getOrderHistory/${loggedInUser.id}`);
 
       if (response.ok) {
         const { orderHistory } = await response.json();
@@ -128,9 +120,7 @@ function DataContextProvider({ children }) {
 
   async function getSearchedRestaurants() {
     try {
-      const response = await fetch(
-        "http://localhost:5002/search/getRestaurants"
-      );
+      const response = await fetch("http://localhost:5002/search/getRestaurants");
       if (response.ok) {
         const data = await response.json();
         setRestaurants(data);
@@ -181,10 +171,7 @@ function DataContextProvider({ children }) {
 
       console.log("Access Token has expired");
 
-      const refreshResponse = await fetch(
-        "http://localhost:5002/refresh-token",
-        { credentials: "include" }
-      );
+      const refreshResponse = await fetch("http://localhost:5002/refresh-token", { credentials: "include" });
 
       if (refreshResponse.ok) {
         console.log("New tokens received");
@@ -217,12 +204,9 @@ function DataContextProvider({ children }) {
 
       console.log("Access Token has expired");
 
-      const refreshResponse = await fetch(
-        "http://localhost:5002/refresh-token/restaurant-token",
-        {
-          credentials: "include",
-        }
-      );
+      const refreshResponse = await fetch("http://localhost:5002/refresh-token/restaurant-token", {
+        credentials: "include",
+      });
 
       if (refreshResponse.ok) {
         console.log("New tokens received");
@@ -325,11 +309,8 @@ function DataContextProvider({ children }) {
         setCompletedStages,
         // orderId,
         // setOrderId,
-
-        getRestaurantOrderHistory,
         orderCounts,
         updateOrderCounts,
-
       }}
     >
       {children}

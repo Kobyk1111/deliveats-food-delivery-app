@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+menu.js
+restaurants.js
+restaurants2.js
+restaurantsAddresses.js
+seeder.js
