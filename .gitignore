@@ -132,3 +132,6 @@ dist
 menu.js
 restaurants.js
 restaurantsAddresses.js
+
+restaurants2.js
+seeder.js
