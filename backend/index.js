@@ -45,6 +45,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use(express.static(path.join(__dirname, "frontend/dist")));
 
 app.use("/users", userRouter);
 app.use("/search", searchRouter);
@@ -53,6 +54,10 @@ app.use("/create-checkout-session", checkoutRouter);
 app.use("/refresh-token", refreshTokenRouter);
 app.use("/restaurants", restaurantsRouter);
 app.use("/logout", logoutRouter);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/dist", "index.html"));
+});
 
 const port = process.env.PORT || 5002;
 server.listen(port, () => console.log(`Server is running on port ${port}`));
