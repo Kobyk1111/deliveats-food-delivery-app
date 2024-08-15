@@ -16,7 +16,7 @@ import { BounceLoader } from "react-spinners";
 import ProtectedRouteLoggedInUser from "./components/ProtectedRouteLoggedInUser";
 import RSProtectedRouteLoggedInRestaurant from "./components/RSProtectedRouteLoggedInRestaurant";
 
-import RegisterLoginPage from "./pages/RegisterLoginPage";
+// import RegisterLoginPage from "./pages/RegisterLoginPage";
 
 // import RestaurantHome from "./pages/RestaurantHome";
 
@@ -124,7 +124,7 @@ function App() {
         <Route path="/BasketPage" element={<BasketPage />} />
         <Route path="/success" element={<SuccessPage />} />
         {/* <Route path="/restaurantHome" element={<RestaurantHome />} /> */}
-        <Route path="/register-login" element={<RegisterLoginPage />} />
+        {/* <Route path="/register-login" element={<RegisterLoginPage />} /> */}
 
         <Route
           path="/profile/*"
