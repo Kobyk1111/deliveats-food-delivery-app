@@ -1,6 +1,4 @@
 .rs-orderHistory-container {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
   position: relative;
   min-height: 100vh;
 }
@@ -35,11 +33,10 @@
 
 .rs-orderHistory-container .cards {
   background: #fbfffc;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  padding: 20px;
-  /* width: 300px; */
+  margin: 2rem 0;
+  padding: 2rem;
   transition: transform 0.2s;
 }
 
