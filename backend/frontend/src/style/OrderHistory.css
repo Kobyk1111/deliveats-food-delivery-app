@@ -1,10 +1,6 @@
 /* OrderHistory.css */
 
 .order-history-container {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 4rem;
-  padding-top: 2rem; */
   position: relative;
 }
 
@@ -62,7 +58,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 2rem; */
 }
 
 .order-history-container .items-container,

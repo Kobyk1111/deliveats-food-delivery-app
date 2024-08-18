@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, useRef } from "react";
+import { useContext, /*  useState, */ useEffect, useRef } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
@@ -23,13 +23,13 @@ function Navbar() {
     setCompletedStages,
     setCurrentStage,
   } = useContext(DataContext);
-  const { totalItemCount } = useContext(BasketContext);
+  const { totalItemCount, isBasketModalOpen, setIsBasketModalOpen } = useContext(BasketContext);
 
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
-  const [isBasketModalOpen, setIsBasketModalOpen] = useState(false);
+  // const [isBasketModalOpen, setIsBasketModalOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -64,6 +64,11 @@ function Navbar() {
     localStorage.removeItem("completedStages");
     localStorage.removeItem("orderId");
     localStorage.removeItem("purchasedItems");
+    // localStorage.removeItem("sessionId");
+    // localStorage.removeItem("restaurantAddress");
+    // localStorage.removeItem("restaurantId");
+    // localStorage.removeItem("restaurantName");
+    // localStorage.removeItem("searchedRestaurantsResults");
     setCurrentStage(0);
     setCompletedStages([]);
     // setOrderId(null);
@@ -103,7 +108,7 @@ function Navbar() {
               {/* <RegisterAndLogin /> */}
               <div className="button-container">
                 <button
-                  className={`toggle-button`}
+                  className="login-button"
                   onClick={() => {
                     setIsToRegister(false);
                     setToggleRegisterOrLoginUser(true);
@@ -113,7 +118,7 @@ function Navbar() {
                   Login
                 </button>
                 <button
-                  className={`toggle-button`}
+                  className="register-button"
                   onClick={() => {
                     setIsToRegister(true);
                     setToggleRegisterOrLoginUser(true);

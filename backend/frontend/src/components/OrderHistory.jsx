@@ -89,7 +89,7 @@ function OrderHistory() {
                       {order?.items.map((item) => {
                         return (
                           <div key={item._id} className="item">
-                            <p>{item.itemName}</p>
+                            <p>{item.name}</p>
                             <div className="calculations">
                               <p>€{item.price}</p>
                               <p>x{item.quantity}</p>
