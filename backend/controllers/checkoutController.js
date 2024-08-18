@@ -36,11 +36,11 @@ export async function checkout(req, res, next) {
       },
       success_url:
         process.env.NODE_ENV === "production"
-          ? "https://deliveats-food-delivery-app.onrender.com/success"
+          ? "https://deliveats-food-delivery-app-uyss.onrender.com/success"
           : "http://localhost:5173/success", // URL to redirect to upon successful payment.
       cancel_url:
         process.env.NODE_ENV === "production"
-          ? `https://deliveats-food-delivery-app.onrender.com/restaurant/${id}`
+          ? `https://deliveats-food-delivery-app-uyss.onrender.com/restaurant/${id}`
           : `http://localhost:5173/restaurant/${id}`, // URL to redirect to if payment is canceled.
     });
 
